@@ -1,0 +1,23 @@
+[docker-info] docker info --format '{{.ServerVersion}}'
+[docker-info] PASSOU (código 0); user_data/research/20261011T175632005777Z/docker-info.log
+[compose-config] docker compose -f docker-compose.yml -f docker-compose.cloud.yml config --quiet
+[compose-config] PASSOU (código 0); user_data/research/20261011T175632005777Z/compose-config.log
+[version] docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-version freqtrade --version
+[version] PASSOU (código 0); user_data/research/20261011T175632005777Z/version.log
+[tests] docker compose -f docker-compose.yml -f docker-compose.cloud.yml -f docker-compose.offline.yml run --rm --name tradebot-ai-20261011t175632005777z-tests freqtrade test
+[tests] PASSOU (código 0); user_data/research/20261011T175632005777Z/tests.log
+[strategies] docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-strategies freqtrade list-strategies
+[strategies] PASSOU (código 0); user_data/research/20261011T175632005777Z/strategies.log
+[download] docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-download freqtrade download-data
+[download] FALHOU (código 2); user_data/research/20261011T175632005777Z/download.log
+[archive-download] docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-archive-download freqtrade download-archive
+[archive-download] PASSOU (código 0); user_data/research/20261011T175632005777Z/archive-download.log
+[list-data] docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-list-data freqtrade list-data
+[list-data] PASSOU (código 0); user_data/research/20261011T175632005777Z/list-data.log
+[validate-data] docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-validate-data freqtrade validate-data
+[validate-data] PASSOU (código 0); user_data/research/20261011T175632005777Z/validate-data.log
+[development] docker compose -f docker-compose.yml -f docker-compose.cloud.yml -f docker-compose.offline.yml run --rm --name tradebot-ai-20261011t175632005777z-development freqtrade backtesting --period development --output-dir /freqtrade/user_data/backtest_results/20261011T175632005777Z/development --offline
+[development] PASSOU (código 0); user_data/research/20261011T175632005777Z/development.log
+[validation] docker compose -f docker-compose.yml -f docker-compose.cloud.yml -f docker-compose.offline.yml run --rm --name tradebot-ai-20261011t175632005777z-validation freqtrade backtesting --period validation --output-dir /freqtrade/user_data/backtest_results/20261011T175632005777Z/validation --offline
+[validation] PASSOU (código 0); user_data/research/20261011T175632005777Z/validation.log
+Relatório: docs/results.md

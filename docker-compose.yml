@@ -1,0 +1,12 @@
+# Adaptado do docker-compose.yml oficial da branch stable; veja docs/sources.md.
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable@sha256:9d67afb8eb5f4e1210f4fb067efcbd5e005bd4f1c27f6f3888b8b9fc7f9b5199
+    restart: "no"
+    working_dir: /freqtrade
+    entrypoint: ["python", "/freqtrade/scripts/research_entrypoint.py"]
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+      - "./scripts:/freqtrade/scripts:ro"
+      - "./tests:/freqtrade/tests:ro"
+    command: ["backtesting", "--period", "development"]

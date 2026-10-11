@@ -1,0 +1,17 @@
+2026-10-11 17:57:00,555 - freqtrade - INFO - freqtrade 2026.9
+2026-10-11 17:57:00,928 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+2026-10-11 17:57:02,527 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.json ...
+2026-10-11 17:57:02,529 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 17:57:02,529 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 17:57:02,530 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 17:57:02,540 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-10-11 17:57:02,541 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-10-11 17:57:02,542 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 17:57:02,550 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-10-11 17:57:02,551 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 17:57:02,551 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃  Strategy name ┃          Location ┃ Status ┃ Hyperoptable ┃ Buy-params ┃ Sell-params ┃ Protection-params ┃ Custom-params ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ SmaRsiStrategy │ SmaRsiStrategy.py │     OK │           No │          0 │           0 │                 0 │               │
+└────────────────┴───────────────────┴────────┴──────────────┴────────────┴─────────────┴───────────────────┴───────────────┘

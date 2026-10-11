@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "bot_name": "tradebot-ai-research",
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "timeframe": "1h",
+  "max_open_trades": 1,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "fee": 0.001,
+  "cancel_open_orders_on_exit": false,
+  "unfilledtimeout": {"entry": 10, "exit": 10, "unit": "minutes"},
+  "entry_pricing": {"price_side": "other", "use_order_book": false, "price_last_balance": 0.0},
+  "exit_pricing": {"price_side": "other", "use_order_book": false, "price_last_balance": 0.0},
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "ccxt_config": {"enableRateLimit": true, "requests_trust_env": true, "options": {"fetchMarkets": {"types": ["spot"]}}},
+    "ccxt_async_config": {"enableRateLimit": true, "aiohttp_trust_env": true, "options": {"fetchMarkets": {"types": ["spot"]}, "include_OS_certificates": true}},
+    "pair_whitelist": ["BTC/USDT"],
+    "pair_blacklist": []
+  },
+  "pairlists": [{"method": "StaticPairList"}],
+  "telegram": {"enabled": false, "token": "", "chat_id": ""},
+  "force_entry_enable": false
+}

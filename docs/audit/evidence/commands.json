@@ -1,0 +1,55 @@
+[
+  {
+    "name": "ci",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "scripts/check_ci.py",
+      "--output",
+      "/workspace/TradeBot-AI/user_data/research/risk-audit/20261011T185104627849Z/ci.json"
+    ],
+    "code": 0,
+    "log": "user_data/research/risk-audit/20261011T185104627849Z/ci.log",
+    "status": "passed"
+  },
+  {
+    "name": "tests",
+    "command": [
+      "docker",
+      "compose",
+      "-f",
+      "docker-compose.yml",
+      "-f",
+      "docker-compose.audit.yml",
+      "run",
+      "--rm",
+      "--name",
+      "tradebot-audit-20261011t185104627849z-tests",
+      "freqtrade",
+      "test"
+    ],
+    "code": 0,
+    "log": "user_data/research/risk-audit/20261011T185104627849Z/tests.log",
+    "status": "passed",
+    "test_count": 59
+  },
+  {
+    "name": "bias",
+    "command": [
+      "docker",
+      "compose",
+      "-f",
+      "docker-compose.yml",
+      "-f",
+      "docker-compose.audit.yml",
+      "run",
+      "--rm",
+      "--name",
+      "tradebot-audit-20261011t185104627849z-bias",
+      "freqtrade",
+      "audit-bias"
+    ],
+    "code": 0,
+    "log": "user_data/research/risk-audit/20261011T185104627849Z/bias.log",
+    "status": "passed"
+  }
+]

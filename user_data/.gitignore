@@ -1,0 +1,15 @@
+data/*
+!data/.gitkeep
+backtest_results/*
+!backtest_results/.gitkeep
+hyperopt_results/
+logs/*
+!logs/.gitkeep
+research/*
+!research/.gitkeep
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+config-private.json

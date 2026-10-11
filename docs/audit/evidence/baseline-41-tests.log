@@ -1,0 +1,46 @@
+test_altered_market_snapshot_is_refused (test_archive.ArchiveTests.test_altered_market_snapshot_is_refused) ... ok
+test_ccxt_parses_snapshot_and_refuses_another_pair (test_archive.ArchiveTests.test_ccxt_parses_snapshot_and_refuses_another_pair) ... ok
+test_checksum_verifies_content_and_filename (test_archive.ArchiveTests.test_checksum_verifies_content_and_filename) ... ok
+test_milliseconds_and_microseconds_are_both_utc_hourly (test_archive.ArchiveTests.test_milliseconds_and_microseconds_are_both_utc_hourly) ... ok
+test_missing_candle_or_wrong_units_are_refused (test_archive.ArchiveTests.test_missing_candle_or_wrong_units_are_refused) ... ok
+test_complete_data_and_disjoint_period_counts (test_data.DataTests.test_complete_data_and_disjoint_period_counts) ... ok
+test_duplicate_is_refused (test_data.DataTests.test_duplicate_is_refused) ... ok
+test_gap_is_refused (test_data.DataTests.test_gap_is_refused) ... ok
+test_infinite_values_and_short_sample_are_refused (test_data.DataTests.test_infinite_values_and_short_sample_are_refused) ... ok
+test_invalid_ohlc_is_refused (test_data.DataTests.test_invalid_ohlc_is_refused) ... ok
+test_naive_or_unaligned_timestamps_are_refused (test_data.DataTests.test_naive_or_unaligned_timestamps_are_refused) ... ok
+test_proxy_403_is_distinct_from_exchange_451_and_direct_403 (test_network.NetworkTests.test_proxy_403_is_distinct_from_exchange_451_and_direct_403) ... ok
+test_tls_dns_timeout_and_success_are_distinct (test_network.NetworkTests.test_tls_dns_timeout_and_success_are_distinct) ... ok
+test_cached_filters_are_used_and_orders_are_blocked (test_offline.OfflineTests.test_cached_filters_are_used_and_orders_are_blocked) ... ok
+test_credentials_are_refused (test_offline.OfflineTests.test_credentials_are_refused) ... ok
+test_live_dry_run_service_and_futures_are_refused (test_offline.OfflineTests.test_live_dry_run_service_and_futures_are_refused) ... ok
+test_unknown_precision_is_refused (test_offline.OfflineTests.test_unknown_precision_is_refused) ... ok
+test_failed_download_is_not_reported_as_zero_profit (test_report.ReportTests.test_failed_download_is_not_reported_as_zero_profit) ... ok
+test_future_or_overlapping_trade_is_refused (test_report.ReportTests.test_future_or_overlapping_trade_is_refused) ... ok
+test_inconsistent_aggregate_is_refused (test_report.ReportTests.test_inconsistent_aggregate_is_refused) ... ok
+test_missing_or_ambiguous_exports_are_refused (test_report.ReportTests.test_missing_or_ambiguous_exports_are_refused) ... ok
+test_net_profit_and_two_sided_fees_are_read (test_report.ReportTests.test_net_profit_and_two_sided_fees_are_read) ... ok
+test_no_trades_has_no_invented_profit_factor_or_winrate (test_report.ReportTests.test_no_trades_has_no_invented_profit_factor_or_winrate) ... ok
+test_profit_factor_winrate_and_temporal_exposure (test_report.ReportTests.test_profit_factor_winrate_and_temporal_exposure) ... ok
+test_backtest_builds_fixed_period_and_fee (test_safety.SafetyTests.test_backtest_builds_fixed_period_and_fee) ... ok
+test_checked_in_config_is_research_only (test_safety.SafetyTests.test_checked_in_config_is_research_only) ... ok
+test_cli_refuses_trade_and_alternate_configs (test_safety.SafetyTests.test_cli_refuses_trade_and_alternate_configs) ... ok
+test_credentials_and_ccxt_overrides_are_refused (test_safety.SafetyTests.test_credentials_and_ccxt_overrides_are_refused) ... ok
+test_environment_override_is_refused (test_safety.SafetyTests.test_environment_override_is_refused) ... ok
+test_live_futures_and_wallet_changes_are_refused (test_safety.SafetyTests.test_live_futures_and_wallet_changes_are_refused) ... ok
+test_periods_are_disjoint_and_ordered (test_safety.SafetyTests.test_periods_are_disjoint_and_ordered) ... ok
+test_strategy_overrides_are_refused (test_safety.SafetyTests.test_strategy_overrides_are_refused) ... ok
+test_additional_entry_guard_refuses_live_short_and_wrong_pair (test_strategy.StrategyTests.test_additional_entry_guard_refuses_live_short_and_wrong_pair) ... ok
+test_entry_requires_a_new_cross (test_strategy.StrategyTests.test_entry_requires_a_new_cross) ... ok
+test_exit_at_rsi_75 (test_strategy.StrategyTests.test_exit_at_rsi_75) ... ok
+test_exit_on_downward_cross_even_with_loss (test_strategy.StrategyTests.test_exit_on_downward_cross_even_with_loss) ... ok
+test_indicators_and_signals_do_not_depend_on_future_candles (test_strategy.StrategyTests.test_indicators_and_signals_do_not_depend_on_future_candles) ... ok
+test_missing_indicators_do_not_create_entry (test_strategy.StrategyTests.test_missing_indicators_do_not_create_entry) ... ok
+test_risk_parameters (test_strategy.StrategyTests.test_risk_parameters) ... ok
+test_rsi_entry_boundaries (test_strategy.StrategyTests.test_rsi_entry_boundaries) ... ok
+test_zero_volume_prevents_entry_and_exit (test_strategy.StrategyTests.test_zero_volume_prevents_entry_and_exit) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.188s
+
+OK

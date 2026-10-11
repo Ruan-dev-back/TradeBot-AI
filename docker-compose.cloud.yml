@@ -1,0 +1,12 @@
+# Somente para hosts Linux com proxy HTTPS e CA gerenciados pelo ambiente.
+# Nunca contém valores de proxy ou credenciais. Mantém verificação TLS habilitada.
+services:
+  freqtrade:
+    environment:
+      - HTTP_PROXY
+      - HTTPS_PROXY
+      - NO_PROXY
+      - SSL_CERT_FILE=/freqtrade/host-ca.pem
+      - REQUESTS_CA_BUNDLE=/freqtrade/host-ca.pem
+    volumes:
+      - "/etc/ssl/certs/ca-certificates.crt:/freqtrade/host-ca.pem:ro"

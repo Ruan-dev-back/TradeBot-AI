@@ -1,0 +1,19 @@
+name: Validate repository
+on:
+  push:
+  pull_request:
+jobs:
+  static-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Python syntax
+        run: python -m py_compile user_data/strategies/SmaRsiStrategy.py
+      - name: Validate configuration JSON
+        run: python -m json.tool user_data/config.json > /dev/null
+      - name: Validate Compose file
+        run: docker compose config --quiet
+      - name: Test with the pinned Freqtrade image and no container network
+        run: |
+          docker compose pull
+          docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test

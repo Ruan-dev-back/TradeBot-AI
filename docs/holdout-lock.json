@@ -1,0 +1,10 @@
+{
+  "status": "reserved_locked",
+  "timezone": "UTC",
+  "start": "2025-07-01T00:00:00+00:00",
+  "end_exclusive": "2026-07-01T00:00:00+00:00",
+  "development": ["2024-01-01T00:00:00+00:00", "2025-01-01T00:00:00+00:00"],
+  "observed_not_independent": ["2025-01-01T00:00:00+00:00", "2025-07-01T00:00:00+00:00"],
+  "unlock_condition": "New strategy, risk rules, costs, acceptance criteria and hashes committed before any holdout price/result inspection; no unlock command in this audit.",
+  "prior_boundary_caveat": "The published MVP downloaded July 2025 monthly archive and retained July 1 boundary candles for native validation closure. Acquisition existed before this reservation; this audit does not inspect those candles. Do not describe all holdout data as never previously acquired."
+}
