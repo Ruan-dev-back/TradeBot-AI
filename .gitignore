@@ -231,3 +231,4 @@ user_data/research/*
 
 # Evidências públicas e saídas completas revisadas para acompanhar o relatório.
 !docs/evidence/*.log
+!docs/audit/evidence/*.log

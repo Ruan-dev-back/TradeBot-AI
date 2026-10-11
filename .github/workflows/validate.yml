@@ -16,4 +16,4 @@ jobs:
       - name: Test with the pinned Freqtrade image and no container network
         run: |
           docker compose pull
-          docker compose -f docker-compose.yml -f docker-compose.offline.yml run --rm freqtrade test
+          docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test

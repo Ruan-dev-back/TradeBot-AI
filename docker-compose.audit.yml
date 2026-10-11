@@ -1,0 +1,8 @@
+# Auditoria sem rede, arquivos publicados e dados de origem somente para leitura.
+services:
+  freqtrade:
+    network_mode: none
+    volumes:
+      - "./docs:/freqtrade/docs:ro"
+      - "./user_data/data/binance:/freqtrade/user_data/data/binance:ro"
+      - "./user_data/strategies:/freqtrade/user_data/strategies:ro"

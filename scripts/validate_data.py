@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 
 from safety import PERIODS
+from audit_guard import require_legacy_research_allowed
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -76,6 +77,7 @@ def inspect_data(path):
 
 
 def main():
+    require_legacy_research_allowed(["validate-data"])
     path = ROOT / "user_data/data/binance/BTC_USDT-1h.feather"
     manifest = inspect_data(path)
     output = ROOT / "user_data/research/data_manifest.json"

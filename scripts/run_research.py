@@ -15,6 +15,7 @@ import sys
 import zipfile
 
 from safety import PERIODS, validate_config
+from audit_guard import require_legacy_research_allowed
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -226,6 +227,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", choices=["auto", "api", "archive"], default="auto")
     args = parser.parse_args()
+    try:
+        require_legacy_research_allowed([])
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     run_dir = ROOT / "user_data/research" / run_id
     run_dir.mkdir(parents=True)

@@ -34,7 +34,8 @@ Todos os intervalos são UTC, com fim exclusivo:
 |---|---|
 | Download, incluindo warm-up e candle de fronteira | 2023-12-01 a 2025-07-02 |
 | Desenvolvimento | 2024-01-01 a 2025-01-01 |
-| Validação reservada | 2025-01-01 a 2025-07-01 |
+| Validação original, já observada | 2025-01-01 a 2025-07-01 |
+| Novo holdout, reservado sem consulta nesta auditoria | 2025-07-01 a 2026-07-01 |
 
 Os 200 candles anteriores a cada início alimentam somente os indicadores; não
 geram operações contabilizadas fora do intervalo. A validação pode usar candles
@@ -107,8 +108,15 @@ unitários com dependências reais da imagem, download, cobertura de dados,
 backtests separados e leitura dos exports atuais. O script não calcula métricas
 se esses pré-requisitos falharem.
 
-Os testes de causalidade comparam indicadores e sinais calculados sobre uma série
-inteira com cálculos em prefixos dessa série. Isso detecta acessos futuros básicos,
-mas não substitui a ferramenta oficial `lookahead-analysis` nem avaliações mais
-extensas. Análises de lookahead/recursive e slippage ficam para uma próxima etapa;
-não foram apresentadas como executadas neste MVP.
+Na pesquisa original, os testes de causalidade comparavam indicadores e sinais
+em prefixos; as ferramentas nativas ainda não tinham sido executadas. A auditoria
+posterior executou `LookaheadAnalysis` e `RecursiveAnalysis` oficiais com o motor
+offline, além de controles por prefixos e recursive rolling, somente em 2024.
+Resultados e limitações estão em [risk-report.md](risk-report.md). Custos de execução
+foram modelados como hipóteses de estresse em replays, sem reescrever os exports.
+
+O protocolo futuro usa apenas 2024 para escolher melhorias. Janeiro–junho/2025
+não pode selecionar parâmetros. A nova reserva, o limite da fronteira anteriormente
+presente no cache, critérios de risco e gates para ML estão em
+[experiment-plan.md](experiment-plan.md). O fluxo histórico permanece bloqueado
+para impedir acesso inadvertido à fronteira e sobrescrita dos resultados publicados.

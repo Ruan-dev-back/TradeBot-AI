@@ -1,5 +1,26 @@
 # Comandos e operação local
 
+## Auditoria atual, holdout fechado
+
+```sh
+python3 scripts/run_audit.py
+docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test
+docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade audit-bias
+```
+
+Sem aquisição, credenciais, serviços ou operações reais. O override de auditoria
+monta documentação, estratégia e dados de origem como somente leitura e desliga
+a rede. Os resultados novos ficam em `docs/audit/evidence/` e `docs/risk-report.md`;
+as evidências e o relatório publicados permanecem congelados por hash.
+`python3 scripts/run_audit.py --reuse-bias` reusa somente artefato temporal com
+hashes compatíveis; a suíte e a verificação de CI continuam sendo executadas.
+
+O runner histórico e seus comandos de aquisição/validação/backtest são recusados
+enquanto a reserva está ativa, inclusive no Compose base sem docs montado. Os
+comandos abaixo documentam a execução anterior à reserva, não são instruções
+para abrir o holdout. Um novo protocolo deve ser congelado antes de ler a janela
+2025-07-01–2026-07-01. Consulte [experiment-plan.md](experiment-plan.md).
+
 Execute todos os comandos na raiz do checkout. Esta tarefa já está isolada;
 não é necessário criar worktree. Os arquivos de dados e exports persistem no bind
 mount `user_data`; contêineres de pesquisa são descartáveis, sem serviços de trading.

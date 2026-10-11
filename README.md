@@ -22,6 +22,24 @@ docker compose run --rm freqtrade test
 
 ## Pesquisa reproduzível
 
+A baseline publicada permanece em `docs/results.md` e `docs/evidence/`. O fluxo
+atual é a auditoria de risco, sem aquisição de novos candles:
+
+```sh
+python3 scripts/run_audit.py
+```
+
+Veja o [relatório de risco](docs/risk-report.md) e o
+[plano de experimento](docs/experiment-plan.md). O holdout UTC de
+2025-07-01 a 2026-07-01 está reservado em `docs/holdout-lock.json`; janeiro–junho/2025
+já é observado. Sizing menor e custos são cenários retrospectivos, sem mudar a
+estratégia/configuração original nem representar validação independente.
+
+O runner anterior e seus comandos de download/backtest estão bloqueados neste
+estágio para preservar a reserva e o relatório publicado. As instruções abaixo
+registram o fluxo **histórico**, executado antes dessa reserva; não use para
+abrir o holdout. Não há comando de unlock nesta etapa.
+
 Execute a partir da raiz deste checkout:
 
 ```sh

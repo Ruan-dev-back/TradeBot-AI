@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 
 from safety import DOWNLOAD_RANGE, PERIODS, validate_config
+from audit_guard import require_legacy_research_allowed
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -14,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def build_command(argv):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("download-data", "download-archive", "list-data", "list-strategies", "test", "validate-data", "version"):
+    for name in ("download-data", "download-archive", "list-data", "list-strategies", "test", "validate-data", "version", "audit-bias"):
         sub.add_parser(name)
     backtest = sub.add_parser("backtesting")
     backtest.add_argument("--period", choices=list(PERIODS), default="development")
@@ -27,6 +28,8 @@ def build_command(argv):
         return base + ["--version"]
     if args.command == "test":
         return [sys.executable, "-m", "unittest", "discover", "-s", str(ROOT / "tests"), "-v"]
+    if args.command == "audit-bias":
+        return [sys.executable, str(ROOT / "scripts/audit_bias.py")]
     if args.command == "validate-data":
         return [sys.executable, str(ROOT / "scripts/validate_data.py")]
     if args.command == "download-archive":
@@ -60,6 +63,7 @@ def main():
     try:
         config = json.loads((ROOT / "user_data/config.json").read_text())
         validate_config(config, os.environ)
+        require_legacy_research_allowed(sys.argv[1:])
         command = build_command(sys.argv[1:])
     except (ValueError, OSError) as exc:
         print(f"Pesquisa bloqueada: {exc}", file=sys.stderr)

@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-11T18:51:08.097952+00:00",
+  "head_sha": "490caa7ab0f4fdaf50507edad29538bcca0231f2",
+  "current_local_sha": "490caa7ab0f4fdaf50507edad29538bcca0231f2",
+  "status": "success",
+  "url": "https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38163008559",
+  "evidence_method": "GitHub public run HTML: exact commit URL and explicit status",
+  "run_page_sha256": "66c0409409e549026d3aecafa14463cfccbdb250aeb4b03d9b3b8482a698a6be",
+  "commit_link_evidence": "/Ruan-dev-back/TradeBot-AI/commit/490caa7ab0f4fdaf50507edad29538bcca0231f2",
+  "status_evidence": "<span class=\"h4 color-fg-default\">Success</span>",
+  "api_limit": "gh/API request blocked with proxy CONNECT 403; public HTML verified instead"
+}
