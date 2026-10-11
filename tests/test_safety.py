@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -66,7 +67,12 @@ class SafetyTests(unittest.TestCase):
                 self.assertEqual(error.exception.code, 2)
 
     def test_backtest_builds_fixed_period_and_fee(self):
-        command = build_command(["backtesting", "--period", "validation"])
+        # CI monta user_data como volume sem garantia de escrita pelo usuário do container.
+        # Este teste valida apenas a construção do comando; a criação do diretório
+        # é coberta na execução de integração, sem mudar a segurança do entrypoint.
+        with patch("research_entrypoint.Path.mkdir") as mkdir_mock:
+            command = build_command(["backtesting", "--period", "validation"])
+        mkdir_mock.assert_called_once()
         self.assertEqual(command[0:2], ["freqtrade", "backtesting"])
         for flag, value in (("--timerange", "20250101-20250701"),
                             ("--fee", "0.001"), ("--cache", "none"),
