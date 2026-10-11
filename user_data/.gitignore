@@ -1,7 +1,12 @@
-data/
-backtest_results/
+data/*
+!data/.gitkeep
+backtest_results/*
+!backtest_results/.gitkeep
 hyperopt_results/
-logs/
+logs/*
+!logs/.gitkeep
+research/*
+!research/.gitkeep
 *.sqlite
 *.sqlite-*
 *.db

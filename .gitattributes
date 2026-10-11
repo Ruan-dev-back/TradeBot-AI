@@ -1,0 +1,2 @@
+# Preservar a saída integral de ferramentas externas, inclusive espaços de tabelas.
+docs/evidence/*.log -whitespace

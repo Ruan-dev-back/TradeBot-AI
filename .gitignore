@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# TradeBot AI: dados públicos e artefatos locais de pesquisa
+user_data/data/*
+!user_data/data/.gitkeep
+user_data/backtest_results/*
+!user_data/backtest_results/.gitkeep
+user_data/logs/*
+!user_data/logs/.gitkeep
+user_data/research/*
+!user_data/research/.gitkeep
+
+# Evidências públicas e saídas completas revisadas para acompanhar o relatório.
+!docs/evidence/*.log

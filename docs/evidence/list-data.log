@@ -1,0 +1,19 @@
+2026-10-11 17:57:51,868 - freqtrade - INFO - freqtrade 2026.9
+2026-10-11 17:57:52,180 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+2026-10-11 17:57:52,955 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.json ...
+2026-10-11 17:57:52,957 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 17:57:52,957 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 17:57:52,957 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 17:57:52,966 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-10-11 17:57:52,967 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-10-11 17:57:52,967 - freqtrade.configuration.configuration - INFO - Detected --show-timerange
+2026-10-11 17:57:52,968 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 17:57:52,975 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-10-11 17:57:52,976 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 17:57:52,976 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+                       Found 1 pair / timeframe combinations.                        
+┏━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃     Pair ┃ Timeframe ┃ Type ┃                From ┃                  To ┃ Candles ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ BTC/USDT │        1h │ spot │ 2023-12-01 00:00:00 │ 2025-07-01 23:00:00 │   13896 │
+└──────────┴───────────┴──────┴─────────────────────┴─────────────────────┴─────────┘

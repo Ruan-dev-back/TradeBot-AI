@@ -1,0 +1,4 @@
+# Backtesting de candles públicos já validados; rede desabilitada no contêiner.
+services:
+  freqtrade:
+    network_mode: none

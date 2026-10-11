@@ -1,0 +1,82 @@
+[
+  {
+    "name": "docker-info",
+    "command": "docker info --format '{{.ServerVersion}}'",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/docker-info.log"
+  },
+  {
+    "name": "compose-config",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml config --quiet",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/compose-config.log"
+  },
+  {
+    "name": "version",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-version freqtrade --version",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/version.log"
+  },
+  {
+    "name": "tests",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml -f docker-compose.offline.yml run --rm --name tradebot-ai-20261011t175632005777z-tests freqtrade test",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/tests.log",
+    "test_count": 41
+  },
+  {
+    "name": "strategies",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-strategies freqtrade list-strategies",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/strategies.log"
+  },
+  {
+    "name": "download",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-download freqtrade download-data",
+    "code": 2,
+    "status": "FALHOU",
+    "log": "user_data/research/20261011T175632005777Z/download.log",
+    "error": "  File \"/freqtrade/freqtrade/exchange/common.py\", line 194, in wrapper\n    return wrapper(*args, **kwargs)\n  File \"/freqtrade/freqtrade/exchange/common.py\", line 194, in wrapper\n    return wrapper(*args, **kwargs)\n  File \"/freqtrade/freqtrade/exchange/common.py\", line 194, in wrapper\n    return wrapper(*args, **kwargs)\n  File \"/freqtrade/freqtrade/exchange/common.py\", line 182, in wrapper\n    return f(*args, **kwargs)\n  File \"/freqtrade/freqtrade/exchange/exchange.py\", line 747, in _load_async_markets\n    markets = self.loop.run_until_complete(self._api_reload_markets(reload=reload))\n  File \"/usr/local/lib/python3.14/asyncio/base_events.py\", line 720, in run_until_complete\n    return future.result()\n           ~~~~~~~~~~~~~^^\n  File \"/freqtrade/freqtrade/exchange/exchange.py\", line 738, in _api_reload_markets\n    raise TemporaryError(\n        f\"Error in reload_markets due to {e.__class__.__name__}. Message: {e}\"\n    ) from e\nfreqtrade.exceptions.TemporaryError: Error in reload_markets due to ExchangeNotAvailable. Message: binance GET https://api.binance.com/api/v3/exchangeInfo 451 Unknown {\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in \nerror.\"\n}\n2026-10-11 17:57:16,518 - freqtrade - ERROR - Markets were not loaded.\n",
+    "required": false
+  },
+  {
+    "name": "archive-download",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-archive-download freqtrade download-archive",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/archive-download.log"
+  },
+  {
+    "name": "list-data",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-list-data freqtrade list-data",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/list-data.log"
+  },
+  {
+    "name": "validate-data",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml run --rm --name tradebot-ai-20261011t175632005777z-validate-data freqtrade validate-data",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/validate-data.log"
+  },
+  {
+    "name": "development",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml -f docker-compose.offline.yml run --rm --name tradebot-ai-20261011t175632005777z-development freqtrade backtesting --period development --output-dir /freqtrade/user_data/backtest_results/20261011T175632005777Z/development --offline",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/development.log"
+  },
+  {
+    "name": "validation",
+    "command": "docker compose -f docker-compose.yml -f docker-compose.cloud.yml -f docker-compose.offline.yml run --rm --name tradebot-ai-20261011t175632005777z-validation freqtrade backtesting --period validation --output-dir /freqtrade/user_data/backtest_results/20261011T175632005777Z/validation --offline",
+    "code": 0,
+    "status": "PASSOU",
+    "log": "user_data/research/20261011T175632005777Z/validation.log"
+  }
+]
