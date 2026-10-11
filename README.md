@@ -87,3 +87,15 @@ O diagnóstico de rede e a solução de aquisição nesta nuvem estão em
 [docs/environment-status.md](docs/environment-status.md).
 O histórico e a justificativa do stop-loss de 5% estão em
 [docs/stoploss-review.md](docs/stoploss-review.md); nenhum parâmetro foi otimizado.
+
+## Mercado ao vivo: simulação contínua (nova branch)
+Um serviço **separado** permite observar preços atuais de BTC/USDT, ETH/USDT e
+SOL/USDT em uma exchange, simulando entradas e saídas automaticamente quando
+estiver conectado. Nunca envia ordens reais: `dry_run=true`, `--dry-run`,
+sem chaves e com 25 USDT fictícios por posição.
+
+**A estratégia atual teve prejuízo no backtest e não foi validada para operar dinheiro real.**
+O serviço não foi implantado nem iniciado automaticamente.
+
+Veja [o roteiro de execução ao vivo](docs/realtime-roadmap.md) antes de
+ativá-lo manualmente. O Compose de pesquisa permanece independente.
