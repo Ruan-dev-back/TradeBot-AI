@@ -1,5 +1,5 @@
 """Estratégia multiativos SOMENTE para simulação; regras de SMA/RSI não lucrativas no histórico."""
-from SmaRsiStrategy import SmaRsiStrategy
+from user_data.strategies.SmaRsiStrategy import SmaRsiStrategy
 
 
 class MultiAssetPaperStrategy(SmaRsiStrategy):
