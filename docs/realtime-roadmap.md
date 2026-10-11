@@ -10,7 +10,7 @@ Robô 24/7 para consumir candles e monitorar estratégias em exchange usando dad
 - Kraken como candidato inicial para teste de conectividade; não há conta ou API vinculada. Não assuma disponibilidade regional, do servidor ou de cada par.
 - Apenas 1 posição aberta e 25 USDT fictícios por operação, carteira fictícia de 1.000 USDT; sem alavancagem.
 - API de controle remoto desativada e sem secrets; `--dry-run` obrigatório também na linha de comando.
-- Estratégia SMA/RSI pré-existente usada SOMENTE para validar o fluxo: falhou no backtest e não é recomendada para dinheiro real.
+- Estratégia MultiAssetPaperStrategy, baseada na SMA/RSI pré-existente, usada SOMENTE para validar o fluxo: falhou no backtest e não é recomendada para dinheiro real.
 
 ## Antes de executar, testar acesso ao mercado
 ```bash
