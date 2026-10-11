@@ -1,0 +1,10 @@
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    restart: "no"
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+    ports:
+      - "127.0.0.1:8080:8080"
+    command: >
+      trade --config user_data/config.json --strategy SmaRsiStrategy
