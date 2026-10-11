@@ -1,4 +1,4 @@
-time="2026-10-11T23:14:30Z" level=warning msg="Found orphan containers ([tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+time="2026-10-11T23:23:20Z" level=warning msg="Found orphan containers ([tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
 test_altered_market_snapshot_is_refused (test_archive.ArchiveTests.test_altered_market_snapshot_is_refused) ... ok
 test_ccxt_parses_snapshot_and_refuses_another_pair (test_archive.ArchiveTests.test_ccxt_parses_snapshot_and_refuses_another_pair) ... ok
 test_checksum_verifies_content_and_filename (test_archive.ArchiveTests.test_checksum_verifies_content_and_filename) ... ok
@@ -33,292 +33,192 @@ test_exchange_uses_explicit_spot_pairs (test_paper.PaperTradingTests.test_exchan
 test_paper_mode_cannot_trade_real_money (test_paper.PaperTradingTests.test_paper_mode_cannot_trade_real_money) ... ok
 test_position_limit_and_fake_wallet (test_paper.PaperTradingTests.test_position_limit_and_fake_wallet) ... ok
 test_research_isolation (test_paper.PaperTradingTests.test_research_isolation) ... ok
-test_native_bot_consumes_signal_and_simulates_order_in_isolated_database (test_paper_engine.NativePaperEngineTests.test_native_bot_consumes_signal_and_simulates_order_in_isolated_database) ... 2026-10-11 23:14:40,514 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-10-11 23:14:40,515 - freqtrade.loggers - INFO - Logfile configured
-2026-10-11 23:14:40,516 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-10-11 23:14:40,517 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
-2026-10-11 23:14:40,517 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-10-11 23:14:40,518 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
-2026-10-11 23:14:40,518 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
-sudo: unable to resolve host e25f67a38e6c: Temporary failure in name resolution
-chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archive_provenance.json': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/BTC_USDT-1h.feather': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/market_snapshot.json': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance': Read-only file system
-2026-10-11 23:14:40,529 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
-2026-10-11 23:14:40,530 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-10-11 23:14:40,531 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
-2026-10-11 23:14:40,532 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-10-11 23:14:40,534 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
-2026-10-11 23:14:40,534 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-10-11 23:14:40,535 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-10-11 23:14:40,535 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
-2026-10-11 23:14:40,536 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
-2026-10-11 23:14:40,537 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
-2026-10-11 23:14:40,539 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
-2026-10-11 23:14:40,544 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
-2026-10-11 23:14:40,544 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-10-11 23:14:40,544 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
-2026-10-11 23:14:40,545 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-10-11 23:14:40,545 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
-2026-10-11 23:14:40,545 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
-2026-10-11 23:14:40,545 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
-2026-10-11 23:14:40,546 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
-2026-10-11 23:14:40,546 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
-2026-10-11 23:14:40,546 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
-2026-10-11 23:14:40,546 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-10-11 23:14:40,547 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
-2026-10-11 23:14:40,547 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
-2026-10-11 23:14:40,547 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
-2026-10-11 23:14:40,547 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
-2026-10-11 23:14:40,548 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
-2026-10-11 23:14:40,548 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
-2026-10-11 23:14:40,548 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
-2026-10-11 23:14:40,548 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
-2026-10-11 23:14:40,548 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
-2026-10-11 23:14:40,549 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
-2026-10-11 23:14:40,549 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
-2026-10-11 23:14:40,549 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
-2026-10-11 23:14:40,549 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
-2026-10-11 23:14:40,549 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
-2026-10-11 23:14:40,549 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
-2026-10-11 23:14:40,550 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
-2026-10-11 23:14:40,550 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
-2026-10-11 23:14:40,550 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
-2026-10-11 23:14:40,551 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
-2026-10-11 23:14:40,551 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
-2026-10-11 23:14:40,558 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,560 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
-2026-10-11 23:14:40,560 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
-2026-10-11 23:14:40,561 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
-2026-10-11 23:14:40,561 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.00s
-2026-10-11 23:14:40,566 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
-2026-10-11 23:14:40,584 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,612 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,634 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,642 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,643 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for BTC/USDT with stake_amount: 25 and price: 100010.0 ...
-2026-10-11 23:14:40,649 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,649 - freqtrade.freqtradebot - INFO - Order dry_run_buy_BTC/USDT_4f8c2350-8513-4e5c-9c6c-46870193bdb7 was created for BTC/USDT and status is closed.
-2026-10-11 23:14:40,658 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,659 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Kraken', 'pair':
+test_native_bot_consumes_signal_and_simulates_order_in_isolated_database (test_paper_engine.NativePaperEngineTests.test_native_bot_consumes_signal_and_simulates_order_in_isolated_database) ... 2026-10-11 23:23:32,080 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 23:23:32,080 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 23:23:32,081 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 23:23:32,081 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+2026-10-11 23:23:32,082 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/user_data/strategies
+2026-10-11 23:23:32,082 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2026-10-11 23:23:32,082 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+2026-10-11 23:23:32,083 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+sudo: unable to resolve host 79f21f15f0f7: Temporary failure in name resolution
+2026-10-11 23:23:32,091 - freqtrade.configuration.configuration - INFO - Using user-data directory: /tmp/tmphfs1q83j ...
+2026-10-11 23:23:32,092 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
+2026-10-11 23:23:32,092 - freqtrade.configuration.configuration - INFO - Using data directory: /tmp/tmphfs1q83j/data/kraken ...
+2026-10-11 23:23:32,093 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 23:23:32,095 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+2026-10-11 23:23:32,095 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 23:23:32,096 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:23:32,096 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:23:32,097 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-11 23:23:32,098 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-11 23:23:32,100 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-11 23:23:32,104 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+2026-10-11 23:23:32,104 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-11 23:23:32,105 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-11 23:23:32,105 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-11 23:23:32,105 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+2026-10-11 23:23:32,105 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+2026-10-11 23:23:32,106 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-11 23:23:32,106 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-11 23:23:32,106 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-11 23:23:32,106 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-11 23:23:32,106 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-11 23:23:32,107 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-11 23:23:32,107 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-11 23:23:32,107 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-11 23:23:32,107 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-11 23:23:32,107 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-11 23:23:32,108 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-11 23:23:32,108 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-11 23:23:32,108 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+2026-10-11 23:23:32,108 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-11 23:23:32,108 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+2026-10-11 23:23:32,109 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-11 23:23:32,109 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-11 23:23:32,109 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-11 23:23:32,109 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-11 23:23:32,109 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-11 23:23:32,109 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-11 23:23:32,110 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-11 23:23:32,110 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-11 23:23:32,110 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-11 23:23:32,110 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:23:32,116 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,118 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-11 23:23:32,119 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
+2026-10-11 23:23:32,119 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
+2026-10-11 23:23:32,120 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.00s
+2026-10-11 23:23:32,123 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+2026-10-11 23:23:32,139 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,167 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,187 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,195 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,196 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for BTC/USDT with stake_amount: 25 and price: 100010.0 ...
+2026-10-11 23:23:32,203 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,204 - freqtrade.freqtradebot - INFO - Order dry_run_buy_BTC/USDT_d9b7957b-caa6-4098-875a-28d4dc197bb6 was created for BTC/USDT and status is closed.
+2026-10-11 23:23:32,213 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,213 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Kraken', 'pair':
 'BTC/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 100010.0, 'order_rate': 100010.0, 'open_rate': 100010.0, 'order_type': 'limit', 'stake_amount': 24.0024, 'stake_currency': 'USDT', 
-'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 11, 23, 14, 40, 650197, tzinfo=datetime.timezone.utc), 
+'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 11, 23, 23, 32, 204504, tzinfo=datetime.timezone.utc), 
 'current_rate': 100010.0, 'sub_trade': False}
-2026-10-11 23:14:40,659 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-11 23:14:40)
-2026-10-11 23:14:40,665 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-11 23:14:40) [buy]: 
+2026-10-11 23:23:32,214 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-11 23:23:32)
+2026-10-11 23:23:32,220 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-11 23:23:32) [buy]: 
 0.0960096 USDT - rate: 0.004
-2026-10-11 23:14:40,665 - freqtrade.persistence.trade_model - INFO - Updating trade (id=1) ...
-2026-10-11 23:14:40,666 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, 
-open_since=2026-10-11 23:14:40).
-2026-10-11 23:14:40,670 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-11 23:14:40,672 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry_fill, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Kraken', 
+2026-10-11 23:23:32,220 - freqtrade.persistence.trade_model - INFO - Updating trade (id=1) ...
+2026-10-11 23:23:32,220 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, 
+open_since=2026-10-11 23:23:32).
+2026-10-11 23:23:32,225 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-11 23:23:32,226 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry_fill, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Kraken', 
 'pair': 'BTC/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 100010.0, 'order_rate': 100010.0, 'open_rate': 100010.0, 'order_type': 'limit', 'stake_amount': 24.0024, 'stake_currency': 'USDT', 
-'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 11, 23, 14, 40, 650197, tzinfo=datetime.timezone.utc), 
+'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 11, 23, 23, 32, 204504, tzinfo=datetime.timezone.utc), 
 'current_rate': 100010.0, 'sub_trade': False}
-2026-10-11 23:14:40,674 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
-2026-10-11 23:14:40,676 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "1 open trades active.\n\nHandle these trades manually on Kraken, or '/start' the bot 
+2026-10-11 23:23:32,229 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-10-11 23:23:32,230 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "1 open trades active.\n\nHandle these trades manually on Kraken, or '/start' the bot 
 again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
-2026-10-11 23:14:40,677 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-10-11 23:23:32,231 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
 ok
-test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange (test_paper_engine.NativePaperEngineTests.test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange) ... 2026-10-11 23:14:40,710 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-10-11 23:14:40,711 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
-2026-10-11 23:14:40,711 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
-2026-10-11 23:14:40,713 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
-2026-10-11 23:14:40,715 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
-2026-10-11 23:14:40,725 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-10-11 23:14:40,725 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
-2026-10-11 23:14:40,725 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
-2026-10-11 23:14:40,727 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
-2026-10-11 23:14:40,729 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
-2026-10-11 23:14:40,735 - freqtrade.wallets - INFO - Wallets synced.
+test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange (test_paper_engine.NativePaperEngineTests.test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange) ... 2026-10-11 23:23:32,260 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:23:32,261 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:23:32,261 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-11 23:23:32,263 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-11 23:23:32,265 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-11 23:23:32,274 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:23:32,274 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:23:32,274 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-11 23:23:32,276 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-11 23:23:32,277 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-11 23:23:32,284 - freqtrade.wallets - INFO - Wallets synced.
 ok
-test_native_paper_configuration_and_strategy_load_without_network (test_paper_engine.NativePaperEngineTests.test_native_paper_configuration_and_strategy_load_without_network) ... 2026-10-11 23:14:40,778 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.paper.json ...
-2026-10-11 23:14:40,781 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-10-11 23:14:40,781 - freqtrade.loggers - INFO - Logfile configured
-2026-10-11 23:14:40,782 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-10-11 23:14:40,782 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
-2026-10-11 23:14:40,783 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-10-11 23:14:40,783 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
-2026-10-11 23:14:40,783 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
-sudo: unable to resolve host e25f67a38e6c: Temporary failure in name resolution
-chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip.CHECKSUM': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archives': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/archive_provenance.json': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/BTC_USDT-1h.feather': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance/market_snapshot.json': Read-only file system
-chown: changing ownership of '/freqtrade/user_data/data/binance': Read-only file system
-2026-10-11 23:14:40,793 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
-2026-10-11 23:14:40,794 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-10-11 23:14:40,794 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
-2026-10-11 23:14:40,795 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-10-11 23:14:40,797 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
-2026-10-11 23:14:40,798 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-10-11 23:14:40,801 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
-2026-10-11 23:14:40,802 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-10-11 23:14:40,802 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
-2026-10-11 23:14:40,803 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-10-11 23:14:40,803 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
-2026-10-11 23:14:40,804 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
-2026-10-11 23:14:40,804 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
-2026-10-11 23:14:40,804 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
-2026-10-11 23:14:40,804 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
-2026-10-11 23:14:40,805 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
-2026-10-11 23:14:40,805 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-10-11 23:14:40,805 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
-2026-10-11 23:14:40,806 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
-2026-10-11 23:14:40,806 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
-2026-10-11 23:14:40,806 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
-2026-10-11 23:14:40,807 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
-2026-10-11 23:14:40,807 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
-2026-10-11 23:14:40,807 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
-2026-10-11 23:14:40,808 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
-2026-10-11 23:14:40,808 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
-2026-10-11 23:14:40,808 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
-2026-10-11 23:14:40,808 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
-2026-10-11 23:14:40,809 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
-2026-10-11 23:14:40,809 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
-2026-10-11 23:14:40,809 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
-2026-10-11 23:14:40,809 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
-2026-10-11 23:14:40,810 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
-2026-10-11 23:14:40,810 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
-2026-10-11 23:14:40,810 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
-2026-10-11 23:14:40,811 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
-2026-10-11 23:14:40,811 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+test_native_paper_configuration_and_strategy_load_without_network (test_paper_engine.NativePaperEngineTests.test_native_paper_configuration_and_strategy_load_without_network) ... 2026-10-11 23:23:32,325 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.paper.json ...
+2026-10-11 23:23:32,328 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 23:23:32,328 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 23:23:32,328 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 23:23:32,329 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+2026-10-11 23:23:32,329 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/user_data/strategies
+2026-10-11 23:23:32,329 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2026-10-11 23:23:32,329 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+2026-10-11 23:23:32,330 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+sudo: unable to resolve host 79f21f15f0f7: Temporary failure in name resolution
+2026-10-11 23:23:32,339 - freqtrade.configuration.configuration - INFO - Using user-data directory: /tmp/tmp2nwmwl7t ...
+2026-10-11 23:23:32,339 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
+2026-10-11 23:23:32,339 - freqtrade.configuration.configuration - INFO - Using data directory: /tmp/tmp2nwmwl7t/data/kraken ...
+2026-10-11 23:23:32,340 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 23:23:32,342 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+2026-10-11 23:23:32,342 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 23:23:32,346 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+2026-10-11 23:23:32,346 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-11 23:23:32,347 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-11 23:23:32,347 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-11 23:23:32,347 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+2026-10-11 23:23:32,348 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+2026-10-11 23:23:32,348 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-11 23:23:32,348 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-11 23:23:32,348 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-11 23:23:32,348 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-11 23:23:32,349 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-11 23:23:32,349 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-11 23:23:32,349 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-11 23:23:32,349 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-11 23:23:32,349 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-11 23:23:32,350 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-11 23:23:32,350 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-11 23:23:32,350 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-11 23:23:32,350 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+2026-10-11 23:23:32,350 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-11 23:23:32,351 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+2026-10-11 23:23:32,351 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-11 23:23:32,351 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-11 23:23:32,351 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-11 23:23:32,351 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-11 23:23:32,352 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-11 23:23:32,352 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-11 23:23:32,352 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-11 23:23:32,352 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-11 23:23:32,352 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-11 23:23:32,353 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
 ok
-test_native_pending_limit_is_recovered_then_fills_after_restart (test_paper_engine.NativePaperEngineTests.test_native_pending_limit_is_recovered_then_fills_after_restart) ... 2026-10-11 23:14:40,845 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-10-11 23:14:40,845 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
-2026-10-11 23:14:40,846 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
-2026-10-11 23:14:40,848 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
-2026-10-11 23:14:40,850 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
-2026-10-11 23:14:40,856 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-10-11 23:14:40,857 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
-2026-10-11 23:14:40,857 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
-2026-10-11 23:14:40,859 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
-2026-10-11 23:14:40,861 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+test_native_pending_limit_is_recovered_then_fills_after_restart (test_paper_engine.NativePaperEngineTests.test_native_pending_limit_is_recovered_then_fills_after_restart) ... 2026-10-11 23:23:32,382 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:23:32,383 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:23:32,383 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-11 23:23:32,385 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-11 23:23:32,387 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-11 23:23:32,392 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:23:32,393 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:23:32,393 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-11 23:23:32,395 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-11 23:23:32,396 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
 ok
-test_cost_and_liquidity_invalidations (test_paper_risk.PaperCallbackTests.test_cost_and_liquidity_invalidations) ... 2026-10-11 23:14:40,898 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Spread or price movement exceeds cost budget
-2026-10-11 23:14:40,904 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient depth or excessive impact
-2026-10-11 23:14:40,910 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Crossed or invalid order book
-2026-10-11 23:14:40,916 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unknown or underestimated market fee
-2026-10-11 23:14:40,921 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unknown exchange minimums
-2026-10-11 23:14:40,926 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Stale order book
+test_cost_and_liquidity_invalidations (test_paper_risk.PaperCallbackTests.test_cost_and_liquidity_invalidations) ... 2026-10-11 23:23:32,431 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Spread or price movement exceeds cost budget
+2026-10-11 23:23:32,441 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient depth or excessive impact
+2026-10-11 23:23:32,449 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Crossed or invalid order book
+2026-10-11 23:23:32,454 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unknown or underestimated market fee
+2026-10-11 23:23:32,460 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unknown exchange minimums
+2026-10-11 23:23:32,464 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Stale order book
 ok
 test_credentials_modes_and_environment_overrides_fail_closed (test_paper_risk.PaperCallbackTests.test_credentials_modes_and_environment_overrides_fail_closed) ... ok
-test_gap_duplicate_future_stale_zero_volume_and_short_candles_block (test_paper_risk.PaperCallbackTests.test_gap_duplicate_future_stale_zero_volume_and_short_candles_block) ... 2026-10-11 23:14:40,970 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Insufficient warmup
-2026-10-11 23:14:40,971 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient warmup
-2026-10-11 23:14:40,973 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Timestamps duplicados ou fora de ordem
-2026-10-11 23:14:40,974 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Timestamps duplicados ou fora de ordem
-2026-10-11 23:14:40,981 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
-2026-10-11 23:14:40,986 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
-2026-10-11 23:14:40,991 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
-2026-10-11 23:14:40,996 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
-2026-10-11 23:14:41,001 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
-2026-10-11 23:14:41,006 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
-2026-10-11 23:14:41,007 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Insufficient warmup
-2026-10-11 23:14:41,007 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient warmup
-2026-10-11 23:14:41,013 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Invalid indicators
-2026-10-11 23:14:41,018 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Invalid indicators
+test_gap_duplicate_future_stale_zero_volume_and_short_candles_block (test_paper_risk.PaperCallbackTests.test_gap_duplicate_future_stale_zero_volume_and_short_candles_block) ... 2026-10-11 23:23:32,509 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Insufficient warmup
+2026-10-11 23:23:32,510 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient warmup
+2026-10-11 23:23:32,511 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Timestamps duplicados ou fora de ordem
+2026-10-11 23:23:32,513 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Timestamps duplicados ou fora de ordem
+2026-10-11 23:23:32,519 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-11 23:23:32,524 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-11 23:23:32,529 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-11 23:23:32,533 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-11 23:23:32,539 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-11 23:23:32,544 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-11 23:23:32,544 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Insufficient warmup
+2026-10-11 23:23:32,545 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient warmup
+2026-10-11 23:23:32,550 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Invalid indicators
+2026-10-11 23:23:32,555 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Invalid indicators
 ok
-test_halt_exits_and_restart_still_blocks_entries (test_paper_risk.PaperCallbackTests.test_halt_exits_and_restart_still_blocks_entries) ... 2026-10-11 23:14:41,041 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
-2026-10-11 23:14:41,058 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
+test_halt_exits_and_restart_still_blocks_entries (test_paper_risk.PaperCallbackTests.test_halt_exits_and_restart_still_blocks_entries) ... 2026-10-11 23:23:32,577 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
+2026-10-11 23:23:32,594 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
 ok
 test_quantity_precision_cannot_push_order_below_minimum (test_paper_risk.PaperCallbackTests.test_quantity_precision_cannot_push_order_below_minimum) ... ok
-test_risk_errors_never_fall_back_to_native_permissive_defaults (test_paper_risk.PaperCallbackTests.test_risk_errors_never_fall_back_to_native_permissive_defaults) ... 2026-10-11 23:14:41,103 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: RuntimeError
-2026-10-11 23:14:41,104 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: RuntimeError
-2026-10-11 23:14:41,104 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
+test_risk_errors_never_fall_back_to_native_permissive_defaults (test_paper_risk.PaperCallbackTests.test_risk_errors_never_fall_back_to_native_permissive_defaults) ... 2026-10-11 23:23:32,641 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: RuntimeError
+2026-10-11 23:23:32,641 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: RuntimeError
+2026-10-11 23:23:32,642 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
 ok
 test_signal_copy_matches_frozen_baseline (test_paper_risk.PaperCallbackTests.test_signal_copy_matches_frozen_baseline) ... ok
 test_valid_simulation_and_native_min_stake_clamp_rejection (test_paper_risk.PaperCallbackTests.test_valid_simulation_and_native_min_stake_clamp_rejection) ... ok
@@ -364,6 +264,6 @@ test_rsi_entry_boundaries (test_strategy.StrategyTests.test_rsi_entry_boundaries
 test_zero_volume_prevents_entry_and_exit (test_strategy.StrategyTests.test_zero_volume_prevents_entry_and_exit) ... ok
 
 ----------------------------------------------------------------------
-Ran 86 tests in 1.320s
+Ran 86 tests in 1.309s
 
 OK

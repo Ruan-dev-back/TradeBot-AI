@@ -59,7 +59,9 @@ class NativePaperEngineTests(unittest.TestCase):
 
     def test_native_paper_configuration_and_strategy_load_without_network(self):
         argv = ['trade', '--config', str(ROOT / 'user_data/config.paper.json'),
-                '--strategy', 'MultiAssetPaperStrategy', '--dry-run']
+                '--strategy', 'MultiAssetPaperStrategy', '--dry-run',
+                '--user-data-dir', self.temp.name,
+                '--strategy-path', str(ROOT / 'user_data/strategies')]
         config = Configuration(Arguments(argv).get_parsed_arg(), RunMode.DRY_RUN).get_config()
         strategy = StrategyResolver.load_strategy(config)
         validate_config_consistency(config)
@@ -120,7 +122,9 @@ class NativePaperEngineTests(unittest.TestCase):
         # Full native create_trade/get_entry_signal/execute_entry path. Fixtures never
         # enter user_data/tradesv3.paper.sqlite or the live paper process.
         argv = ['trade', '--config', str(ROOT / 'user_data/config.paper.json'),
-                '--strategy', 'MultiAssetPaperStrategy', '--dry-run']
+                '--strategy', 'MultiAssetPaperStrategy', '--dry-run',
+                '--user-data-dir', self.temp.name,
+                '--strategy-path', str(ROOT / 'user_data/strategies')]
         config = Configuration(Arguments(argv).get_parsed_arg(), RunMode.DRY_RUN).get_config()
         config['user_data_dir'] = Path(self.temp.name)
         config['datadir'] = Path(self.temp.name) / 'data'

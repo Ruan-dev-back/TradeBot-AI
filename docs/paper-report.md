@@ -120,6 +120,26 @@ curva marcada, pausas no replay, auditorias nativas dos candidatos e incerteza.
 Não foram otimizados parâmetros por esses resultados ou por2025. O planejamento
 completo e orçamento estão em `docs/development-framework.md`; ML segue fora.
 
+## Correção de isolamento dos testes no CI
+
+O primeiro push de integração (`50e0ce8`) teve CI remoto com falha, preservada em
+`ci-integration-failed.json`. O HTML público identifica o job de testes, mas seus
+logs completos exigem login e o endpoint público de logs respondeu404. Não foram
+extraídas credenciais do proxy para acessá-los.
+
+Uma cópia dos arquivos versionados em diretório temporário, sem novo checkout,
+reproduziu dois `PermissionError` ao tornar `user_data/data` somente leitura:
+`Configuration.get_config` tentava criar `/freqtrade/user_data/data/kraken` nos
+novos testes nativos. Localmente o diretório já existia, mascarando essa dependência.
+Os testes agora passam `--user-data-dir` temporário e `--strategy-path` explícito
+antes de carregar a configuração, preservando todas as asserções e o banco ativo.
+
+A mesma reprodução restritiva passou86 testes após a correção, e a suíte do
+checkout principal também passou86. Esses logs foram preservados em
+`ci-permissions-before.log` / `ci-permissions-after.log`. O resultado do CI remoto
+do commit corretivo será conferido pelo SHA exato na entrega; não confundir o
+status do primeiro push com o estado final da branch.
+
 ## Ambiente e operação
 
 As instruções de instalação/startup e o checkout final serão salvos no rascunho
