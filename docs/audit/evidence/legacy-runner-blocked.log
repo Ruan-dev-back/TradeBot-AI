@@ -1,0 +1,1 @@
+Holdout reservado: o fluxo histórico lê/adquire candles de fronteira após 2025-07-01 e pode sobrescrever resultados publicados. Use scripts/run_audit.py; nenhum holdout foi aberto.

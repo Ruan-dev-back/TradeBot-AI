@@ -1,19 +1,27 @@
 # Independente do Compose de pesquisa: usa apenas saldo fictício.
-# Não altere para modo real antes de auditoria, validação e aprovação explícita.
+# Serviço exclusivamente fictício; a entrada rejeita configuração financeira real.
 services:
   papertrade:
     image: freqtradeorg/freqtrade:stable@sha256:9d67afb8eb5f4e1210f4fb067efcbd5e005bd4f1c27f6f3888b8b9fc7f9b5199
     restart: unless-stopped
     working_dir: /freqtrade
-    entrypoint: ["freqtrade"]
-    command:
-      - trade
-      - --config
-      - /freqtrade/user_data/config.paper.json
-      - --strategy
-      - MultiAssetPaperStrategy
-      - --dry-run
+    entrypoint: ["python", "/freqtrade/scripts/paper_entrypoint.py"]
+    command: []  # Entrypoint fixa trade --dry-run e rejeita argumentos/overrides.
     volumes:
       - ./user_data:/freqtrade/user_data
       - ./scripts:/freqtrade/scripts:ro
+      - ./user_data/config.paper.json:/freqtrade/user_data/config.paper.json:ro
+      - ./user_data/strategies:/freqtrade/user_data/strategies:ro
+      - ./docs:/freqtrade/docs:ro
     stop_grace_period: 30s
+    healthcheck:
+      test: ["CMD", "python", "/freqtrade/scripts/paper_status.py"]
+      interval: 30s
+      timeout: 5s
+      start_period: 45s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -1,0 +1,1255 @@
+papertrade-1  | 2026-10-11 19:30:44,712 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:30:45,094 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:30:46,917 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:30:46,917 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:30:46,919 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:30:46,920 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:30:46,920 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:30:46,920 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:30:46,921 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:30:46,921 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:30:46,921 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:30:46,921 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:30:46,931 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:30:46,932 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:30:46,932 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:30:46,933 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:30:46,936 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:30:46,937 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:30:46,937 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:30:46,938 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:30:46,938 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:30:46,939 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem', 
+papertrade-1  | 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:30:46,941 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:30:48,998 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:30:49,022 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:30:49,023 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:30:49,024 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:30:49,024 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:30:49,024 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:30:49,025 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:30:49,025 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:30:49,025 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:30:49,025 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:30:49,026 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:30:49,026 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:30:49,026 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:30:49,026 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:30:49,026 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:30:49,027 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:30:49,027 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:30:49,027 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:30:49,027 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:30:49,028 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:30:49,028 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:30:49,028 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:30:49,028 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:30:49,029 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:30:49,029 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:30:49,029 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:30:49,029 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:30:49,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:30:49,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:30:49,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:30:49,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:30:49,031 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:30:49,034 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'token' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['telegram']:
+papertrade-1  |     {'description': 'Telegram settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Enable Telegram '
+papertrade-1  |                                                'notifications.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'token': {'description': 'Telegram bot token.',
+papertrade-1  |                               'type': 'string'},
+papertrade-1  |                     'chat_id': {'description': 'Telegram chat or group ID. '
+papertrade-1  |                                                'Recommended to be set via '
+papertrade-1  |                                                'environment variable '
+papertrade-1  |                                                'FREQTRADE__TELEGRAM__CHAT_ID',
+papertrade-1  |                                 'type': 'string'},
+papertrade-1  |                     'topic_id': {'description': 'Telegram topic ID - only '
+papertrade-1  |                                                 'applicable for group '
+papertrade-1  |                                                 'chats. Recommended to be '
+papertrade-1  |                                                 'set via environment '
+papertrade-1  |                                                 'variable '
+papertrade-1  |                                                 'FREQTRADE__TELEGRAM__TOPIC_ID',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'authorized_users': {'description': 'Authorized users '
+papertrade-1  |                                                         'for the bot.',
+papertrade-1  |                                          'type': 'array',
+papertrade-1  |                                          'items': {'type': 'string'},
+papertrade-1  |                                          'uniqueItems': True},
+papertrade-1  |                     'allow_custom_messages': {'description': 'Allow '
+papertrade-1  |                                                              'sending '
+papertrade-1  |                                                              'custom '
+papertrade-1  |                                                              'messages '
+papertrade-1  |                                                              'from the '
+papertrade-1  |                                                              'Strategy.',
+papertrade-1  |                                               'type': 'boolean',
+papertrade-1  |                                               'default': True},
+papertrade-1  |                     'balance_dust_level': {'description': 'Minimum balance '
+papertrade-1  |                                                           'level to '
+papertrade-1  |                                                           'consider as '
+papertrade-1  |                                                           'dust.',
+papertrade-1  |                                            'type': 'number',
+papertrade-1  |                                            'minimum': 0.0},
+papertrade-1  |                     'notification_settings': {'description': 'Settings for '
+papertrade-1  |                                                              'different '
+papertrade-1  |                                                              'types of '
+papertrade-1  |                                                              'notifications.',
+papertrade-1  |                                               'type': 'object',
+papertrade-1  |                                               'default': {'entry_fill': 'off',
+papertrade-1  |                                                           'exit_fill': 'on',
+papertrade-1  |                                                           'protection_trigger': 'on',
+papertrade-1  |                                                           'protection_trigger_global': 'on',
+papertrade-1  |                                                           'liquidation_warning': 'on'},
+papertrade-1  |                                               'properties': {'status': {'description': 'Telegram '
+papertrade-1  |                                                                                        'setting '
+papertrade-1  |                                                                                        'for '
+papertrade-1  |                                                                                        'status '
+papertrade-1  |                                                                                        'updates.',
+papertrade-1  |                                                                         'type': 'string',
+papertrade-1  |                                                                         'enum': ['on',
+papertrade-1  |                                                                                  'off',
+papertrade-1  |                                                                                  'silent']},
+papertrade-1  |                                                              'warning': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'warnings.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'startup': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'startup '
+papertrade-1  |                                                                                         'messages.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'entry': {'description': 'Telegram '
+papertrade-1  |                                                                                       'setting '
+papertrade-1  |                                                                                       'for '
+papertrade-1  |                                                                                       'entry '
+papertrade-1  |                                                                                       'signals.',
+papertrade-1  |                                                                        'type': 'string',
+papertrade-1  |                                                                        'enum': ['on',
+papertrade-1  |                                                                                 'off',
+papertrade-1  |                                                                                 'silent']},
+papertrade-1  |                                                              'entry_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                            'setting '
+papertrade-1  |                                                                                            'for '
+papertrade-1  |                                                                                            'entry '
+papertrade-1  |                                                                                            'fill '
+papertrade-1  |                                                                                            'signals.',
+papertrade-1  |                                                                             'type': 'string',
+papertrade-1  |                                                                             'enum': ['on',
+papertrade-1  |                                                                                      'off',
+papertrade-1  |                                                                                      'silent'],
+papertrade-1  |                                                                             'default': 'off'},
+papertrade-1  |                                                              'entry_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                              'setting '
+papertrade-1  |                                                                                              'for '
+papertrade-1  |                                                                                              'entry '
+papertrade-1  |                                                                                              'cancel '
+papertrade-1  |                                                                                              'signals.',
+papertrade-1  |                                                                               'type': 'string',
+papertrade-1  |                                                                               'enum': ['on',
+papertrade-1  |                                                                                        'off',
+papertrade-1  |                                                                                        'silent']},
+papertrade-1  |                                                              'exit': {'description': 'Telegram '
+papertrade-1  |                                                                                      'setting '
+papertrade-1  |                                                                                      'for '
+papertrade-1  |                                                                                      'exit '
+papertrade-1  |                                                                                      'signals.',
+papertrade-1  |                                                                       'type': ['string',
+papertrade-1  |                                                                                'object'],
+papertrade-1  |                                                                       'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                'enum': ['on',
+papertrade-1  |                                                                                                         'off',
+papertrade-1  |                                                                                                         'silent']}},
+papertrade-1  |                                                              'exit_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                           'setting '
+papertrade-1  |                                                                                           'for '
+papertrade-1  |                                                                                           'exit '
+papertrade-1  |                                                                                           'fill '
+papertrade-1  |                                                                                           'signals.',
+papertrade-1  |                                                                            'type': ['string',
+papertrade-1  |                                                                                     'object'],
+papertrade-1  |                                                                            'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                     'enum': ['on',
+papertrade-1  |                                                                                                              'off',
+papertrade-1  |                                                                                                              'silent']},
+papertrade-1  |                                                                            'default': 'on'},
+papertrade-1  |                                                              'exit_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                             'setting '
+papertrade-1  |                                                                                             'for '
+papertrade-1  |                                                                                             'exit '
+papertrade-1  |                                                                                             'cancel '
+papertrade-1  |                                                                                             'signals.',
+papertrade-1  |                                                                              'type': 'string',
+papertrade-1  |                                                                              'enum': ['on',
+papertrade-1  |                                                                                       'off',
+papertrade-1  |                                                                                       'silent']},
+papertrade-1  |                                                              'protection_trigger': {'description': 'Telegram '
+papertrade-1  |                                                                                                    'setting '
+papertrade-1  |                                                                                                    'for '
+papertrade-1  |                                                                                                    'protection '
+papertrade-1  |                                                                                                    'triggers.',
+papertrade-1  |                                                                                     'type': 'string',
+papertrade-1  |                                                                                     'enum': ['on',
+papertrade-1  |                                                                                              'off',
+papertrade-1  |                                                                                              'silent'],
+papertrade-1  |                                                                                     'default': 'on'},
+papertrade-1  |                                                              'protection_trigger_global': {'description': 'Telegram '
+papertrade-1  |                                                                                                           'setting '
+papertrade-1  |                                                                                                           'for '
+papertrade-1  |                                                                                                           'global '
+papertrade-1  |                                                                                                           'protection '
+papertrade-1  |                                                                                                           'triggers.',
+papertrade-1  |                                                                                            'type': 'string',
+papertrade-1  |                                                                                            'enum': ['on',
+papertrade-1  |                                                                                                     'off',
+papertrade-1  |                                                                                                     'silent'],
+papertrade-1  |                                                                                            'default': 'on'},
+papertrade-1  |                                                              'liquidation_warning': {'description': 'Telegram '
+papertrade-1  |                                                                                                     'setting '
+papertrade-1  |                                                                                                     'for '
+papertrade-1  |                                                                                                     'liquidation '
+papertrade-1  |                                                                                                     'warnings.',
+papertrade-1  |                                                                                      'type': 'string',
+papertrade-1  |                                                                                      'enum': ['on',
+papertrade-1  |                                                                                               'off',
+papertrade-1  |                                                                                               'silent'],
+papertrade-1  |                                                                                      'default': 'on'}}},
+papertrade-1  |                     'reload': {'description': 'Add Reload button to '
+papertrade-1  |                                               'certain messages.',
+papertrade-1  |                                'type': 'boolean'}},
+papertrade-1  |      'required': ['enabled', 'token', 'chat_id']}
+papertrade-1  | 
+papertrade-1  | On instance['telegram']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'allow_custom_messages': True,
+papertrade-1  |      'notification_settings': {'entry_fill': 'off',
+papertrade-1  |                                'exit_fill': 'on',
+papertrade-1  |                                'protection_trigger': 'on',
+papertrade-1  |                                'protection_trigger_global': 'on',
+papertrade-1  |                                'liquidation_warning': 'on'}}
+papertrade-1  | 2026-10-11 19:30:49,038 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:30:49,290 - freqtrade - ERROR - Configuration error: 'token' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.
+papertrade-1  | 2026-10-11 19:30:51,058 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:30:51,385 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:30:53,156 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:30:53,157 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:30:53,159 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:30:53,159 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:30:53,160 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:30:53,160 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:30:53,160 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:30:53,160 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:30:53,161 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:30:53,161 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:30:53,170 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:30:53,170 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:30:53,171 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:30:53,171 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:30:53,175 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:30:53,175 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:30:53,176 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:30:53,176 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:30:53,176 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:30:53,178 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem', 
+papertrade-1  | 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:30:53,179 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:30:55,202 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:30:55,227 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:30:55,228 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:30:55,228 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:30:55,229 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:30:55,229 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:30:55,229 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:30:55,229 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:30:55,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:30:55,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:30:55,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:30:55,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:30:55,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:30:55,231 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:30:55,231 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:30:55,231 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:30:55,231 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:30:55,231 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:30:55,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:30:55,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:30:55,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:30:55,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:30:55,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:30:55,233 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:30:55,233 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:30:55,233 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:30:55,233 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:30:55,233 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:30:55,234 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:30:55,234 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:30:55,234 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:30:55,234 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:30:55,237 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'token' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['telegram']:
+papertrade-1  |     {'description': 'Telegram settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Enable Telegram '
+papertrade-1  |                                                'notifications.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'token': {'description': 'Telegram bot token.',
+papertrade-1  |                               'type': 'string'},
+papertrade-1  |                     'chat_id': {'description': 'Telegram chat or group ID. '
+papertrade-1  |                                                'Recommended to be set via '
+papertrade-1  |                                                'environment variable '
+papertrade-1  |                                                'FREQTRADE__TELEGRAM__CHAT_ID',
+papertrade-1  |                                 'type': 'string'},
+papertrade-1  |                     'topic_id': {'description': 'Telegram topic ID - only '
+papertrade-1  |                                                 'applicable for group '
+papertrade-1  |                                                 'chats. Recommended to be '
+papertrade-1  |                                                 'set via environment '
+papertrade-1  |                                                 'variable '
+papertrade-1  |                                                 'FREQTRADE__TELEGRAM__TOPIC_ID',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'authorized_users': {'description': 'Authorized users '
+papertrade-1  |                                                         'for the bot.',
+papertrade-1  |                                          'type': 'array',
+papertrade-1  |                                          'items': {'type': 'string'},
+papertrade-1  |                                          'uniqueItems': True},
+papertrade-1  |                     'allow_custom_messages': {'description': 'Allow '
+papertrade-1  |                                                              'sending '
+papertrade-1  |                                                              'custom '
+papertrade-1  |                                                              'messages '
+papertrade-1  |                                                              'from the '
+papertrade-1  |                                                              'Strategy.',
+papertrade-1  |                                               'type': 'boolean',
+papertrade-1  |                                               'default': True},
+papertrade-1  |                     'balance_dust_level': {'description': 'Minimum balance '
+papertrade-1  |                                                           'level to '
+papertrade-1  |                                                           'consider as '
+papertrade-1  |                                                           'dust.',
+papertrade-1  |                                            'type': 'number',
+papertrade-1  |                                            'minimum': 0.0},
+papertrade-1  |                     'notification_settings': {'description': 'Settings for '
+papertrade-1  |                                                              'different '
+papertrade-1  |                                                              'types of '
+papertrade-1  |                                                              'notifications.',
+papertrade-1  |                                               'type': 'object',
+papertrade-1  |                                               'default': {'entry_fill': 'off',
+papertrade-1  |                                                           'exit_fill': 'on',
+papertrade-1  |                                                           'protection_trigger': 'on',
+papertrade-1  |                                                           'protection_trigger_global': 'on',
+papertrade-1  |                                                           'liquidation_warning': 'on'},
+papertrade-1  |                                               'properties': {'status': {'description': 'Telegram '
+papertrade-1  |                                                                                        'setting '
+papertrade-1  |                                                                                        'for '
+papertrade-1  |                                                                                        'status '
+papertrade-1  |                                                                                        'updates.',
+papertrade-1  |                                                                         'type': 'string',
+papertrade-1  |                                                                         'enum': ['on',
+papertrade-1  |                                                                                  'off',
+papertrade-1  |                                                                                  'silent']},
+papertrade-1  |                                                              'warning': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'warnings.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'startup': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'startup '
+papertrade-1  |                                                                                         'messages.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'entry': {'description': 'Telegram '
+papertrade-1  |                                                                                       'setting '
+papertrade-1  |                                                                                       'for '
+papertrade-1  |                                                                                       'entry '
+papertrade-1  |                                                                                       'signals.',
+papertrade-1  |                                                                        'type': 'string',
+papertrade-1  |                                                                        'enum': ['on',
+papertrade-1  |                                                                                 'off',
+papertrade-1  |                                                                                 'silent']},
+papertrade-1  |                                                              'entry_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                            'setting '
+papertrade-1  |                                                                                            'for '
+papertrade-1  |                                                                                            'entry '
+papertrade-1  |                                                                                            'fill '
+papertrade-1  |                                                                                            'signals.',
+papertrade-1  |                                                                             'type': 'string',
+papertrade-1  |                                                                             'enum': ['on',
+papertrade-1  |                                                                                      'off',
+papertrade-1  |                                                                                      'silent'],
+papertrade-1  |                                                                             'default': 'off'},
+papertrade-1  |                                                              'entry_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                              'setting '
+papertrade-1  |                                                                                              'for '
+papertrade-1  |                                                                                              'entry '
+papertrade-1  |                                                                                              'cancel '
+papertrade-1  |                                                                                              'signals.',
+papertrade-1  |                                                                               'type': 'string',
+papertrade-1  |                                                                               'enum': ['on',
+papertrade-1  |                                                                                        'off',
+papertrade-1  |                                                                                        'silent']},
+papertrade-1  |                                                              'exit': {'description': 'Telegram '
+papertrade-1  |                                                                                      'setting '
+papertrade-1  |                                                                                      'for '
+papertrade-1  |                                                                                      'exit '
+papertrade-1  |                                                                                      'signals.',
+papertrade-1  |                                                                       'type': ['string',
+papertrade-1  |                                                                                'object'],
+papertrade-1  |                                                                       'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                'enum': ['on',
+papertrade-1  |                                                                                                         'off',
+papertrade-1  |                                                                                                         'silent']}},
+papertrade-1  |                                                              'exit_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                           'setting '
+papertrade-1  |                                                                                           'for '
+papertrade-1  |                                                                                           'exit '
+papertrade-1  |                                                                                           'fill '
+papertrade-1  |                                                                                           'signals.',
+papertrade-1  |                                                                            'type': ['string',
+papertrade-1  |                                                                                     'object'],
+papertrade-1  |                                                                            'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                     'enum': ['on',
+papertrade-1  |                                                                                                              'off',
+papertrade-1  |                                                                                                              'silent']},
+papertrade-1  |                                                                            'default': 'on'},
+papertrade-1  |                                                              'exit_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                             'setting '
+papertrade-1  |                                                                                             'for '
+papertrade-1  |                                                                                             'exit '
+papertrade-1  |                                                                                             'cancel '
+papertrade-1  |                                                                                             'signals.',
+papertrade-1  |                                                                              'type': 'string',
+papertrade-1  |                                                                              'enum': ['on',
+papertrade-1  |                                                                                       'off',
+papertrade-1  |                                                                                       'silent']},
+papertrade-1  |                                                              'protection_trigger': {'description': 'Telegram '
+papertrade-1  |                                                                                                    'setting '
+papertrade-1  |                                                                                                    'for '
+papertrade-1  |                                                                                                    'protection '
+papertrade-1  |                                                                                                    'triggers.',
+papertrade-1  |                                                                                     'type': 'string',
+papertrade-1  |                                                                                     'enum': ['on',
+papertrade-1  |                                                                                              'off',
+papertrade-1  |                                                                                              'silent'],
+papertrade-1  |                                                                                     'default': 'on'},
+papertrade-1  |                                                              'protection_trigger_global': {'description': 'Telegram '
+papertrade-1  |                                                                                                           'setting '
+papertrade-1  |                                                                                                           'for '
+papertrade-1  |                                                                                                           'global '
+papertrade-1  |                                                                                                           'protection '
+papertrade-1  |                                                                                                           'triggers.',
+papertrade-1  |                                                                                            'type': 'string',
+papertrade-1  |                                                                                            'enum': ['on',
+papertrade-1  |                                                                                                     'off',
+papertrade-1  |                                                                                                     'silent'],
+papertrade-1  |                                                                                            'default': 'on'},
+papertrade-1  |                                                              'liquidation_warning': {'description': 'Telegram '
+papertrade-1  |                                                                                                     'setting '
+papertrade-1  |                                                                                                     'for '
+papertrade-1  |                                                                                                     'liquidation '
+papertrade-1  |                                                                                                     'warnings.',
+papertrade-1  |                                                                                      'type': 'string',
+papertrade-1  |                                                                                      'enum': ['on',
+papertrade-1  |                                                                                               'off',
+papertrade-1  |                                                                                               'silent'],
+papertrade-1  |                                                                                      'default': 'on'}}},
+papertrade-1  |                     'reload': {'description': 'Add Reload button to '
+papertrade-1  |                                               'certain messages.',
+papertrade-1  |                                'type': 'boolean'}},
+papertrade-1  |      'required': ['enabled', 'token', 'chat_id']}
+papertrade-1  | 
+papertrade-1  | On instance['telegram']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'allow_custom_messages': True,
+papertrade-1  |      'notification_settings': {'entry_fill': 'off',
+papertrade-1  |                                'exit_fill': 'on',
+papertrade-1  |                                'protection_trigger': 'on',
+papertrade-1  |                                'protection_trigger_global': 'on',
+papertrade-1  |                                'liquidation_warning': 'on'}}
+papertrade-1  | 2026-10-11 19:30:55,241 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:30:55,493 - freqtrade - ERROR - Configuration error: 'token' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.
+papertrade-1  | 2026-10-11 19:30:57,205 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:30:57,522 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:30:59,305 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:30:59,305 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:30:59,307 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:30:59,308 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:30:59,308 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:30:59,309 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:30:59,309 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:30:59,309 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:30:59,309 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:30:59,310 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:30:59,318 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:30:59,318 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:30:59,319 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:30:59,320 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:30:59,324 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:30:59,324 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:30:59,325 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:30:59,325 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:30:59,325 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:30:59,327 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem', 
+papertrade-1  | 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:30:59,329 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:31:01,005 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:31:01,027 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:31:01,028 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:31:01,028 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:31:01,029 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:31:01,029 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:31:01,029 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:31:01,029 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:31:01,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:31:01,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:31:01,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:31:01,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:31:01,030 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:31:01,031 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:31:01,031 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:31:01,031 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:31:01,031 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:31:01,031 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:31:01,032 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:31:01,032 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:31:01,032 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:31:01,032 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:31:01,032 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:31:01,032 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:31:01,033 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:31:01,033 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:31:01,033 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:31:01,033 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:31:01,033 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:31:01,034 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:31:01,034 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:31:01,034 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:31:01,037 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'token' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['telegram']:
+papertrade-1  |     {'description': 'Telegram settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Enable Telegram '
+papertrade-1  |                                                'notifications.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'token': {'description': 'Telegram bot token.',
+papertrade-1  |                               'type': 'string'},
+papertrade-1  |                     'chat_id': {'description': 'Telegram chat or group ID. '
+papertrade-1  |                                                'Recommended to be set via '
+papertrade-1  |                                                'environment variable '
+papertrade-1  |                                                'FREQTRADE__TELEGRAM__CHAT_ID',
+papertrade-1  |                                 'type': 'string'},
+papertrade-1  |                     'topic_id': {'description': 'Telegram topic ID - only '
+papertrade-1  |                                                 'applicable for group '
+papertrade-1  |                                                 'chats. Recommended to be '
+papertrade-1  |                                                 'set via environment '
+papertrade-1  |                                                 'variable '
+papertrade-1  |                                                 'FREQTRADE__TELEGRAM__TOPIC_ID',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'authorized_users': {'description': 'Authorized users '
+papertrade-1  |                                                         'for the bot.',
+papertrade-1  |                                          'type': 'array',
+papertrade-1  |                                          'items': {'type': 'string'},
+papertrade-1  |                                          'uniqueItems': True},
+papertrade-1  |                     'allow_custom_messages': {'description': 'Allow '
+papertrade-1  |                                                              'sending '
+papertrade-1  |                                                              'custom '
+papertrade-1  |                                                              'messages '
+papertrade-1  |                                                              'from the '
+papertrade-1  |                                                              'Strategy.',
+papertrade-1  |                                               'type': 'boolean',
+papertrade-1  |                                               'default': True},
+papertrade-1  |                     'balance_dust_level': {'description': 'Minimum balance '
+papertrade-1  |                                                           'level to '
+papertrade-1  |                                                           'consider as '
+papertrade-1  |                                                           'dust.',
+papertrade-1  |                                            'type': 'number',
+papertrade-1  |                                            'minimum': 0.0},
+papertrade-1  |                     'notification_settings': {'description': 'Settings for '
+papertrade-1  |                                                              'different '
+papertrade-1  |                                                              'types of '
+papertrade-1  |                                                              'notifications.',
+papertrade-1  |                                               'type': 'object',
+papertrade-1  |                                               'default': {'entry_fill': 'off',
+papertrade-1  |                                                           'exit_fill': 'on',
+papertrade-1  |                                                           'protection_trigger': 'on',
+papertrade-1  |                                                           'protection_trigger_global': 'on',
+papertrade-1  |                                                           'liquidation_warning': 'on'},
+papertrade-1  |                                               'properties': {'status': {'description': 'Telegram '
+papertrade-1  |                                                                                        'setting '
+papertrade-1  |                                                                                        'for '
+papertrade-1  |                                                                                        'status '
+papertrade-1  |                                                                                        'updates.',
+papertrade-1  |                                                                         'type': 'string',
+papertrade-1  |                                                                         'enum': ['on',
+papertrade-1  |                                                                                  'off',
+papertrade-1  |                                                                                  'silent']},
+papertrade-1  |                                                              'warning': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'warnings.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'startup': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'startup '
+papertrade-1  |                                                                                         'messages.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'entry': {'description': 'Telegram '
+papertrade-1  |                                                                                       'setting '
+papertrade-1  |                                                                                       'for '
+papertrade-1  |                                                                                       'entry '
+papertrade-1  |                                                                                       'signals.',
+papertrade-1  |                                                                        'type': 'string',
+papertrade-1  |                                                                        'enum': ['on',
+papertrade-1  |                                                                                 'off',
+papertrade-1  |                                                                                 'silent']},
+papertrade-1  |                                                              'entry_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                            'setting '
+papertrade-1  |                                                                                            'for '
+papertrade-1  |                                                                                            'entry '
+papertrade-1  |                                                                                            'fill '
+papertrade-1  |                                                                                            'signals.',
+papertrade-1  |                                                                             'type': 'string',
+papertrade-1  |                                                                             'enum': ['on',
+papertrade-1  |                                                                                      'off',
+papertrade-1  |                                                                                      'silent'],
+papertrade-1  |                                                                             'default': 'off'},
+papertrade-1  |                                                              'entry_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                              'setting '
+papertrade-1  |                                                                                              'for '
+papertrade-1  |                                                                                              'entry '
+papertrade-1  |                                                                                              'cancel '
+papertrade-1  |                                                                                              'signals.',
+papertrade-1  |                                                                               'type': 'string',
+papertrade-1  |                                                                               'enum': ['on',
+papertrade-1  |                                                                                        'off',
+papertrade-1  |                                                                                        'silent']},
+papertrade-1  |                                                              'exit': {'description': 'Telegram '
+papertrade-1  |                                                                                      'setting '
+papertrade-1  |                                                                                      'for '
+papertrade-1  |                                                                                      'exit '
+papertrade-1  |                                                                                      'signals.',
+papertrade-1  |                                                                       'type': ['string',
+papertrade-1  |                                                                                'object'],
+papertrade-1  |                                                                       'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                'enum': ['on',
+papertrade-1  |                                                                                                         'off',
+papertrade-1  |                                                                                                         'silent']}},
+papertrade-1  |                                                              'exit_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                           'setting '
+papertrade-1  |                                                                                           'for '
+papertrade-1  |                                                                                           'exit '
+papertrade-1  |                                                                                           'fill '
+papertrade-1  |                                                                                           'signals.',
+papertrade-1  |                                                                            'type': ['string',
+papertrade-1  |                                                                                     'object'],
+papertrade-1  |                                                                            'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                     'enum': ['on',
+papertrade-1  |                                                                                                              'off',
+papertrade-1  |                                                                                                              'silent']},
+papertrade-1  |                                                                            'default': 'on'},
+papertrade-1  |                                                              'exit_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                             'setting '
+papertrade-1  |                                                                                             'for '
+papertrade-1  |                                                                                             'exit '
+papertrade-1  |                                                                                             'cancel '
+papertrade-1  |                                                                                             'signals.',
+papertrade-1  |                                                                              'type': 'string',
+papertrade-1  |                                                                              'enum': ['on',
+papertrade-1  |                                                                                       'off',
+papertrade-1  |                                                                                       'silent']},
+papertrade-1  |                                                              'protection_trigger': {'description': 'Telegram '
+papertrade-1  |                                                                                                    'setting '
+papertrade-1  |                                                                                                    'for '
+papertrade-1  |                                                                                                    'protection '
+papertrade-1  |                                                                                                    'triggers.',
+papertrade-1  |                                                                                     'type': 'string',
+papertrade-1  |                                                                                     'enum': ['on',
+papertrade-1  |                                                                                              'off',
+papertrade-1  |                                                                                              'silent'],
+papertrade-1  |                                                                                     'default': 'on'},
+papertrade-1  |                                                              'protection_trigger_global': {'description': 'Telegram '
+papertrade-1  |                                                                                                           'setting '
+papertrade-1  |                                                                                                           'for '
+papertrade-1  |                                                                                                           'global '
+papertrade-1  |                                                                                                           'protection '
+papertrade-1  |                                                                                                           'triggers.',
+papertrade-1  |                                                                                            'type': 'string',
+papertrade-1  |                                                                                            'enum': ['on',
+papertrade-1  |                                                                                                     'off',
+papertrade-1  |                                                                                                     'silent'],
+papertrade-1  |                                                                                            'default': 'on'},
+papertrade-1  |                                                              'liquidation_warning': {'description': 'Telegram '
+papertrade-1  |                                                                                                     'setting '
+papertrade-1  |                                                                                                     'for '
+papertrade-1  |                                                                                                     'liquidation '
+papertrade-1  |                                                                                                     'warnings.',
+papertrade-1  |                                                                                      'type': 'string',
+papertrade-1  |                                                                                      'enum': ['on',
+papertrade-1  |                                                                                               'off',
+papertrade-1  |                                                                                               'silent'],
+papertrade-1  |                                                                                      'default': 'on'}}},
+papertrade-1  |                     'reload': {'description': 'Add Reload button to '
+papertrade-1  |                                               'certain messages.',
+papertrade-1  |                                'type': 'boolean'}},
+papertrade-1  |      'required': ['enabled', 'token', 'chat_id']}
+papertrade-1  | 
+papertrade-1  | On instance['telegram']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'allow_custom_messages': True,
+papertrade-1  |      'notification_settings': {'entry_fill': 'off',
+papertrade-1  |                                'exit_fill': 'on',
+papertrade-1  |                                'protection_trigger': 'on',
+papertrade-1  |                                'protection_trigger_global': 'on',
+papertrade-1  |                                'liquidation_warning': 'on'}}
+papertrade-1  | 2026-10-11 19:31:01,041 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:31:01,292 - freqtrade - ERROR - Configuration error: 'token' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.
+papertrade-1  | 2026-10-11 19:31:03,255 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:31:03,594 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:31:05,396 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:31:05,396 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:31:05,398 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:31:05,399 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:31:05,399 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:31:05,400 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:31:05,400 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:31:05,400 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:31:05,400 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:31:05,400 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:31:05,410 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:31:05,410 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:31:05,411 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:31:05,412 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:31:05,417 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:31:05,417 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:31:05,418 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:31:05,418 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:31:05,418 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:31:05,420 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem', 
+papertrade-1  | 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:31:05,422 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:31:07,524 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:31:07,550 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:31:07,551 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:31:07,552 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:31:07,552 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:31:07,552 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:31:07,553 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:31:07,553 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:31:07,553 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:31:07,553 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:31:07,553 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:31:07,554 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:31:07,554 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:31:07,554 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:31:07,554 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:31:07,554 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:31:07,555 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:31:07,555 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:31:07,555 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:31:07,555 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:31:07,555 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:31:07,556 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:31:07,556 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:31:07,556 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:31:07,557 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:31:07,557 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:31:07,557 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:31:07,558 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:31:07,558 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:31:07,558 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:31:07,559 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:31:07,559 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:31:07,563 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'token' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['telegram']:
+papertrade-1  |     {'description': 'Telegram settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Enable Telegram '
+papertrade-1  |                                                'notifications.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'token': {'description': 'Telegram bot token.',
+papertrade-1  |                               'type': 'string'},
+papertrade-1  |                     'chat_id': {'description': 'Telegram chat or group ID. '
+papertrade-1  |                                                'Recommended to be set via '
+papertrade-1  |                                                'environment variable '
+papertrade-1  |                                                'FREQTRADE__TELEGRAM__CHAT_ID',
+papertrade-1  |                                 'type': 'string'},
+papertrade-1  |                     'topic_id': {'description': 'Telegram topic ID - only '
+papertrade-1  |                                                 'applicable for group '
+papertrade-1  |                                                 'chats. Recommended to be '
+papertrade-1  |                                                 'set via environment '
+papertrade-1  |                                                 'variable '
+papertrade-1  |                                                 'FREQTRADE__TELEGRAM__TOPIC_ID',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'authorized_users': {'description': 'Authorized users '
+papertrade-1  |                                                         'for the bot.',
+papertrade-1  |                                          'type': 'array',
+papertrade-1  |                                          'items': {'type': 'string'},
+papertrade-1  |                                          'uniqueItems': True},
+papertrade-1  |                     'allow_custom_messages': {'description': 'Allow '
+papertrade-1  |                                                              'sending '
+papertrade-1  |                                                              'custom '
+papertrade-1  |                                                              'messages '
+papertrade-1  |                                                              'from the '
+papertrade-1  |                                                              'Strategy.',
+papertrade-1  |                                               'type': 'boolean',
+papertrade-1  |                                               'default': True},
+papertrade-1  |                     'balance_dust_level': {'description': 'Minimum balance '
+papertrade-1  |                                                           'level to '
+papertrade-1  |                                                           'consider as '
+papertrade-1  |                                                           'dust.',
+papertrade-1  |                                            'type': 'number',
+papertrade-1  |                                            'minimum': 0.0},
+papertrade-1  |                     'notification_settings': {'description': 'Settings for '
+papertrade-1  |                                                              'different '
+papertrade-1  |                                                              'types of '
+papertrade-1  |                                                              'notifications.',
+papertrade-1  |                                               'type': 'object',
+papertrade-1  |                                               'default': {'entry_fill': 'off',
+papertrade-1  |                                                           'exit_fill': 'on',
+papertrade-1  |                                                           'protection_trigger': 'on',
+papertrade-1  |                                                           'protection_trigger_global': 'on',
+papertrade-1  |                                                           'liquidation_warning': 'on'},
+papertrade-1  |                                               'properties': {'status': {'description': 'Telegram '
+papertrade-1  |                                                                                        'setting '
+papertrade-1  |                                                                                        'for '
+papertrade-1  |                                                                                        'status '
+papertrade-1  |                                                                                        'updates.',
+papertrade-1  |                                                                         'type': 'string',
+papertrade-1  |                                                                         'enum': ['on',
+papertrade-1  |                                                                                  'off',
+papertrade-1  |                                                                                  'silent']},
+papertrade-1  |                                                              'warning': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'warnings.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'startup': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'startup '
+papertrade-1  |                                                                                         'messages.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'entry': {'description': 'Telegram '
+papertrade-1  |                                                                                       'setting '
+papertrade-1  |                                                                                       'for '
+papertrade-1  |                                                                                       'entry '
+papertrade-1  |                                                                                       'signals.',
+papertrade-1  |                                                                        'type': 'string',
+papertrade-1  |                                                                        'enum': ['on',
+papertrade-1  |                                                                                 'off',
+papertrade-1  |                                                                                 'silent']},
+papertrade-1  |                                                              'entry_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                            'setting '
+papertrade-1  |                                                                                            'for '
+papertrade-1  |                                                                                            'entry '
+papertrade-1  |                                                                                            'fill '
+papertrade-1  |                                                                                            'signals.',
+papertrade-1  |                                                                             'type': 'string',
+papertrade-1  |                                                                             'enum': ['on',
+papertrade-1  |                                                                                      'off',
+papertrade-1  |                                                                                      'silent'],
+papertrade-1  |                                                                             'default': 'off'},
+papertrade-1  |                                                              'entry_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                              'setting '
+papertrade-1  |                                                                                              'for '
+papertrade-1  |                                                                                              'entry '
+papertrade-1  |                                                                                              'cancel '
+papertrade-1  |                                                                                              'signals.',
+papertrade-1  |                                                                               'type': 'string',
+papertrade-1  |                                                                               'enum': ['on',
+papertrade-1  |                                                                                        'off',
+papertrade-1  |                                                                                        'silent']},
+papertrade-1  |                                                              'exit': {'description': 'Telegram '
+papertrade-1  |                                                                                      'setting '
+papertrade-1  |                                                                                      'for '
+papertrade-1  |                                                                                      'exit '
+papertrade-1  |                                                                                      'signals.',
+papertrade-1  |                                                                       'type': ['string',
+papertrade-1  |                                                                                'object'],
+papertrade-1  |                                                                       'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                'enum': ['on',
+papertrade-1  |                                                                                                         'off',
+papertrade-1  |                                                                                                         'silent']}},
+papertrade-1  |                                                              'exit_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                           'setting '
+papertrade-1  |                                                                                           'for '
+papertrade-1  |                                                                                           'exit '
+papertrade-1  |                                                                                           'fill '
+papertrade-1  |                                                                                           'signals.',
+papertrade-1  |                                                                            'type': ['string',
+papertrade-1  |                                                                                     'object'],
+papertrade-1  |                                                                            'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                     'enum': ['on',
+papertrade-1  |                                                                                                              'off',
+papertrade-1  |                                                                                                              'silent']},
+papertrade-1  |                                                                            'default': 'on'},
+papertrade-1  |                                                              'exit_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                             'setting '
+papertrade-1  |                                                                                             'for '
+papertrade-1  |                                                                                             'exit '
+papertrade-1  |                                                                                             'cancel '
+papertrade-1  |                                                                                             'signals.',
+papertrade-1  |                                                                              'type': 'string',
+papertrade-1  |                                                                              'enum': ['on',
+papertrade-1  |                                                                                       'off',
+papertrade-1  |                                                                                       'silent']},
+papertrade-1  |                                                              'protection_trigger': {'description': 'Telegram '
+papertrade-1  |                                                                                                    'setting '
+papertrade-1  |                                                                                                    'for '
+papertrade-1  |                                                                                                    'protection '
+papertrade-1  |                                                                                                    'triggers.',
+papertrade-1  |                                                                                     'type': 'string',
+papertrade-1  |                                                                                     'enum': ['on',
+papertrade-1  |                                                                                              'off',
+papertrade-1  |                                                                                              'silent'],
+papertrade-1  |                                                                                     'default': 'on'},
+papertrade-1  |                                                              'protection_trigger_global': {'description': 'Telegram '
+papertrade-1  |                                                                                                           'setting '
+papertrade-1  |                                                                                                           'for '
+papertrade-1  |                                                                                                           'global '
+papertrade-1  |                                                                                                           'protection '
+papertrade-1  |                                                                                                           'triggers.',
+papertrade-1  |                                                                                            'type': 'string',
+papertrade-1  |                                                                                            'enum': ['on',
+papertrade-1  |                                                                                                     'off',
+papertrade-1  |                                                                                                     'silent'],
+papertrade-1  |                                                                                            'default': 'on'},
+papertrade-1  |                                                              'liquidation_warning': {'description': 'Telegram '
+papertrade-1  |                                                                                                     'setting '
+papertrade-1  |                                                                                                     'for '
+papertrade-1  |                                                                                                     'liquidation '
+papertrade-1  |                                                                                                     'warnings.',
+papertrade-1  |                                                                                      'type': 'string',
+papertrade-1  |                                                                                      'enum': ['on',
+papertrade-1  |                                                                                               'off',
+papertrade-1  |                                                                                               'silent'],
+papertrade-1  |                                                                                      'default': 'on'}}},
+papertrade-1  |                     'reload': {'description': 'Add Reload button to '
+papertrade-1  |                                               'certain messages.',
+papertrade-1  |                                'type': 'boolean'}},
+papertrade-1  |      'required': ['enabled', 'token', 'chat_id']}
+papertrade-1  | 
+papertrade-1  | On instance['telegram']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'allow_custom_messages': True,
+papertrade-1  |      'notification_settings': {'entry_fill': 'off',
+papertrade-1  |                                'exit_fill': 'on',
+papertrade-1  |                                'protection_trigger': 'on',
+papertrade-1  |                                'protection_trigger_global': 'on',
+papertrade-1  |                                'liquidation_warning': 'on'}}
+papertrade-1  | 2026-10-11 19:31:07,567 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:31:07,819 - freqtrade - ERROR - Configuration error: 'token' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.
+papertrade-1  | 2026-10-11 19:31:10,444 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:31:10,826 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:31:12,707 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:31:12,707 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:31:12,709 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:31:12,710 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:31:12,710 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:31:12,711 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:31:12,711 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:31:12,712 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:31:12,712 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:31:12,712 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:31:12,722 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:31:12,722 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:31:12,723 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:31:12,725 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:31:12,729 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:31:12,730 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:31:12,731 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:31:12,731 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:31:12,732 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:31:12,734 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'trust_env': True, 'cafile': '/freqtrade/host-ca.pem', 
+papertrade-1  | 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:31:12,736 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:31:14,675 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:31:14,701 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:31:14,702 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:31:14,703 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:31:14,703 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:31:14,703 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:31:14,704 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:31:14,704 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:31:14,704 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:31:14,705 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:31:14,705 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:31:14,705 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:31:14,706 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:31:14,706 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:31:14,706 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:31:14,707 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:31:14,707 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:31:14,707 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:31:14,708 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:31:14,708 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:31:14,708 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:31:14,709 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:31:14,709 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:31:14,709 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:31:14,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:31:14,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:31:14,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:31:14,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:31:14,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:31:14,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:31:14,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:31:14,712 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:31:14,717 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'token' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['telegram']:
+papertrade-1  |     {'description': 'Telegram settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Enable Telegram '
+papertrade-1  |                                                'notifications.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'token': {'description': 'Telegram bot token.',
+papertrade-1  |                               'type': 'string'},
+papertrade-1  |                     'chat_id': {'description': 'Telegram chat or group ID. '
+papertrade-1  |                                                'Recommended to be set via '
+papertrade-1  |                                                'environment variable '
+papertrade-1  |                                                'FREQTRADE__TELEGRAM__CHAT_ID',
+papertrade-1  |                                 'type': 'string'},
+papertrade-1  |                     'topic_id': {'description': 'Telegram topic ID - only '
+papertrade-1  |                                                 'applicable for group '
+papertrade-1  |                                                 'chats. Recommended to be '
+papertrade-1  |                                                 'set via environment '
+papertrade-1  |                                                 'variable '
+papertrade-1  |                                                 'FREQTRADE__TELEGRAM__TOPIC_ID',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'authorized_users': {'description': 'Authorized users '
+papertrade-1  |                                                         'for the bot.',
+papertrade-1  |                                          'type': 'array',
+papertrade-1  |                                          'items': {'type': 'string'},
+papertrade-1  |                                          'uniqueItems': True},
+papertrade-1  |                     'allow_custom_messages': {'description': 'Allow '
+papertrade-1  |                                                              'sending '
+papertrade-1  |                                                              'custom '
+papertrade-1  |                                                              'messages '
+papertrade-1  |                                                              'from the '
+papertrade-1  |                                                              'Strategy.',
+papertrade-1  |                                               'type': 'boolean',
+papertrade-1  |                                               'default': True},
+papertrade-1  |                     'balance_dust_level': {'description': 'Minimum balance '
+papertrade-1  |                                                           'level to '
+papertrade-1  |                                                           'consider as '
+papertrade-1  |                                                           'dust.',
+papertrade-1  |                                            'type': 'number',
+papertrade-1  |                                            'minimum': 0.0},
+papertrade-1  |                     'notification_settings': {'description': 'Settings for '
+papertrade-1  |                                                              'different '
+papertrade-1  |                                                              'types of '
+papertrade-1  |                                                              'notifications.',
+papertrade-1  |                                               'type': 'object',
+papertrade-1  |                                               'default': {'entry_fill': 'off',
+papertrade-1  |                                                           'exit_fill': 'on',
+papertrade-1  |                                                           'protection_trigger': 'on',
+papertrade-1  |                                                           'protection_trigger_global': 'on',
+papertrade-1  |                                                           'liquidation_warning': 'on'},
+papertrade-1  |                                               'properties': {'status': {'description': 'Telegram '
+papertrade-1  |                                                                                        'setting '
+papertrade-1  |                                                                                        'for '
+papertrade-1  |                                                                                        'status '
+papertrade-1  |                                                                                        'updates.',
+papertrade-1  |                                                                         'type': 'string',
+papertrade-1  |                                                                         'enum': ['on',
+papertrade-1  |                                                                                  'off',
+papertrade-1  |                                                                                  'silent']},
+papertrade-1  |                                                              'warning': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'warnings.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'startup': {'description': 'Telegram '
+papertrade-1  |                                                                                         'setting '
+papertrade-1  |                                                                                         'for '
+papertrade-1  |                                                                                         'startup '
+papertrade-1  |                                                                                         'messages.',
+papertrade-1  |                                                                          'type': 'string',
+papertrade-1  |                                                                          'enum': ['on',
+papertrade-1  |                                                                                   'off',
+papertrade-1  |                                                                                   'silent']},
+papertrade-1  |                                                              'entry': {'description': 'Telegram '
+papertrade-1  |                                                                                       'setting '
+papertrade-1  |                                                                                       'for '
+papertrade-1  |                                                                                       'entry '
+papertrade-1  |                                                                                       'signals.',
+papertrade-1  |                                                                        'type': 'string',
+papertrade-1  |                                                                        'enum': ['on',
+papertrade-1  |                                                                                 'off',
+papertrade-1  |                                                                                 'silent']},
+papertrade-1  |                                                              'entry_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                            'setting '
+papertrade-1  |                                                                                            'for '
+papertrade-1  |                                                                                            'entry '
+papertrade-1  |                                                                                            'fill '
+papertrade-1  |                                                                                            'signals.',
+papertrade-1  |                                                                             'type': 'string',
+papertrade-1  |                                                                             'enum': ['on',
+papertrade-1  |                                                                                      'off',
+papertrade-1  |                                                                                      'silent'],
+papertrade-1  |                                                                             'default': 'off'},
+papertrade-1  |                                                              'entry_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                              'setting '
+papertrade-1  |                                                                                              'for '
+papertrade-1  |                                                                                              'entry '
+papertrade-1  |                                                                                              'cancel '
+papertrade-1  |                                                                                              'signals.',
+papertrade-1  |                                                                               'type': 'string',
+papertrade-1  |                                                                               'enum': ['on',
+papertrade-1  |                                                                                        'off',
+papertrade-1  |                                                                                        'silent']},
+papertrade-1  |                                                              'exit': {'description': 'Telegram '
+papertrade-1  |                                                                                      'setting '
+papertrade-1  |                                                                                      'for '
+papertrade-1  |                                                                                      'exit '
+papertrade-1  |                                                                                      'signals.',
+papertrade-1  |                                                                       'type': ['string',
+papertrade-1  |                                                                                'object'],
+papertrade-1  |                                                                       'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                'enum': ['on',
+papertrade-1  |                                                                                                         'off',
+papertrade-1  |                                                                                                         'silent']}},
+papertrade-1  |                                                              'exit_fill': {'description': 'Telegram '
+papertrade-1  |                                                                                           'setting '
+papertrade-1  |                                                                                           'for '
+papertrade-1  |                                                                                           'exit '
+papertrade-1  |                                                                                           'fill '
+papertrade-1  |                                                                                           'signals.',
+papertrade-1  |                                                                            'type': ['string',
+papertrade-1  |                                                                                     'object'],
+papertrade-1  |                                                                            'additionalProperties': {'type': 'string',
+papertrade-1  |                                                                                                     'enum': ['on',
+papertrade-1  |                                                                                                              'off',
+papertrade-1  |                                                                                                              'silent']},
+papertrade-1  |                                                                            'default': 'on'},
+papertrade-1  |                                                              'exit_cancel': {'description': 'Telegram '
+papertrade-1  |                                                                                             'setting '
+papertrade-1  |                                                                                             'for '
+papertrade-1  |                                                                                             'exit '
+papertrade-1  |                                                                                             'cancel '
+papertrade-1  |                                                                                             'signals.',
+papertrade-1  |                                                                              'type': 'string',
+papertrade-1  |                                                                              'enum': ['on',
+papertrade-1  |                                                                                       'off',
+papertrade-1  |                                                                                       'silent']},
+papertrade-1  |                                                              'protection_trigger': {'description': 'Telegram '
+papertrade-1  |                                                                                                    'setting '
+papertrade-1  |                                                                                                    'for '
+papertrade-1  |                                                                                                    'protection '
+papertrade-1  |                                                                                                    'triggers.',
+papertrade-1  |                                                                                     'type': 'string',
+papertrade-1  |                                                                                     'enum': ['on',
+papertrade-1  |                                                                                              'off',
+papertrade-1  |                                                                                              'silent'],
+papertrade-1  |                                                                                     'default': 'on'},
+papertrade-1  |                                                              'protection_trigger_global': {'description': 'Telegram '
+papertrade-1  |                                                                                                           'setting '
+papertrade-1  |                                                                                                           'for '
+papertrade-1  |                                                                                                           'global '
+papertrade-1  |                                                                                                           'protection '
+papertrade-1  |                                                                                                           'triggers.',
+papertrade-1  |                                                                                            'type': 'string',
+papertrade-1  |                                                                                            'enum': ['on',
+papertrade-1  |                                                                                                     'off',
+papertrade-1  |                                                                                                     'silent'],
+papertrade-1  |                                                                                            'default': 'on'},
+papertrade-1  |                                                              'liquidation_warning': {'description': 'Telegram '
+papertrade-1  |                                                                                                     'setting '
+papertrade-1  |                                                                                                     'for '
+papertrade-1  |                                                                                                     'liquidation '
+papertrade-1  |                                                                                                     'warnings.',
+papertrade-1  |                                                                                      'type': 'string',
+papertrade-1  |                                                                                      'enum': ['on',
+papertrade-1  |                                                                                               'off',
+papertrade-1  |                                                                                               'silent'],
+papertrade-1  |                                                                                      'default': 'on'}}},
+papertrade-1  |                     'reload': {'description': 'Add Reload button to '
+papertrade-1  |                                               'certain messages.',
+papertrade-1  |                                'type': 'boolean'}},
+papertrade-1  |      'required': ['enabled', 'token', 'chat_id']}
+papertrade-1  | 
+papertrade-1  | On instance['telegram']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'allow_custom_messages': True,
+papertrade-1  |      'notification_settings': {'entry_fill': 'off',
+papertrade-1  |                                'exit_fill': 'on',
+papertrade-1  |                                'protection_trigger': 'on',
+papertrade-1  |                                'protection_trigger_global': 'on',
+papertrade-1  |                                'liquidation_warning': 'on'}}
+papertrade-1  | 2026-10-11 19:31:14,721 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:31:14,973 - freqtrade - ERROR - Configuration error: 'token' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.

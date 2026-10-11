@@ -13,6 +13,7 @@ import ccxt
 import pandas as pd
 
 from safety import DOWNLOAD_RANGE
+from audit_guard import require_legacy_research_allowed
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h"
@@ -96,6 +97,7 @@ def parse_archive(content, month):
 
 
 def main():
+    require_legacy_research_allowed(["download-archive"])
     start, end = DOWNLOAD_RANGE.split("-")
     months = pd.date_range(pd.to_datetime(start, format="%Y%m%d"),
                            pd.to_datetime(end, format="%Y%m%d"), freq="MS", inclusive="left")

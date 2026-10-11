@@ -19,7 +19,7 @@ class PaperTradingTests(unittest.TestCase):
         self.assertFalse(self.config["exchange"]["key"])
         self.assertFalse(self.config["exchange"]["secret"])
         self.assertFalse(self.config["force_entry_enable"])
-        self.assertFalse(self.config["api_server"]["enabled"])
+        self.assertFalse(self.config.get("api_server", {}).get("enabled", False))
         self.assertIn("--dry-run", self.compose)
         self.assertIn("config.paper.json", self.compose)
 

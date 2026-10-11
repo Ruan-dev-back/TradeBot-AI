@@ -17,10 +17,28 @@ docker info
 docker compose config --quiet
 docker compose pull
 docker compose run --rm freqtrade --version
-docker compose run --rm freqtrade test
+docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test
 ```
 
 ## Pesquisa reproduzível
+
+A baseline publicada permanece em `docs/results.md` e `docs/evidence/`. O fluxo
+atual é a auditoria de risco, sem aquisição de novos candles:
+
+```sh
+python3 scripts/run_audit.py
+```
+
+Veja o [relatório de risco](docs/risk-report.md) e o
+[plano de experimento](docs/experiment-plan.md). O holdout UTC de
+2025-07-01 a 2026-07-01 está reservado em `docs/holdout-lock.json`; janeiro–junho/2025
+já é observado. Sizing menor e custos são cenários retrospectivos, sem mudar a
+estratégia/configuração original nem representar validação independente.
+
+O runner anterior e seus comandos de download/backtest estão bloqueados neste
+estágio para preservar a reserva e o relatório publicado. As instruções abaixo
+registram o fluxo **histórico**, executado antes dessa reserva; não use para
+abrir o holdout. Não há comando de unlock nesta etapa.
 
 Execute a partir da raiz deste checkout:
 
@@ -88,14 +106,20 @@ O diagnóstico de rede e a solução de aquisição nesta nuvem estão em
 O histórico e a justificativa do stop-loss de 5% estão em
 [docs/stoploss-review.md](docs/stoploss-review.md); nenhum parâmetro foi otimizado.
 
-## Mercado ao vivo: simulação contínua (nova branch)
-Um serviço **separado** permite observar preços atuais de BTC/USDT, ETH/USDT e
-SOL/USDT em uma exchange, simulando entradas e saídas automaticamente quando
-estiver conectado. Nunca envia ordens reais: `dry_run=true`, `--dry-run`,
-sem chaves e com 25 USDT fictícios por posição.
+## Mercado atual: paper trading
+O serviço Kraken em `docker-compose.paper.yml` recebe candles atuais de
+BTC/USDT, ETH/USDT e SOL/USDT e pode simular ordens automaticamente quando houver
+sinais válidos. Usa Freqtrade nativo com `dry_run=true`, carteira fictícia de
+1000 USDT, uma posição e stake de até25 USDT, limitada também pelo teto10% e
+orçamento nominal0,5% com custos. Não há credenciais privadas nem ordens reais.
 
-**A estratégia atual teve prejuízo no backtest e não foi validada para operar dinheiro real.**
-O serviço não foi implantado nem iniciado automaticamente.
+A estratégia de paper é uma cópia dos sinais da baseline que perdeu dinheiro em
+Binance BTC/USDT. Esses resultados não são resultados Kraken; não há comprovação
+de lucratividade da simulação. A baseline e as evidências históricas permanecem
+congeladas. [Relatório da integração e dos testes](docs/paper-report.md),
+[operação e comandos](docs/realtime-roadmap.md) e
+[framework de desenvolvimento 2024](docs/development-framework.md).
 
-Veja [o roteiro de execução ao vivo](docs/realtime-roadmap.md) antes de
-ativá-lo manualmente. O Compose de pesquisa permanece independente.
+O serviço foi validado nesta máquina, com dados reais e reinicialização. Isso não
+constitui deploy ou monitoramento 24/7. Processos do ambiente de desenvolvimento
+não têm garantia de sobreviver à publicação ou restauração do ambiente.

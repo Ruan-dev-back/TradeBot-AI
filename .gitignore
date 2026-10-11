@@ -231,3 +231,9 @@ user_data/research/*
 
 # Evidências públicas e saídas completas revisadas para acompanhar o relatório.
 !docs/evidence/*.log
+!docs/audit/evidence/*.log
+
+# Estado fictício persistente e configuração runtime (nunca versionar).
+user_data/paper/
+user_data/*.sqlite*
+!docs/paper/evidence/*.log

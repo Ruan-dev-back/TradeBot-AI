@@ -1,0 +1,11 @@
+# Proxy gerenciado, TLS verificado; não altera endpoints nem contorna geobloqueios.
+services:
+  papertrade:
+    environment:
+      - HTTP_PROXY
+      - HTTPS_PROXY
+      - NO_PROXY
+      - SSL_CERT_FILE=/freqtrade/host-ca.pem
+      - REQUESTS_CA_BUNDLE=/freqtrade/host-ca.pem
+    volumes:
+      - "/etc/ssl/certs/ca-certificates.crt:/freqtrade/host-ca.pem:ro"

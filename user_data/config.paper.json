@@ -10,7 +10,7 @@
   "stake_currency": "USDT",
   "stake_amount": 25,
   "tradable_balance_ratio": 0.9,
-  "fiat_display_currency": "USD",
+  "fiat_display_currency": "",
   "cancel_open_orders_on_exit": true,
   "db_url": "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite",
   "timeframe": "1h",
@@ -35,31 +35,37 @@
     "key": "",
     "secret": "",
     "ccxt_config": {
-      "enableRateLimit": true
+      "enableRateLimit": true,
+      "timeout": 15000,
+      "requests_trust_env": true
     },
     "ccxt_async_config": {
-      "enableRateLimit": true
+      "enableRateLimit": true,
+      "timeout": 15000,
+      "aiohttp_trust_env": true
     },
     "pair_whitelist": [
       "BTC/USDT",
       "ETH/USDT",
       "SOL/USDT"
     ],
-    "pair_blacklist": []
+    "pair_blacklist": [],
+    "enable_ws": false
   },
   "pairlists": [
     {
       "method": "StaticPairList"
     }
   ],
-  "api_server": {
-    "enabled": false
-  },
   "telegram": {
-    "enabled": false
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
   },
   "force_entry_enable": false,
   "internals": {
     "process_throttle_secs": 5
-  }
+  },
+  "fee": 0.004,
+  "logfile": "/freqtrade/user_data/logs/paper.log"
 }

@@ -1,44 +1,103 @@
-# TradeBot AI: execução com mercado ao vivo
+# Paper trading com dados atuais
 
-## Objetivo
-Robô 24/7 para consumir candles e monitorar estratégias em exchange usando dados atuais, inicialmente com **operações simuladas automáticas (dry-run)**. O modo financeiro real requer uma avaliação separada e autorização explícita. O backtesting permanece para validar hipóteses; não é o produto final.
+O serviço Kraken é exclusivamente fictício. `MultiAssetPaperStrategy` copia os
+sinais SMA20/50 + RSI14 da baseline histórica não lucrativa, com gestão de risco
+separada. O histórico Binance não valida resultados Kraken. Não há ML, painel,
+credenciais privadas ou ordens reais. A baseline `SmaRsiStrategy` permanece intacta.
 
-## O que está preparado
-- Um serviço Docker independente (`docker-compose.paper.yml`) com Freqtrade nativo em modo `trade --dry-run`, rede habilitada para consultas públicas.
-- Configuração independente em `user_data/config.paper.json`, banco SQLite de simulações persistido em `user_data/`.
-- Mercado spot, pares BTC/USDT, ETH/USDT e SOL/USDT (disponibilidade a verificar via exchange selecionada).
-- Kraken como candidato inicial para teste de conectividade; não há conta ou API vinculada. Não assuma disponibilidade regional, do servidor ou de cada par.
-- Apenas 1 posição aberta e 25 USDT fictícios por operação, carteira fictícia de 1.000 USDT; sem alavancagem.
-- API de controle remoto desativada e sem secrets; `--dry-run` obrigatório também na linha de comando.
-- Estratégia MultiAssetPaperStrategy, baseada na SMA/RSI pré-existente, usada SOMENTE para validar o fluxo: falhou no backtest e não é recomendada para dinheiro real.
+## Iniciar e verificar
 
-## Antes de executar, testar acesso ao mercado
-```bash
-docker compose -f docker-compose.paper.yml config --quiet
-docker compose -f docker-compose.paper.yml pull
-docker compose -f docker-compose.paper.yml run --rm --entrypoint python papertrade /freqtrade/scripts/check_market.py
+Execute na raiz do repositório. Docker/Compose já existem; nenhum pacote novo foi
+instalado. Em host com proxy e CA gerenciados, use ambos os arquivos abaixo:
+
+```sh
+docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml config --quiet
+docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml run --rm \
+  --entrypoint python papertrade /freqtrade/scripts/check_market.py
+docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml up -d
+python3 scripts/paper_status.py
+docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml ps
+docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml logs -f --tail=100
 ```
-Teste apenas dados públicos. Se a corretora ou algum par não estiver disponível, altere o candidato no arquivo de configuração **somente para testes simulados**. Nunca contorne restrições geográficas ou termos do provedor.
 
-## Iniciar e acompanhar, somente quando a conexão pública funcionar
-```bash
-docker compose -f docker-compose.paper.yml up -d
-docker compose -f docker-compose.paper.yml logs -f --tail=100
-docker compose -f docker-compose.paper.yml ps
-docker compose -f docker-compose.paper.yml down
+Em host sem esse proxy Linux, omita `-f docker-compose.paper.cloud.yml`. Não use
+`up` se a verificação pública falhar. Kraken não é um endereço alternativo da
+Binance: é outra exchange, declarada em configuração independente. Não use VPN,
+endpoints alternativos ou credenciais para contornar geobloqueios. A resposta
+pública não comprova elegibilidade legal ou de uma conta na região.
+
+A entrada Python não aceita argumentos nem `FREQTRADE__*`, valida configuração,
+hashes e holdout, e fixa `freqtrade trade --dry-run`. Um lock impede dois processos
+escrevendo o mesmo estado. API de controle remoto ausente/desativada; Telegram
+explicitamente desativado com campos vazios exigidos pelo schema. Não há portas
+expostas. `fiat_display_currency=""` evita consultas desnecessárias ao CoinGecko.
+TLS permanece verificado: clientes CCXT respeitam o proxy e o bundle de CA
+somente leitura; não se alteram URLs da exchange.
+
+## Política fixa de risco
+
+Carteira inicial1000 USDT, spot, uma posição long, sem DCA ou alavancagem. Stake
+proposto25 USDT; o callback pode reduzi-lo. O gasto reservado por posição deve ser
+≤10% da equity atual e a perda projetada pelo stop5%, com custos, ≤0,5% da equity.
+
+Taxa nativa simulada40bps por lado. O orçamento reserva mais5bps de taxa por lado,
+spread completo10bps e slippage10bps por lado. São hipóteses conservadoras de
+simulação; não tarifas de conta verificadas. Em carteira1000 USDT, o teto calculado
+é aproximadamente81,04 USDT de stake, mas o limite proposto permanece25 USDT. O
+notional é verificado novamente após os mínimos do Freqtrade e o arredondamento
+de quantidade. Se o mínimo exigir exceder o orçamento, nenhuma posição é criada.
+
+Book cruzado/inválido, spread acima do orçamento, impacto sem profundidade,
+metadados/minimos desconhecidos, taxa pública superior à reservada, candle ainda
+aberto, gaps, duplicatas, UTC/1h inválidos, indicadores ausentes, volume zero,
+menos200 candles, observação de risco antiga e exceções bloqueiam entradas.
+A idade do último candle aberto deve ficar entre1h e2h05; a atualização da
+observação de risco deve ter no máximo30s. O book é obtido por chamada pública
+limitada a3s; timestamp, quando disponibilizado, precisa ter no máximo30s.
+
+Equity marcada: USDT livre + valor líquido de liquidação dos trades abertos ao
+bid. Peak persistente; aviso DD3%, bloqueio permanente de entradas e saída
+fictícia solicitada ao atingir DD6%. Restart não remove o bloqueio. Cooldown1h
+após saída; três perdas consecutivas acionam24h. IDs de trades fechados impedem
+processamento duplicado. Alterar a política exige reconciliação explícita do
+estado; não existe comando automático para apagar peak/cooldown/halt.
+
+Stop, spread e slippage podem exceder o cenário nominal em gaps ou desconexão.
+Saída de mercado no dry-run usa o modelo nativo de book do Freqtrade, que admite
+slippage de até5%; não há garantia de perda máxima. Entradas são limit, expiram
+após10min. Reservas de custos extras não alteram a taxa nativa ou criam fidelidade
+à fila/latência real da exchange.
+
+## Persistência, saúde e reinicialização
+
+- `user_data/tradesv3.paper.sqlite`: trades, ordens e wallet nativos.
+- `user_data/paper/risk.sqlite`: peak, halt, cooldown e IDs processados.
+- `user_data/paper/status.json`: última observação e candles/sinais por par.
+- `user_data/logs/paper.log`: log rotativo nativo; Docker limita logs a3×10MB.
+
+Esses arquivos são locais, ignorados pelo Git e preservados por bind mount.
+Não os apague para reiniciar. O healthcheck usa dados, observação de risco e
+SQLite; um PID isolado não passa. Docker marca `unhealthy` se o teste falhar,
+mas isso não reinicia automaticamente o container por si só.
+
+```sh
+docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml restart
+python3 scripts/paper_status.py
+# Para encerrar o processo sem excluir os bancos:
+docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml stop
 ```
-O Docker hospedeiro precisa ficar ligado continuamente; GitHub Actions e Codex Cloud não são hospedagem 24/7. Para operar continuamente, escolher VPS com Docker, monitoramento, armazenamento persistente, backups e reinicialização automática. **Não foi realizado deploy e não há processo ativo.**
 
-## Requisitos antes de sequer considerar ordens reais
-1. Validar a conectividade da corretora e elegibilidade da conta.
-2. Elaborar, comparar e validar estratégias com novo holdout e paper-trading contínuo. Não há estratégia comprovadamente lucrativa.
-3. Adicionar kill switch, limites de perdas diárias, limite máximo de posição, alertas, reconciliação de ordens, tolerância a desconexões e logs auditáveis.
-4. Simular taxas, spread, slippage e execução falha; estimar risco de ruína.
-5. Separar credenciais de código-fonte; usar secrets seguros, API sem saques e escopo mínimo.
-6. Auditar integração e realizar aprovação explícita de capital/risco antes de ativar `dry_run=false` em configuração diferente da pesquisa e da simulação.
+O teste desta tarefa comprovou recriação do container com persistência e
+processamento atual dos três pares. Zero operações fictícias foram observadas no
+banco ativo até o snapshot do relatório. Sinais existentes no warmup não são
+reexecutados como trades retroativos. Fixtures de integração ficam em bancos
+temporários e não são resultados do mercado atual.
 
-## Estratégias de pesquisa (nenhuma garantia de lucro)
-- Tendência + filtro de regime/volatilidade (reduzir entradas em mercado lateral).
-- Rompimento com confirmação de volume e gestão de saída.
-- Reversão à média em regime lateral, com limites rigorosos.
-Comparar com baseline, buy-and-hold e caixa, usando períodos não vistos e custo realista. Só então avaliar ML (XGBoost/FreqAI) em dados contínuos.
+## O que falta para funcionamento 24/7
+
+Não houve deploy. Codex Cloud e GitHub Actions não oferecem garantia de operação
+contínua. É necessário hospedeiro persistente, monitoramento externo e alertas,
+resposta a quedas de API/host, reconciliação após desconexão, backups consistentes
+dos dois SQLite e testes de restauração, verificação regional e política de
+retenção. O restart do Compose e o healthcheck são recursos locais, não evidência
+de disponibilidade24/7. Nenhuma etapa deste roteiro autoriza trading real.

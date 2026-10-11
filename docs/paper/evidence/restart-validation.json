@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "before": "2026-10-11T23:11:06.044281+00:00",
+  "after": "2026-10-11T23:11:51.238505+00:00",
+  "preserved_risk_fields": [
+    "peak",
+    "equity",
+    "halted",
+    "cooldown_until",
+    "losses",
+    "closed_ids",
+    "policy_sha256"
+  ],
+  "native_trades": 0,
+  "native_orders": 0,
+  "all_three_pairs_processing": true,
+  "method": "Docker container recreation with existing bind-mounted SQLite files"
+}

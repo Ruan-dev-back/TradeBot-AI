@@ -1,0 +1,57 @@
+{
+  "purpose": "Native-engine compatibility smoke, D1 development only; no selection or independent validation",
+  "source": "Binance BTC/USDT spot 1h",
+  "fee_per_side": 0.001,
+  "spread_slippage_in_native_results": false,
+  "holdout_prices_inspected": false,
+  "results": {
+    "baseline": {
+      "total_trades": 17,
+      "profit_total": -0.18533527357,
+      "profit_total_abs": -185.33527357,
+      "max_drawdown_account": 0.2375874202914088,
+      "max_drawdown_abs": 246.91535401,
+      "profit_factor": 0.4030766422245824,
+      "winrate": 0.23529411764705882,
+      "market_change": -0.11778655137685258,
+      "backtest_start": "2024-04-01 00:00:00",
+      "backtest_end": "2024-06-30 23:00:00"
+    },
+    "trend": {
+      "total_trades": 5,
+      "profit_total": -0.01144826951,
+      "profit_total_abs": -11.44826951,
+      "max_drawdown_account": 0.011448269510000046,
+      "max_drawdown_abs": 11.44826951,
+      "profit_factor": 0.0,
+      "winrate": 0.0,
+      "market_change": -0.11778655137685258,
+      "backtest_start": "2024-04-01 00:00:00",
+      "backtest_end": "2024-06-30 23:00:00"
+    },
+    "breakout": {
+      "total_trades": 20,
+      "profit_total": -0.0099111941,
+      "profit_total_abs": -9.9111941,
+      "max_drawdown_account": 0.010934650150000039,
+      "max_drawdown_abs": 10.93465015,
+      "profit_factor": 0.5745693493668617,
+      "winrate": 0.4,
+      "market_change": -0.11778655137685258,
+      "backtest_start": "2024-04-01 00:00:00",
+      "backtest_end": "2024-06-30 23:00:00"
+    },
+    "mean_reversion": {
+      "total_trades": 16,
+      "profit_total": -0.0009525137199999995,
+      "profit_total_abs": -0.9525137199999995,
+      "max_drawdown_account": 0.0046364375373419845,
+      "max_drawdown_abs": 4.64944003,
+      "profit_factor": 0.8978370317509449,
+      "winrate": 0.625,
+      "market_change": -0.11778655137685258,
+      "backtest_start": "2024-04-01 00:00:00",
+      "backtest_end": "2024-06-30 23:00:00"
+    }
+  }
+}

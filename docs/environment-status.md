@@ -3,6 +3,25 @@
 Verificação em 2026-10-11 UTC; resultados do runtime atual, sem presumir publicação
 de uma nova versão da configuração do ambiente.
 
+## Estado após a auditoria de risco
+
+O CI do commit remoto `490caa7ab0f4fdaf50507edad29538bcca0231f2` foi confirmado
+verde na [execução38163008559](https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38163008559).
+Essa correção de teste já existente foi incorporada por fast-forward, preservando
+o histórico. Os 41 testes originais passaram novamente; a suíte foi ampliada
+com os testes da auditoria. Contagem final e evidências em [risk-report.md](risk-report.md).
+
+As análises oficiais de lookahead/recursive agora funcionam com a exchange
+offline em cache e dados estritamente de 2024. Os novos relatórios não alteram
+a pesquisa financeira publicada. O holdout está fechado; o fluxo atual é
+`python3 scripts/run_audit.py`, sem consultas a preços novos. O runner histórico,
+a entrada Docker e os scripts diretos de download/validação/backtest recusam o
+fluxo anterior antes de tocar candles enquanto durar esta reserva.
+
+A API GitHub retornou403 do proxy. A conferência de CI usou a página pública
+GitHub com SHA e status explícitos, sem solicitar tokens. Não foi necessário
+alterar configurações do ambiente ou publicar uma versão nova da nuvem.
+
 ## Runtime e testes
 
 - Docker 28.4.0, Compose v2.40.3 e daemon operacional.
@@ -70,7 +89,8 @@ Filtros de preço/lote/notional são atuais, não históricos. Spread, slippage 
 impacto não foram modelados. Testes de causalidade por prefixos não substituem
 uma execução completa das ferramentas de análise de lookahead.
 
-Para reproduzir a aquisição sem repetir a falha de API:
+Comando histórico de aquisição, anterior à reserva do novo holdout; atualmente
+recusado pelo bloqueio temporal. O fluxo atual é `python3 scripts/run_audit.py`:
 
 ```sh
 python3 scripts/run_research.py --source archive
@@ -78,3 +98,24 @@ python3 scripts/run_research.py --source archive
 
 Os retornos foram negativos nos dois períodos. Revisar a baseline e reservar um
 novo período não observado antes de avaliar qualquer ajuste de parâmetros.
+
+## Atualização: integração de paper trading
+
+A configuração Kraken existente na branch realtime foi preservada. Após adicionar
+`api.kraken.com` à permissão de internet, a API pública respondeu200 e os três
+pares BTC/USDT, ETH/USDT e SOL/USDT tiveram candles reais horários validados. A
+Binance principal continua451 por restrição regional. Foram corrigidos o proxy do
+CCXT síncrono, a CA async e campos obrigatórios do schema nativo. A apresentação
+fiat foi desativada para remover uma consulta opcional bloqueada ao CoinGecko.
+
+O Freqtrade nativo processou os três pares, com heartbeat RUNNING, healthcheck e
+persistência em recriação do container. Isso não comprova disponibilidade24/7.
+Detalhes, snapshots, erros anteriores e teste completo: [paper-report.md](paper-report.md).
+
+O rascunho de onboarding recebe instruções testadas de setup/start e a referência
+do checkout preservado. A ferramenta de configuração salva rascunhos; o retorno
+`requires_publish=true` exige revisão/salvamento e publicação na interface pelo
+usuário. Não há requisito de segredo/credencial. Não foi efetuada publicação do
+ambiente pelo agente, nem há ferramenta que permita confirmar o estado visual
+“Requer atenção”. A conexão Kraken funciona na instância atual independentemente
+dessa confirmação de publicação/restauração futura.

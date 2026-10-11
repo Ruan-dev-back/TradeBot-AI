@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-11T23:15:29.832971+00:00",
+  "paper_parent": "1d3e143bd652ff549ee8f96c5d8d39d4e4dbad86",
+  "audit_merge_parent": "46d376ebdd141f2fb20da6fcd88ed5b2833b0138",
+  "conflict_resolved": ".github/workflows/validate.yml: audit read-only mounts plus paper Compose mount",
+  "baseline_files": {
+    "user_data/config.json": "8b34d550c3368f42bf7d638b043574887575e2576f40814c41480b81900ee904",
+    "user_data/strategies/SmaRsiStrategy.py": "b37becb4d3b98242053eaa699c4b744f3f3228865125c0330655b29efea073e6",
+    "docs/results.md": "e1dce99d9c94aa37f8b924fb0db7f0e1bed6e696dd8d1c1179836939dcba08fd",
+    "docs/evidence/backtest-development.json": "77703469c061ace81e47e86746fcca71a4afa646f935dd7bc243473011dca88e",
+    "docs/evidence/backtest-validation.json": "7970af3cd63e04b89ccdb2f89ccfba6e8e3d12b221075196bcfe00c8fba240bf",
+    "docs/evidence/data_manifest.json": "48a820cbe2ada7bfe1329257a0236a431a06394c23ea3e2b62e1033268249ea8",
+    "docs/evidence/market_snapshot.json": "b97a56de2a2f79b42a6616b3fb2479f70e86c7b7953fe1a3bb87aec01dbb29ae"
+  },
+  "retained_audit_files": {
+    "docs/audit/baseline-lock.json": "6e3c977306e7f851385d8217ae6c082a0972e4c17d6e4f463263ac9817067c86",
+    "docs/audit/evidence/README.md": "456a2ab6462092d2f544234e3c4da21c76f6c36a2cf346b0e72fb3fde64c7c0c",
+    "docs/audit/evidence/baseline-41-tests.log": "cc72f7614e0ec7da81095bf33b6ca683c58dd9cfb0d491f7b1695b0ceab6e889",
+    "docs/audit/evidence/bias.json": "db03a978f35075532a4f6b8a1e88880c549c78655d6201fc7bb0a234eef38fb4",
+    "docs/audit/evidence/bias.log": "8a1ff056a328207da95b44d892597862451ddbba068acf99c9153c7e55ac3a45",
+    "docs/audit/evidence/ci.json": "77bc91358089b71beb4878e1464fd15b86149be2b54bc9ca8b1d574a6c8ae807",
+    "docs/audit/evidence/ci.log": "77bc91358089b71beb4878e1464fd15b86149be2b54bc9ca8b1d574a6c8ae807",
+    "docs/audit/evidence/commands.json": "32265312093462774ef2f57f4dfd7597a45cbec9ea3c43fde70a7b664c72593c",
+    "docs/audit/evidence/legacy-runner-blocked.log": "6da807086a4a4dbfadedb19b0ae7a9f3cadb0a76847d1ba7ac81e4c4349c0d5d",
+    "docs/audit/evidence/risk-analysis.json": "52f3cca6d313ba231a19f0ff53ba07d9a3786bedbf1e504bfc6f911f2028864c",
+    "docs/audit/evidence/run-console.log": "fb0951d106b550f820c113552e10f33d1dddcca33fbf284f2efa707f35852bf9",
+    "docs/audit/evidence/tests.log": "d4624dbef30f6e0ef43a430c8d7060ffafe3dccd0ff59e2afa5036aaed34a90c",
+    "docs/experiment-plan.md": "0901a9d2c2fa40e4ffbc711fa132bddd7bfdb9f727bd1014ec010b6d3223224e",
+    "docs/holdout-lock.json": "829e2858f5fea6cec44cd4df914ca8d689986eb4a3b9ac4c56e9c5090bbc220d",
+    "docs/risk-report.md": "8aeea96e04dbb8fcf04b3603400d51afa6828e09497d447101bf6e02b44d3b27"
+  },
+  "holdout_status": "reserved_locked",
+  "holdout_prices_inspected": false
+}

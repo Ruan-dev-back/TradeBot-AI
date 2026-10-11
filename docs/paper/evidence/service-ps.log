@@ -1,0 +1,2 @@
+NAME                       IMAGE                                                                                                   COMMAND                  SERVICE      CREATED          STATUS                    PORTS
+tradebot-ai-papertrade-1   freqtradeorg/freqtrade:stable@sha256:9d67afb8eb5f4e1210f4fb067efcbd5e005bd4f1c27f6f3888b8b9fc7f9b5199   "python /freqtrade/s…"   papertrade   45 seconds ago   Up 34 seconds (healthy)   

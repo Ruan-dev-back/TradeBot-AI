@@ -55,3 +55,36 @@ projeto, sem modificar o Freqtrade ou substituir sua lógica de indicadores/trad
 Metadados atuais são normalizados pelo mesmo CCXT 4.5.84. As precisões e limites
 efetivamente retornados, o instante da coleta e o JSON completo estão no snapshot
 de evidência; não foi usado fixture para cálculos financeiros.
+
+## Auditoria temporal e custos
+
+Documentação oficial stable consultada em 2026-10-11, antes de executar as análises:
+
+- [Lookahead-analysis](https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/docs/lookahead-analysis.md):
+  encadeamento de backtests, overrides diagnósticos, quantidade mínima e force_exit.
+- [Recursive-analysis](https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/docs/recursive-analysis.md):
+  referência longa, startup variável, comparação da última linha e limitação sobre sinais.
+- Código da mesma imagem Freqtrade2026.9: classes `BaseAnalysis`, `LookaheadAnalysis`,
+  `RecursiveAnalysis`, seus helpers, `StrategyResolver` e `Backtesting.load_bt_data`.
+  `BaseAnalysis.exchange` permite fornecer o adaptador offline sem alterar o motor.
+
+O CI remoto foi conferido pela página pública do run com SHA e status explícitos,
+porque `api.github.com` retornou CONNECT403 do proxy. Não foram requisitadas chaves
+de GitHub/Binance. Cenários de spread/slippage são hipóteses documentadas, não dados
+de order book extraídos dos candles.
+
+## Paper trading e callbacks de risco
+
+Documentação oficial stable consultada antes da implementação, no snapshot já
+fixado `1f394eaebc2f46a83d26971388628707802f8602`:
+
+- [Dry-run, carteira, SQLite, mínimos e logs](https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/docs/configuration.md).
+- [Callbacks de stake e confirmação](https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/docs/strategy-callbacks.md): stake é ajustado aos mínimos; exceções podem retornar ao stake proposto e confirmação padrão permissiva. Os callbacks do paper capturam falhas e recusam a entrada.
+- [Ciclo do bot](https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/docs/bot-basics.md).
+- Código instalado Freqtrade2026.9 / CCXT4.5.84: `FreqtradeBot.create_trade`, `execute_entry`, `Exchange.create_order`, `create_dry_run_order`, `fetch_dry_run_order`, `Wallets._update_dry` e `DataProvider`. A integração testa esse motor, sem alterar a biblioteca.
+- Kraken REST pública: `https://api.kraken.com/0/public/Time`, `Assets`, `AssetPairs`, `OHLC` e `Depth`; credenciais privadas não foram utilizadas.
+
+O CA gerenciado é carregado via `cafile` no cliente async. O cliente síncrono usa
+`requests_trust_env=true`; `trust_env=true` isoladamente não alterava a Session
+na versão CCXT fixada. O acesso atual foi comprovado por requisições e pelo
+serviço nativo, sem desabilitar TLS ou mudar os endpoints.

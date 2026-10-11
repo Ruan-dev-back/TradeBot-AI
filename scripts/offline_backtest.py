@@ -17,6 +17,7 @@ from freqtrade.exchange.binance import Binance
 from freqtrade.optimize.backtesting import Backtesting
 
 from safety import PERIODS, validate_config
+from audit_guard import require_legacy_research_allowed
 from validate_data import inspect_data
 from download_archive import load_market_snapshot
 
@@ -72,6 +73,7 @@ class OfflineResearchBinance(Binance):
 
 
 def main():
+    require_legacy_research_allowed(["backtesting"])
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--period", choices=list(PERIODS), required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
