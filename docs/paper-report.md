@@ -5,8 +5,9 @@ O motor nativo está processando dados públicos Kraken dos três pares. A suít
 completa passou: **86 testes, zero falhas/erros/skips**. O banco ativo contém
 **0 trades e 0 ordens**. Nenhum trade foi inventado ou
 injetado nesse banco. Isso é validação técnica em ambiente de desenvolvimento,
-sem deploy, operação real ou garantia24/7. CI remoto do novo commit deve ser
-conferido depois do push pelo SHA exato; evidência final indicada na entrega.
+sem deploy, operação real ou garantia24/7. CI remoto do código final `5c8215959defdcf1d39e6e6c4ddbc961117cb7ae` foi
+confirmado verde pelo SHA exato: [execução38184578685](https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38184578685),
+com prova preservada em `docs/paper/evidence/ci-verified.json`.
 
 ## Histórico e congelamento
 
@@ -136,9 +137,8 @@ antes de carregar a configuração, preservando todas as asserções e o banco a
 
 A mesma reprodução restritiva passou86 testes após a correção, e a suíte do
 checkout principal também passou86. Esses logs foram preservados em
-`ci-permissions-before.log` / `ci-permissions-after.log`. O resultado do CI remoto
-do commit corretivo será conferido pelo SHA exato na entrega; não confundir o
-status do primeiro push com o estado final da branch.
+`ci-permissions-before.log` / `ci-permissions-after.log`. O status verde do código corrigido foi verificado pelo SHA exato, conforme
+registrado no início deste relatório; as falhas intermediárias foram preservadas.
 
 A nova execução ainda falhou no handler de log. Um wrapper de CI passou a
 preservar o exit code da suíte e publicar os tracebacks reais como annotations
@@ -164,5 +164,5 @@ essas condições. O bot ativo nesta máquina é apenas paper; não é deploy.
 Evidências completas em `docs/paper/evidence/`: `tests.log`, `market.json`,
 `status-final.json`, `restart-validation.json`, `single-writer.json`,
 `integration.json`, `ci-local-commands.json`, exports `development-*.json` e logs
-de erros anteriores. CI remoto pós-push será verificado separadamente e citado
-na entrega para não confundir o CI do pai com o commit final.
+de erros anteriores. A prova de CI verde do código corrigido é `ci-verified.json`; a entrega também
+confere o CI do HEAD documental final, sem atribuir ao pai o status do filho.

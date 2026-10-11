@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-11T23:32:07.745469+00:00",
+  "branch": "feat/realtime-paper-trading",
+  "head_sha": "5c8215959defdcf1d39e6e6c4ddbc961117cb7ae",
+  "current_local_sha": "5c8215959defdcf1d39e6e6c4ddbc961117cb7ae",
+  "status": "success",
+  "url": "https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38184578685",
+  "evidence_method": "GitHub public run HTML: exact commit URL and explicit status",
+  "run_page_sha256": "613fbf6cb00b4f0331dd8ffae55a9b19b126b6ca48e1ce83fea1ac678a9b8220",
+  "commit_link_evidence": "/Ruan-dev-back/TradeBot-AI/commit/5c8215959defdcf1d39e6e6c4ddbc961117cb7ae",
+  "status_evidence": "<span class=\"h4 color-fg-default\">Success</span>",
+  "api_limit": "gh/API request blocked with proxy CONNECT 403; public HTML verified instead"
+}
