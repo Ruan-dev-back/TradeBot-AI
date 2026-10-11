@@ -1,0 +1,19 @@
+# Independente do Compose de pesquisa: usa apenas saldo fictício.
+# Não altere para modo real antes de auditoria, validação e aprovação explícita.
+services:
+  papertrade:
+    image: freqtradeorg/freqtrade:stable@sha256:9d67afb8eb5f4e1210f4fb067efcbd5e005bd4f1c27f6f3888b8b9fc7f9b5199
+    restart: unless-stopped
+    working_dir: /freqtrade
+    entrypoint: ["freqtrade"]
+    command:
+      - trade
+      - --config
+      - /freqtrade/user_data/config.paper.json
+      - --strategy
+      - SmaRsiStrategy
+      - --dry-run
+    volumes:
+      - ./user_data:/freqtrade/user_data
+      - ./scripts:/freqtrade/scripts:ro
+    stop_grace_period: 30s
