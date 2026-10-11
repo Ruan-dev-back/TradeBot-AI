@@ -11,7 +11,7 @@ services:
       - --config
       - /freqtrade/user_data/config.paper.json
       - --strategy
-      - SmaRsiStrategy
+      - MultiAssetPaperStrategy
       - --dry-run
     volumes:
       - ./user_data:/freqtrade/user_data
