@@ -1,0 +1,197 @@
+Annotations" class="js-updatable-content js-socket-channel"
+      data-channel="eyJjIjoiY2hlY2tfc3VpdGVzOjEwMzQ1MTk5NDE0OSIsInQiOjE3OTE3NjE0MjV9--b762d94d3a9fc1b317b0e98d6e175d2a6aec5bfa2140ea11add2a17bb33d4cb3"
+      data-url="/Ruan-dev-back/TradeBot-AI/actions/runs/38184439935/annotations_partial"
+      >
+       
+         
+           
+             Annotations 
+             3 errors, 1 warning, and 1 notice 
+           
+         
+         
+               
+                 
+                   
+                          
+                     
+                       
+                           static-check 
+                        
+                       
+                       
+                         
+                           Process completed with exit code 1. 
+                         
+                         Show more 
+                         Show less 
+                       
+                     
+                   
+                 
+               
+               
+                 
+                   
+                          
+                     
+                       
+                           Offline suite failure 
+                        
+                       
+                       
+                         
+                           ERROR: test_native_paper_configuration_and_strategy_load_without_network (test_paper_engine.NativePaperEngineTests.test_native_paper_configuration_and_strategy_load_without_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.14/logging/config.py", line 605, in configure
+    handler = self.configure_handler(handlers[name])
+  File "/usr/local/lib/python3.14/logging/config.py", line 872, in configure_handler
+    result = factory(**kwargs)
+  File "/usr/local/lib/python3.14/logging/handlers.py", line 161, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 delay=delay, errors=errors)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.14/logging/handlers.py", line 64, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 encoding=encoding, delay=delay,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 errors=errors)
+                                 ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.14/logging/__init__.py", line 1219, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ~~~~~~~~~~^^
+  File "/usr/local/lib/python3.14/logging/__init__.py", line 1248, in _open
+    return open_func(self.baseFilename, self.mode,
+                     encoding=self.encoding, errors=self.errors)
+PermissionError: [Errno 13] Permission denied: '/freqtrade/user_data/logs/paper.log'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/freqtrade/tests/test_paper_engine.py", line 65, in test_native_paper_configuration_and_strategy_load_without_network
+    config = Configuration(Arguments(argv).get_parsed_arg(), RunMode.DRY_RUN).get_config()
+  File "/freqtrade/freqtrade/configuration/configuration.py", line 51, in get_config
+    self.config = self.load_config()
+                  ~~~~~~~~~~~~~~~~^^
+  File "/freqtrade/freqtrade/configuration/configuration.py", line 93, in load_config
+    self._process_logging_options(config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/freqtrade/freqtrade/configuration/configuration.py", line 143, in _process_logging_options
+    setup_logging(config)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "/freqtrade/freqtrade/loggers/__init__.py", line 217, in setup_logging
+    logging.config.dictConfig(log_config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/local/lib/python3.14/logging/config.py", line 947, in dictConfig
+    dictConfigClass(config).configure()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.14/logging/config.py", line 612, in configure
+    raise ValueError('Unable to configure handler '
+                     '%r' % name) from e
+ValueError: Unable to configure handler 'file'
+ 
+                         
+                         Show more 
+                         Show less 
+                       
+                     
+                   
+                 
+               
+               
+                 
+                   
+                          
+                     
+                       
+                           Offline suite failure 
+                        
+                       
+                       
+                         
+                           ERROR: test_native_bot_consumes_signal_and_simulates_order_in_isolated_database (test_paper_engine.NativePaperEngineTests.test_native_bot_consumes_signal_and_simulates_order_in_isolated_database)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.14/logging/config.py", line 605, in configure
+    handler = self.configure_handler(handlers[name])
+  File "/usr/local/lib/python3.14/logging/config.py", line 872, in configure_handler
+    result = factory(**kwargs)
+  File "/usr/local/lib/python3.14/logging/handlers.py", line 161, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 delay=delay, errors=errors)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.14/logging/handlers.py", line 64, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 encoding=encoding, delay=delay,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 errors=errors)
+                                 ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.14/logging/__init__.py", line 1219, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ~~~~~~~~~~^^
+  File "/usr/local/lib/python3.14/logging/__init__.py", line 1248, in _open
+    return open_func(self.baseFilename, self.mode,
+                     encoding=self.encoding, errors=self.errors)
+PermissionError: [Errno 13] Permission denied: '/freqtrade/user_data/logs/paper.log'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/freqtrade/tests/test_paper_engine.py", line 128, in test_native_bot_consumes_signal_and_simulates_order_in_isolated_database
+    config = Configuration(Arguments(argv).get_parsed_arg(), RunMode.DRY_RUN).get_config()
+  File "/freqtrade/freqtrade/configuration/configuration.py", line 51, in get_config
+    self.config = self.load_config()
+                  ~~~~~~~~~~~~~~~~^^
+  File "/freqtrade/freqtrade/configuration/configuration.py", line 93, in load_config
+    self._process_logging_options(config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/freqtrade/freqtrade/configuration/configuration.py", line 143, in _process_logging_options
+    setup_logging(config)
+    ~~~~~~~~~~~~~^^^^^^^^
+  File "/freqtrade/freqtrade/loggers/__init__.py", line 217, in setup_logging
+    logging.config.dictConfig(log_config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/local/lib/python3.14/logging/config.py", line 947, in dictConfig
+    dictConfigClass(config).configure()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.14/logging/config.py", line 612, in configure
+    raise ValueError('Unable to configure handler '
+                     '%r' % name) from e
+ValueError: Unable to configure handler 'file'
+ 
+                         
+                         Show more 
+                         Show less 
+                       
+                     
+                   
+                 
+               
+               
+                 
+                   
+                          
+                     
+                       
+                           static-check 
+                        
+                       
+                       
+                         
+                           Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see:  https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/  
+                         
+                         Show more 
+                         Show less 
+                       
+                     
+                   
+                 
+               
+               
+                 
+    

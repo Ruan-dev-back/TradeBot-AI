@@ -61,6 +61,7 @@ class NativePaperEngineTests(unittest.TestCase):
         argv = ['trade', '--config', str(ROOT / 'user_data/config.paper.json'),
                 '--strategy', 'MultiAssetPaperStrategy', '--dry-run',
                 '--user-data-dir', self.temp.name,
+                '--logfile', str(Path(self.temp.name) / 'native-test.log'),
                 '--strategy-path', str(ROOT / 'user_data/strategies')]
         config = Configuration(Arguments(argv).get_parsed_arg(), RunMode.DRY_RUN).get_config()
         strategy = StrategyResolver.load_strategy(config)
@@ -124,6 +125,7 @@ class NativePaperEngineTests(unittest.TestCase):
         argv = ['trade', '--config', str(ROOT / 'user_data/config.paper.json'),
                 '--strategy', 'MultiAssetPaperStrategy', '--dry-run',
                 '--user-data-dir', self.temp.name,
+                '--logfile', str(Path(self.temp.name) / 'native-test.log'),
                 '--strategy-path', str(ROOT / 'user_data/strategies')]
         config = Configuration(Arguments(argv).get_parsed_arg(), RunMode.DRY_RUN).get_config()
         config['user_data_dir'] = Path(self.temp.name)

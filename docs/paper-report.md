@@ -140,6 +140,14 @@ checkout principal também passou86. Esses logs foram preservados em
 do commit corretivo será conferido pelo SHA exato na entrega; não confundir o
 status do primeiro push com o estado final da branch.
 
+A nova execução ainda falhou no handler de log. Um wrapper de CI passou a
+preservar o exit code da suíte e publicar os tracebacks reais como annotations
+GitHub, sem desativar testes. Isso confirmou remotamente dois `PermissionError`
+para `/freqtrade/user_data/logs/paper.log`. Os dois testes agora também usam
+`--logfile` no diretório temporário. As anotações reais estão em
+`ci-remote-errors.log`; a suíte continuou com86 testes aprovados. O teste não
+precisa de acesso de escrita ao log do bot ativo.
+
 ## Ambiente e operação
 
 As instruções de instalação/startup e o checkout final serão salvos no rascunho
