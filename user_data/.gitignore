@@ -1,0 +1,10 @@
+data/
+backtest_results/
+hyperopt_results/
+logs/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+config-private.json
