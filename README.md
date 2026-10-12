@@ -182,3 +182,5 @@ Linux tem templates renderizáveis de systemd, sem instalação automática.
 [backup/migração/recuperação](docs/host-recovery.md) e
 [monitor externo e alertas humanos](docs/external-monitor-design.md).
 Não houve deploy em PC/VPS nem cadastro de monitor/serviço externo.
+Veja [verificações reais e pendências](docs/host-report.md) e
+[checklist de implantação](docs/host-checklist.md).

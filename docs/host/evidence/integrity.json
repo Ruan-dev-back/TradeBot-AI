@@ -1,7 +1,7 @@
 {
   "original_122_preserved": true,
-  "total_tests": 146,
-  "new_tests": 24,
+  "total_tests": 147,
+  "new_tests": 25,
   "baseline": {
     "user_data/config.json": "8b34d550c3368f42bf7d638b043574887575e2576f40814c41480b81900ee904",
     "user_data/strategies/SmaRsiStrategy.py": "b37becb4d3b98242053eaa699c4b744f3f3228865125c0330655b29efea073e6",

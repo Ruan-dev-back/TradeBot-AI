@@ -1,0 +1,30 @@
+{
+  "window": {
+    "start_utc": "2026-10-12T17:17:10.179088+00:00",
+    "target_end_utc": "2026-10-19T17:17:10.179088+00:00",
+    "protocol_sha256": "0d276dcbf79e565ca7eeb61d52980a45a98e890cbcdd250dc9409308c5f2aa39",
+    "last_sample_utc": "2026-10-12T18:07:40.205879+00:00",
+    "exchange": "okx"
+  },
+  "native_counts": {
+    "trades": 0,
+    "orders": 0,
+    "open_positions": 0
+  },
+  "telemetry_events": 0,
+  "risk": {
+    "peak": 1000,
+    "equity": 1000.0,
+    "halted": false,
+    "warning": false,
+    "drawdown": 0.0,
+    "cooldown_until": null,
+    "losses": 0,
+    "closed_ids": [],
+    "policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+    "observed_at": "2026-10-12T18:07:46.032041+00:00"
+  },
+  "live_health_verified": false,
+  "status": "state_verified_live_health_pending",
+  "now_utc": "2026-10-12T18:10:53.479057+00:00"
+}

@@ -6,8 +6,10 @@ import fcntl
 import json
 from pathlib import Path
 import sqlite3
+import subprocess
 import sys
 import tempfile
+import time
 import unittest
 from unittest.mock import patch
 
@@ -16,7 +18,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from paper_monitor import Journal, manifest
 from paper_risk import RiskState
 from paper_telemetry import Telemetry
-from paper_host import compose, preflight, start, stop_observer
+from paper_host import compose, observer_locked, preflight, process_identity, start, stop_observer
 from render_host_units import render
 from state_bundle import create_backup, inspect_state, paths, restore_bundle, sha, verify_bundle
 
@@ -179,6 +181,24 @@ class HostGuardTests(unittest.TestCase):
                  patch('paper_host.os.kill') as kill:
                 with self.assertRaises(ValueError):stop_observer(root,'okx')
                 kill.assert_not_called()
+
+    def test_known_managed_process_stops_with_sigint_and_releases_lock(self):
+        with tempfile.TemporaryDirectory() as name:
+            root=Path(name);script=root/'scripts/paper_monitor.py';script.parent.mkdir()
+            lock=root/'user_data/observation/okx/observer.lock';lock.parent.mkdir(parents=True)
+            script.write_text("import fcntl,time\ntry:\n with open("+repr(str(lock))+",'a') as file:\n  fcntl.flock(file,fcntl.LOCK_EX)\n  while True: time.sleep(.1)\nexcept KeyboardInterrupt: pass\n")
+            child=subprocess.Popen([sys.executable,str(script),'watch','--exchange','okx'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+            try:
+                deadline=time.monotonic()+5
+                while not observer_locked(root,'okx') and time.monotonic()<deadline:time.sleep(.05)
+                self.assertTrue(observer_locked(root,'okx'))
+                folder=root/'user_data/host-ops/okx';folder.mkdir(parents=True)
+                (folder/'observer.json').write_text(json.dumps({'pid':child.pid,'start_ticks':process_identity(child.pid)}))
+                self.assertEqual(stop_observer(root,'okx')['observer'],'stopped_preserving_window')
+                child.wait(timeout=5)
+                self.assertFalse(observer_locked(root,'okx'))
+            finally:
+                if child.poll() is None:child.terminate();child.wait(timeout=5)
 
     def test_rendered_units_require_recovery_and_non_root_account(self):
         with tempfile.TemporaryDirectory() as name:

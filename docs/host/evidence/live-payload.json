@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "emitted_utc": "2026-10-12T18:13:18.123701+00:00",
+  "exchange": "okx",
+  "dry_run": true,
+  "engine_healthy": true,
+  "entries_blocked": false,
+  "observer": {
+    "status": "healthy",
+    "last_sample_utc": "2026-10-12T18:12:55.992691+00:00"
+  },
+  "engine_observed_utc": "2026-10-12T18:13:14.975944+00:00",
+  "candles": {
+    "BTC/USDT": "2026-10-12 17:00:00+00:00",
+    "ETH/USDT": "2026-10-12 17:00:00+00:00",
+    "SOL/USDT": "2026-10-12 17:00:00+00:00"
+  },
+  "alert_codes": [],
+  "drawdown": 0.0,
+  "drawdown_halted": false,
+  "transport": "local stdout only; external receiver/credentials/notifications not configured"
+}
