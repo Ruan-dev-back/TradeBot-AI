@@ -1,0 +1,142 @@
+{
+  "checked_at": "2026-10-12T17:15:42.158144+00:00",
+  "exchange": "kraken",
+  "healthy": true,
+  "alerts": [],
+  "process": {
+    "status": "running",
+    "container_id": "8a0e5c208c92",
+    "started_at": "2026-10-12T17:14:25.042750063Z",
+    "restart_count": 0,
+    "docker_health": "healthy"
+  },
+  "snapshot": {
+    "observed_at": "2026-10-12T17:15:39.114558+00:00",
+    "dry_run": true,
+    "schema_version": 3,
+    "loop_failure": null,
+    "wallet": {
+      "free_usdt": 1000.0,
+      "equity_usdt": 1000.0,
+      "observed_at": "2026-10-12T17:15:39.114558+00:00"
+    },
+    "exchange": "kraken",
+    "risk_ready": true,
+    "risk": {
+      "peak": 1000,
+      "equity": 1000.0,
+      "halted": false,
+      "warning": false,
+      "drawdown": 0.0,
+      "cooldown_until": null,
+      "losses": 0,
+      "closed_ids": [],
+      "policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+      "observed_at": "2026-10-12T17:15:39.114558+00:00"
+    },
+    "pairs": {
+      "BTC/USDT": {
+        "status": "ok",
+        "candles": 719,
+        "checked_candles": 200,
+        "first_utc": "2026-10-04 09:00:00+00:00",
+        "last_closed_utc": "2026-10-12 16:00:00+00:00",
+        "timeframe": "1h",
+        "latest_enter_long": 0,
+        "latest_exit_long": 0,
+        "latest_close_price": 82509.4,
+        "public_book": {
+          "status": "ok",
+          "observed_at": "2026-10-12T17:15:39.114558+00:00",
+          "received_at": "2026-10-12T17:15:39.462886+00:00",
+          "bid": 82611.0,
+          "ask": 82614.2,
+          "spread_bps": 0.38735011366269667
+        },
+        "candle_close_utc": "2026-10-12T17:00:00+00:00",
+        "decision": "no_trade",
+        "non_entry_reason": "no_entry_signal",
+        "rsi14": 35.6837587109685,
+        "sma20": 83498.95999999999,
+        "sma50": 83316.99000000005,
+        "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+        "entry_signals_in_checked_window": 2
+      },
+      "ETH/USDT": {
+        "status": "ok",
+        "candles": 719,
+        "checked_candles": 200,
+        "first_utc": "2026-10-04 09:00:00+00:00",
+        "last_closed_utc": "2026-10-12 16:00:00+00:00",
+        "timeframe": "1h",
+        "latest_enter_long": 0,
+        "latest_exit_long": 0,
+        "latest_close_price": 2513.81,
+        "public_book": {
+          "status": "ok",
+          "observed_at": "2026-10-12T17:15:39.114558+00:00",
+          "received_at": "2026-10-12T17:15:41.405066+00:00",
+          "bid": 2518.32,
+          "ask": 2518.34,
+          "spread_bps": 0.07941770935493683
+        },
+        "candle_close_utc": "2026-10-12T17:00:00+00:00",
+        "decision": "no_trade",
+        "non_entry_reason": "no_entry_signal",
+        "rsi14": 39.960229435126465,
+        "sma20": 2545.6409999999996,
+        "sma50": 2526.084400000001,
+        "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+        "entry_signals_in_checked_window": 2
+      },
+      "SOL/USDT": {
+        "status": "ok",
+        "candles": 719,
+        "checked_candles": 200,
+        "first_utc": "2026-10-04 09:00:00+00:00",
+        "last_closed_utc": "2026-10-12 16:00:00+00:00",
+        "timeframe": "1h",
+        "latest_enter_long": 0,
+        "latest_exit_long": 0,
+        "latest_close_price": 107.8,
+        "public_book": {
+          "status": "ok",
+          "observed_at": "2026-10-12T17:15:39.114558+00:00",
+          "received_at": "2026-10-12T17:15:41.864395+00:00",
+          "bid": 108.06,
+          "ask": 108.07,
+          "spread_bps": 0.9253689908842739
+        },
+        "candle_close_utc": "2026-10-12T17:00:00+00:00",
+        "decision": "no_trade",
+        "non_entry_reason": "no_entry_signal",
+        "rsi14": 28.86400355309909,
+        "sma20": 111.20099999999991,
+        "sma50": 110.62600000000003,
+        "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+        "entry_signals_in_checked_window": 1
+      }
+    },
+    "holdout_prices_inspected": false
+  },
+  "portfolio": {
+    "native_trades": 0,
+    "native_orders": 0,
+    "positions": [],
+    "orders": [],
+    "realized_pnl_usdt": 0.0,
+    "unrealized_pnl_usdt": 0.0,
+    "fees_usdt": 0.0,
+    "fee_method": "reconstructed from filled notional and native dry fee; not account invoices",
+    "wallet": {
+      "free_usdt": 1000.0,
+      "equity_usdt": 1000.0,
+      "observed_at": "2026-10-12T17:15:39.114558+00:00"
+    },
+    "pnl_note": "native closed PnL; open liquidation estimate at public bid, not promised fill"
+  },
+  "telemetry": [],
+  "private_api_used": false,
+  "entries_blocked": false,
+  "api_health": "recent_public_quotes"
+}

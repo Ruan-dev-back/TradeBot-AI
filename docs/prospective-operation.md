@@ -1,6 +1,8 @@
 # Operação local prospectiva
 
-Somente paper; não houve deploy. Perfil principal OKX e alternativa manual Kraken,
+Somente paper; não houve deploy. Validado em Linux; PC Windows deve usar WSL2/Linux
+com Docker acessível. Python Windows nativo não suporta o lock fcntl deste projeto.
+Perfil principal OKX e alternativa manual Kraken,
 sem wallet/estado compartilhados. Requisitos: Python3 stdlib no host, Docker/Compose
 já instalados, imagem fixada, horário UTC sincronizado e permissões nos bind mounts.
 Leia o [protocolo](prospective-protocol.md) antes da primeira coleta. O código do
@@ -78,6 +80,9 @@ e `tradebot-paper-health.timer`: observer host separado, timer30s, restart limit
 e journald. Não foram instalados/habilitados. Revisar `/opt/tradebot-ai`, permissões,
 usuário com acesso Docker e credenciais **de infraestrutura** somente se autorizadas;
 acesso ao socket Docker dá privilégios elevados e não deve ser exposto.
+O verificador systemd desta nuvem não encontra docker.service: os templates não
+foram validados como startup real. No host definitivo verificar/adaptar essa
+dependência, especialmente quando Docker é fornecido externamente no WSL2.
 
 PC: impedir suspensão/hibernação, NTP, energia/rede estáveis e disco monitorado.
 VPS: seguir [plano já publicado](vps-plan.md), sem contratar ou instalar sem

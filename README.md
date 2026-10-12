@@ -141,3 +141,24 @@ candles fechados de 1h. Acesso público não comprova elegibilidade de uma conta
 Nenhum candidato passou todos os gates; nenhum foi promovido e ML continua
 bloqueado. O holdout reservado permanece fechado. Os relatórios históricos
 permanecem preservados. Não houve contratação ou deploy de VPS.
+
+## Observação prospectiva OKX
+
+CLI independente, somente leitura do operador:
+
+```sh
+python3 scripts/paper_monitor.py snapshot --exchange okx
+python3 scripts/paper_monitor.py watch --exchange okx
+python3 scripts/paper_monitor.py health --exchange okx
+python3 scripts/paper_monitor.py report --exchange okx
+```
+
+Diário UTC persistente, alertas locais raised/recovered, hashes e janela fixa de
+168h, sem reutilizar warmup como trades. O monitor mostra saldo/P&L/fees, sinais,
+motivos de recusa, quotes e posições nativas; health exige dados/risco/SQLite,
+além da evidência do processo. Nenhum monitor local comprova disponibilidade do
+host inteiro. [Protocolo](docs/prospective-protocol.md),
+[operação Linux/WSL2](docs/prospective-operation.md),
+[relatório real desta etapa](docs/prospective-report.md) e
+[pesquisa futura com controle de múltiplos testes](docs/future-research-protocol.md).
+Sete dias só serão declarados depois da janela e das evidências suficientes.
