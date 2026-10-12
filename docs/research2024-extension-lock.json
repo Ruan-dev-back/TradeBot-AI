@@ -1,0 +1,9 @@
+{
+  "status": "frozen_before_D2_D3_and_F2V_results",
+  "parent": "e81b01cb551b2ea8f2133963f8f5abba839fc3bb",
+  "files": {
+    "research_strategies/DevelopmentCandidates.py": "485e8d4be5a7521629c9efb76237f363c062e281ccf84643a98328137a893d0d",
+    "docs/research2024-extension.md": "790365cffe59b86b90f04948bd3afd4451334691ec9b9288837b7f29fcb61386"
+  },
+  "holdout_prices_inspected": false
+}

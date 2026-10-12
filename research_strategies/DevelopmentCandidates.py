@@ -93,3 +93,15 @@ class MeanReversionDevelopment(DevelopmentBase):
         dataframe['exit_long'] = (((dataframe['close'] >= dataframe['band_middle']) | (dataframe['rsi'] >= 50)) &
                                   (dataframe['volume'] > 0)).astype(int)
         return dataframe
+
+
+class BreakoutVolumeDevelopment(BreakoutDevelopment):
+    """New hypothesis F2V: fixed 1.5x previous 20-bar mean volume, never a silent F2 edit."""
+
+    def populate_entry_trend(self, dataframe, metadata):
+        dataframe = super().populate_entry_trend(dataframe, metadata)
+        previous_mean = dataframe['volume'].rolling(20).mean().shift(1)
+        dataframe['enter_long'] = (dataframe['enter_long'].eq(1) &
+                                   (dataframe['volume'] >= 1.5 * previous_mean)).astype(int)
+        return dataframe
+
