@@ -63,7 +63,9 @@ PC/VPS. Nenhuma unit/tarefa foi registrada nesta tarefa.
 PowerShell/WSL/Docker Desktop não existem aqui. Os PS1 são preparados e revisáveis,
 mas **não executados em Windows**. Não declarar instalação Windows validada pelos
 resultados Linux. Host ARM, NTFS/sync/NFS e container user alternativo não são
-anunciados compatíveis; preflight falha nos casos que fogem do alvo testado.
+anunciados compatíveis. Preflight bloqueia arquitetura/UID/Compose inválidos e
+/mnt; tipo de filesystem, sync e confiabilidade de rede devem ser verificados
+no host definitivo, sem alegar detecção automática de todo armazenamento remoto.
 
 ## Backup real e restauração isolada
 
@@ -123,4 +125,8 @@ naquele host, receptor externo e contatos/ACK autorizados, backup externo/reten�
 restore/energia/outage drills e janela168h suficientemente observada. Nenhuma
 contratação, notificação ou operação com dinheiro real foi feita. Kraken segue
 alternativa manual, carteira e eventual janela independentes; ML/holdout fechado
-permanecem bloqueados. CI do SHA remoto deve ser registrado antes da entrega.
+permanecem bloqueados. CI da implementação está verde no SHA remoto
+`fd0b871e24ecec86d1b7bfdf38160053bef408d3`: [run38289960290](https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38289960290)
+e [evidência de SHA/status/hash](host/evidence/ci-verified.json). API GitHub permanece
+bloqueada com CONNECT403; HTML público confirmou o run exato. O commit posterior
+apenas registra essa evidência; seu HEAD também será verificado ao finalizar.
