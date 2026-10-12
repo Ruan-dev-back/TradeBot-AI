@@ -61,4 +61,8 @@ Pendências: completar a janela com evidência/cobertura, decidir PC persistente
 
 Todos os candidatos de2024 continuam NO-GO. Pesquisa futura mantém orçamento cumulativo, hipóteses pré-registradas e controle de múltiplos testes; não usa holdout fechado ou dados novos para otimização nesta janela. Gates de causalidade/custos nativos e validação independente continuam pendentes. ML e operações reais permanecem bloqueados; não se promete lucro.
 
-CI deve ser confirmado no SHA remoto exato após o push autorizado, com URL/hash do run; a evidência será adicionada à pasta prospective. A API GitHub pode falhar com CONNECT403 nesta nuvem; verificação HTML pública distingue sucesso real de badge/execução antiga.
+CI **verde** no SHA `253fd7ac75102c5aea579b03c64f6ded2c565576`: [run 38283903199](https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38283903199), [evidência do SHA/status/hash](prospective/evidence/ci-verified.json). A API GitHub permanece bloqueada com CONNECT403 nesta nuvem; HTML público confirmou o resultado exato. Logs locais integrais preservam os 122 testes; logs completos do GitHub podem exigir login. O commit posterior apenas registra documentação/evidências, com seu CI também verificado ao finalizar.
+
+## Checkpoint posterior da sessão
+
+Em 2026-10-12T17:25:57.265325+00:00 UTC: 18 amostras, 527.1s decorridos, 510.0s de intervalos amostrados, 510.0s saudáveis; sete dias decorridos/qualificados continuam false. Ordens acrescentadas desde T0: 0. Último estado saudável: True. [Checkpoint](prospective/evidence/observation-final.json). A coleta continua nesta sessão, sem garantia de sobrevivência ao encerramento/publicação do ambiente.

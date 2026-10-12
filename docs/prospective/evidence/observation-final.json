@@ -1,0 +1,334 @@
+{
+  "window": {
+    "protocol": {
+      "duration_seconds": 604800,
+      "exchange": "okx",
+      "file_hashes": {
+        "docker-compose.okx.yml": "594b254c6870b5607966b934b921602691313a1540e93a1de2f316866c9c4118",
+        "docs/prospective-protocol.md": "e08620aabf14cfdf4d59336644c15493873ea2a8c65132b7e46aea8873b2a048",
+        "scripts/paper_health.py": "274314d6bd4b871c88674a849d7bb718470f6dc89e62e04f27a4654325067b0b",
+        "scripts/paper_monitor.py": "e980edeaf02b6fa1e0611d3b6fe4984847d19a6d2c75380aea304854f7de5e2c",
+        "scripts/paper_risk.py": "8435cbe7729286c0603fd88e809c6200364a983c30a4660bba23e8e52b3ad6a0",
+        "scripts/paper_status.py": "ccdbf4c98d1c7c57c995d639bd85f759969ca95a484fead05e9c6c98a230b32e",
+        "scripts/paper_telemetry.py": "f344dada09a3f67a3aadb68b05bad8b95311de23fc256a48df34035ab8a63de4",
+        "user_data/config.paper.okx.json": "2343c6e24e3b917de2dc9bbae3a373b9ff5072153461d0de479807c1cdcef4a2",
+        "user_data/strategies/MultiAssetPaperStrategy.py": "884eb05ba5e03b7d19f7f0085f10e57fea197555f11ed4853b6e5f999dd0d8d5",
+        "user_data/strategies/OkxPaperStrategy.py": "e42e778e2ac6c223f4c0c3e810a56125aced094ec2d9182308c5de4c1a7f413f"
+      },
+      "holdout_prices_inspected": false,
+      "interval_seconds": 30,
+      "maximum_bracket_seconds": 45,
+      "source_commit": "98e41958f66b994bfce6b96944cfa0d18a9835a5"
+    },
+    "protocol_sha256": "0d276dcbf79e565ca7eeb61d52980a45a98e890cbcdd250dc9409308c5f2aa39",
+    "start_utc": "2026-10-12T17:17:10.179088+00:00",
+    "target_end_utc": "2026-10-19T17:17:10.179088+00:00"
+  },
+  "checked_at": "2026-10-12T17:25:57.265325+00:00",
+  "samples": 18,
+  "total_journal_samples": 18,
+  "elapsed_seconds": 527.086237,
+  "wall_elapsed_seconds": 527.086237,
+  "sampled_bracket_seconds": 510.004625,
+  "healthy_bracket_seconds": 510.004625,
+  "sample_coverage_fraction": 0.967592377108492,
+  "healthy_sample_fraction": 1.0,
+  "interval_gaps_or_restarts": 0,
+  "seven_days_elapsed": false,
+  "seven_day_observation_qualified": false,
+  "alert_transitions": [],
+  "recorded_telemetry_events": 0,
+  "latest": {
+    "alerts": [],
+    "api_health": "recent_public_quotes",
+    "checked_at": "2026-10-12T17:25:40.195961+00:00",
+    "entries_blocked": false,
+    "exchange": "okx",
+    "healthy": true,
+    "portfolio": {
+      "fee_method": "reconstructed from filled notional and native dry fee; not account invoices",
+      "fees_usdt": 0.0,
+      "native_orders": 0,
+      "native_trades": 0,
+      "orders": [],
+      "pnl_note": "native closed PnL; open liquidation estimate at public bid, not promised fill",
+      "positions": [],
+      "realized_pnl_usdt": 0.0,
+      "unrealized_pnl_usdt": 0.0,
+      "wallet": {
+        "equity_usdt": 1000.0,
+        "free_usdt": 1000.0,
+        "observed_at": "2026-10-12T17:25:38.134081+00:00"
+      }
+    },
+    "private_api_used": false,
+    "process": {
+      "container_id": "f88a3751f7f9",
+      "docker_health": "healthy",
+      "restart_count": 0,
+      "started_at": "2026-10-12T17:14:22.760352532Z",
+      "status": "running"
+    },
+    "snapshot": {
+      "dry_run": true,
+      "exchange": "okx",
+      "holdout_prices_inspected": false,
+      "loop_failure": null,
+      "observed_at": "2026-10-12T17:25:38.134081+00:00",
+      "pairs": {
+        "BTC/USDT": {
+          "candle_close_utc": "2026-10-12T17:00:00+00:00",
+          "candles": 299,
+          "checked_candles": 200,
+          "decision": "no_trade",
+          "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+          "entry_signals_in_checked_window": 2,
+          "first_utc": "2026-10-04 09:00:00+00:00",
+          "last_closed_utc": "2026-10-12 16:00:00+00:00",
+          "latest_close_price": 82507.2,
+          "latest_enter_long": 0,
+          "latest_exit_long": 0,
+          "non_entry_reason": "no_entry_signal",
+          "public_book": {
+            "ask": 82551.7,
+            "bid": 82551.6,
+            "observed_at": "2026-10-12T17:25:38.134081+00:00",
+            "received_at": "2026-10-12T17:25:38.513801+00:00",
+            "spread_bps": 0.012113628254707067,
+            "status": "ok"
+          },
+          "rsi14": 35.382445518210965,
+          "sma20": 83494.21999999999,
+          "sma50": 83312.86200000004,
+          "status": "ok",
+          "timeframe": "1h"
+        },
+        "ETH/USDT": {
+          "candle_close_utc": "2026-10-12T17:00:00+00:00",
+          "candles": 299,
+          "checked_candles": 200,
+          "decision": "no_trade",
+          "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+          "entry_signals_in_checked_window": 2,
+          "first_utc": "2026-10-04 09:00:00+00:00",
+          "last_closed_utc": "2026-10-12 16:00:00+00:00",
+          "latest_close_price": 2513.8,
+          "latest_enter_long": 0,
+          "latest_exit_long": 0,
+          "non_entry_reason": "no_entry_signal",
+          "public_book": {
+            "ask": 2513.86,
+            "bid": 2513.85,
+            "observed_at": "2026-10-12T17:25:38.134081+00:00",
+            "received_at": "2026-10-12T17:25:38.867569+00:00",
+            "spread_bps": 0.03977954178032654,
+            "status": "ok"
+          },
+          "rsi14": 39.800351522442774,
+          "sma20": 2545.3540000000007,
+          "sma50": 2525.9348000000023,
+          "status": "ok",
+          "timeframe": "1h"
+        },
+        "SOL/USDT": {
+          "candle_close_utc": "2026-10-12T17:00:00+00:00",
+          "candles": 299,
+          "checked_candles": 200,
+          "decision": "no_trade",
+          "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+          "entry_signals_in_checked_window": 1,
+          "first_utc": "2026-10-04 09:00:00+00:00",
+          "last_closed_utc": "2026-10-12 16:00:00+00:00",
+          "latest_close_price": 107.84,
+          "latest_enter_long": 0,
+          "latest_exit_long": 0,
+          "non_entry_reason": "no_entry_signal",
+          "public_book": {
+            "ask": 107.75,
+            "bid": 107.74,
+            "observed_at": "2026-10-12T17:25:38.134081+00:00",
+            "received_at": "2026-10-12T17:25:39.225324+00:00",
+            "spread_bps": 0.928117314028968,
+            "status": "ok"
+          },
+          "rsi14": 28.174535247505283,
+          "sma20": 111.2,
+          "sma50": 110.62819999999999,
+          "status": "ok",
+          "timeframe": "1h"
+        }
+      },
+      "risk": {
+        "closed_ids": [],
+        "cooldown_until": null,
+        "drawdown": 0.0,
+        "equity": 1000.0,
+        "halted": false,
+        "losses": 0,
+        "observed_at": "2026-10-12T17:25:38.134081+00:00",
+        "peak": 1000,
+        "policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+        "warning": false
+      },
+      "risk_ready": true,
+      "schema_version": 3,
+      "wallet": {
+        "equity_usdt": 1000.0,
+        "free_usdt": 1000.0,
+        "observed_at": "2026-10-12T17:25:38.134081+00:00"
+      }
+    },
+    "telemetry": []
+  },
+  "latest_live_sample": {
+    "alerts": [],
+    "api_health": "recent_public_quotes",
+    "checked_at": "2026-10-12T17:25:40.195961+00:00",
+    "entries_blocked": false,
+    "exchange": "okx",
+    "healthy": true,
+    "portfolio": {
+      "fee_method": "reconstructed from filled notional and native dry fee; not account invoices",
+      "fees_usdt": 0.0,
+      "native_orders": 0,
+      "native_trades": 0,
+      "orders": [],
+      "pnl_note": "native closed PnL; open liquidation estimate at public bid, not promised fill",
+      "positions": [],
+      "realized_pnl_usdt": 0.0,
+      "unrealized_pnl_usdt": 0.0,
+      "wallet": {
+        "equity_usdt": 1000.0,
+        "free_usdt": 1000.0,
+        "observed_at": "2026-10-12T17:25:38.134081+00:00"
+      }
+    },
+    "private_api_used": false,
+    "process": {
+      "container_id": "f88a3751f7f9",
+      "docker_health": "healthy",
+      "restart_count": 0,
+      "started_at": "2026-10-12T17:14:22.760352532Z",
+      "status": "running"
+    },
+    "snapshot": {
+      "dry_run": true,
+      "exchange": "okx",
+      "holdout_prices_inspected": false,
+      "loop_failure": null,
+      "observed_at": "2026-10-12T17:25:38.134081+00:00",
+      "pairs": {
+        "BTC/USDT": {
+          "candle_close_utc": "2026-10-12T17:00:00+00:00",
+          "candles": 299,
+          "checked_candles": 200,
+          "decision": "no_trade",
+          "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+          "entry_signals_in_checked_window": 2,
+          "first_utc": "2026-10-04 09:00:00+00:00",
+          "last_closed_utc": "2026-10-12 16:00:00+00:00",
+          "latest_close_price": 82507.2,
+          "latest_enter_long": 0,
+          "latest_exit_long": 0,
+          "non_entry_reason": "no_entry_signal",
+          "public_book": {
+            "ask": 82551.7,
+            "bid": 82551.6,
+            "observed_at": "2026-10-12T17:25:38.134081+00:00",
+            "received_at": "2026-10-12T17:25:38.513801+00:00",
+            "spread_bps": 0.012113628254707067,
+            "status": "ok"
+          },
+          "rsi14": 35.382445518210965,
+          "sma20": 83494.21999999999,
+          "sma50": 83312.86200000004,
+          "status": "ok",
+          "timeframe": "1h"
+        },
+        "ETH/USDT": {
+          "candle_close_utc": "2026-10-12T17:00:00+00:00",
+          "candles": 299,
+          "checked_candles": 200,
+          "decision": "no_trade",
+          "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+          "entry_signals_in_checked_window": 2,
+          "first_utc": "2026-10-04 09:00:00+00:00",
+          "last_closed_utc": "2026-10-12 16:00:00+00:00",
+          "latest_close_price": 2513.8,
+          "latest_enter_long": 0,
+          "latest_exit_long": 0,
+          "non_entry_reason": "no_entry_signal",
+          "public_book": {
+            "ask": 2513.86,
+            "bid": 2513.85,
+            "observed_at": "2026-10-12T17:25:38.134081+00:00",
+            "received_at": "2026-10-12T17:25:38.867569+00:00",
+            "spread_bps": 0.03977954178032654,
+            "status": "ok"
+          },
+          "rsi14": 39.800351522442774,
+          "sma20": 2545.3540000000007,
+          "sma50": 2525.9348000000023,
+          "status": "ok",
+          "timeframe": "1h"
+        },
+        "SOL/USDT": {
+          "candle_close_utc": "2026-10-12T17:00:00+00:00",
+          "candles": 299,
+          "checked_candles": 200,
+          "decision": "no_trade",
+          "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+          "entry_signals_in_checked_window": 1,
+          "first_utc": "2026-10-04 09:00:00+00:00",
+          "last_closed_utc": "2026-10-12 16:00:00+00:00",
+          "latest_close_price": 107.84,
+          "latest_enter_long": 0,
+          "latest_exit_long": 0,
+          "non_entry_reason": "no_entry_signal",
+          "public_book": {
+            "ask": 107.75,
+            "bid": 107.74,
+            "observed_at": "2026-10-12T17:25:38.134081+00:00",
+            "received_at": "2026-10-12T17:25:39.225324+00:00",
+            "spread_bps": 0.928117314028968,
+            "status": "ok"
+          },
+          "rsi14": 28.174535247505283,
+          "sma20": 111.2,
+          "sma50": 110.62819999999999,
+          "status": "ok",
+          "timeframe": "1h"
+        }
+      },
+      "risk": {
+        "closed_ids": [],
+        "cooldown_until": null,
+        "drawdown": 0.0,
+        "equity": 1000.0,
+        "halted": false,
+        "losses": 0,
+        "observed_at": "2026-10-12T17:25:38.134081+00:00",
+        "peak": 1000,
+        "policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+        "warning": false
+      },
+      "risk_ready": true,
+      "schema_version": 3,
+      "wallet": {
+        "equity_usdt": 1000.0,
+        "free_usdt": 1000.0,
+        "observed_at": "2026-10-12T17:25:38.134081+00:00"
+      }
+    },
+    "telemetry": []
+  },
+  "new_closed_candles_seen": {
+    "BTC/USDT": [],
+    "ETH/USDT": [],
+    "SOL/USDT": []
+  },
+  "orders_added_since_first_sample": [],
+  "realized_pnl_change_since_first_sample_usdt": 0.0,
+  "pnl_boundary_note": "all native positions preserved; change may include exits of pre-window positions; not independent profitability validation",
+  "limitation": "sampled brackets, not proof of continuous uptime; no profitability inference"
+}
