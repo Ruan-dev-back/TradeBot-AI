@@ -1,0 +1,15 @@
+{
+  "restored_utc": "2026-10-12T18:10:53.424506+00:00",
+  "exchange": "okx",
+  "backup_manifest_sha256": "d563f6abc608c2691df707ba9328ab5f04566a87ec9729fa4626e69ffe9cbf0e",
+  "source_commit": "46cccd18c88c122dc5701922f428cccc680cc991",
+  "preserved_window": {
+    "start_utc": "2026-10-12T17:17:10.179088+00:00",
+    "target_end_utc": "2026-10-19T17:17:10.179088+00:00",
+    "protocol_sha256": "0d276dcbf79e565ca7eeb61d52980a45a98e890cbcdd250dc9409308c5f2aa39",
+    "last_sample_utc": "2026-10-12T18:07:40.205879+00:00",
+    "exchange": "okx"
+  },
+  "live_health_pending": true,
+  "next_observer_sample_must_record_gap_or_restart": true
+}

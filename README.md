@@ -1,7 +1,8 @@
 # TradeBot AI
 
-MVP de pesquisa quantitativa com **Freqtrade via Docker Compose**. Apenas dados
-públicos, testes e backtesting de BTC/USDT spot em 1h. Não executa trading real,
+Pesquisa quantitativa e operador de **paper trading com Freqtrade via Docker Compose**.
+Dados públicos spot em 1h: pesquisa Binance BTC/USDT de 2024 e simulação atual
+OKX/Kraken de BTC/USDT, ETH/USDT e SOL/USDT. Não executa trading real,
 não usa chaves de API e não inclui ML, LLM, painel web ou deploy.
 
 ## Requisitos
@@ -17,7 +18,7 @@ docker info
 docker compose config --quiet
 docker compose pull
 docker compose run --rm freqtrade --version
-docker compose run --rm freqtrade test
+docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test
 ```
 
 ## Pesquisa reproduzível
@@ -94,8 +95,8 @@ taxa simulada: 0,1% na entrada e na saída. Não há alegação de lucratividade
 ## Segurança
 
 `dry_run=true`, mercado `spot`, credenciais ausentes, API e Telegram desativados.
-O Compose não expõe portas nem inicia um bot: seu comando padrão é um backtest.
-A entrada adaptada só aceita pesquisa e testes; `trade` e argumentos de
+O Compose de pesquisa não expõe portas nem inicia um bot: seu comando padrão é um backtest.
+A entrada de pesquisa só aceita pesquisa e testes; `trade` e argumentos de
 configuração alternativos são recusados. Overrides `FREQTRADE__*` também são
 recusados. Não forneça credenciais nem substitua a entrada por comandos de trading.
 Essas proteções não impedem alguém de editar o projeto ou invocar Docker diretamente.
@@ -105,3 +106,81 @@ O diagnóstico de rede e a solução de aquisição nesta nuvem estão em
 [docs/environment-status.md](docs/environment-status.md).
 O histórico e a justificativa do stop-loss de 5% estão em
 [docs/stoploss-review.md](docs/stoploss-review.md); nenhum parâmetro foi otimizado.
+
+## Mercado atual: paper trading
+O serviço Kraken em `docker-compose.paper.yml` recebe candles atuais de
+BTC/USDT, ETH/USDT e SOL/USDT e pode simular ordens automaticamente quando houver
+sinais válidos. Usa Freqtrade nativo com `dry_run=true`, carteira fictícia de
+1000 USDT, uma posição e stake de até25 USDT, limitada também pelo teto10% e
+orçamento nominal0,5% com custos. Não há credenciais privadas nem ordens reais.
+
+A estratégia de paper é uma cópia dos sinais da baseline que perdeu dinheiro em
+Binance BTC/USDT. Esses resultados não são resultados Kraken; não há comprovação
+de lucratividade da simulação. A baseline e as evidências históricas permanecem
+congeladas. [Relatório da integração e dos testes](docs/paper-report.md),
+[operação e comandos](docs/realtime-roadmap.md) e
+[framework de desenvolvimento 2024](docs/development-framework.md).
+
+O serviço foi validado nesta máquina, com dados reais e reinicialização. Isso não
+constitui deploy ou monitoramento 24/7. Processos do ambiente de desenvolvimento
+não têm garantia de sobreviver à publicação ou restauração do ambiente.
+
+## OKX e desenvolvimento concluído nesta etapa
+
+O perfil separado `docker-compose.okx.yml` usa `OkxPaperStrategy`, banco/carteira
+próprios e dados públicos oficiais da OKX. O modo demo autenticado da exchange
+não é utilizado: ordens são simuladas localmente pelo Freqtrade. Kraken permanece
+como alternativa manual, sem migração automática de posições. Os dois perfis
+mantêm as mesmas proteções; monitoram bid/ask a cada 20s e calculam sinais em
+candles fechados de 1h. Acesso público não comprova elegibilidade de uma conta.
+
+[Integração e evidências](docs/okx-integration-report.md),
+[comandos seguros](docs/okx-commands.md),
+[resultados D1–D3 de 2024](docs/research2024-results.md) e
+[plano VPS e custos](docs/vps-plan.md).
+Nenhum candidato passou todos os gates; nenhum foi promovido e ML continua
+bloqueado. O holdout reservado permanece fechado. Os relatórios históricos
+permanecem preservados. Não houve contratação ou deploy de VPS.
+
+## Observação prospectiva OKX
+
+CLI independente, somente leitura do operador:
+
+```sh
+python3 scripts/paper_monitor.py snapshot --exchange okx
+python3 scripts/paper_monitor.py watch --exchange okx
+python3 scripts/paper_monitor.py health --exchange okx
+python3 scripts/paper_monitor.py report --exchange okx
+```
+
+Diário UTC persistente, alertas locais raised/recovered, hashes e janela fixa de
+168h, sem reutilizar warmup como trades. O monitor mostra saldo/P&L/fees, sinais,
+motivos de recusa, quotes e posições nativas; health exige dados/risco/SQLite,
+além da evidência do processo. Nenhum monitor local comprova disponibilidade do
+host inteiro. [Protocolo](docs/prospective-protocol.md),
+[operação Linux/WSL2](docs/prospective-operation.md),
+[relatório real desta etapa](docs/prospective-report.md) e
+[pesquisa futura com controle de múltiplos testes](docs/future-research-protocol.md).
+Sete dias só serão declarados depois da janela e das evidências suficientes.
+
+## Host persistente: Windows/WSL2 e Linux
+
+Ferramentas de operação adicionais, sem alterar os arquivos congelados:
+
+```sh
+python3 scripts/paper_host.py preflight
+python3 scripts/paper_host.py verify-recovery
+python3 scripts/paper_host.py start
+python3 scripts/paper_host.py status
+```
+
+Start exige uma janela já restaurada/autorizada. Backup completo inclui quatro
+bancos e código Git pelo commit; recuperação não sobrescreve estados, não muda
+T0/T1 e não fabrica saúde atual. Windows usa dispatcher PowerShell para WSL2;
+Linux tem templates renderizáveis de systemd, sem instalação automática.
+[Instalação e comandos](docs/host-installation.md),
+[backup/migração/recuperação](docs/host-recovery.md) e
+[monitor externo e alertas humanos](docs/external-monitor-design.md).
+Não houve deploy em PC/VPS nem cadastro de monitor/serviço externo.
+Veja [verificações reais e pendências](docs/host-report.md) e
+[checklist de implantação](docs/host-checklist.md).

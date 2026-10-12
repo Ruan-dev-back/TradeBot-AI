@@ -72,3 +72,36 @@ O CI remoto foi conferido pela página pública do run com SHA e status explíci
 porque `api.github.com` retornou CONNECT403 do proxy. Não foram requisitadas chaves
 de GitHub/Binance. Cenários de spread/slippage são hipóteses documentadas, não dados
 de order book extraídos dos candles.
+
+## Paper trading e callbacks de risco
+
+Documentação oficial stable consultada antes da implementação, no snapshot já
+fixado `1f394eaebc2f46a83d26971388628707802f8602`:
+
+- [Dry-run, carteira, SQLite, mínimos e logs](https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/docs/configuration.md).
+- [Callbacks de stake e confirmação](https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/docs/strategy-callbacks.md): stake é ajustado aos mínimos; exceções podem retornar ao stake proposto e confirmação padrão permissiva. Os callbacks do paper capturam falhas e recusam a entrada.
+- [Ciclo do bot](https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/docs/bot-basics.md).
+- Código instalado Freqtrade2026.9 / CCXT4.5.84: `FreqtradeBot.create_trade`, `execute_entry`, `Exchange.create_order`, `create_dry_run_order`, `fetch_dry_run_order`, `Wallets._update_dry` e `DataProvider`. A integração testa esse motor, sem alterar a biblioteca.
+- Kraken REST pública: `https://api.kraken.com/0/public/Time`, `Assets`, `AssetPairs`, `OHLC` e `Depth`; credenciais privadas não foram utilizadas.
+
+O CA gerenciado é carregado via `cafile` no cliente async. O cliente síncrono usa
+`requests_trust_env=true`; `trust_env=true` isoladamente não alterava a Session
+na versão CCXT fixada. O acesso atual foi comprovado por requisições e pelo
+serviço nativo, sem desabilitar TLS ou mudar os endpoints.
+
+## Fontes adicionais da integração OKX
+
+Esta continuação consultou a documentação estável do Freqtrade: exchanges,
+configuration, strategy-callbacks e docker_quickstart no branch stable de
+`freqtrade/freqtrade`, além do adaptador OKX da imagem fixada (2026.9/CCXT 4.5.84).
+O bot nativo spot/dry-run funcionou; demo autenticado não foi executado.
+
+- OKX API oficial: https://www.okx.com/docs-v5/en/ ; time/instruments spot,
+  market ticker/books/candles. Demo requer chaves/passphrase próprias e
+  `x-simulated-trading: 1`; fee de conta é endpoint privado, não consultado.
+- Fee pública: https://www.okx.com/fees ; tabela padrão/contexto registrado,
+  sem assumir tarifa autenticada ou substituir a fee paper de 40 bps/lado.
+- Fontes de hospedagem e hashes das consultas: [public-sources.json](okx/evidence/public-sources.json)
+  e [plano VPS](vps-plan.md). Cotação é snapshot, sem contrato/deploy.
+
+O conteúdo histórico acima permanece como referência das etapas anteriores.

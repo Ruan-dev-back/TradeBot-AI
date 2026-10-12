@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import subprocess
 import urllib.request
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://github.com/Ruan-dev-back/TradeBot-AI"
@@ -31,20 +32,22 @@ def fetch(url):
         return response.read().decode("utf-8")
 
 
-def check():
-    remote = subprocess.check_output(["git", "ls-remote", "origin", "refs/heads/feat/mvp-foundation"],
+def check(branch="feat/mvp-foundation"):
+    if branch not in {"feat/mvp-foundation", "feat/realtime-paper-trading"}:
+        raise ValueError("CI check limited to the authorized development branches")
+    remote = subprocess.check_output(["git", "ls-remote", "origin", "refs/heads/" + branch],
                                      cwd=ROOT, text=True).split()
     if len(remote) != 2:
         raise ValueError("Branch remota não identificada")
     sha = remote[0]
-    page = fetch(BASE + "/actions?query=branch%3Afeat%2Fmvp-foundation")
+    page = fetch(BASE + "/actions?query=" + quote("branch:" + branch, safe=""))
     run_paths = list(dict.fromkeys(re.findall(r'/Ruan-dev-back/TradeBot-AI/actions/runs/\d+', page)))
     for path in run_paths[:10]:
         run_page = fetch("https://github.com" + path)
         if f"/Ruan-dev-back/TradeBot-AI/commit/{sha}" not in run_page:
             continue
         status = parse_run_page(run_page, sha)
-        return {"checked_at": datetime.now(timezone.utc).isoformat(), "head_sha": sha,
+        return {"checked_at": datetime.now(timezone.utc).isoformat(), "branch": branch, "head_sha": sha,
                 "current_local_sha": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
                 "status": status, "url": "https://github.com" + path,
                 "evidence_method": "GitHub public run HTML: exact commit URL and explicit status",
@@ -58,8 +61,9 @@ def check():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--branch", choices=["feat/mvp-foundation", "feat/realtime-paper-trading"], default="feat/mvp-foundation")
     args = parser.parse_args()
-    result = check()
+    result = check(args.branch)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))

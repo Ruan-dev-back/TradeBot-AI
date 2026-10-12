@@ -1,0 +1,126 @@
+time="2026-10-12T00:15:29Z" level=warning msg="Found orphan containers ([tradebot-ai-okxpaper-1 tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+{
+  "output": "/freqtrade/user_data/research/research2024-analysis",
+  "acceptance": {
+    "baseline": {
+      "central_aggregate": {
+        "trades": 51,
+        "net_pnl": -23.999782152312548,
+        "profit_factor": 0.6680809897309055,
+        "winrate": 0.37254901960784315
+      },
+      "adverse_aggregate_pnl": -39.063694545210794,
+      "gates": {
+        "minimum_sample": true,
+        "central_pnl_pf": false,
+        "two_positive_folds": false,
+        "adverse_nonnegative": false,
+        "marked_drawdown": true
+      },
+      "economic_and_sample_gates_passed": false,
+      "promoted": false,
+      "remaining_gates": [
+        "full signal replay/native execution costs",
+        "native candidate lookahead/recursive",
+        "gap and block uncertainty"
+      ],
+      "independent_validation": false
+    },
+    "breakout": {
+      "central_aggregate": {
+        "trades": 70,
+        "net_pnl": -30.844296043318238,
+        "profit_factor": 0.6331685096499925,
+        "winrate": 0.32857142857142857
+      },
+      "adverse_aggregate_pnl": -50.580803054761844,
+      "gates": {
+        "minimum_sample": true,
+        "central_pnl_pf": false,
+        "two_positive_folds": false,
+        "adverse_nonnegative": false,
+        "marked_drawdown": true
+      },
+      "economic_and_sample_gates_passed": false,
+      "promoted": false,
+      "remaining_gates": [
+        "full signal replay/native execution costs",
+        "native candidate lookahead/recursive",
+        "gap and block uncertainty"
+      ],
+      "independent_validation": false
+    },
+    "breakout_volume": {
+      "central_aggregate": {
+        "trades": 57,
+        "net_pnl": -23.64391276295656,
+        "profit_factor": 0.6522876033215286,
+        "winrate": 0.3157894736842105
+      },
+      "adverse_aggregate_pnl": -40.901745489229725,
+      "gates": {
+        "minimum_sample": true,
+        "central_pnl_pf": false,
+        "two_positive_folds": false,
+        "adverse_nonnegative": false,
+        "marked_drawdown": true
+      },
+      "economic_and_sample_gates_passed": false,
+      "promoted": false,
+      "remaining_gates": [
+        "full signal replay/native execution costs",
+        "native candidate lookahead/recursive",
+        "gap and block uncertainty"
+      ],
+      "independent_validation": false
+    },
+    "mean_reversion": {
+      "central_aggregate": {
+        "trades": 39,
+        "net_pnl": -10.717398736230379,
+        "profit_factor": 0.5557542623478141,
+        "winrate": 0.48717948717948717
+      },
+      "adverse_aggregate_pnl": -22.927339812396625,
+      "gates": {
+        "minimum_sample": false,
+        "central_pnl_pf": false,
+        "two_positive_folds": false,
+        "adverse_nonnegative": false,
+        "marked_drawdown": true
+      },
+      "economic_and_sample_gates_passed": false,
+      "promoted": false,
+      "remaining_gates": [
+        "full signal replay/native execution costs",
+        "native candidate lookahead/recursive",
+        "gap and block uncertainty"
+      ],
+      "independent_validation": false
+    },
+    "trend": {
+      "central_aggregate": {
+        "trades": 27,
+        "net_pnl": 7.504513349952759,
+        "profit_factor": 1.175208163415123,
+        "winrate": 0.2962962962962963
+      },
+      "adverse_aggregate_pnl": -2.055596774726652,
+      "gates": {
+        "minimum_sample": false,
+        "central_pnl_pf": true,
+        "two_positive_folds": true,
+        "adverse_nonnegative": false,
+        "marked_drawdown": true
+      },
+      "economic_and_sample_gates_passed": false,
+      "promoted": false,
+      "remaining_gates": [
+        "full signal replay/native execution costs",
+        "native candidate lookahead/recursive",
+        "gap and block uncertainty"
+      ],
+      "independent_validation": false
+    }
+  }
+}

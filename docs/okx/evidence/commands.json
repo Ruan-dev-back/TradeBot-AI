@@ -1,0 +1,90 @@
+{
+  "recorded_at": "2026-10-12T00:43:53.540162+00:00",
+  "branch": "feat/realtime-paper-trading",
+  "commands_executed": [
+    {
+      "command": "python3 scripts/ci_tests.py",
+      "exit_code": 0,
+      "evidence": "tests.log",
+      "observed_tests": 106
+    },
+    {
+      "command": "sh scripts/setup_environment.sh",
+      "exit_code": 0,
+      "evidence": "setup.log",
+      "observed_tests": 106
+    },
+    {
+      "command": "docker compose -f docker-compose.okx.yml -f docker-compose.okx.cloud.yml run --rm --entrypoint python okxpaper /freqtrade/scripts/check_okx.py --output /freqtrade/user_data/research/okx-market.json",
+      "exit_code": 0,
+      "evidence": "okx-market.log"
+    },
+    {
+      "command": "docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml run --rm --entrypoint python papertrade /freqtrade/scripts/check_market.py --output /freqtrade/user_data/research/kraken-market-stage2.json",
+      "exit_code": 0,
+      "evidence": "kraken-market.log"
+    },
+    {
+      "command": "docker compose -f docker-compose.okx.yml -f docker-compose.okx.cloud.yml up -d",
+      "exit_code": 0,
+      "evidence": "okx-start.log"
+    },
+    {
+      "command": "docker compose -f docker-compose.okx.yml -f docker-compose.okx.cloud.yml restart",
+      "exit_code": 0,
+      "evidence": "okx-quotes-restart.log"
+    },
+    {
+      "command": "docker compose -f docker-compose.paper.yml -f docker-compose.paper.cloud.yml restart",
+      "exit_code": 0,
+      "evidence": "kraken-quotes-restart.log"
+    },
+    {
+      "command": "python3 scripts/paper_status.py --exchange okx",
+      "exit_code": 0,
+      "evidence": "okx-current.json"
+    },
+    {
+      "command": "python3 scripts/paper_status.py --exchange kraken",
+      "exit_code": 0,
+      "evidence": "kraken-current.json"
+    },
+    {
+      "command": "docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm --entrypoint python freqtrade /freqtrade/scripts/run_development_suite.py",
+      "exit_code": 0,
+      "evidence": "development-suite-preflight.log",
+      "note": "protocol only; no --execute in this particular command"
+    },
+    {
+      "method": "offline Python orchestration invoking development_framework.run for five fixed candidates x D1/D2/D3",
+      "exit_code": 0,
+      "evidence": "research2024-native.log",
+      "native_backtests": 15
+    },
+    {
+      "method": "offline Docker Python calling scripts/analyze_development.py",
+      "exit_code": 0,
+      "evidence": "research2024-analysis.log"
+    },
+    {
+      "command": "docker exec tradebot-ai-okxpaper-1 freqtrade --version",
+      "exit_code": 0,
+      "evidence": "versions.log"
+    }
+  ],
+  "preserved_ancestors": [
+    "e81b01cb551b2ea8f2133963f8f5abba839fc3bb",
+    "46d376e",
+    "1d3e143"
+  ],
+  "private_api_used": false,
+  "real_orders": false,
+  "holdout_prices_inspected": false,
+  "limitations": [
+    "operator observed during development session only",
+    "fixture dry orders distinct from current live paper database",
+    "replay is not complete native signal/cost validation",
+    "cloud draft save is not publish",
+    "no VPS deployment"
+  ]
+}

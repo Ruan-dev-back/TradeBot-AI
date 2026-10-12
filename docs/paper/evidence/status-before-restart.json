@@ -1,0 +1,49 @@
+{
+  "observed_at": "2026-10-11T23:11:06.044281+00:00",
+  "dry_run": true,
+  "exchange": "kraken",
+  "risk_ready": true,
+  "risk": {
+    "peak": 1000,
+    "equity": 1000.0,
+    "halted": false,
+    "warning": false,
+    "drawdown": 0.0,
+    "cooldown_until": null,
+    "losses": 0,
+    "closed_ids": [],
+    "policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+    "observed_at": "2026-10-11T23:11:06.044281+00:00"
+  },
+  "pairs": {
+    "BTC/USDT": {
+      "status": "ok",
+      "candles": 723,
+      "checked_candles": 200,
+      "first_utc": "2026-10-03 15:00:00+00:00",
+      "last_closed_utc": "2026-10-11 22:00:00+00:00",
+      "timeframe": "1h"
+    },
+    "ETH/USDT": {
+      "status": "ok",
+      "candles": 723,
+      "checked_candles": 200,
+      "first_utc": "2026-10-03 15:00:00+00:00",
+      "last_closed_utc": "2026-10-11 22:00:00+00:00",
+      "timeframe": "1h"
+    },
+    "SOL/USDT": {
+      "status": "ok",
+      "candles": 723,
+      "checked_candles": 200,
+      "first_utc": "2026-10-03 15:00:00+00:00",
+      "last_closed_utc": "2026-10-11 22:00:00+00:00",
+      "timeframe": "1h"
+    }
+  },
+  "holdout_prices_inspected": false,
+  "native_trades": 0,
+  "native_orders": 0,
+  "checked_at": "2026-10-11T23:11:08.375517+00:00",
+  "status": "running_with_public_data"
+}

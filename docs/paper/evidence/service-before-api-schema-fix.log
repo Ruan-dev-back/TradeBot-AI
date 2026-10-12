@@ -1,0 +1,468 @@
+papertrade-1  | 2026-10-11 19:33:00,590 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:33:00,954 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:33:02,634 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:33:02,635 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:33:02,637 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:33:02,637 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:33:02,637 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:33:02,638 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:33:02,638 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:33:02,638 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:33:02,639 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:33:02,639 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:33:02,648 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:33:02,648 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:33:02,649 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:33:02,649 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:33:02,655 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:33:02,658 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:33:02,659 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:33:02,659 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:33:02,660 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:33:02,661 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem', 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:33:02,663 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:33:05,352 - freqtrade.exchange.exchange - INFO - Time offset to Kraken is 69ms.
+papertrade-1  | 2026-10-11 19:33:05,353 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:33:05,376 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:33:05,377 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:33:05,378 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:33:05,378 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:33:05,379 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:33:05,379 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:33:05,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:33:05,381 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:33:05,381 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:33:05,382 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:33:05,382 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:33:05,382 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:05,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:33:05,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:33:05,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:33:05,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:33:05,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:33:05,387 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:33:05,387 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:33:05,388 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:33:05,388 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:33:05,388 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:33:05,388 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:33:05,389 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:33:05,389 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:05,389 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:33:05,390 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:33:05,390 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:33:05,390 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:33:05,391 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:33:05,391 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:33:05,394 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'listen_ip_address' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['api_server']:
+papertrade-1  |     {'description': 'API server settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Whether the API server is '
+papertrade-1  |                                                'enabled.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'listen_ip_address': {'description': 'IP address the '
+papertrade-1  |                                                          'API server '
+papertrade-1  |                                                          'listens on.',
+papertrade-1  |                                           'format': 'ipv4'},
+papertrade-1  |                     'listen_port': {'description': 'Port the API server '
+papertrade-1  |                                                    'listens on.',
+papertrade-1  |                                     'type': 'integer',
+papertrade-1  |                                     'minimum': 1024,
+papertrade-1  |                                     'maximum': 65535},
+papertrade-1  |                     'username': {'description': 'Username for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'password': {'description': 'Password for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'ws_token': {'description': 'WebSocket token for API '
+papertrade-1  |                                                 'server.',
+papertrade-1  |                                  'type': ['string', 'array'],
+papertrade-1  |                                  'items': {'type': 'string'}},
+papertrade-1  |                     'jwt_secret_key': {'description': 'Secret key for JWT '
+papertrade-1  |                                                       'authentication.',
+papertrade-1  |                                        'type': 'string',
+papertrade-1  |                                        'default': 'somethingRandomSomethingRandom123',
+papertrade-1  |                                        'minLength': 32},
+papertrade-1  |                     'CORS_origins': {'description': 'List of allowed CORS '
+papertrade-1  |                                                     'origins.',
+papertrade-1  |                                      'type': 'array',
+papertrade-1  |                                      'items': {'type': 'string'}},
+papertrade-1  |                     'verbosity': {'description': 'Logging verbosity level.',
+papertrade-1  |                                   'type': 'string',
+papertrade-1  |                                   'enum': ['error', 'info']}},
+papertrade-1  |      'required': ['enabled',
+papertrade-1  |                   'listen_ip_address',
+papertrade-1  |                   'listen_port',
+papertrade-1  |                   'username',
+papertrade-1  |                   'password',
+papertrade-1  |                   'jwt_secret_key']}
+papertrade-1  | 
+papertrade-1  | On instance['api_server']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'jwt_secret_key': 'somethingRandomSomethingRandom123'}
+papertrade-1  | 2026-10-11 19:33:05,396 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:33:05,647 - freqtrade - ERROR - Configuration error: 'listen_ip_address' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.
+papertrade-1  | 2026-10-11 19:33:07,249 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:33:07,550 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:33:09,370 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:33:09,371 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:33:09,373 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:33:09,373 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:33:09,373 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:33:09,374 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:33:09,374 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:33:09,374 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:33:09,375 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:33:09,375 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:33:09,384 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:33:09,384 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:33:09,385 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:33:09,385 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:33:09,389 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:33:09,390 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:33:09,390 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:33:09,390 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:33:09,391 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:33:09,392 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem', 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:33:09,394 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:33:11,385 - freqtrade.exchange.exchange - INFO - Time offset to Kraken is 239ms.
+papertrade-1  | 2026-10-11 19:33:11,385 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:33:11,409 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:33:11,410 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:33:11,410 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:33:11,411 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:33:11,411 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:33:11,411 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:33:11,411 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:33:11,412 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:33:11,412 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:33:11,412 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:33:11,412 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:33:11,412 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:11,413 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:33:11,413 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:33:11,413 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:33:11,413 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:33:11,413 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:33:11,414 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:33:11,414 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:33:11,414 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:33:11,414 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:33:11,414 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:33:11,414 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:33:11,415 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:33:11,415 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:11,415 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:33:11,415 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:33:11,415 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:33:11,416 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:33:11,416 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:33:11,416 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:33:11,418 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'listen_ip_address' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['api_server']:
+papertrade-1  |     {'description': 'API server settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Whether the API server is '
+papertrade-1  |                                                'enabled.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'listen_ip_address': {'description': 'IP address the '
+papertrade-1  |                                                          'API server '
+papertrade-1  |                                                          'listens on.',
+papertrade-1  |                                           'format': 'ipv4'},
+papertrade-1  |                     'listen_port': {'description': 'Port the API server '
+papertrade-1  |                                                    'listens on.',
+papertrade-1  |                                     'type': 'integer',
+papertrade-1  |                                     'minimum': 1024,
+papertrade-1  |                                     'maximum': 65535},
+papertrade-1  |                     'username': {'description': 'Username for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'password': {'description': 'Password for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'ws_token': {'description': 'WebSocket token for API '
+papertrade-1  |                                                 'server.',
+papertrade-1  |                                  'type': ['string', 'array'],
+papertrade-1  |                                  'items': {'type': 'string'}},
+papertrade-1  |                     'jwt_secret_key': {'description': 'Secret key for JWT '
+papertrade-1  |                                                       'authentication.',
+papertrade-1  |                                        'type': 'string',
+papertrade-1  |                                        'default': 'somethingRandomSomethingRandom123',
+papertrade-1  |                                        'minLength': 32},
+papertrade-1  |                     'CORS_origins': {'description': 'List of allowed CORS '
+papertrade-1  |                                                     'origins.',
+papertrade-1  |                                      'type': 'array',
+papertrade-1  |                                      'items': {'type': 'string'}},
+papertrade-1  |                     'verbosity': {'description': 'Logging verbosity level.',
+papertrade-1  |                                   'type': 'string',
+papertrade-1  |                                   'enum': ['error', 'info']}},
+papertrade-1  |      'required': ['enabled',
+papertrade-1  |                   'listen_ip_address',
+papertrade-1  |                   'listen_port',
+papertrade-1  |                   'username',
+papertrade-1  |                   'password',
+papertrade-1  |                   'jwt_secret_key']}
+papertrade-1  | 
+papertrade-1  | On instance['api_server']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'jwt_secret_key': 'somethingRandomSomethingRandom123'}
+papertrade-1  | 2026-10-11 19:33:11,421 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:33:11,672 - freqtrade - ERROR - Configuration error: 'listen_ip_address' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.
+papertrade-1  | 2026-10-11 19:33:13,509 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:33:13,880 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:33:15,729 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:33:15,730 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:33:15,732 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:33:15,732 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:33:15,733 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:33:15,733 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:33:15,734 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:33:15,734 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:33:15,734 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:33:15,735 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:33:15,743 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:33:15,744 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:33:15,744 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:33:15,745 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:33:15,749 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:33:15,749 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:33:15,750 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:33:15,750 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:33:15,751 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:33:15,752 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem', 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:33:15,754 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:33:18,371 - freqtrade.exchange.exchange - INFO - Time offset to Kraken is 82ms.
+papertrade-1  | 2026-10-11 19:33:18,375 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:33:18,436 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:33:18,437 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:33:18,437 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:33:18,438 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:33:18,438 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:33:18,438 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:33:18,439 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:33:18,439 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:33:18,439 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:33:18,440 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:33:18,440 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:33:18,440 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:18,441 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:33:18,441 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:33:18,441 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:33:18,442 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:33:18,442 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:33:18,442 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:33:18,442 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:33:18,443 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:33:18,443 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:33:18,443 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:33:18,444 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:33:18,444 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:33:18,444 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:18,445 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:33:18,445 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:33:18,445 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:33:18,446 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:33:18,446 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:33:18,446 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:33:18,449 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'listen_ip_address' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['api_server']:
+papertrade-1  |     {'description': 'API server settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Whether the API server is '
+papertrade-1  |                                                'enabled.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'listen_ip_address': {'description': 'IP address the '
+papertrade-1  |                                                          'API server '
+papertrade-1  |                                                          'listens on.',
+papertrade-1  |                                           'format': 'ipv4'},
+papertrade-1  |                     'listen_port': {'description': 'Port the API server '
+papertrade-1  |                                                    'listens on.',
+papertrade-1  |                                     'type': 'integer',
+papertrade-1  |                                     'minimum': 1024,
+papertrade-1  |                                     'maximum': 65535},
+papertrade-1  |                     'username': {'description': 'Username for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'password': {'description': 'Password for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'ws_token': {'description': 'WebSocket token for API '
+papertrade-1  |                                                 'server.',
+papertrade-1  |                                  'type': ['string', 'array'],
+papertrade-1  |                                  'items': {'type': 'string'}},
+papertrade-1  |                     'jwt_secret_key': {'description': 'Secret key for JWT '
+papertrade-1  |                                                       'authentication.',
+papertrade-1  |                                        'type': 'string',
+papertrade-1  |                                        'default': 'somethingRandomSomethingRandom123',
+papertrade-1  |                                        'minLength': 32},
+papertrade-1  |                     'CORS_origins': {'description': 'List of allowed CORS '
+papertrade-1  |                                                     'origins.',
+papertrade-1  |                                      'type': 'array',
+papertrade-1  |                                      'items': {'type': 'string'}},
+papertrade-1  |                     'verbosity': {'description': 'Logging verbosity level.',
+papertrade-1  |                                   'type': 'string',
+papertrade-1  |                                   'enum': ['error', 'info']}},
+papertrade-1  |      'required': ['enabled',
+papertrade-1  |                   'listen_ip_address',
+papertrade-1  |                   'listen_port',
+papertrade-1  |                   'username',
+papertrade-1  |                   'password',
+papertrade-1  |                   'jwt_secret_key']}
+papertrade-1  | 
+papertrade-1  | On instance['api_server']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'jwt_secret_key': 'somethingRandomSomethingRandom123'}
+papertrade-1  | 2026-10-11 19:33:18,451 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:33:18,706 - freqtrade - ERROR - Configuration error: 'listen_ip_address' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.
+papertrade-1  | 2026-10-11 19:33:20,867 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 19:33:21,211 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 19:33:22,902 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 19:33:22,903 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 19:33:22,905 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 19:33:22,905 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 19:33:22,906 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 19:33:22,906 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 19:33:22,906 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 19:33:22,907 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 19:33:22,907 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 19:33:22,907 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 19:33:22,916 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 19:33:22,917 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 19:33:22,917 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 19:33:22,918 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 19:33:22,921 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 19:33:22,922 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 19:33:22,922 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 19:33:22,922 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 19:33:22,923 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 19:33:22,924 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem', 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 19:33:22,926 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 19:33:25,261 - freqtrade.exchange.exchange - INFO - Time offset to Kraken is -5ms.
+papertrade-1  | 2026-10-11 19:33:25,262 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 19:33:25,286 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 19:33:25,287 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 19:33:25,287 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 19:33:25,287 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 19:33:25,288 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 19:33:25,288 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 19:33:25,288 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 19:33:25,288 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 19:33:25,289 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 19:33:25,289 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 19:33:25,289 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 19:33:25,289 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:25,289 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 19:33:25,290 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 19:33:25,290 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 19:33:25,290 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 19:33:25,290 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 19:33:25,290 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 19:33:25,291 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 19:33:25,291 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 19:33:25,291 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 19:33:25,291 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 19:33:25,291 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 19:33:25,291 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 19:33:25,292 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 19:33:25,292 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 19:33:25,292 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 19:33:25,292 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 19:33:25,292 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 19:33:25,293 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 19:33:25,293 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 19:33:25,295 - freqtrade.configuration.config_validation - CRITICAL - Invalid configuration. Reason: 'listen_ip_address' is a required property
+papertrade-1  | 
+papertrade-1  | Failed validating 'required' in schema['properties']['api_server']:
+papertrade-1  |     {'description': 'API server settings.',
+papertrade-1  |      'type': 'object',
+papertrade-1  |      'properties': {'enabled': {'description': 'Whether the API server is '
+papertrade-1  |                                                'enabled.',
+papertrade-1  |                                 'type': 'boolean'},
+papertrade-1  |                     'listen_ip_address': {'description': 'IP address the '
+papertrade-1  |                                                          'API server '
+papertrade-1  |                                                          'listens on.',
+papertrade-1  |                                           'format': 'ipv4'},
+papertrade-1  |                     'listen_port': {'description': 'Port the API server '
+papertrade-1  |                                                    'listens on.',
+papertrade-1  |                                     'type': 'integer',
+papertrade-1  |                                     'minimum': 1024,
+papertrade-1  |                                     'maximum': 65535},
+papertrade-1  |                     'username': {'description': 'Username for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'password': {'description': 'Password for API server '
+papertrade-1  |                                                 'authentication.',
+papertrade-1  |                                  'type': 'string'},
+papertrade-1  |                     'ws_token': {'description': 'WebSocket token for API '
+papertrade-1  |                                                 'server.',
+papertrade-1  |                                  'type': ['string', 'array'],
+papertrade-1  |                                  'items': {'type': 'string'}},
+papertrade-1  |                     'jwt_secret_key': {'description': 'Secret key for JWT '
+papertrade-1  |                                                       'authentication.',
+papertrade-1  |                                        'type': 'string',
+papertrade-1  |                                        'default': 'somethingRandomSomethingRandom123',
+papertrade-1  |                                        'minLength': 32},
+papertrade-1  |                     'CORS_origins': {'description': 'List of allowed CORS '
+papertrade-1  |                                                     'origins.',
+papertrade-1  |                                      'type': 'array',
+papertrade-1  |                                      'items': {'type': 'string'}},
+papertrade-1  |                     'verbosity': {'description': 'Logging verbosity level.',
+papertrade-1  |                                   'type': 'string',
+papertrade-1  |                                   'enum': ['error', 'info']}},
+papertrade-1  |      'required': ['enabled',
+papertrade-1  |                   'listen_ip_address',
+papertrade-1  |                   'listen_port',
+papertrade-1  |                   'username',
+papertrade-1  |                   'password',
+papertrade-1  |                   'jwt_secret_key']}
+papertrade-1  | 
+papertrade-1  | On instance['api_server']:
+papertrade-1  |     {'enabled': False,
+papertrade-1  |      'jwt_secret_key': 'somethingRandomSomethingRandom123'}
+papertrade-1  | 2026-10-11 19:33:25,299 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-11 19:33:25,550 - freqtrade - ERROR - Configuration error: 'listen_ip_address' is a required property
+papertrade-1  | Please make sure to review the documentation at https://www.freqtrade.io/en/stable.

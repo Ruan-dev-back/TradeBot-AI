@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "exchange": "okx",
+  "captured_utc": "2026-10-12T18:07:48.567964+00:00",
+  "both_writers_quiesced": true,
+  "files": {
+    "trades.sqlite": "7e266376ec997856d6081a28eae657d53834261a3a8309a73afdbd4e5e8fb80b",
+    "risk.sqlite": "4048d98fba603baec6ce2ff2c8868109b70e0185b4f63b36b57030cdae989def",
+    "telemetry.sqlite": "4272b6b126ea05b5d18862d14aeee2c27d828b684f22ea61672272a5a618359d",
+    "observation.sqlite": "df0e2e5fa8a200ec25ad74f20e324035550162d8896b58254acf9bcdb65c3296",
+    "source.bundle": "d699b38b902c46abf7ef9c5e25314be1fce285c4b13a067670be67339b2ada61"
+  },
+  "source_commit": "46cccd18c88c122dc5701922f428cccc680cc991",
+  "state": {
+    "window": {
+      "start_utc": "2026-10-12T17:17:10.179088+00:00",
+      "target_end_utc": "2026-10-19T17:17:10.179088+00:00",
+      "protocol_sha256": "0d276dcbf79e565ca7eeb61d52980a45a98e890cbcdd250dc9409308c5f2aa39",
+      "last_sample_utc": "2026-10-12T18:07:40.205879+00:00",
+      "exchange": "okx"
+    },
+    "native_counts": {
+      "trades": 0,
+      "orders": 0,
+      "open_positions": 0
+    },
+    "telemetry_events": 0,
+    "risk": {
+      "peak": 1000,
+      "equity": 1000.0,
+      "halted": false,
+      "warning": false,
+      "drawdown": 0.0,
+      "cooldown_until": null,
+      "losses": 0,
+      "closed_ids": [],
+      "policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+      "observed_at": "2026-10-12T18:07:46.032041+00:00"
+    },
+    "live_health_verified": false
+  },
+  "no_status_or_runtime_config_restored": true
+}

@@ -1,0 +1,8 @@
+okx | UTC 2026-10-12T17:17:11.651503+00:00 | healthy=True | API=recent_public_quotes
+Processo: {'status': 'running', 'container_id': 'f88a3751f7f9', 'started_at': '2026-10-12T17:14:22.760352532Z', 'restart_count': 0, 'docker_health': 'healthy'} | risco: {'peak': 1000, 'equity': 1000.0, 'halted': False, 'warning': False, 'drawdown': 0.0, 'cooldown_until': None, 'losses': 0, 'closed_ids': [], 'policy_sha256': 'f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7', 'observed_at': '2026-10-12T17:17:08.102643+00:00'} | falha: None
+Saldo/equity: {'free_usdt': 1000.0, 'equity_usdt': 1000.0, 'observed_at': '2026-10-12T17:17:08.102643+00:00'} | P&L realizado=0.0 / não realizado=0.0 USDT | taxas=0.0
+BTC/USDT: candle=2026-10-12 16:00:00+00:00, bid/ask=82611.0/82611.1 (UTC 2026-10-12T17:17:03.102200+00:00), sinal=0/0, decisão=no_trade, motivo=no_entry_signal
+ETH/USDT: candle=2026-10-12 16:00:00+00:00, bid/ask=2518.46/2518.47 (UTC 2026-10-12T17:17:03.102200+00:00), sinal=0/0, decisão=no_trade, motivo=no_entry_signal
+SOL/USDT: candle=2026-10-12 16:00:00+00:00, bid/ask=108.03/108.04 (UTC 2026-10-12T17:17:03.102200+00:00), sinal=0/0, decisão=no_trade, motivo=no_entry_signal
+Posições: [] | ordens fictícias: []
+Alertas locais: []

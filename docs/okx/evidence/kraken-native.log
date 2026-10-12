@@ -1,0 +1,1361 @@
+papertrade-1  | 2026-10-11 23:11:20,244 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-11 23:11:20,618 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-11 23:11:23,416 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-11 23:11:23,418 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-11 23:11:23,421 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-11 23:11:23,421 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-11 23:11:23,421 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-11 23:11:23,422 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-11 23:11:23,422 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-11 23:11:23,423 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-11 23:11:23,423 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-11 23:11:23,423 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-11 23:11:23,435 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-11 23:11:23,435 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-11 23:11:23,436 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-11 23:11:23,437 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-11 23:11:23,441 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-11 23:11:23,442 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-11 23:11:23,443 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-11 23:11:23,443 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-11 23:11:23,443 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-11 23:11:23,445 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem', 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-11 23:11:23,447 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-11 23:11:26,147 - freqtrade.exchange.exchange - INFO - Time offset to Kraken is -166ms.
+papertrade-1  | 2026-10-11 23:11:26,148 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-11 23:11:26,173 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-11 23:11:26,174 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-11 23:11:26,175 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-11 23:11:26,175 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-11 23:11:26,175 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-11 23:11:26,176 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-11 23:11:26,176 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-11 23:11:26,176 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-11 23:11:26,176 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-11 23:11:26,176 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-11 23:11:26,177 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-11 23:11:26,177 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-11 23:11:26,177 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-11 23:11:26,177 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-11 23:11:26,178 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-11 23:11:26,178 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-11 23:11:26,178 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-11 23:11:26,178 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-11 23:11:26,178 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-11 23:11:26,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-11 23:11:26,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-11 23:11:26,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-11 23:11:26,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-11 23:11:26,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-11 23:11:26,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-11 23:11:26,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-11 23:11:26,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-11 23:11:26,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-11 23:11:26,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-11 23:11:26,181 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-11 23:11:26,181 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-11 23:11:26,212 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:11:26,215 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+papertrade-1  | 2026-10-11 23:11:26,216 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
+papertrade-1  | 2026-10-11 23:11:26,218 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
+papertrade-1  | 2026-10-11 23:11:26,219 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.00s
+papertrade-1  | 2026-10-11 23:11:26,220 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+papertrade-1  | 2026-10-11 23:11:26,220 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'running'}
+papertrade-1  | 2026-10-11 23:11:26,221 - freqtrade.worker - INFO - Changing state to: RUNNING
+papertrade-1  | 2026-10-11 23:11:26,229 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': 'Dry run is enabled. All trades are simulated.'}
+papertrade-1  | 2026-10-11 23:11:26,230 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': '*Exchange:* `kraken`\n*Stake per trade:* `25 USDT`\n*Minimum ROI:* `{}`\n*Stoploss:* 
+papertrade-1  | `-0.05`\n*Position adjustment:* `Off`\n*Timeframe:* `1h`\n*Strategy:* `MultiAssetPaperStrategy`'}
+papertrade-1  | 2026-10-11 23:11:26,230 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "Searching for USDT pairs to buy and sell based on [{'StaticPairList': 
+papertrade-1  | 'StaticPairList'}]"}
+papertrade-1  | 2026-10-11 23:11:29,912 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:11:31,233 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:11:31,238 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:11:36,238 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:11:41,238 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:11:46,238 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:11:51,239 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:11:56,239 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:01,240 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:06,239 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:11,240 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:16,241 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:21,241 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:26,242 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:31,237 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:12:31,243 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:36,244 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:41,242 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:46,243 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:51,244 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:12:56,244 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:01,244 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:06,244 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:11,244 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:16,245 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:21,245 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:26,246 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:31,240 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:13:31,246 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:36,352 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:41,323 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:46,261 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:51,264 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:13:56,261 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:01,261 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:06,265 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:11,263 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:16,263 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:21,264 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:26,264 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:31,260 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:14:31,265 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:36,271 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:41,267 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:46,267 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:51,267 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:14:56,270 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:01,268 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:06,269 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:11,268 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:16,270 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:21,269 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:26,269 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:31,265 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:15:31,270 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:36,271 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:41,271 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:46,271 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:51,271 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:15:56,272 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:01,276 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:06,275 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:11,364 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:16,280 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:21,281 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:26,281 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:31,277 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:16:31,282 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:36,282 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:41,283 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:46,283 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:51,283 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:16:56,284 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:01,283 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:06,284 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:11,283 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:16,285 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:21,285 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:26,285 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:31,281 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:17:31,286 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:36,286 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:41,397 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:46,295 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:51,297 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:17:56,295 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:01,298 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:06,296 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:11,313 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:16,381 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:21,304 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:26,304 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:31,300 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:18:31,305 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:36,305 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:41,305 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:46,306 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:51,306 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:18:56,306 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:01,307 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:06,307 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:11,314 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:16,309 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:21,307 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:26,308 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:31,304 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:19:31,312 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:36,316 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:41,311 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:46,312 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:51,312 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:19:56,390 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:01,326 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:06,330 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:11,329 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:16,327 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:21,327 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:26,328 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:31,323 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:20:31,331 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:36,329 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:41,352 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:46,399 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:51,337 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:20:56,337 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:01,338 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:06,338 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:11,338 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:16,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:21,440 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:26,352 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:31,347 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:21:31,353 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:36,353 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:41,405 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:46,362 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:51,363 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:21:56,359 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:01,364 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:06,360 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:11,390 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:16,360 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:21,360 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:26,361 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:31,357 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:22:31,361 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:36,363 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:41,364 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:46,362 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:51,363 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:22:56,364 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:01,363 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:06,364 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:11,363 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:16,364 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:21,366 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:26,364 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:31,360 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:23:31,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:36,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:41,366 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:46,366 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:51,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:23:56,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:01,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:06,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:11,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:16,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:21,368 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:26,367 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:31,364 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:24:31,368 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:36,369 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:41,370 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:46,388 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:51,384 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:24:56,373 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:01,374 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:06,373 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:11,373 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:16,374 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:21,374 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:26,374 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:31,370 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:25:31,375 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:36,375 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:41,376 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:46,376 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:51,376 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:25:56,376 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:01,377 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:06,380 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:11,379 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:16,381 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:21,380 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:26,380 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:31,376 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:26:31,381 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:36,382 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:41,382 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:46,382 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:51,382 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:26:56,382 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:01,383 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:06,383 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:11,384 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:16,384 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:21,383 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:26,384 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:31,380 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:27:31,385 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:36,389 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:41,385 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:46,385 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:51,386 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:27:56,386 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:01,386 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:06,387 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:11,387 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:16,387 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:21,387 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:26,388 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:31,383 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:28:31,388 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:36,389 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:41,388 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:46,389 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:51,390 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:28:56,389 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:01,417 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:06,390 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:11,391 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:16,390 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:21,391 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:26,391 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:31,386 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:29:31,391 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:36,395 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:41,393 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:46,392 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:51,393 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:29:56,395 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:01,393 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:06,394 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:11,394 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:16,394 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:21,394 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:26,395 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:31,390 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:30:31,395 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:36,399 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:41,396 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:46,396 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:51,396 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:30:56,398 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:01,397 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:06,397 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:11,399 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:16,398 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:21,398 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:26,398 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:31,394 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:31:31,398 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:36,399 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:41,400 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:46,400 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:51,400 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:31:56,401 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:01,401 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:06,401 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:11,403 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:16,401 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:21,402 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:26,401 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:31,397 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:32:31,402 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:36,403 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:41,403 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:46,406 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:51,403 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:32:56,403 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:01,414 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:06,404 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:11,404 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:16,405 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:21,405 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:26,406 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:31,400 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:33:31,406 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:36,405 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:41,406 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:46,407 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:51,407 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:33:56,408 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:01,409 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:06,408 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:11,407 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:16,408 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:21,408 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:26,412 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:31,407 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:34:31,413 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:36,413 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:41,413 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:46,414 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:51,413 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:34:56,414 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:01,414 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:06,415 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:11,414 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:16,414 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:21,415 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:26,415 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:31,411 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:35:31,416 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:36,417 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:41,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:46,418 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:51,418 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:35:56,418 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:01,419 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:06,419 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:11,420 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:16,419 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:21,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:26,423 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:31,415 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:36:31,420 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:36,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:41,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:46,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:51,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:36:56,421 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:01,422 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:06,422 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:11,422 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:16,423 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:21,423 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:26,423 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:31,419 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:37:31,424 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:36,425 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:41,425 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:46,425 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:51,425 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:37:56,431 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:01,425 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:06,425 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:11,426 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:16,426 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:21,426 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:26,426 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:31,423 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:38:31,427 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:36,428 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:41,428 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:46,428 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:51,428 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:38:56,429 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:01,429 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:06,429 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:11,430 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:16,429 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:21,429 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:26,430 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:31,426 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:39:31,432 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:36,432 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:41,432 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:46,432 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:51,433 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:39:56,432 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:01,433 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:06,432 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:11,433 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:16,434 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:21,433 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:26,434 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:31,430 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:40:31,434 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:36,435 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:41,435 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:46,435 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:51,435 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:40:56,436 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:01,436 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:06,436 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:11,436 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:16,437 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:21,437 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:26,437 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:31,433 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:41:31,438 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:36,440 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:41,438 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:46,438 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:51,440 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:41:56,439 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:01,440 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:06,440 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:11,440 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:16,441 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:21,440 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:26,441 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:31,436 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:42:31,441 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:36,443 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:41,442 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:46,443 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:51,442 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:42:56,475 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:01,443 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:06,443 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:11,443 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:16,446 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:21,446 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:26,444 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:31,440 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:43:31,445 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:36,445 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:41,445 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:46,446 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:51,446 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:43:56,447 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:01,447 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:06,447 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:11,447 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:16,447 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:21,448 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:26,448 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:31,444 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:44:31,449 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:36,449 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:41,452 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:46,450 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:51,450 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:44:56,450 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:01,452 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:06,451 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:11,452 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:16,451 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:21,453 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:26,452 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:31,448 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:45:31,453 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:36,453 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:41,453 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:46,453 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:51,454 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:45:56,454 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:01,454 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:06,454 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:11,455 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:16,455 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:21,455 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:26,455 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:31,451 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:46:31,456 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:36,457 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:41,457 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:46,457 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:51,457 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:46:56,458 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:01,458 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:06,458 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:11,458 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:16,458 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:21,459 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:26,459 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:31,455 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:47:31,459 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:36,460 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:41,460 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:46,460 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:51,461 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:47:56,461 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:01,461 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:06,463 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:11,462 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:16,462 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:21,463 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:26,463 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:31,458 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:48:31,464 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:36,464 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:41,470 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:46,467 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:51,470 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:48:56,466 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:01,466 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:06,466 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:11,468 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:16,468 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:21,467 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:26,467 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:31,463 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:49:31,467 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:36,468 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:41,468 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:46,469 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:51,469 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:49:56,469 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:01,469 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:06,469 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:11,470 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:16,470 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:21,471 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:26,470 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:31,466 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:50:31,475 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:36,472 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:41,473 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:46,472 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:51,472 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:50:56,472 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:01,474 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:06,473 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:11,473 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:16,473 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:21,473 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:26,474 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:31,470 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:51:31,474 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:36,475 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:41,476 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:46,478 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:51,477 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:51:56,476 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:01,477 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:06,476 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:11,477 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:16,477 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:21,477 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:26,477 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:31,473 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:52:31,479 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:36,478 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:41,478 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:46,481 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:51,480 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:52:56,479 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:01,479 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:06,479 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:11,480 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:16,480 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:21,480 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:26,481 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:31,476 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:53:31,482 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:36,481 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:41,482 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:46,482 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:51,483 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:53:56,484 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:01,483 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:06,483 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:11,484 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:16,484 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:21,484 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:26,484 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:31,480 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:54:31,485 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:36,486 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:41,487 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:46,486 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:51,486 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:54:56,488 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:01,487 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:06,488 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:11,487 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:16,488 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:21,487 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:26,488 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:31,484 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:55:31,488 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:36,489 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:41,489 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:46,489 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:51,490 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:55:56,490 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:01,490 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:06,490 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:11,490 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:16,491 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:21,491 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:26,493 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:31,487 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:56:31,494 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:36,495 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:41,499 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:46,493 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:51,493 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:56:56,494 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:01,494 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:06,494 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:11,494 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:16,494 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:21,495 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:26,495 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:31,491 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:57:31,496 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:36,496 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:41,496 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:46,497 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:51,497 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:57:56,497 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:01,497 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:06,503 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:11,498 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:16,498 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:21,498 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:26,498 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:31,494 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:58:31,499 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:36,500 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:41,499 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:46,502 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:51,501 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:58:56,501 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:01,501 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:06,501 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:11,501 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:16,501 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:21,501 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:26,502 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:31,497 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-11 23:59:31,502 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:36,503 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:41,504 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:46,503 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:51,504 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-11 23:59:56,503 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:04,919 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:06,009 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:11,004 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:16,008 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:21,005 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:26,005 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:31,006 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:36,001 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:00:36,006 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:41,008 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:46,007 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:51,007 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:00:56,010 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:01,007 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:06,007 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:11,010 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:16,008 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:21,008 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:26,008 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:31,009 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:36,005 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:01:36,010 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:41,010 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:46,012 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:51,012 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:01:56,022 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:01,016 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:06,016 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:11,016 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:16,016 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:21,017 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:26,017 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:31,017 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:36,013 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:02:36,019 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:41,019 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:46,019 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:51,019 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:02:56,020 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:01,019 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:06,021 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:11,020 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:16,020 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:21,020 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:26,025 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:31,021 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:36,017 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:03:36,023 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:41,023 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:46,023 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:51,023 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:03:56,023 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:01,024 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:06,024 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:11,024 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:16,024 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:21,024 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:26,024 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:31,025 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:36,020 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:04:36,025 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:41,026 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:46,026 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:51,026 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:04:56,027 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:01,027 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:06,027 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:11,026 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:16,027 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:21,027 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:26,028 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:31,027 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:36,024 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:05:36,029 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:41,029 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:46,029 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:51,029 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:05:56,030 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:01,030 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:06,030 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:11,030 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:16,033 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:21,031 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:26,031 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:31,031 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:36,027 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:06:36,032 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:41,032 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:46,033 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:51,033 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:06:56,034 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:01,033 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:06,034 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:11,034 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:16,036 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:21,035 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:26,034 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:31,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:36,031 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:07:36,036 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:41,036 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:46,036 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:51,036 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:07:56,036 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:01,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:06,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:11,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:16,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:21,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:26,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:31,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:36,034 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:08:36,039 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:41,040 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:46,040 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:51,040 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:08:56,040 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:01,040 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:06,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:11,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:16,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:21,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:26,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:31,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:36,038 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:09:36,042 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:41,043 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:46,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:51,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:09:56,043 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:01,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:06,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:11,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:16,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:21,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:26,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:31,045 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:36,041 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:10:36,045 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:41,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:46,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:51,048 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:10:56,047 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:01,047 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:06,047 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:11,051 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:16,049 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:21,048 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:29,368 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
+papertrade-1  | 2026-10-12 00:11:29,370 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:31,051 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:36,044 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:11:36,049 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:41,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:46,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:51,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:11:56,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:01,051 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:06,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:11,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:16,051 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:21,052 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:26,051 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:31,051 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:36,047 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:12:36,052 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:41,053 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:46,054 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:51,053 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:12:56,053 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:01,054 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:06,055 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:11,054 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:16,055 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:21,055 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:26,060 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:31,055 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:36,051 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:13:36,056 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:41,056 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:46,057 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:51,056 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:13:56,057 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:01,057 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:06,057 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:11,058 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:16,058 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:21,058 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:26,061 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:31,060 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:36,054 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:14:36,062 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:41,062 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:46,062 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:51,062 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:14:56,063 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:01,062 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:06,063 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:11,063 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:16,063 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:21,063 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:26,064 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:31,064 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:36,059 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:15:36,066 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:41,068 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:46,065 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:51,066 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:15:56,065 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:01,065 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:06,066 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:11,067 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:16,066 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:21,066 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:26,067 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:31,067 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:36,063 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:16:36,069 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:41,071 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:46,070 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:49,981 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+papertrade-1  | 2026-10-12 00:16:49,982 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+papertrade-1  | 2026-10-12 00:16:49,982 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-12 00:16:49,984 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+papertrade-1  | 2026-10-12 00:16:50,236 - freqtrade - INFO - SIGINT received, aborting ...
+papertrade-1  | 2026-10-12 00:16:52,225 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-12 00:16:52,583 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-12 00:16:54,355 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-12 00:16:54,355 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-12 00:16:54,357 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-12 00:16:54,358 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-12 00:16:54,358 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-12 00:16:54,358 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-12 00:16:54,359 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-12 00:16:54,359 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-12 00:16:54,359 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-12 00:16:54,359 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/OkxPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-12 00:16:54,371 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-12 00:16:54,371 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-12 00:16:54,372 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-12 00:16:54,373 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-12 00:16:54,376 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-12 00:16:54,376 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-12 00:16:54,377 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-12 00:16:54,377 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-12 00:16:54,378 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-12 00:16:54,379 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem', 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-12 00:16:54,381 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-12 00:16:57,061 - freqtrade.exchange.exchange - INFO - Time offset to Kraken is 780ms.
+papertrade-1  | 2026-10-12 00:16:57,061 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-12 00:16:57,087 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-12 00:16:57,088 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-12 00:16:57,089 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-12 00:16:57,089 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-12 00:16:57,089 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-12 00:16:57,090 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-12 00:16:57,090 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-12 00:16:57,090 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-12 00:16:57,091 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-12 00:16:57,091 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-12 00:16:57,091 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-12 00:16:57,092 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-12 00:16:57,092 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-12 00:16:57,092 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-12 00:16:57,093 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-12 00:16:57,093 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-12 00:16:57,093 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-12 00:16:57,094 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-12 00:16:57,094 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-12 00:16:57,094 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-12 00:16:57,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-12 00:16:57,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-12 00:16:57,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-12 00:16:57,096 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-12 00:16:57,096 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-12 00:16:57,096 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-12 00:16:57,097 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-12 00:16:57,097 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-12 00:16:57,097 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-12 00:16:57,098 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-12 00:16:57,098 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-12 00:16:57,127 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:16:57,130 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+papertrade-1  | 2026-10-12 00:16:57,130 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
+papertrade-1  | 2026-10-12 00:16:57,133 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
+papertrade-1  | 2026-10-12 00:16:57,133 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.00s
+papertrade-1  | 2026-10-12 00:16:57,135 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+papertrade-1  | 2026-10-12 00:16:57,135 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'running'}
+papertrade-1  | 2026-10-12 00:16:57,136 - freqtrade.worker - INFO - Changing state to: RUNNING
+papertrade-1  | 2026-10-12 00:16:57,141 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': 'Dry run is enabled. All trades are simulated.'}
+papertrade-1  | 2026-10-12 00:16:57,141 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': '*Exchange:* `kraken`\n*Stake per trade:* `25 USDT`\n*Minimum ROI:* `{}`\n*Stoploss:* 
+papertrade-1  | `-0.05`\n*Position adjustment:* `Off`\n*Timeframe:* `1h`\n*Strategy:* `MultiAssetPaperStrategy`'}
+papertrade-1  | 2026-10-12 00:16:57,142 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "Searching for USDT pairs to buy and sell based on [{'StaticPairList': 
+papertrade-1  | 'StaticPairList'}]"}
+papertrade-1  | 2026-10-12 00:17:00,829 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:02,144 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:17:02,149 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:07,149 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:12,150 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:17,149 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:22,150 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:27,151 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:32,151 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:37,151 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:42,151 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:47,151 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:52,152 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:17:57,151 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:02,148 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:18:02,152 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:07,153 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:12,154 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:17,154 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:22,155 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:27,156 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:32,154 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:37,155 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:42,156 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:47,155 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:52,155 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:18:57,163 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:02,152 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:19:02,157 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:07,158 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:12,157 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:17,158 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:22,158 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:27,160 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:32,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:37,159 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:42,159 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:47,159 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:52,159 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:19:57,159 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:02,156 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:20:02,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:07,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:12,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:17,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:22,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:27,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:32,161 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:37,162 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:42,162 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:47,162 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:52,163 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:20:57,163 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:02,161 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:21:02,190 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:07,191 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:12,208 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:17,188 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:22,183 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:27,184 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:32,183 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:37,184 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:42,183 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:47,183 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:52,184 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:21:57,184 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:02,180 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:22:02,185 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:07,185 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:12,185 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:17,185 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:22,186 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:27,186 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:32,186 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:37,186 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:42,186 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:47,189 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:52,186 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:22:57,187 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:02,183 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:23:02,188 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:07,188 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:12,189 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:17,189 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:22,189 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:27,189 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:32,190 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:37,189 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:42,195 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:47,190 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:52,190 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:23:57,190 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:02,186 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:24:02,191 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:07,191 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:12,192 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:17,191 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:22,194 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:27,192 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:32,192 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:37,193 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:42,193 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:47,193 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:52,193 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:24:57,194 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:02,189 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:25:02,194 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:07,194 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:12,196 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:17,195 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:22,195 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:27,207 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:32,197 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:37,196 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:42,197 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:47,198 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:52,198 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:25:57,212 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:02,195 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:26:02,204 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:07,201 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:12,201 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:17,202 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:22,201 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:27,201 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:32,201 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:37,202 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:42,202 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:47,218 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:52,205 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:26:57,206 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:02,201 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:27:02,205 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:07,205 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:12,206 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:17,206 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:22,207 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:27,209 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:32,207 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:37,207 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:42,207 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:47,207 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:52,208 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:27:57,208 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:02,204 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:28:02,208 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:07,209 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:12,222 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:17,215 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:22,211 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:27,211 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:32,212 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:37,212 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:42,211 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:47,212 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:52,212 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:28:57,213 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:02,208 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:29:02,217 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:07,214 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:12,214 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:17,214 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:22,214 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:27,215 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:32,215 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:37,215 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:42,215 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:47,215 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:52,215 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:29:57,216 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:02,212 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:30:02,216 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:07,217 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:12,217 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:17,217 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:22,218 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:27,220 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:32,219 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:37,219 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:42,219 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:47,220 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:52,219 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:30:57,219 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:02,215 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:31:02,220 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:07,220 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:12,221 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:17,220 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:22,221 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:27,221 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:32,221 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:37,221 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:42,223 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:47,222 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:52,222 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:31:57,222 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:02,219 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:32:02,224 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:07,225 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:12,228 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:17,224 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:22,224 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:26,407 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+papertrade-1  | 2026-10-12 00:32:26,408 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+papertrade-1  | 2026-10-12 00:32:26,409 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+papertrade-1  | 2026-10-12 00:32:26,410 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+papertrade-1  | 2026-10-12 00:32:26,662 - freqtrade - INFO - SIGINT received, aborting ...
+papertrade-1  | 2026-10-12 00:32:28,477 - freqtrade - INFO - freqtrade 2026.9
+papertrade-1  | 2026-10-12 00:32:28,820 - numexpr.utils - INFO - NumExpr defaulting to 5 threads.
+papertrade-1  | 2026-10-12 00:32:30,758 - freqtrade.worker - INFO - Starting worker 2026.9
+papertrade-1  | 2026-10-12 00:32:30,758 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/paper/runtime.json ...
+papertrade-1  | 2026-10-12 00:32:30,761 - freqtrade.loggers - INFO - Enabling colorized output.
+papertrade-1  | 2026-10-12 00:32:30,761 - freqtrade.loggers - INFO - Logfile configured
+papertrade-1  | 2026-10-12 00:32:30,762 - freqtrade.loggers - INFO - Verbosity set to 0
+papertrade-1  | 2026-10-12 00:32:30,762 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+papertrade-1  | 2026-10-12 00:32:30,763 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+papertrade-1  | 2026-10-12 00:32:30,763 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+papertrade-1  | 2026-10-12 00:32:30,763 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+papertrade-1  | 2026-10-12 00:32:30,763 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/OkxPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+papertrade-1  | chown: changing ownership of '/freqtrade/user_data/config.paper.json': Read-only file system
+papertrade-1  | 2026-10-12 00:32:30,774 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+papertrade-1  | 2026-10-12 00:32:30,774 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+papertrade-1  | 2026-10-12 00:32:30,775 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/kraken ...
+papertrade-1  | 2026-10-12 00:32:30,776 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+papertrade-1  | 2026-10-12 00:32:30,780 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+papertrade-1  | 2026-10-12 00:32:30,780 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+papertrade-1  | 2026-10-12 00:32:30,781 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+papertrade-1  | 2026-10-12 00:32:30,781 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+papertrade-1  | 2026-10-12 00:32:30,782 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem'}
+papertrade-1  | 2026-10-12 00:32:30,784 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'cafile': 
+papertrade-1  | '/freqtrade/host-ca.pem', 'aiohttp_trust_env': True}
+papertrade-1  | 2026-10-12 00:32:30,786 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+papertrade-1  | 2026-10-12 00:32:33,350 - freqtrade.exchange.exchange - INFO - Time offset to Kraken is 68ms.
+papertrade-1  | 2026-10-12 00:32:33,350 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Kraken' ...
+papertrade-1  | 2026-10-12 00:32:33,379 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+papertrade-1  | 2026-10-12 00:32:33,379 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+papertrade-1  | 2026-10-12 00:32:33,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+papertrade-1  | 2026-10-12 00:32:33,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+papertrade-1  | 2026-10-12 00:32:33,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+papertrade-1  | 2026-10-12 00:32:33,381 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+papertrade-1  | 2026-10-12 00:32:33,381 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+papertrade-1  | 2026-10-12 00:32:33,381 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+papertrade-1  | 2026-10-12 00:32:33,381 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+papertrade-1  | 2026-10-12 00:32:33,382 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+papertrade-1  | 2026-10-12 00:32:33,382 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+papertrade-1  | 2026-10-12 00:32:33,382 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+papertrade-1  | 2026-10-12 00:32:33,382 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+papertrade-1  | 2026-10-12 00:32:33,383 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+papertrade-1  | 2026-10-12 00:32:33,383 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+papertrade-1  | 2026-10-12 00:32:33,383 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+papertrade-1  | 2026-10-12 00:32:33,383 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+papertrade-1  | 2026-10-12 00:32:33,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+papertrade-1  | 2026-10-12 00:32:33,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+papertrade-1  | 2026-10-12 00:32:33,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+papertrade-1  | 2026-10-12 00:32:33,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+papertrade-1  | 2026-10-12 00:32:33,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+papertrade-1  | 2026-10-12 00:32:33,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+papertrade-1  | 2026-10-12 00:32:33,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+papertrade-1  | 2026-10-12 00:32:33,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+papertrade-1  | 2026-10-12 00:32:33,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+papertrade-1  | 2026-10-12 00:32:33,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+papertrade-1  | 2026-10-12 00:32:33,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+papertrade-1  | 2026-10-12 00:32:33,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+papertrade-1  | 2026-10-12 00:32:33,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+papertrade-1  | 2026-10-12 00:32:33,387 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+papertrade-1  | 2026-10-12 00:32:33,418 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:33,420 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+papertrade-1  | 2026-10-12 00:32:33,420 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
+papertrade-1  | 2026-10-12 00:32:33,423 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
+papertrade-1  | 2026-10-12 00:32:33,423 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.00s
+papertrade-1  | 2026-10-12 00:32:33,424 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+papertrade-1  | 2026-10-12 00:32:33,425 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'running'}
+papertrade-1  | 2026-10-12 00:32:33,425 - freqtrade.worker - INFO - Changing state to: RUNNING
+papertrade-1  | 2026-10-12 00:32:33,432 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': 'Dry run is enabled. All trades are simulated.'}
+papertrade-1  | 2026-10-12 00:32:33,432 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': '*Exchange:* `kraken`\n*Stake per trade:* `25 USDT`\n*Minimum ROI:* `{}`\n*Stoploss:* 
+papertrade-1  | `-0.05`\n*Position adjustment:* `Off`\n*Timeframe:* `1h`\n*Strategy:* `MultiAssetPaperStrategy`'}
+papertrade-1  | 2026-10-12 00:32:33,433 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "Searching for USDT pairs to buy and sell based on [{'StaticPairList': 
+papertrade-1  | 'StaticPairList'}]"}
+papertrade-1  | 2026-10-12 00:32:37,105 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:40,030 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:32:40,033 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:45,034 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:50,035 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:32:55,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:00,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:05,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:10,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:15,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:20,037 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:25,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:30,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:35,038 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:40,035 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:33:40,039 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:45,039 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:50,039 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:33:55,040 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:00,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:05,040 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:10,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:15,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:20,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:25,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:30,041 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:35,042 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:40,038 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:34:40,043 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:45,045 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:50,043 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:34:55,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:00,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:05,045 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:10,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:15,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:20,044 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:25,045 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:30,045 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:35,045 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:40,041 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:35:40,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:45,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:50,047 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:35:55,046 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:00,047 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:05,047 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:10,047 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:15,048 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:20,048 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:25,048 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:30,048 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:35,048 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:40,044 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+papertrade-1  | 2026-10-12 00:36:40,049 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:45,049 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:50,049 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:36:55,049 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:37:00,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:37:05,050 - freqtrade.wallets - INFO - Wallets synced.
+papertrade-1  | 2026-10-12 00:37:10,050 - freqtrade.wallets - INFO - Wallets synced.

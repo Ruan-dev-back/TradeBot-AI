@@ -8,12 +8,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check Python syntax
-        run: python -m py_compile user_data/strategies/SmaRsiStrategy.py
-      - name: Validate configuration JSON
-        run: python -m json.tool user_data/config.json > /dev/null
-      - name: Validate Compose file
-        run: docker compose config --quiet
+        run: python -m compileall -q scripts tests user_data/strategies research_strategies
+      - name: Validate research and paper JSON
+        run: |
+          python -m json.tool user_data/config.json > /dev/null
+          python -m json.tool user_data/config.paper.json > /dev/null
+          python -m json.tool user_data/config.paper.okx.json > /dev/null
+      - name: Validate both Compose configurations
+        run: |
+          docker compose config --quiet
+          docker compose -f docker-compose.paper.yml config --quiet
+          docker compose -f docker-compose.okx.yml config --quiet
       - name: Test with the pinned Freqtrade image and no container network
         run: |
           docker compose pull
-          docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test
+          python3 scripts/ci_tests.py

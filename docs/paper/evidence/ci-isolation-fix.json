@@ -1,0 +1,11 @@
+{
+  "failed_remote_sha": "50e0ce8ec685ff764e7c657b639837baca27f3c6",
+  "failed_run_url": "https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38183928705",
+  "remote_full_logs_available": false,
+  "local_reproduction": "archive of tracked files; user_data/data mode 0555",
+  "before_errors": 2,
+  "before_tests": 86,
+  "after_errors": 0,
+  "after_tests": 86,
+  "fix": "Configuration CLI uses temporary --user-data-dir and explicit --strategy-path"
+}

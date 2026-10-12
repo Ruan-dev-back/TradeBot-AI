@@ -1,0 +1,81 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-m",
+      "compileall",
+      "-q",
+      "scripts",
+      "tests",
+      "user_data/strategies",
+      "research_strategies"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "python3",
+      "-m",
+      "json.tool",
+      "user_data/config.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "python3",
+      "-m",
+      "json.tool",
+      "user_data/config.paper.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "config",
+      "--quiet"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-f",
+      "docker-compose.paper.yml",
+      "config",
+      "--quiet"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-f",
+      "docker-compose.paper.yml",
+      "-f",
+      "docker-compose.paper.cloud.yml",
+      "config",
+      "--quiet"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-f",
+      "docker-compose.yml",
+      "-f",
+      "docker-compose.audit.yml",
+      "run",
+      "--rm",
+      "freqtrade",
+      "test"
+    ],
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "okx": {
+    "preserved_fields": [
+      "peak",
+      "halted",
+      "cooldown_until",
+      "closed_ids",
+      "policy_sha256"
+    ],
+    "native_trades": 0,
+    "native_orders": 0,
+    "healthy": true
+  },
+  "kraken": {
+    "preserved_fields": [
+      "peak",
+      "halted",
+      "cooldown_until",
+      "closed_ids",
+      "policy_sha256"
+    ],
+    "native_trades": 0,
+    "native_orders": 0,
+    "healthy": true
+  }
+}

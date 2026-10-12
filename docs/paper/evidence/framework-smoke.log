@@ -1,0 +1,919 @@
+time="2026-10-11T23:15:51Z" level=warning msg="Found orphan containers ([tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+2026-10-11 23:16:02,883 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 23:16:02,884 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 23:16:02,885 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 23:16:02,885 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-10-11 23:16:02,885 - freqtrade.configuration.configuration - INFO - Parameter --fee detected, setting fee to: 0.001 ...
+2026-10-11 23:16:02,886 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20240401-20240701 ...
+sudo: unable to resolve host a0f859c48a6c: Temporary failure in name resolution
+chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archive_provenance.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/BTC_USDT-1h.feather': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/market_snapshot.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance': Read-only file system
+2026-10-11 23:16:02,896 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+2026-10-11 23:16:02,896 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-10-11 23:16:02,897 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/baseline/data ...
+2026-10-11 23:16:02,897 - freqtrade.configuration.configuration - INFO - Using /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/baseline/exports as backtest directory
+...
+2026-10-11 23:16:02,897 - freqtrade.configuration.configuration - INFO - Parameter --export detected: trades ...
+2026-10-11 23:16:02,897 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-10-11 23:16:02,897 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20240401-20240701
+2026-10-11 23:16:02,898 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 23:16:02,907 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-10-11 23:16:02,907 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 23:16:02,908 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:02,913 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:16:02,913 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:16:02,914 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}}}
+2026-10-11 23:16:02,917 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}, 
+'include_OS_certificates': True}, 'aiohttp_trust_env': True}
+2026-10-11 23:16:02,923 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-10-11 23:16:02,935 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy SmaRsiStrategy from '/freqtrade/user_data/strategies/SmaRsiStrategy.py'...
+2026-10-11 23:16:02,935 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-11 23:16:02,936 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-11 23:16:02,936 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-11 23:16:02,937 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-10-11 23:16:02,937 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes', 
+'exit_timeout_count': 0}.
+2026-10-11 23:16:02,937 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-11 23:16:02,938 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-11 23:16:02,938 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-11 23:16:02,938 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-11 23:16:02,939 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-11 23:16:02,939 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-11 23:16:02,939 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-11 23:16:02,940 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-11 23:16:02,940 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-11 23:16:02,940 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-11 23:16:02,940 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-11 23:16:02,941 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-11 23:16:02,941 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-10-11 23:16:02,941 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-11 23:16:02,942 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes', 'exit_timeout_count': 0}
+2026-10-11 23:16:02,942 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-11 23:16:02,942 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-11 23:16:02,943 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-11 23:16:02,943 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-11 23:16:02,943 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-11 23:16:02,944 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-11 23:16:02,944 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-11 23:16:02,944 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-11 23:16:02,945 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-11 23:16:02,945 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:02,948 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-11 23:16:02,958 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT, spot, 1h, data ends at 2024-06-30 23:00:00
+2026-10-11 23:16:02,968 - freqtrade.optimize.backtesting - INFO - Loading data from 2024-03-23 16:00:00 up to 2024-06-30 23:00:00 (99 days).
+2026-10-11 23:16:02,990 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-10-11 23:16:02,991 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy SmaRsiStrategy
+2026-10-11 23:16:02,994 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2024-04-01 00:00:00 up to 2024-06-30 23:00:00 (90 days).
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4/4       100% • 0:00:00 • 0:00:00
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2183/2183 100% • 0:00:00 • 0:00:00
+
+2026-10-11 23:16:03,333 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/baseline/exports-2026-10-11_23-16-03.meta.json"
+Result for strategy SmaRsiStrategy
+                                             BACKTESTING REPORT                                              
+┏━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT │     17 │        -1.17 │        -185.335 │       -18.53 │     21:00:00 │    4     0    13  23.5 │
+│    TOTAL │     17 │        -1.17 │        -185.335 │       -18.53 │     21:00:00 │    4     0    13  23.5 │
+└──────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                         LEFT OPEN TRADES REPORT                                          
+┏━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ TOTAL │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                  ENTER TAG STATS                                                  
+┏━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ sma_cross_rsi │      17 │        -1.17 │        -185.335 │       -18.53 │     21:00:00 │    4     0    13  23.5 │
+│         TOTAL │      17 │        -1.17 │        -185.335 │       -18.53 │     21:00:00 │    4     0    13  23.5 │
+└───────────────┴─────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                  EXIT REASON STATS                                                   
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ sma_down_or_rsi_75 │    15 │        -0.63 │         -84.998 │         -8.5 │     23:08:00 │    4     0    11  26.7 │
+│          stop_loss │     2 │        -5.19 │        -100.338 │       -10.03 │      5:00:00 │    0     0     2     0 │
+│              TOTAL │    17 │        -1.17 │        -185.335 │       -18.53 │     21:00:00 │    4     0    13  23.5 │
+└────────────────────┴───────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                            MIXED TAG STATS                                                            
+┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Enter Tag ┃        Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ sma_cross_rsi │ sma_down_or_rsi_75 │     15 │        -0.63 │         -84.998 │         -8.5 │     23:08:00 │    4     0    11  26.7 │
+│ sma_cross_rsi │          stop_loss │      2 │        -5.19 │        -100.338 │       -10.03 │      5:00:00 │    0     0     2     0 │
+│         TOTAL │                    │     17 │        -1.17 │        -185.335 │       -18.53 │     21:00:00 │    4     0    13  23.5 │
+└───────────────┴────────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                   SUMMARY METRICS                                    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                                 ┃ Value                                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from                       │ 2024-04-01 00:00:00                       │
+│ Backtesting to                         │ 2024-06-30 23:00:00                       │
+│ Trading Mode                           │ Spot                                      │
+│ Max open trades                        │ 1                                         │
+│                                        │                                           │
+│ Total/Daily Avg Trades                 │ 17 / 0.19                                 │
+│ Starting balance                       │ 1000 USDT                                 │
+│ Final balance                          │ 814.665 USDT                              │
+│ Absolute profit                        │ -185.335 USDT                             │
+│ Total profit %                         │ -18.53%                                   │
+│ CAGR %                                 │ -56.45%                                   │
+│ Sharpe (closed trades)                 │ -1.47                                     │
+│ Sortino (closed trades)                │ -2.81                                     │
+│ Calmar (closed trades)                 │ -16.56                                    │
+│ SQN                                    │ -1.63                                     │
+│ Mean profit p-value                    │ 0.1216                                    │
+│ Profit factor                          │ 0.40                                      │
+│ Expectancy (Ratio)                     │ -10.90 (-0.46)                            │
+│ Avg. daily profit                      │ -2.059 USDT                               │
+│ Avg. stake amount                      │ 888.106 USDT                              │
+│ Market change                          │ -11.78%                                   │
+│ Total trade volume                     │ 30070.362 USDT                            │
+│                                        │                                           │
+│ Best Pair                              │ BTC/USDT -18.53%                          │
+│ Worst Pair                             │ BTC/USDT -18.53%                          │
+│ Best trade                             │ BTC/USDT 4.41%                            │
+│ Worst trade                            │ BTC/USDT -5.19%                           │
+│ Best day                               │ 39.261 USDT                               │
+│ Worst day                              │ -51.482 USDT                              │
+│ Days win/draw/lose                     │ 4 / 71 / 13                               │
+│ Min/Max/Avg. Duration Winners          │ 0d 10:00 / 0d 21:00 / 0d 16:45            │
+│ Min/Max/Avg. Duration Losers           │ 0d 03:00 / 1d 19:00 / 0d 22:18            │
+│ Max Consecutive Wins / Loss            │ 1 / 8                                     │
+│ Rejected Entry signals                 │ 0                                         │
+│ Entry/Exit Timeouts                    │ 0 / 0                                     │
+│                                        │                                           │
+│ Min/Max balance (closed trades)        │ 792.346 USDT / 1039.261 USDT              │
+│ Max % of account underwater            │ 23.76%                                    │
+│ Absolute drawdown                      │ 246.915 USDT (23.76%)                     │
+│ Drawdown duration                      │ 85 days 04:00:00                          │
+│ Profit at drawdown start               │ 39.261 USDT                               │
+│ Profit at drawdown end                 │ -207.654 USDT                             │
+│ Drawdown start                         │ 2024-04-04 18:00:00                       │
+│ Drawdown end                           │ 2024-06-28 22:00:00                       │
+│                                        │                                           │
+│ Wallet based Metrics                   │                                           │
+│ Min/Max balance (wallet balance)       │ 790.78 USDT / 1047.012 USDT               │
+│ Min/Max balance dates (wallet balance) │ 2024-06-28 20:00:00 / 2024-04-12 05:00:00 │
+│ Max % of account underwater (balance)  │ 24.47%                                    │
+│ Absolute drawdown (wallet balance)     │ 256.232 USDT (24.47%)                     │
+│ Drawdown duration                      │ 77 days 15:00:00                          │
+│ Profit at drawdown start               │ 47.012 USDT                               │
+│ Profit at drawdown end                 │ -209.22 USDT                              │
+│ Drawdown start                         │ 2024-04-12 05:00:00                       │
+│ Drawdown end                           │ 2024-06-28 20:00:00                       │
+│ Sharpe (daily wallet balance)          │ -3.27                                     │
+│ Sortino (daily wallet balance)         │ -2.92                                     │
+│ Calmar (daily wallet balance)          │ -15.94                                    │
+└────────────────────────────────────────┴───────────────────────────────────────────┘
+
+Backtested 2024-04-01 00:00:00 -> 2024-06-30 23:00:00 | Max open trades : 1
+                                                             STRATEGY SUMMARY                                                             
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓
+┃       Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃             Drawdown ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━┩
+│ SmaRsiStrategy │     17 │        -1.17 │        -185.335 │       -18.53 │     21:00:00 │    4     0    13  23.5 │ 246.915 USDT  23.76% │
+└────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┴──────────────────────┘
+
+2026-10-11 23:16:03,448 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.json ...
+2026-10-11 23:16:03,451 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 23:16:03,451 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 23:16:03,451 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 23:16:03,452 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/research_strategies
+2026-10-11 23:16:03,452 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-10-11 23:16:03,452 - freqtrade.configuration.configuration - INFO - Parameter --fee detected, setting fee to: 0.001 ...
+2026-10-11 23:16:03,453 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20240401-20240701 ...
+sudo: unable to resolve host a0f859c48a6c: Temporary failure in name resolution
+chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archive_provenance.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/BTC_USDT-1h.feather': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/market_snapshot.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance': Read-only file system
+2026-10-11 23:16:03,463 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+2026-10-11 23:16:03,463 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-10-11 23:16:03,463 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/trend/data ...
+2026-10-11 23:16:03,464 - freqtrade.configuration.configuration - INFO - Using /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/trend/exports as backtest directory 
+...
+2026-10-11 23:16:03,464 - freqtrade.configuration.configuration - INFO - Parameter --export detected: trades ...
+2026-10-11 23:16:03,464 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-10-11 23:16:03,464 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20240401-20240701
+2026-10-11 23:16:03,465 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 23:16:03,469 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-10-11 23:16:03,469 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 23:16:03,470 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:03,474 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:16:03,475 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:16:03,475 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}}}
+2026-10-11 23:16:03,477 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}, 
+'include_OS_certificates': True}, 'aiohttp_trust_env': True}
+2026-10-11 23:16:03,481 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-10-11 23:16:03,483 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy TrendDevelopment from '/freqtrade/research_strategies/DevelopmentCandidates.py'...
+2026-10-11 23:16:03,484 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-11 23:16:03,484 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-11 23:16:03,484 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-11 23:16:03,485 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-10-11 23:16:03,485 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes', 
+'exit_timeout_count': 0}.
+2026-10-11 23:16:03,485 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-11 23:16:03,485 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-11 23:16:03,486 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-11 23:16:03,486 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-11 23:16:03,486 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-11 23:16:03,487 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-11 23:16:03,487 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-11 23:16:03,487 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-11 23:16:03,487 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-11 23:16:03,487 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-11 23:16:03,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-11 23:16:03,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-11 23:16:03,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-10-11 23:16:03,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-11 23:16:03,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes', 'exit_timeout_count': 0}
+2026-10-11 23:16:03,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-11 23:16:03,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-11 23:16:03,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-11 23:16:03,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-11 23:16:03,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-11 23:16:03,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-11 23:16:03,490 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-11 23:16:03,490 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-11 23:16:03,490 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-11 23:16:03,490 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:03,493 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-11 23:16:03,501 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT, spot, 1h, data ends at 2024-06-30 23:00:00
+2026-10-11 23:16:03,510 - freqtrade.optimize.backtesting - INFO - Loading data from 2024-03-23 16:00:00 up to 2024-06-30 23:00:00 (99 days).
+2026-10-11 23:16:03,531 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-10-11 23:16:03,531 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy TrendDevelopment
+2026-10-11 23:16:03,537 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2024-04-01 00:00:00 up to 2024-06-30 23:00:00 (90 days).
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4/4       100% • 0:00:00 • 0:00:00
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2183/2183 100% • 0:00:00 • 0:00:00
+
+2026-10-11 23:16:03,785 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/trend/exports-2026-10-11_23-16-03.meta.json"
+Result for strategy TrendDevelopment
+                                              BACKTESTING REPORT                                               
+┏━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT │      5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+│    TOTAL │      5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+└──────────┴────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                         LEFT OPEN TRADES REPORT                                          
+┏━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ TOTAL │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                 ENTER TAG STATS                                                 
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     OTHER │       5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+│     TOTAL │       5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                                EXIT REASON STATS                                                
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ exit_signal │     5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+│       TOTAL │     5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+└─────────────┴───────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                                       MIXED TAG STATS                                                        
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│           │ exit_signal │      5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+│     TOTAL │             │      5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │
+└───────────┴─────────────┴────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                   SUMMARY METRICS                                    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                                 ┃ Value                                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from                       │ 2024-04-01 00:00:00                       │
+│ Backtesting to                         │ 2024-06-30 23:00:00                       │
+│ Trading Mode                           │ Spot                                      │
+│ Max open trades                        │ 1                                         │
+│                                        │                                           │
+│ Total/Daily Avg Trades                 │ 5 / 0.06                                  │
+│ Starting balance                       │ 1000 USDT                                 │
+│ Final balance                          │ 988.552 USDT                              │
+│ Absolute profit                        │ -11.448 USDT                              │
+│ Total profit %                         │ -1.14%                                    │
+│ CAGR %                                 │ -4.56%                                    │
+│ Sharpe (closed trades)                 │ -2.46                                     │
+│ Sortino (closed trades)                │ -2.46                                     │
+│ Calmar (closed trades)                 │ -21.23                                    │
+│ SQN                                    │ -4.63                                     │
+│ Mean profit p-value                    │ 0.009833                                  │
+│ Profit factor                          │ 0.00                                      │
+│ Expectancy (Ratio)                     │ -2.29 (-1.00)                             │
+│ Avg. daily profit                      │ -0.127 USDT                               │
+│ Avg. stake amount                      │ 88.766 USDT                               │
+│ Market change                          │ -11.78%                                   │
+│ Total trade volume                     │ 877.963 USDT                              │
+│                                        │                                           │
+│ Best Pair                              │ BTC/USDT -1.14%                           │
+│ Worst Pair                             │ BTC/USDT -1.14%                           │
+│ Best trade                             │ BTC/USDT -0.60%                           │
+│ Worst trade                            │ BTC/USDT -3.66%                           │
+│ Best day                               │ 0 USDT                                    │
+│ Worst day                              │ -3.254 USDT                               │
+│ Days win/draw/lose                     │ 0 / 56 / 5                                │
+│ Min/Max/Avg. Duration Winners          │ 0d 00:00 / 0d 00:00 / 0d 00:00            │
+│ Min/Max/Avg. Duration Losers           │ 0d 18:00 / 1d 19:00 / 1d 06:00            │
+│ Max Consecutive Wins / Loss            │ 0 / 5                                     │
+│ Rejected Entry signals                 │ 0                                         │
+│ Entry/Exit Timeouts                    │ 0 / 0                                     │
+│                                        │                                           │
+│ Min/Max balance (closed trades)        │ 988.552 USDT / 996.746 USDT               │
+│ Max % of account underwater            │ 1.14%                                     │
+│ Absolute drawdown                      │ 11.448 USDT (1.14%)                       │
+│ Drawdown duration                      │ 59 days 09:00:00                          │
+│ Profit at drawdown start               │ 0 USDT                                    │
+│ Profit at drawdown end                 │ -11.448 USDT                              │
+│ Drawdown start                         │ 2024-04-12 18:00:00                       │
+│ Drawdown end                           │ 2024-06-11 03:00:00                       │
+│                                        │                                           │
+│ Wallet based Metrics                   │                                           │
+│ Min/Max balance (wallet balance)       │ 988.552 USDT / 1000.67 USDT               │
+│ Min/Max balance dates (wallet balance) │ 2024-06-11 04:00:00 / 2024-04-12 05:00:00 │
+│ Max % of account underwater (balance)  │ 1.21%                                     │
+│ Absolute drawdown (wallet balance)     │ 12.119 USDT (1.21%)                       │
+│ Drawdown duration                      │ 59 days 23:00:00                          │
+│ Profit at drawdown start               │ 0.67 USDT                                 │
+│ Profit at drawdown end                 │ -11.448 USDT                              │
+│ Drawdown start                         │ 2024-04-12 05:00:00                       │
+│ Drawdown end                           │ 2024-06-11 04:00:00                       │
+│ Sharpe (daily wallet balance)          │ -4.83                                     │
+│ Sortino (daily wallet balance)         │ -2.45                                     │
+│ Calmar (daily wallet balance)          │ -20.07                                    │
+└────────────────────────────────────────┴───────────────────────────────────────────┘
+
+Backtested 2024-04-01 00:00:00 -> 2024-06-30 23:00:00 | Max open trades : 1
+                                                              STRATEGY SUMMARY                                                              
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃         Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃           Drawdown ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ TrendDevelopment │      5 │        -2.58 │         -11.448 │        -1.14 │ 1 day, 6:00:00 │    0     0     5     0 │ 11.448 USDT  1.14% │
+└──────────────────┴────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┴────────────────────┘
+
+2026-10-11 23:16:03,897 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.json ...
+2026-10-11 23:16:03,900 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 23:16:03,900 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 23:16:03,900 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 23:16:03,901 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/research_strategies
+2026-10-11 23:16:03,901 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-10-11 23:16:03,901 - freqtrade.configuration.configuration - INFO - Parameter --fee detected, setting fee to: 0.001 ...
+2026-10-11 23:16:03,901 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20240401-20240701 ...
+sudo: unable to resolve host a0f859c48a6c: Temporary failure in name resolution
+chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archive_provenance.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/BTC_USDT-1h.feather': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/market_snapshot.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance': Read-only file system
+2026-10-11 23:16:03,910 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+2026-10-11 23:16:03,910 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-10-11 23:16:03,911 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/breakout/data ...
+2026-10-11 23:16:03,911 - freqtrade.configuration.configuration - INFO - Using /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/breakout/exports as backtest directory
+...
+2026-10-11 23:16:03,911 - freqtrade.configuration.configuration - INFO - Parameter --export detected: trades ...
+2026-10-11 23:16:03,912 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-10-11 23:16:03,912 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20240401-20240701
+2026-10-11 23:16:03,912 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 23:16:03,916 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-10-11 23:16:03,917 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 23:16:03,917 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:03,922 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:16:03,922 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:16:03,922 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}}}
+2026-10-11 23:16:03,925 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}, 
+'include_OS_certificates': True}, 'aiohttp_trust_env': True}
+2026-10-11 23:16:03,928 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-10-11 23:16:03,930 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy BreakoutDevelopment from '/freqtrade/research_strategies/DevelopmentCandidates.py'...
+2026-10-11 23:16:03,931 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-11 23:16:03,931 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-11 23:16:03,932 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-11 23:16:03,932 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-10-11 23:16:03,932 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes', 
+'exit_timeout_count': 0}.
+2026-10-11 23:16:03,932 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-11 23:16:03,933 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-11 23:16:03,933 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-11 23:16:03,933 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-11 23:16:03,933 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-11 23:16:03,933 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-11 23:16:03,934 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-11 23:16:03,934 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-11 23:16:03,934 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-11 23:16:03,934 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-11 23:16:03,935 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-11 23:16:03,935 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-11 23:16:03,935 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-10-11 23:16:03,935 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-11 23:16:03,936 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes', 'exit_timeout_count': 0}
+2026-10-11 23:16:03,936 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-11 23:16:03,936 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-11 23:16:03,936 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-11 23:16:03,937 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-11 23:16:03,937 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-11 23:16:03,937 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-11 23:16:03,937 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-11 23:16:03,937 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-11 23:16:03,938 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-11 23:16:03,938 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:03,941 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-11 23:16:03,948 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT, spot, 1h, data ends at 2024-06-30 23:00:00
+2026-10-11 23:16:03,957 - freqtrade.optimize.backtesting - INFO - Loading data from 2024-03-23 16:00:00 up to 2024-06-30 23:00:00 (99 days).
+2026-10-11 23:16:03,978 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-10-11 23:16:03,978 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy BreakoutDevelopment
+2026-10-11 23:16:03,983 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2024-04-01 00:00:00 up to 2024-06-30 23:00:00 (90 days).
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4/4       100% • 0:00:00 • 0:00:00
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2183/2183 100% • 0:00:00 • 0:00:00
+
+2026-10-11 23:16:04,334 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/breakout/exports-2026-10-11_23-16-04.meta.json"
+Result for strategy BreakoutDevelopment
+                                              BACKTESTING REPORT                                               
+┏━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT │     20 │        -0.55 │          -9.911 │        -0.99 │ 1 day, 3:51:00 │    8     0    12  40.0 │
+│    TOTAL │     20 │        -0.55 │          -9.911 │        -0.99 │ 1 day, 3:51:00 │    8     0    12  40.0 │
+└──────────┴────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                           LEFT OPEN TRADES REPORT                                           
+┏━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT │      1 │         1.16 │           1.023 │          0.1 │      4:00:00 │    1     0     0   100 │
+│    TOTAL │      1 │         1.16 │           1.023 │          0.1 │      4:00:00 │    1     0     0   100 │
+└──────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                 ENTER TAG STATS                                                 
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     OTHER │      20 │        -0.55 │          -9.911 │        -0.99 │ 1 day, 3:51:00 │    8     0    12  40.0 │
+│     TOTAL │      20 │        -0.55 │          -9.911 │        -0.99 │ 1 day, 3:51:00 │    8     0    12  40.0 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                                EXIT REASON STATS                                                
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  force_exit │     1 │         1.16 │           1.023 │          0.1 │        4:00:00 │    1     0     0   100 │
+│   stop_loss │     1 │        -5.19 │          -4.616 │        -0.46 │ 1 day, 0:00:00 │    0     0     1     0 │
+│ exit_signal │    18 │        -0.39 │          -6.319 │        -0.63 │ 1 day, 5:23:00 │    7     0    11  38.9 │
+│       TOTAL │    20 │        -0.55 │          -9.911 │        -0.99 │ 1 day, 3:51:00 │    8     0    12  40.0 │
+└─────────────┴───────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                                       MIXED TAG STATS                                                        
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│           │  force_exit │      1 │         1.16 │           1.023 │          0.1 │        4:00:00 │    1     0     0   100 │
+│           │   stop_loss │      1 │        -5.19 │          -4.616 │        -0.46 │ 1 day, 0:00:00 │    0     0     1     0 │
+│           │ exit_signal │     18 │        -0.39 │          -6.319 │        -0.63 │ 1 day, 5:23:00 │    7     0    11  38.9 │
+│     TOTAL │             │     20 │        -0.55 │          -9.911 │        -0.99 │ 1 day, 3:51:00 │    8     0    12  40.0 │
+└───────────┴─────────────┴────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                   SUMMARY METRICS                                    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                                 ┃ Value                                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from                       │ 2024-04-01 00:00:00                       │
+│ Backtesting to                         │ 2024-06-30 23:00:00                       │
+│ Trading Mode                           │ Spot                                      │
+│ Max open trades                        │ 1                                         │
+│                                        │                                           │
+│ Total/Daily Avg Trades                 │ 20 / 0.22                                 │
+│ Starting balance                       │ 1000 USDT                                 │
+│ Final balance                          │ 990.089 USDT                              │
+│ Absolute profit                        │ -9.911 USDT                               │
+│ Total profit %                         │ -0.99%                                    │
+│ CAGR %                                 │ -3.96%                                    │
+│ Sharpe (closed trades)                 │ -0.91                                     │
+│ Sortino (closed trades)                │ -1.42                                     │
+│ Calmar (closed trades)                 │ -19.24                                    │
+│ SQN                                    │ -0.94                                     │
+│ Mean profit p-value                    │ 0.361                                     │
+│ Profit factor                          │ 0.57                                      │
+│ Expectancy (Ratio)                     │ -0.50 (-0.26)                             │
+│ Avg. daily profit                      │ -0.11 USDT                                │
+│ Avg. stake amount                      │ 88.777 USDT                               │
+│ Market change                          │ -11.78%                                   │
+│ Total trade volume                     │ 3548.258 USDT                             │
+│                                        │                                           │
+│ Best Pair                              │ BTC/USDT -0.99%                           │
+│ Worst Pair                             │ BTC/USDT -0.99%                           │
+│ Best trade                             │ BTC/USDT 4.50%                            │
+│ Worst trade                            │ BTC/USDT -5.19%                           │
+│ Best day                               │ 4.01 USDT                                 │
+│ Worst day                              │ -4.616 USDT                               │
+│ Days win/draw/lose                     │ 8 / 67 / 12                               │
+│ Min/Max/Avg. Duration Winners          │ 0d 04:00 / 3d 18:00 / 1d 14:08            │
+│ Min/Max/Avg. Duration Losers           │ 0d 08:00 / 1d 22:00 / 0d 21:00            │
+│ Max Consecutive Wins / Loss            │ 3 / 4                                     │
+│ Rejected Entry signals                 │ 0                                         │
+│ Entry/Exit Timeouts                    │ 0 / 0                                     │
+│                                        │                                           │
+│ Min/Max balance (closed trades)        │ 989.065 USDT / 999.146 USDT               │
+│ Max % of account underwater            │ 1.09%                                     │
+│ Absolute drawdown                      │ 10.935 USDT (1.09%)                       │
+│ Drawdown duration                      │ 69 days 09:00:00                          │
+│ Profit at drawdown start               │ 0 USDT                                    │
+│ Profit at drawdown end                 │ -10.935 USDT                              │
+│ Drawdown start                         │ 2024-04-05 06:00:00                       │
+│ Drawdown end                           │ 2024-06-13 15:00:00                       │
+│                                        │                                           │
+│ Wallet based Metrics                   │                                           │
+│ Min/Max balance (wallet balance)       │ 988.902 USDT / 1000.452 USDT              │
+│ Min/Max balance dates (wallet balance) │ 2024-06-30 22:00:00 / 2024-05-21 00:00:00 │
+│ Max % of account underwater (balance)  │ 1.15%                                     │
+│ Absolute drawdown (wallet balance)     │ 11.55 USDT (1.15%)                        │
+│ Drawdown duration                      │ 40 days 22:00:00                          │
+│ Profit at drawdown start               │ 0.452 USDT                                │
+│ Profit at drawdown end                 │ -11.098 USDT                              │
+│ Drawdown start                         │ 2024-05-21 00:00:00                       │
+│ Drawdown end                           │ 2024-06-30 22:00:00                       │
+│ Sharpe (daily wallet balance)          │ -1.91                                     │
+│ Sortino (daily wallet balance)         │ -2.17                                     │
+│ Calmar (daily wallet balance)          │ -17.90                                    │
+└────────────────────────────────────────┴───────────────────────────────────────────┘
+
+Backtested 2024-04-01 00:00:00 -> 2024-06-30 23:00:00 | Max open trades : 1
+                                                               STRATEGY SUMMARY                                                                
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃            Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃           Drawdown ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ BreakoutDevelopment │     20 │        -0.55 │          -9.911 │        -0.99 │ 1 day, 3:51:00 │    8     0    12  40.0 │ 10.935 USDT  1.09% │
+└─────────────────────┴────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┴────────────────────┘
+
+2026-10-11 23:16:04,450 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.json ...
+2026-10-11 23:16:04,452 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-11 23:16:04,453 - freqtrade.loggers - INFO - Logfile configured
+2026-10-11 23:16:04,453 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-11 23:16:04,453 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/research_strategies
+2026-10-11 23:16:04,454 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-10-11 23:16:04,454 - freqtrade.configuration.configuration - INFO - Parameter --fee detected, setting fee to: 0.001 ...
+2026-10-11 23:16:04,454 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20240401-20240701 ...
+sudo: unable to resolve host a0f859c48a6c: Temporary failure in name resolution
+chown: changing ownership of '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/SmaRsiStrategy.py': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/MultiAssetPaperStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__/SmaRsiStrategy.cpython-312.pyc': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies/__pycache__': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/strategies': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-09.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-08.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-04.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-03.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2023-12.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-03.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-05.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-04.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-05.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-02.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-02.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-06.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-11.zip': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2024-10.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-07.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives/BTCUSDT-1h-2025-01.zip.CHECKSUM': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archives': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/archive_provenance.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/BTC_USDT-1h.feather': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance/market_snapshot.json': Read-only file system
+chown: changing ownership of '/freqtrade/user_data/data/binance': Read-only file system
+2026-10-11 23:16:04,464 - freqtrade.configuration.directory_operations - WARNING - Could not chown /freqtrade/user_data
+2026-10-11 23:16:04,464 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-10-11 23:16:04,465 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/mean_reversion/data 
+...
+2026-10-11 23:16:04,465 - freqtrade.configuration.configuration - INFO - Using /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/mean_reversion/exports as backtest 
+directory ...
+2026-10-11 23:16:04,465 - freqtrade.configuration.configuration - INFO - Parameter --export detected: trades ...
+2026-10-11 23:16:04,465 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-10-11 23:16:04,466 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20240401-20240701
+2026-10-11 23:16:04,466 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-11 23:16:04,470 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-10-11 23:16:04,471 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-11 23:16:04,471 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:04,476 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-11 23:16:04,476 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-11 23:16:04,477 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}}}
+2026-10-11 23:16:04,479 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'requests_trust_env': True, 'options': {'fetchMarkets': {'types': ['spot']}, 
+'include_OS_certificates': True}, 'aiohttp_trust_env': True}
+2026-10-11 23:16:04,482 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-10-11 23:16:04,485 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MeanReversionDevelopment from '/freqtrade/research_strategies/DevelopmentCandidates.py'...
+2026-10-11 23:16:04,485 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-11 23:16:04,486 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-11 23:16:04,486 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-11 23:16:04,487 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-10-11 23:16:04,487 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes', 
+'exit_timeout_count': 0}.
+2026-10-11 23:16:04,487 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-11 23:16:04,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-11 23:16:04,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-11 23:16:04,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-11 23:16:04,488 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-11 23:16:04,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-11 23:16:04,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-11 23:16:04,489 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-11 23:16:04,490 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-11 23:16:04,490 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-11 23:16:04,490 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-11 23:16:04,490 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-11 23:16:04,491 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-10-11 23:16:04,491 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-11 23:16:04,491 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes', 'exit_timeout_count': 0}
+2026-10-11 23:16:04,492 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-11 23:16:04,492 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-11 23:16:04,492 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-11 23:16:04,492 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-11 23:16:04,493 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-11 23:16:04,493 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-11 23:16:04,493 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-11 23:16:04,493 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-11 23:16:04,494 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-11 23:16:04,494 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-11 23:16:04,497 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-11 23:16:04,505 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT, spot, 1h, data ends at 2024-06-30 23:00:00
+2026-10-11 23:16:04,515 - freqtrade.optimize.backtesting - INFO - Loading data from 2024-03-23 16:00:00 up to 2024-06-30 23:00:00 (99 days).
+2026-10-11 23:16:04,540 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-10-11 23:16:04,541 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy MeanReversionDevelopment
+2026-10-11 23:16:04,547 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2024-04-01 00:00:00 up to 2024-06-30 23:00:00 (90 days).
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4/4       100% • 0:00:00 • 0:00:00
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2183/2183 100% • 0:00:00 • 0:00:00
+
+2026-10-11 23:16:04,892 - freqtrade.misc - INFO - dumping json to 
+"/freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z/mean_reversion/exports-2026-10-11_23-16-04.meta.json"
+Result for strategy MeanReversionDevelopment
+                                             BACKTESTING REPORT                                              
+┏━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT │     16 │        -0.06 │          -0.953 │         -0.1 │     14:56:00 │   10     0     6  62.5 │
+│    TOTAL │     16 │        -0.06 │          -0.953 │         -0.1 │     14:56:00 │   10     0     6  62.5 │
+└──────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                         LEFT OPEN TRADES REPORT                                          
+┏━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ TOTAL │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                ENTER TAG STATS                                                
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     OTHER │      16 │        -0.06 │          -0.953 │         -0.1 │     14:56:00 │   10     0     6  62.5 │
+│     TOTAL │      16 │        -0.06 │          -0.953 │         -0.1 │     14:56:00 │   10     0     6  62.5 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                               EXIT REASON STATS                                               
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ exit_signal │    15 │         0.28 │           3.697 │         0.37 │     14:52:00 │   10     0     5  66.7 │
+│   stop_loss │     1 │        -5.19 │          -4.649 │        -0.46 │     16:00:00 │    0     0     1     0 │
+│       TOTAL │    16 │        -0.06 │          -0.953 │         -0.1 │     14:56:00 │   10     0     6  62.5 │
+└─────────────┴───────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                      MIXED TAG STATS                                                       
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│           │ exit_signal │     15 │         0.28 │           3.697 │         0.37 │     14:52:00 │   10     0     5  66.7 │
+│           │   stop_loss │      1 │        -5.19 │          -4.649 │        -0.46 │     16:00:00 │    0     0     1     0 │
+│     TOTAL │             │     16 │        -0.06 │          -0.953 │         -0.1 │     14:56:00 │   10     0     6  62.5 │
+└───────────┴─────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                   SUMMARY METRICS                                    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                                 ┃ Value                                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from                       │ 2024-04-01 00:00:00                       │
+│ Backtesting to                         │ 2024-06-30 23:00:00                       │
+│ Trading Mode                           │ Spot                                      │
+│ Max open trades                        │ 1                                         │
+│                                        │                                           │
+│ Total/Daily Avg Trades                 │ 16 / 0.18                                 │
+│ Starting balance                       │ 1000 USDT                                 │
+│ Final balance                          │ 999.047 USDT                              │
+│ Absolute profit                        │ -0.953 USDT                               │
+│ Total profit %                         │ -0.10%                                    │
+│ CAGR %                                 │ -0.39%                                    │
+│ Sharpe (closed trades)                 │ -0.13                                     │
+│ Sortino (closed trades)                │ -0.14                                     │
+│ Calmar (closed trades)                 │ -4.36                                     │
+│ SQN                                    │ -0.15                                     │
+│ Mean profit p-value                    │ 0.8806                                    │
+│ Profit factor                          │ 0.90                                      │
+│ Expectancy (Ratio)                     │ -0.06 (-0.04)                             │
+│ Avg. daily profit                      │ -0.011 USDT                               │
+│ Avg. stake amount                      │ 89.243 USDT                               │
+│ Market change                          │ -11.78%                                   │
+│ Total trade volume                     │ 2860.531 USDT                             │
+│                                        │                                           │
+│ Best Pair                              │ BTC/USDT -0.10%                           │
+│ Worst Pair                             │ BTC/USDT -0.10%                           │
+│ Best trade                             │ BTC/USDT 1.95%                            │
+│ Worst trade                            │ BTC/USDT -5.19%                           │
+│ Best day                               │ 1.747 USDT                                │
+│ Worst day                              │ -4.649 USDT                               │
+│ Days win/draw/lose                     │ 10 / 74 / 6                               │
+│ Min/Max/Avg. Duration Winners          │ 0d 04:00 / 0d 19:00 / 0d 12:06            │
+│ Min/Max/Avg. Duration Losers           │ 0d 16:00 / 1d 01:00 / 0d 19:40            │
+│ Max Consecutive Wins / Loss            │ 3 / 2                                     │
+│ Rejected Entry signals                 │ 0                                         │
+│ Entry/Exit Timeouts                    │ 0 / 0                                     │
+│                                        │                                           │
+│ Min/Max balance (closed trades)        │ 998.155 USDT / 1002.804 USDT              │
+│ Max % of account underwater            │ 0.46%                                     │
+│ Absolute drawdown                      │ 4.649 USDT (0.46%)                        │
+│ Drawdown duration                      │ 2 days 13:00:00                           │
+│ Profit at drawdown start               │ 2.804 USDT                                │
+│ Profit at drawdown end                 │ -1.845 USDT                               │
+│ Drawdown start                         │ 2024-06-21 20:00:00                       │
+│ Drawdown end                           │ 2024-06-24 09:00:00                       │
+│                                        │                                           │
+│ Wallet based Metrics                   │                                           │
+│ Min/Max balance (wallet balance)       │ 997.324 USDT / 1003.116 USDT              │
+│ Min/Max balance dates (wallet balance) │ 2024-04-13 02:00:00 / 2024-06-23 20:00:00 │
+│ Max % of account underwater (balance)  │ 0.49%                                     │
+│ Absolute drawdown (wallet balance)     │ 4.961 USDT (0.49%)                        │
+│ Drawdown duration                      │ 0 days 14:00:00                           │
+│ Profit at drawdown start               │ 3.116 USDT                                │
+│ Profit at drawdown end                 │ -1.845 USDT                               │
+│ Drawdown start                         │ 2024-06-23 20:00:00                       │
+│ Drawdown end                           │ 2024-06-24 10:00:00                       │
+│ Sharpe (daily wallet balance)          │ -0.49                                     │
+│ Sortino (daily wallet balance)         │ -0.25                                     │
+│ Calmar (daily wallet balance)          │ -4.09                                     │
+└────────────────────────────────────────┴───────────────────────────────────────────┘
+
+Backtested 2024-04-01 00:00:00 -> 2024-06-30 23:00:00 | Max open trades : 1
+                                                                STRATEGY SUMMARY                                                                 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+┃                 Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃          Drawdown ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+│ MeanReversionDevelopment │     16 │        -0.06 │          -0.953 │         -0.1 │     14:56:00 │   10     0     6  62.5 │ 4.649 USDT  0.46% │
+└──────────────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┴───────────────────┘
+
+SMOKE_DIRECTORY /freqtrade/user_data/research/development-experiments/smoke-20261011T231600377476Z

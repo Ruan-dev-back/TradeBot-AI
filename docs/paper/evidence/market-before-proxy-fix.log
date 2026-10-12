@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-11T19:27:52.897636+00:00",
+  "exchange": "kraken",
+  "private_api_used": false,
+  "regional_limit": "API availability does not establish account or jurisdiction eligibility",
+  "holdout_prices_inspected": false,
+  "probes": [
+    {
+      "url": "https://api.binance.com/api/v3/time",
+      "status": "exchange_region_restriction",
+      "http_status": 451,
+      "body_excerpt": "{\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.\"\n}"
+    },
+    {
+      "url": "https://api.kraken.com/0/public/Time",
+      "status": "ok",
+      "http_status": 200,
+      "bytes": 87,
+      "api_errors": []
+    },
+    {
+      "url": "https://api.kraken.com/0/public/AssetPairs",
+      "status": "ok",
+      "http_status": 200,
+      "bytes": 678579,
+      "api_errors": []
+    }
+  ],
+  "pairs": {
+    "BTC/USDT": {
+      "status": "unverified"
+    },
+    "ETH/USDT": {
+      "status": "unverified"
+    },
+    "SOL/USDT": {
+      "status": "unverified"
+    }
+  },
+  "status": "market_check_failed",
+  "error": {
+    "type": "NetworkError",
+    "message": "kraken GET https://api.kraken.com/0/public/Assets"
+  }
+}
+
+

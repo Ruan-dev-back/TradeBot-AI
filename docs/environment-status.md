@@ -98,3 +98,42 @@ python3 scripts/run_research.py --source archive
 
 Os retornos foram negativos nos dois períodos. Revisar a baseline e reservar um
 novo período não observado antes de avaliar qualquer ajuste de parâmetros.
+
+## Atualização: integração de paper trading
+
+A configuração Kraken existente na branch realtime foi preservada. Após adicionar
+`api.kraken.com` à permissão de internet, a API pública respondeu200 e os três
+pares BTC/USDT, ETH/USDT e SOL/USDT tiveram candles reais horários validados. A
+Binance principal continua451 por restrição regional. Foram corrigidos o proxy do
+CCXT síncrono, a CA async e campos obrigatórios do schema nativo. A apresentação
+fiat foi desativada para remover uma consulta opcional bloqueada ao CoinGecko.
+
+O Freqtrade nativo processou os três pares, com heartbeat RUNNING, healthcheck e
+persistência em recriação do container. Isso não comprova disponibilidade24/7.
+Detalhes, snapshots, erros anteriores e teste completo: [paper-report.md](paper-report.md).
+
+O rascunho de onboarding recebe instruções testadas de setup/start e a referência
+do checkout preservado. A ferramenta de configuração salva rascunhos; o retorno
+`requires_publish=true` exige revisão/salvamento e publicação na interface pelo
+usuário. Não há requisito de segredo/credencial. Não foi efetuada publicação do
+ambiente pelo agente, nem há ferramenta que permita confirmar o estado visual
+“Requer atenção”. A conexão Kraken funciona na instância atual independentemente
+dessa confirmação de publicação/restauração futura.
+
+## Atualização de ambiente: OKX
+
+Docker/Compose e a imagem fixada continuam disponíveis, sem instalação de pacotes
+no host. Foram preservadas as permissões existentes e acrescentados hosts oficiais
+OKX e de cotação VPS ao rascunho de rede. API oficial OKX e Kraken responderam;
+TLS verificado com CA gerenciada, configurações de proxy não publicadas.
+HTTP CONNECT 403 inicial do proxy difere do HTTP 403/1010 do provedor e do
+451 regional Binance. User-Agent próprio identificável resolveu a recusa 1010
+no mesmo host OKX, sem troca de região ou rota. [Detalhes](okx-integration-report.md).
+
+O setup valida os dois perfis paper e a suíte offline. O ambiente exige zero
+secretos; mantém `dry_run=true`. O rascunho de configuração salvo precisa ser
+revisado/salvo e publicado pela interface para futuras sessões; salvar via ferramenta
+não publica, não comprova restauração e não garante remover o aviso visual
+"Requer atenção". Isso não bloqueou testes ou consultas atuais. Não houve VPS/deploy.
+
+O conteúdo histórico acima permanece como referência das etapas anteriores.

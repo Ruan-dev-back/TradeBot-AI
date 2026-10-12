@@ -181,3 +181,30 @@ não faz deploy de um bot. Uma aprovação de rascunho não prova publicação.
 
 Atualizar a imagem requer escolher e registrar um novo digest oficial e executar
 novamente testes e backtests. Não use imagem de ML/plotting neste MVP.
+
+## Paper Kraken e framework 2024
+
+Os comandos atuais de conexão, inicialização, saúde, logs e restart estão em
+[realtime-roadmap.md](realtime-roadmap.md). O serviço independente usa
+`docker-compose.paper.yml`; o override `.paper.cloud.yml` mantém proxy/CA do host.
+O endpoint público permitido adicional é `api.kraken.com`. O framework restrito
+está em [development-framework.md](development-framework.md); não use os comandos
+históricos bloqueados para executá-lo.
+
+Suíte completa de pesquisa, risco, estratégia, SQLite e motor nativo sem rede:
+
+```sh
+docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test
+python3 scripts/check_ci.py --branch feat/realtime-paper-trading \
+  --output user_data/research/paper-ci.json
+```
+
+O override de auditoria monta docs, estratégias, dados históricos, candidatos e
+`docker-compose.paper.yml` somente para leitura. Essa última montagem preserva a
+correção `1d3e143`; não substitua pelo Compose base sem os arquivos necessários.
+O teste de CI identifica status e SHA exato, mesmo se a API GitHub estiver bloqueada.
+
+A verificação de saúde `python3 scripts/paper_status.py` funciona com stdlib no
+host, sem Freqtrade instalado. As operações e indicadores nativos usam somente a
+imagem fixada. O relatório desta integração fica em `docs/paper-report.md`; as
+evidências históricas e da auditoria anterior continuam nos caminhos originais.
