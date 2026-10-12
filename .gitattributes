@@ -3,3 +3,4 @@ docs/evidence/*.log -whitespace
 docs/audit/evidence/*.log -whitespace
 docs/paper/evidence/*.log -whitespace
 docs/okx/evidence/*.log -whitespace
+docs/prospective/evidence/*.log -whitespace

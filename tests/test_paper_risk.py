@@ -184,6 +184,34 @@ class PaperCallbackTests(unittest.TestCase):
         self.assertEqual(self.size(),0)
         self.assertFalse(self.confirm())
 
+    def test_attempt_persistence_failure_blocks_then_recovers_without_erasing_risk(self):
+        before = deepcopy(self.strategy.risk_state.data)
+        with patch.object(self.strategy.telemetry, 'record', side_effect=OSError('fixture disk full')):
+            self.assertFalse(self.confirm())
+            self.assertFalse(self.strategy.risk_ready)
+            self.assertEqual(self.size(), 0)
+        self.strategy.bot_loop_start(self.now)
+        self.assertTrue(self.strategy.risk_ready)
+        self.assertEqual(before['peak'], self.strategy.risk_state.data['peak'])
+        self.assertTrue(self.confirm())
+
+    def test_api_recovery_records_error_and_recovery_without_replaying_signal(self):
+        self.strategy.public_quotes.clear()
+        self.strategy.dp.orderbook.side_effect = RuntimeError('fixture disconnect')
+        self.strategy.bot_loop_start(self.now)
+        self.assertFalse(self.strategy.risk_ready)
+        self.strategy.dp.orderbook.side_effect = None
+        self.strategy.bot_loop_start(self.now)
+        self.assertTrue(self.strategy.risk_ready)
+        import sqlite3
+        from contextlib import closing
+        with closing(sqlite3.connect(self.strategy.telemetry.path)) as db:
+            events = [json.loads(row[0]) for row in db.execute('SELECT body FROM events ORDER BY id')]
+        self.assertEqual([e['kind'] for e in events], ['loop_error', 'loop_recovered'])
+        body = json.loads((Path(self.temp.name)/'paper/status.json').read_text())
+        self.assertEqual(body['pairs']['BTC/USDT']['latest_enter_long'], 0)
+        self.assertEqual(body['pairs']['BTC/USDT']['non_entry_reason'], 'no_entry_signal')
+
     def test_halt_exits_and_restart_still_blocks_entries(self):
         self.strategy.risk_state.observe(930, self.now)
         self.assertFalse(self.confirm())

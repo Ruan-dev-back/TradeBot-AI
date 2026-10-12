@@ -1,0 +1,12 @@
+# TEMPLATE ONLY: not enabled, no notifications sent externally.
+[Unit]
+Description=Independently check TradeBot paper observation every 30 seconds
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=30
+AccuracySec=1
+Unit=tradebot-paper-health.service
+
+[Install]
+WantedBy=timers.target

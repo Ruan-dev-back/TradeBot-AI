@@ -1,0 +1,22 @@
+# TEMPLATE ONLY: host observer independent from the paper container. Not installed.
+[Unit]
+Description=TradeBot OKX prospective local observer
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/tradebot-ai
+ExecStart=/usr/bin/python3 /opt/tradebot-ai/scripts/paper_monitor.py watch --exchange okx
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=15
+KillSignal=SIGINT
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

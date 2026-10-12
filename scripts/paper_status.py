@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import sqlite3
 from paper_profiles import profile_for
+from paper_health import validate_current
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,13 +25,15 @@ def check(root=ROOT, now=None, exchange='kraken'):
         raise ValueError('Unexpected market universe')
     if any(p['status'] != 'ok' or p['checked_candles'] < 200 for p in snapshot['pairs'].values()):
         raise ValueError('Paper candles not ready')
-    if snapshot.get('schema_version',1) not in (1,2):
+    if snapshot.get('schema_version',1) not in (1,2,3):
         raise ValueError('Unknown paper status schema')
-    if snapshot.get('schema_version')==2:
+    if snapshot.get('schema_version') in (2,3):
         for pair in snapshot['pairs'].values():
             quote=pair.get('public_book',{})
             if quote.get('status')!='ok' or not 0 <= (now-datetime.fromisoformat(quote['observed_at'])).total_seconds() <= 30:
                 raise ValueError('Public price snapshot unavailable or stale')
+    if snapshot.get('schema_version') == 3:
+        validate_current(snapshot, root, now)
     db_path = root / 'user_data' / profile.database
     with closing(sqlite3.connect(db_path.resolve().as_uri() + '?mode=ro', uri=True)) as db:
         snapshot['native_trades'] = db.execute('SELECT COUNT(*) FROM trades').fetchone()[0]
@@ -47,8 +50,8 @@ def main():
     args = parser.parse_args()
     try:
         report = check(exchange=args.exchange)
-    except (ValueError, OSError, sqlite3.Error) as error:
-        print(f'Paper status failed: {error}')
+    except (ValueError, OSError, sqlite3.Error, KeyError, TypeError) as error:
+        print(f'Paper status failed: {type(error).__name__}')
         return 2
     body = json.dumps(report, indent=2) + '\n'
     if args.output:

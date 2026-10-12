@@ -14,6 +14,7 @@ import time
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 from paper_risk import RiskPolicy, RiskState, finite_positive, require_current_window, validate_paper_config
 from paper_profiles import profile_for, minimum_notional
+from paper_telemetry import Telemetry, safe_number
 from validate_data import validate_candles
 from freqtrade.persistence import Trade
 
@@ -49,6 +50,21 @@ class MultiAssetPaperStrategy(IStrategy):
                                     self.policy)
         self.risk_ready = False
         self.public_quotes = {}
+        self.telemetry = Telemetry(Path(self.config['user_data_dir']) / profile.state_folder / 'telemetry.sqlite')
+        self.loop_failure = None
+        self.wallet_snapshot = None
+
+    def _attempt(self, now, pair, stage, outcome, reason, rate=None, amount=None):
+        try:
+            self.telemetry.record(now, 'entry_attempt', pair=pair, stage=stage,
+                                  outcome=outcome, reason=reason,
+                                  rate=safe_number(rate), amount=safe_number(amount))
+            return True
+        except Exception as error:
+            self.risk_ready = False
+            self.loop_failure = {'stage': 'telemetry_persistence', 'type': type(error).__name__}
+            logger.error('Paper telemetry persistence failed; entries blocked: %s', type(error).__name__)
+            return False
 
     def _update_quotes(self, now):
         for pair in self.config['exchange']['pair_whitelist']:
@@ -77,7 +93,7 @@ class MultiAssetPaperStrategy(IStrategy):
             bid = book["bids"][0][0]
             if not finite_positive(bid):
                 raise ValueError("Invalid mark price")
-            equity += trade.stake_amount + trade.calc_profit(bid).profit_abs
+            equity += trade.stake_amount + trade.calculate_profit(bid).profit_abs
         if not finite_positive(equity, free):
             raise ValueError("Invalid paper wallet")
         return equity, free
@@ -89,20 +105,37 @@ class MultiAssetPaperStrategy(IStrategy):
 
     def bot_loop_start(self, current_time, **kwargs):
         self.risk_ready = False
+        stage = 'wallet_or_mark'
         try:
             validate_paper_config(self.config)
-            equity, _ = self._equity()
+            equity, free = self._equity()
+            self.wallet_snapshot = {'free_usdt': free, 'equity_usdt': equity,
+                                    'observed_at': current_time.isoformat()}
             closed = [(t.id, t.close_date_utc, t.close_profit_abs)
                       for t in Trade.get_trades_proxy(is_open=False)]
+            stage = 'risk_persistence'
             self.risk_state.observe(equity, current_time, closed)
+            stage = 'public_quotes'
             self._update_quotes(current_time)
+            stage = 'telemetry_persistence'
+            if self.loop_failure:
+                self.telemetry.record(current_time, 'loop_recovered', previous=self.loop_failure)
+            self.loop_failure = None
             self.risk_ready = True
             if self.risk_state.data["warning"]:
                 logger.warning("Paper drawdown warning: %.4f; entry halt=%s",
                                self.risk_state.data["drawdown"], self.risk_state.data["halted"])
+            stage = 'status_persistence'
             self._write_status(current_time)
         except Exception as error:
             self.risk_ready = False
+            failure = {'stage': stage, 'type': type(error).__name__}
+            if failure != self.loop_failure:
+                try:
+                    self.telemetry.record(current_time, 'loop_error', **failure)
+                except Exception:
+                    pass  # Logging and stale/missing status remain independent failure evidence.
+            self.loop_failure = failure
             logger.warning("Paper risk observation failed; entries blocked: %s",
                            str(error) if isinstance(error, ValueError) else type(error).__name__)
             try:
@@ -129,6 +162,11 @@ class MultiAssetPaperStrategy(IStrategy):
                             else 'hold' if pair in open_pairs
                             else 'entry_candidate' if self.risk_ready and valid and enter and not exit_ and not open_pairs and self.risk_state.allowed(now)
                             else 'no_trade')
+                reason = ('risk_unready' if not self.risk_ready else 'invalid_candles' if not valid
+                          else 'drawdown_halt' if self.risk_state.data['halted']
+                          else 'position_limit' if open_pairs else 'cooldown' if not self.risk_state.allowed(now)
+                          else 'no_entry_signal' if not enter else 'conflicting_exit_signal' if exit_
+                          else 'awaiting_native_checks')
                 pairs[pair] = {'status': 'ok' if valid else 'invalid', 'candles': len(frame),
                                'checked_candles': len(sample), 'first_utc': str(sample['date'].iloc[0]),
                                'last_closed_utc': str(sample['date'].iloc[-1]), 'timeframe': self.timeframe,
@@ -137,12 +175,17 @@ class MultiAssetPaperStrategy(IStrategy):
                                'public_book':self.public_quotes.get(pair,{'status':'unavailable'}),
                                'candle_close_utc': (sample['date'].iloc[-1]+timedelta(hours=1)).isoformat(),
                                'decision': decision,
+                               'non_entry_reason': reason,
+                               'rsi14': safe_number(sample['rsi'].iloc[-1]),
+                               'sma20': safe_number(sample['sma_fast'].iloc[-1]),
+                               'sma50': safe_number(sample['sma_slow'].iloc[-1]),
                                'decision_note': 'candidate still requires native order/sizing/confirmation; not an executed order',
                                'entry_signals_in_checked_window': int(sample['enter_long'].sum())}
             except ValueError:
                 pairs[pair] = {'status': 'invalid', 'candles': len(frame)}
         body = {'observed_at': now.isoformat(), 'dry_run': self.config['dry_run'],
-                'schema_version':2,
+                'schema_version':3,
+                'loop_failure': self.loop_failure, 'wallet': self.wallet_snapshot,
                 'exchange': self.config['exchange']['name'], 'risk_ready': self.risk_ready, 'risk': self.risk_state.data,
                 'pairs': pairs, 'holdout_prices_inspected': False}
         path = Path(self.config['user_data_dir']) / profile_for(self.config['exchange']['name']).state_folder / 'status.json'
@@ -211,11 +254,17 @@ class MultiAssetPaperStrategy(IStrategy):
                             min_stake, max_stake, leverage, entry_tag, side, **kwargs):
         try:
             if leverage != 1 or side != "long":
+                self._attempt(current_time, pair, 'sizing', 'rejected', 'invalid_side_or_leverage', current_rate)
                 return 0.0
             equity, free, minimum = self._entry_context(pair, current_time, current_rate)
-            return min(proposed_stake, self.policy.stake(equity, free,
+            size = min(proposed_stake, self.policy.stake(equity, free,
                        max(minimum, min_stake or minimum), max_stake))
+            recorded = self._attempt(current_time, pair, 'sizing', 'candidate' if size > 0 else 'rejected',
+                                     'sized' if size > 0 else 'budget_or_minimum', current_rate)
+            return size if recorded else 0.0
         except Exception as error:
+            self._attempt(current_time, pair, 'sizing', 'rejected',
+                          str(error)[:180] if isinstance(error, ValueError) else type(error).__name__, current_rate)
             logger.info("Paper sizing denied %s: %s", pair,
                         str(error) if isinstance(error, ValueError) else type(error).__name__)
             return 0.0  # Avoid native exception fallback to proposed stake.
@@ -251,14 +300,20 @@ class MultiAssetPaperStrategy(IStrategy):
                             current_time, entry_tag, side, **kwargs) -> bool:
         try:
             if pair not in self.config["exchange"]["pair_whitelist"] or side != "long" or order_type != "limit":
+                self._attempt(current_time, pair, 'confirmation', 'rejected', 'invalid_pair_side_or_type', rate, amount)
                 return False
             equity, free, minimum = self._entry_context(pair, current_time, rate, amount)
             # Recheck after Freqtrade's min-stake clamp; never accept an enlarged position.
             rounded = self.dp._exchange.amount_to_precision(pair, amount)
             minimum_amount = self.dp.market(pair)['limits']['amount']['min']
-            return (finite_positive(rounded) and rounded >= minimum_amount
+            allowed = (finite_positive(rounded) and rounded >= minimum_amount
                     and self.policy.allows_notional(rounded * rate, equity, free, minimum))
+            recorded = self._attempt(current_time, pair, 'confirmation', 'confirmed' if allowed else 'rejected',
+                                     'native_confirmation_only' if allowed else 'rounding_minimum_or_budget', rate, amount)
+            return allowed and recorded
         except Exception as error:
+            self._attempt(current_time, pair, 'confirmation', 'rejected',
+                          str(error)[:180] if isinstance(error, ValueError) else type(error).__name__, rate, amount)
             logger.info("Paper entry denied %s: %s", pair,
                         str(error) if isinstance(error, ValueError) else type(error).__name__)
             return False  # Native callback default is permissive on unhandled exceptions.

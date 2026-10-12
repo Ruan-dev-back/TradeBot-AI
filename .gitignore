@@ -236,6 +236,8 @@ user_data/research/*
 # Estado fictício persistente e configuração runtime (nunca versionar).
 user_data/paper/
 user_data/paper-okx/
+user_data/observation/
 !docs/okx/evidence/*.log
+!docs/prospective/evidence/*.log
 user_data/*.sqlite*
 !docs/paper/evidence/*.log
