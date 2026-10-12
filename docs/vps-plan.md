@@ -21,8 +21,8 @@ de comprar. Fontes e hashes em `docs/okx/evidence/public-sources.json`.
 | DigitalOcean Basic |1 vCPU,2 GiB,50 GiB SSD,2 TB transferência |US$12 | Backup semanal 20%:US$2,40; totalUS$14,40 sem armazenamento externo |
 | DigitalOcean Basic |2 vCPU,2 GiB,60 GiB SSD,3 TB transferência |US$18 | Backup semanalUS$3,60; totalUS$21,60; opção inicial com mais margem CPU |
 | DigitalOcean Basic |2 vCPU,4 GiB,80 GiB SSD,4 TB transferência |US$24 | Backup semanalUS$4,80; totalUS$28,80; útil para duas sessões fictícias independentes |
-| Hetzner CPX02, NBG 1/FSN 1/HEL 1 |1 core informado no JSON público; RAM/SSD do SKU devem ser confirmados |€5,99 | IPv 4€0,50/mês: base€6,49. Backup e armazenamento externo cotar separadamente; não presumir equivalência ao plano 2 GiB |
-| Hetzner CPX12, Europa |1 core informado no JSON público; RAM/SSD confirmar |€11,49 | IPv 4€0,50: base€11,99. Preço varia por localidade/moeda; backup adicional não verificado nesta cotação |
+| Hetzner CPX02, NBG1/FSN1/HEL1 |1 core informado no JSON público; RAM/SSD do SKU devem ser confirmados |€5,99 | IPv4€0,50/mês: base€6,49. Backup e armazenamento externo cotar separadamente; não presumir equivalência ao plano 2 GiB |
+| Hetzner CPX12, Europa |1 core informado no JSON público; RAM/SSD confirmar |€11,49 | IPv4€0,50: base€11,99. Preço varia por localidade/moeda; backup adicional não verificado nesta cotação |
 
 DigitalOcean Spaces publica US$5/mês para 250 GiB e 1 TiB de transferência. Como
 armazenamento externo opcional, somaUS$5 às opções DO:US$19,40/26,60/33,80,
@@ -35,7 +35,7 @@ Fontes: [DO Droplets](https://www.digitalocean.com/pricing/droplets),
 [DO Spaces](https://www.digitalocean.com/pricing/spaces-object-storage),
 [Hetzner](https://www.hetzner.com/cloud/) e
 [JSON do calculador oficial](https://www.hetzner.com/_resources/app/data/bench/cloud_data.json).
-A fonte Hetzner capturada informa preço/CPU/IPv 4, sem RAM/SSD; confirmar esses
+A fonte Hetzner capturada informa preço/CPU/IPv4, sem RAM/SSD; confirmar esses
 campos é condição para recomendar um SKU. Custos de egress além da franquia e
 câmbio BRL não foram estimados sem necessidade/volume acordados.
 
@@ -67,8 +67,8 @@ API pública nesta nuvem não comprova elegibilidade de uma conta ou de nova VPS
 ## Monitoramento e resposta
 
 Monitor externo ao host: heartbeat no máximo 60 s, candles fechados dentro da janela
-permitida (último open entre 1 h e 2 h 05), risk observation<=30s, quotes públicos com idade<=30s (polling 20s), Docker health e restart
-count. Alertar também sobre DD>=3%, halt 6%, disco>80%, erros de SQLite, API/TLS,
+permitida (último open entre 1h e 2h05), risco observado há <=30s, quotes públicos
+com idade <=30s (polling 20s), Docker health e restart count. Alertar também sobre DD>=3%, halt 6%, disco>80%, erros de SQLite, API/TLS,
 clock drift>30 s e backup vencido. O CLI `paper_status.py --exchange okx` fornece
 estado e flags; halt pode coexistir com liveness saudável e deve gerar alerta.
 Não alterar limites para eliminar alertas.
@@ -90,13 +90,13 @@ reativar. Stop/gaps/desconexão podem superar o risco nominal.
 RPO inicial 24 h; RTO alvo 30 min, a medir em exercício. Backup diário após parada
 controlada do perfil, sem apagar bancos. O helper `scripts/backup_paper.py` adquire
 exclusivamente o lock do engine e recusa backup se ele estiver ativo; snapshots
-nativos+risco usam a API SQLite backup e PRAGMA quick_check, com SHA 256/manifesto.
+nativos+risco usam a API SQLite backup e PRAGMA quick_check, com SHA256/manifesto.
 Isso foi testado com bancos sintéticos; não foi enviado backup para serviço externo.
 
 Fluxo futuro do agendador: parar o perfil, fazer snapshot, verificar manifesto,
 reiniciar em bloco de recuperação inclusive se o backup falhar, executar saúde e
 alertar sobre falha. Interrupção deve ser medida. Para OKX, o comando local de
-snapshot depois da parada é `python 3 scripts/backup_paper.py --exchange okx`.
+snapshot depois da parada é `python3 scripts/backup_paper.py --exchange okx`.
 Retenção inicial 7 diários +4 semanais, cópia externa com criptografia do provedor
 e credenciais de infraestrutura a provisionar somente com autorização. Não usar
 cópia de SQLite aberto como se os dois arquivos formassem um snapshot atômico.

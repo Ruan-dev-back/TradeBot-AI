@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-12T00:46:00.070735+00:00",
+  "profiles": {
+    "okx": {
+      "sqlite_checks": {
+        "user_data/tradesv3.paper-okx.sqlite": "ok",
+        "user_data/paper-okx/risk.sqlite": "ok"
+      },
+      "native_orders": 0,
+      "native_trades": 0,
+      "risk_ready": true,
+      "risk_policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+      "equity": 1000.0,
+      "pair_decisions": {
+        "BTC/USDT": "no_trade",
+        "ETH/USDT": "no_trade",
+        "SOL/USDT": "no_trade"
+      },
+      "observed_at": "2026-10-12T00:45:55.712723+00:00"
+    },
+    "kraken": {
+      "sqlite_checks": {
+        "user_data/tradesv3.paper.sqlite": "ok",
+        "user_data/paper/risk.sqlite": "ok"
+      },
+      "native_orders": 0,
+      "native_trades": 0,
+      "risk_ready": true,
+      "risk_policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+      "equity": 1000.0,
+      "pair_decisions": {
+        "BTC/USDT": "no_trade",
+        "ETH/USDT": "no_trade",
+        "SOL/USDT": "no_trade"
+      },
+      "observed_at": "2026-10-12T00:45:55.088570+00:00"
+    }
+  },
+  "private_api_used": false
+}

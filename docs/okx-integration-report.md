@@ -136,10 +136,19 @@ sizing, arredondamento, mínimos e confirmação nativa ainda podem recusá-la.
 - Risco: cap/risco/mínimos/arredondamento, halt/cooldown persistentes, política incompatível recusada, API/quotes inválidos, clock de recebimento, rejeição de credenciais/demo/options/mode real. Backup SQLite consistente e restauração foram testados com bancos sintéticos, não VPS implantada.
 - [Integridade](okx/evidence/integrity.json): sete hashes da baseline, holdout reservado, config Kraken byte a byte e AST de RiskPolicy/RiskState/candidatos originais preservados.
 
-CI deve ser conferido no **SHA remoto exato**, depois do push da branch autorizada;
-badge isolado não é prova. Evidência de publicação/CI fica em
-`docs/okx/evidence/ci-verified.json` quando confirmada. Não interpretar o CI antigo
-de e81b01c como CI desta implementação.
+CI **verde** para a implementação `4ce86849b90599041c9343efeacd4db6c58f95c0`,
+enviada exclusivamente à branch autorizada: [run 38189151843](https://github.com/Ruan-dev-back/TradeBot-AI/actions/runs/38189151843).
+[Verificação](okx/evidence/ci-verified.json) associa SHA remoto/local, URL exata,
+status Success e hash do HTML público; não usa apenas badge. A API GitHub nesta
+nuvem permanece bloqueada com CONNECT 403; o HTML público permite confirmar o
+resultado. Logs completos do run podem exigir login no GitHub; os logs locais
+integrais de 106 testes foram preservados. O commit posterior registra esta
+verificação/documentação; seu HEAD também deve ser conferido com o comando CI.
+Main e feat/mvp-foundation não foram alteradas.
+
+[SQLite ao final](okx/evidence/sqlite-final.json): quick_check dos quatro bancos
+retornou ok, equity fictícia 1000 por perfil, risco pronto, zero ordens/trades e
+no_trade para os três pares em ambos os perfis.
 
 ## Pesquisa e hospedagem
 
