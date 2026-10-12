@@ -50,3 +50,13 @@ class PaperStatusTests(unittest.TestCase):
         self.body['pairs']['SOL/USDT']['status'] = 'warming_up'
         self.save()
         with self.assertRaises(ValueError): check(self.root, self.now)
+
+    def test_current_schema_requires_fresh_public_quotes(self):
+        self.body['schema_version']=2
+        for pair in self.body['pairs'].values():
+            pair['public_book']={'status':'ok','observed_at':self.now.isoformat()}
+        self.save()
+        self.assertEqual(check(self.root,self.now)['status'],'running_with_public_data')
+        self.body['pairs']['BTC/USDT']['public_book']['observed_at']=(self.now-timedelta(seconds=31)).isoformat()
+        self.save()
+        with self.assertRaises(ValueError):check(self.root,self.now)

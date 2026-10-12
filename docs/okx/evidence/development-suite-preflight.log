@@ -1,0 +1,71 @@
+time="2026-10-12T00:41:39Z" level=warning msg="Found orphan containers ([tradebot-ai-freqtrade-run-bfebe5866321 tradebot-ai-okxpaper-1 tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+{
+  "created_at": "2026-10-12T00:41:41.899312+00:00",
+  "source": "published Binance BTC/USDT spot 1h acquisition; no exchange mixing",
+  "candidates": {
+    "baseline": "SmaRsiStrategy",
+    "trend": "TrendDevelopment",
+    "breakout": "BreakoutDevelopment",
+    "mean_reversion": "MeanReversionDevelopment",
+    "breakout_volume": "BreakoutVolumeDevelopment"
+  },
+  "folds": {
+    "D1": [
+      "20240101",
+      "20240401",
+      "20240701"
+    ],
+    "D2": [
+      "20240101",
+      "20240701",
+      "20241001"
+    ],
+    "D3": [
+      "20240101",
+      "20241001",
+      "20250101"
+    ]
+  },
+  "candidate": null,
+  "fold": null,
+  "candidate_code_sha256": {
+    "research_strategies/DevelopmentCandidates.py": "485e8d4be5a7521629c9efb76237f363c062e281ccf84643a98328137a893d0d",
+    "scripts/development_framework.py": "193cfe1a7ab238f840a41c21a616ad34d860c12a8661d4bf46a3fe281e9b6005",
+    "scripts/paper_risk.py": "8435cbe7729286c0603fd88e809c6200364a983c30a4660bba23e8e52b3ad6a0",
+    "docs/experiment-plan.md": "0901a9d2c2fa40e4ffbc711fa132bddd7bfdb9f727bd1014ec010b6d3223224e",
+    "docs/development-framework.md": "ad86735431dc1c95f29c8766e92196ea8854611b0171a4f44c72751cb9337048"
+  },
+  "baseline_files": {
+    "user_data/config.json": "8b34d550c3368f42bf7d638b043574887575e2576f40814c41480b81900ee904",
+    "user_data/strategies/SmaRsiStrategy.py": "b37becb4d3b98242053eaa699c4b744f3f3228865125c0330655b29efea073e6",
+    "docs/results.md": "e1dce99d9c94aa37f8b924fb0db7f0e1bed6e696dd8d1c1179836939dcba08fd",
+    "docs/evidence/backtest-development.json": "77703469c061ace81e47e86746fcca71a4afa646f935dd7bc243473011dca88e",
+    "docs/evidence/backtest-validation.json": "7970af3cd63e04b89ccdb2f89ccfba6e8e3d12b221075196bcfe00c8fba240bf",
+    "docs/evidence/data_manifest.json": "48a820cbe2ada7bfe1329257a0236a431a06394c23ea3e2b62e1033268249ea8",
+    "docs/evidence/market_snapshot.json": "b97a56de2a2f79b42a6616b3fb2479f70e86c7b7953fe1a3bb87aec01dbb29ae"
+  },
+  "risk_policy": {
+    "position_cap": 0.1,
+    "risk_budget": 0.005,
+    "stop": 0.05,
+    "fee": 0.001,
+    "additional_fee": 0.0005,
+    "spread": 0.001,
+    "slippage": 0.001,
+    "drawdown_warning": 0.03,
+    "drawdown_halt": 0.06,
+    "consecutive_losses": 3,
+    "cooldown_hours": 24
+  },
+  "evaluation_rules": {
+    "selection_only": "2024 development folds, no independent validation claim",
+    "state": "each candidate/fold starts with 1000 USDT, no transferred positions",
+    "warmup": "past only, at least 200 hours before each evaluation",
+    "fold_boundary": "data ends at 23:00 UTC preceding exclusive end; final hourly close one hour earlier",
+    "baseline_stake": "original frozen strategy/config behavior; candidates fixed risk sizing",
+    "costs": "native 10 bps/side; execution/extra fees require separate sensitivity",
+    "risk_state": "native backtests do not model paper persisted drawdown/cooldown",
+    "promotion": "none; criteria in docs/experiment-plan.md; cost and marked-equity replay still required"
+  },
+  "holdout_prices_inspected": false
+}

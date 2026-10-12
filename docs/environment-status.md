@@ -119,3 +119,21 @@ usuário. Não há requisito de segredo/credencial. Não foi efetuada publicaç�
 ambiente pelo agente, nem há ferramenta que permita confirmar o estado visual
 “Requer atenção”. A conexão Kraken funciona na instância atual independentemente
 dessa confirmação de publicação/restauração futura.
+
+## Atualização de ambiente: OKX
+
+Docker/Compose e a imagem fixada continuam disponíveis, sem instalação de pacotes
+no host. Foram preservadas as permissões existentes e acrescentados hosts oficiais
+OKX e de cotação VPS ao rascunho de rede. API oficial OKX e Kraken responderam;
+TLS verificado com CA gerenciada, configurações de proxy não publicadas.
+HTTP CONNECT 403 inicial do proxy difere do HTTP 403/1010 do provedor e do
+451 regional Binance. User-Agent próprio identificável resolveu a recusa 1010
+no mesmo host OKX, sem troca de região ou rota. [Detalhes](okx-integration-report.md).
+
+O setup valida os dois perfis paper e a suíte offline. O ambiente exige zero
+secretos; mantém `dry_run=true`. O rascunho de configuração salvo precisa ser
+revisado/salvo e publicado pela interface para futuras sessões; salvar via ferramenta
+não publica, não comprova restauração e não garante remover o aviso visual
+"Requer atenção". Isso não bloqueou testes ou consultas atuais. Não houve VPS/deploy.
+
+O conteúdo histórico acima permanece como referência das etapas anteriores.

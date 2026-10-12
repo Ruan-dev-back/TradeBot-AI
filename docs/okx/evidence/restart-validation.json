@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "before": "2026-10-12T00:16:47.458289+00:00",
+  "after": "2026-10-12T00:18:34.419693+00:00",
+  "preserved_fields": [
+    "peak",
+    "halted",
+    "cooldown_until",
+    "losses",
+    "closed_ids",
+    "policy_sha256"
+  ],
+  "native_trades": 0,
+  "native_orders": 0
+}

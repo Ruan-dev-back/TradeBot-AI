@@ -9,7 +9,9 @@ import unittest
 from unittest.mock import Mock, patch
 
 from freqtrade.enums import RunMode, CandleType
-from freqtrade.exchange import Kraken
+from freqtrade.exchange import Kraken, Okx
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+from paper_profiles import profile_for
 from freqtrade.persistence import Order, Trade, init_db
 from freqtrade.wallets import Wallets
 from freqtrade.freqtradebot import FreqtradeBot
@@ -23,10 +25,13 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class NativePaperEngineTests(unittest.TestCase):
+    paper_exchange = 'kraken'
+    exchange_type = Kraken
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.config = json.loads((ROOT / 'user_data/config.paper.json').read_text())
+        self.profile = profile_for(self.paper_exchange)
+        self.config = json.loads((ROOT / 'user_data' / self.profile.config_file).read_text())
         self.config['runmode'] = RunMode.DRY_RUN
         self.db_url = 'sqlite:///' + str(Path(self.temp.name) / 'native-paper.sqlite')
         init_db(self.db_url)
@@ -47,8 +52,8 @@ class NativePaperEngineTests(unittest.TestCase):
         engine.dispose()
 
     def exchange(self):
-        with patch.object(Kraken, 'reload_markets', return_value=None):
-            exchange = Kraken(self.config, validate=False, load_leverage_tiers=False)
+        with patch.object(self.exchange_type, 'reload_markets', return_value=None):
+            exchange = self.exchange_type(self.config, validate=False, load_leverage_tiers=False)
         exchange._markets = {'BTC/USDT': self.market}
         exchange._api.set_markets([self.market])
         exchange._api_async.set_markets([self.market])
@@ -58,8 +63,8 @@ class NativePaperEngineTests(unittest.TestCase):
         return exchange
 
     def test_native_paper_configuration_and_strategy_load_without_network(self):
-        argv = ['trade', '--config', str(ROOT / 'user_data/config.paper.json'),
-                '--strategy', 'MultiAssetPaperStrategy', '--dry-run',
+        argv = ['trade', '--config', str(ROOT / 'user_data' / self.profile.config_file),
+                '--strategy', self.profile.strategy, '--dry-run',
                 '--user-data-dir', self.temp.name,
                 '--logfile', str(Path(self.temp.name) / 'native-test.log'),
                 '--strategy-path', str(ROOT / 'user_data/strategies')]
@@ -78,7 +83,7 @@ class NativePaperEngineTests(unittest.TestCase):
         self.assertEqual(order['status'], 'closed')
         self.assertAlmostEqual(order['fee']['cost'], order['cost'] * .004)
         exchange._api.create_order.assert_not_called()
-        trade = Trade(pair='BTC/USDT', exchange='kraken', open_rate=order['average'],
+        trade = Trade(pair='BTC/USDT', exchange=self.paper_exchange, open_rate=order['average'],
                       stake_amount=order['cost'], amount=order['filled'],
                       fee_open=.004, fee_close=.004, open_date=datetime.now(timezone.utc),
                       is_open=True, strategy='MultiAssetPaperStrategy', timeframe=60)
@@ -103,7 +108,7 @@ class NativePaperEngineTests(unittest.TestCase):
         order = exchange.create_order(pair='BTC/USDT', ordertype='limit', side='buy',
                                       amount=.00025, rate=99000., leverage=1)
         self.assertEqual(order['status'], 'open')
-        trade = Trade(pair='BTC/USDT', exchange='kraken', open_rate=99000.,
+        trade = Trade(pair='BTC/USDT', exchange=self.paper_exchange, open_rate=99000.,
                       stake_amount=24.75, amount=0., fee_open=.004, fee_close=.004,
                       open_date=datetime.now(timezone.utc), is_open=True,
                       strategy='MultiAssetPaperStrategy', timeframe=60)
@@ -122,8 +127,8 @@ class NativePaperEngineTests(unittest.TestCase):
     def test_native_bot_consumes_signal_and_simulates_order_in_isolated_database(self):
         # Full native create_trade/get_entry_signal/execute_entry path. Fixtures never
         # enter user_data/tradesv3.paper.sqlite or the live paper process.
-        argv = ['trade', '--config', str(ROOT / 'user_data/config.paper.json'),
-                '--strategy', 'MultiAssetPaperStrategy', '--dry-run',
+        argv = ['trade', '--config', str(ROOT / 'user_data' / self.profile.config_file),
+                '--strategy', self.profile.strategy, '--dry-run',
                 '--user-data-dir', self.temp.name,
                 '--logfile', str(Path(self.temp.name) / 'native-test.log'),
                 '--strategy-path', str(ROOT / 'user_data/strategies')]

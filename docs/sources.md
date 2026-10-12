@@ -88,3 +88,20 @@ O CA gerenciado é carregado via `cafile` no cliente async. O cliente síncrono 
 `requests_trust_env=true`; `trust_env=true` isoladamente não alterava a Session
 na versão CCXT fixada. O acesso atual foi comprovado por requisições e pelo
 serviço nativo, sem desabilitar TLS ou mudar os endpoints.
+
+## Fontes adicionais da integração OKX
+
+Esta continuação consultou a documentação estável do Freqtrade: exchanges,
+configuration, strategy-callbacks e docker_quickstart no branch stable de
+`freqtrade/freqtrade`, além do adaptador OKX da imagem fixada (2026.9/CCXT 4.5.84).
+O bot nativo spot/dry-run funcionou; demo autenticado não foi executado.
+
+- OKX API oficial: https://www.okx.com/docs-v5/en/ ; time/instruments spot,
+  market ticker/books/candles. Demo requer chaves/passphrase próprias e
+  `x-simulated-trading: 1`; fee de conta é endpoint privado, não consultado.
+- Fee pública: https://www.okx.com/fees ; tabela padrão/contexto registrado,
+  sem assumir tarifa autenticada ou substituir a fee paper de 40 bps/lado.
+- Fontes de hospedagem e hashes das consultas: [public-sources.json](okx/evidence/public-sources.json)
+  e [plano VPS](vps-plan.md). Cotação é snapshot, sem contrato/deploy.
+
+O conteúdo histórico acima permanece como referência das etapas anteriores.

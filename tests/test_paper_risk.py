@@ -168,6 +168,22 @@ class PaperCallbackTests(unittest.TestCase):
         self.strategy.dp._exchange.amount_to_precision.side_effect = None
         self.assertFalse(self.confirm())  # Rounded cost 0.10 USDT is below the 5 USDT minimum.
 
+    def test_book_after_callback_time_is_checked_against_receipt(self):
+        self.book['timestamp']=(self.now.timestamp()+.1)*1000
+        with patch('MultiAssetPaperStrategy.datetime',wraps=datetime) as clock:
+            clock.now.return_value=self.now+timedelta(seconds=.2)
+            self.assertTrue(self.confirm())
+            self.book['timestamp']=(self.now.timestamp()+10)*1000
+            self.assertFalse(self.confirm())
+
+    def test_public_price_api_failure_blocks_entry_and_sizing(self):
+        self.strategy.public_quotes.clear()
+        self.strategy.dp.orderbook.side_effect=RuntimeError('synthetic API outage')
+        self.strategy.bot_loop_start(self.now)
+        self.assertFalse(self.strategy.risk_ready)
+        self.assertEqual(self.size(),0)
+        self.assertFalse(self.confirm())
+
     def test_halt_exits_and_restart_still_blocks_entries(self):
         self.strategy.risk_state.observe(930, self.now)
         self.assertFalse(self.confirm())

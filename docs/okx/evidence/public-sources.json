@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://www.okx.com/docs-v5/en/",
+    "http_status": 200,
+    "bytes": 5247633,
+    "sha256": "009d139c6386fad226e43a47a346d00be4cac2fe8412779078d65c2cc9e50f0d",
+    "checked_at": "2026-10-12T00:20:06.400037+00:00"
+  },
+  {
+    "url": "https://www.okx.com/fees",
+    "http_status": 200,
+    "bytes": 65950,
+    "sha256": "5ad1eed55eda870e509cec403aa306ad3e69c6e1570e8022395db391f2f1c7be",
+    "checked_at": "2026-10-12T00:20:06.400354+00:00"
+  },
+  {
+    "url": "https://www.hetzner.com/_resources/app/data/bench/cloud_data.json",
+    "http_status": 200,
+    "bytes": 13768,
+    "sha256": "29f17c17a51ce13edabff7746c607f5ec7a7db0aab13b89bb8148480e07fb358",
+    "checked_at": "2026-10-12T00:20:06.401521+00:00"
+  },
+  {
+    "url": "https://www.digitalocean.com/pricing/droplets",
+    "http_status": 200,
+    "bytes": 491155,
+    "sha256": "90c2318423e9bee50fd19ea45a2fa35f9e643b9c1cfc6a40537816ce3cd15118",
+    "checked_at": "2026-10-12T00:20:06.402207+00:00"
+  },
+  {
+    "url": "https://docs.hetzner.com/cloud/servers/backups-snapshots/overview/",
+    "http_status": 200,
+    "bytes": 348147,
+    "sha256": "6dc39a4e906728b0d18473dfc9314a2df75f3049899437bdf99b3827af4c1bcd",
+    "checked_at": "2026-10-12T00:20:06.402657+00:00"
+  },
+  {
+    "url": "https://www.digitalocean.com/pricing/spaces-object-storage",
+    "http_status": 200,
+    "bytes": 182790,
+    "sha256": "de02166607332839a817e552dba664c9e210da8ffb4e516a1c3b294964f28c56",
+    "checked_at": "2026-10-12T00:36:59.880827+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docs/exchanges.md",
+    "http_status": 200,
+    "bytes": 28615,
+    "sha256": "65cb183e80f5cbfa02e77f9fd81bfb95d665797536a58703079d8738f89de7bf",
+    "limitation": "stable is mutable; content fingerprint recorded, runtime image remains pinned"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docs/configuration.md",
+    "http_status": 200,
+    "bytes": 58335,
+    "sha256": "9b46fc1e35af5f5ceb9fe9e36bc517e21d8dd1e38e6eb92b682f29dd7ef38a42",
+    "limitation": "stable is mutable; content fingerprint recorded, runtime image remains pinned"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docs/strategy-callbacks.md",
+    "http_status": 200,
+    "bytes": 69047,
+    "sha256": "70f9677e647809998c9e80a3a9f441e43f7f4d36662db74027a9d9c9239b9246",
+    "limitation": "stable is mutable; content fingerprint recorded, runtime image remains pinned"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docs/docker_quickstart.md",
+    "http_status": 200,
+    "bytes": 11200,
+    "sha256": "df04f54c634b9952f9241575d8b5227944abc73ee8456efa38e10ef04956896d",
+    "limitation": "stable is mutable; content fingerprint recorded, runtime image remains pinned"
+  }
+]

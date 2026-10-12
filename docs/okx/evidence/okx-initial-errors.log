@@ -1,0 +1,32 @@
+time="2026-10-12T00:01:33Z" level=warning msg="Found orphan containers ([tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+{
+  "checked_at": "2026-10-12T00:01:42.509440+00:00",
+  "exchange": "okx",
+  "official_host": "www.okx.com",
+  "dry_run": true,
+  "private_api_used": false,
+  "holdout_prices_inspected": false,
+  "account_region_eligibility_verified": false,
+  "probes": [
+    {
+      "url": "https://www.okx.com/api/v5/public/time",
+      "status": "provider_http_error",
+      "http_status": 403,
+      "body_excerpt": "error code: 1010\n"
+    }
+  ],
+  "pairs": {
+    "BTC/USDT": {
+      "status": "unverified"
+    },
+    "ETH/USDT": {
+      "status": "unverified"
+    },
+    "SOL/USDT": {
+      "status": "unverified"
+    }
+  },
+  "status": "blocked_public_connectivity"
+}
+
+

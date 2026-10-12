@@ -142,11 +142,13 @@ class RiskState:
 def validate_paper_config(config, environ=None):
     """Reject runtime overrides, credentials, unbounded endpoints and real modes."""
     from freqtrade.enums import RunMode
+    from paper_profiles import profile_for
+    profile = profile_for(config.get('exchange', {}).get('name'))
     if (config.get('dry_run') is not True or config.get('trading_mode') != 'spot'
             or config.get('margin_mode', '') != '' or config.get('max_open_trades') != 1
             or config.get('dry_run_wallet') != 1000 or config.get('stake_currency') != 'USDT'
             or config.get('stake_amount') != 25 or config.get('timeframe') != '1h'
-            or config.get('strategy', 'MultiAssetPaperStrategy') != 'MultiAssetPaperStrategy'
+            or config.get('strategy', profile.strategy) != profile.strategy
             or config.get('fee') != RiskPolicy().fee
             or config.get('stoploss', -0.05) != -0.05
             or config.get('position_adjustment_enable', False) is not False
@@ -157,18 +159,28 @@ def validate_paper_config(config, environ=None):
             or config.get('runmode', RunMode.DRY_RUN) != RunMode.DRY_RUN):
         raise ValueError('Paper configuration must remain fixed, spot and dry-run only')
     ex = config.get('exchange', {})
-    if (ex.get('name') != 'kraken' or set(ex.get('pair_whitelist', [])) !=
+    if (set(ex.get('pair_whitelist', [])) !=
             {'BTC/USDT', 'ETH/USDT', 'SOL/USDT'} or ex.get('pair_blacklist')
             or any(ex.get(k) for k in ('key', 'secret', 'password', 'uid', 'apiKey', 'api_key',
                                        'account_id', 'walletAddress', 'wallet_address', 'privateKey', 'private_key'))):
-        raise ValueError('Only public Kraken spot markets without credentials are permitted')
+        raise ValueError('Only public spot markets without credentials are permitted')
+    if ex.get('demo_trading') or ex.get('sandbox'):
+        raise ValueError('Exchange demo/sandbox is not the local dry-run engine')
     for field in ('ccxt_config', 'ccxt_async_config'):
         settings = ex.get(field, {})
-        if set(settings) - {'enableRateLimit', 'timeout', 'requests_trust_env', 'aiohttp_trust_env', 'cafile'}:
+        allowed = {'enableRateLimit', 'timeout', 'requests_trust_env', 'aiohttp_trust_env', 'cafile'}
+        if profile.exchange == 'okx':
+            allowed.add('options')
+            allowed.add('userAgent')
+        if set(settings) - allowed:
             raise ValueError('CCXT endpoint/credential/options overrides are forbidden')
+        if 'options' in settings and settings['options'] != {'defaultType': 'spot', 'fetchMarkets': {'types': ['spot']}}:
+            raise ValueError('Only fixed OKX public spot market options are allowed')
+        if 'userAgent' in settings and settings['userAgent'] != 'TradeBot-AI/0.1 public research':
+            raise ValueError('Only the honest fixed TradeBot client identity is allowed')
         if 'cafile' in settings and settings['cafile'] != '/freqtrade/host-ca.pem':
             raise ValueError('Only the read-only managed CA file is allowed')
-    if config.get('db_url') != 'sqlite:////freqtrade/user_data/tradesv3.paper.sqlite':
+    if config.get('db_url') != 'sqlite:////freqtrade/user_data/' + profile.database:
         raise ValueError('Paper database must use the dedicated persistent SQLite path')
     if config.get('order_types', {}).get('stoploss_on_exchange'):
         raise ValueError('Exchange-side stop orders are forbidden')

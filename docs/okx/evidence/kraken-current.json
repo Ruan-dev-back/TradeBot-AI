@@ -1,0 +1,95 @@
+{
+  "observed_at": "2026-10-12T00:37:10.049937+00:00",
+  "dry_run": true,
+  "schema_version": 2,
+  "exchange": "kraken",
+  "risk_ready": true,
+  "risk": {
+    "peak": 1000,
+    "equity": 1000.0,
+    "halted": false,
+    "warning": false,
+    "drawdown": 0.0,
+    "cooldown_until": null,
+    "losses": 0,
+    "closed_ids": [],
+    "policy_sha256": "f46f0ade8299a8ca0f04e634cd73c7902d78646a9842853e4c536e8501de85e7",
+    "observed_at": "2026-10-12T00:37:10.049937+00:00"
+  },
+  "pairs": {
+    "BTC/USDT": {
+      "status": "ok",
+      "candles": 719,
+      "checked_candles": 200,
+      "first_utc": "2026-10-03 16:00:00+00:00",
+      "last_closed_utc": "2026-10-11 23:00:00+00:00",
+      "timeframe": "1h",
+      "latest_enter_long": 0,
+      "latest_exit_long": 0,
+      "latest_close_price": 83764.7,
+      "public_book": {
+        "status": "ok",
+        "observed_at": "2026-10-12T00:37:00.049534+00:00",
+        "received_at": "2026-10-12T00:37:00.422051+00:00",
+        "bid": 83864.2,
+        "ask": 83864.3,
+        "spread_bps": 0.011924031992871904
+      },
+      "candle_close_utc": "2026-10-12T00:00:00+00:00",
+      "decision": "no_trade",
+      "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+      "entry_signals_in_checked_window": 2
+    },
+    "ETH/USDT": {
+      "status": "ok",
+      "candles": 719,
+      "checked_candles": 200,
+      "first_utc": "2026-10-03 16:00:00+00:00",
+      "last_closed_utc": "2026-10-11 23:00:00+00:00",
+      "timeframe": "1h",
+      "latest_enter_long": 0,
+      "latest_exit_long": 0,
+      "latest_close_price": 2537.52,
+      "public_book": {
+        "status": "ok",
+        "observed_at": "2026-10-12T00:37:00.049534+00:00",
+        "received_at": "2026-10-12T00:37:01.483334+00:00",
+        "bid": 2541.66,
+        "ask": 2541.69,
+        "spread_bps": 0.11803239989455808
+      },
+      "candle_close_utc": "2026-10-12T00:00:00+00:00",
+      "decision": "no_trade",
+      "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+      "entry_signals_in_checked_window": 2
+    },
+    "SOL/USDT": {
+      "status": "ok",
+      "candles": 719,
+      "checked_candles": 200,
+      "first_utc": "2026-10-03 16:00:00+00:00",
+      "last_closed_utc": "2026-10-11 23:00:00+00:00",
+      "timeframe": "1h",
+      "latest_enter_long": 0,
+      "latest_exit_long": 0,
+      "latest_close_price": 111.36,
+      "public_book": {
+        "status": "ok",
+        "observed_at": "2026-10-12T00:37:00.049534+00:00",
+        "received_at": "2026-10-12T00:37:02.558318+00:00",
+        "bid": 111.32,
+        "ask": 111.33,
+        "spread_bps": 0.8982708286552992
+      },
+      "candle_close_utc": "2026-10-12T00:00:00+00:00",
+      "decision": "no_trade",
+      "decision_note": "candidate still requires native order/sizing/confirmation; not an executed order",
+      "entry_signals_in_checked_window": 2
+    }
+  },
+  "holdout_prices_inspected": false,
+  "native_trades": 0,
+  "native_orders": 0,
+  "checked_at": "2026-10-12T00:37:10.552673+00:00",
+  "status": "running_with_public_data"
+}

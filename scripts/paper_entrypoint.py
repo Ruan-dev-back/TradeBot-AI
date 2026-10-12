@@ -1,6 +1,7 @@
 """The only supported paper startup; accepts no arbitrary trade CLI arguments."""
 
 from datetime import datetime, timedelta, timezone
+import argparse
 import fcntl
 import json
 import os
@@ -9,14 +10,19 @@ import sys
 
 from paper_risk import require_current_window, validate_paper_config
 from audit_guard import require_locked_holdout, verify_baseline
+from paper_profiles import profile_for
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    if sys.argv[1:]:
-        raise ValueError('Paper entrypoint does not accept CLI overrides')
-    config = json.loads((ROOT / 'user_data/config.paper.json').read_text())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--exchange', choices=['kraken', 'okx'], default='kraken')
+    args = parser.parse_args()
+    profile = profile_for(args.exchange)
+    config = json.loads((ROOT / 'user_data' / profile.config_file).read_text())
+    if config.get('exchange', {}).get('name') != args.exchange:
+        raise ValueError('Paper profile/config exchange mismatch')
     verify_baseline()
     require_locked_holdout()
     validate_paper_config(config, os.environ)
@@ -27,7 +33,7 @@ def main():
     if Path('/freqtrade/host-ca.pem').is_file():
         for field in ('ccxt_config', 'ccxt_async_config'):
             config['exchange'][field]['cafile'] = '/freqtrade/host-ca.pem'
-    folder = ROOT / 'user_data/paper'
+    folder = ROOT / 'user_data' / profile.state_folder
     folder.mkdir(parents=True, exist_ok=True)
     lock_fd = os.open(folder / 'engine.lock', os.O_RDWR | os.O_CREAT, 0o600)
     fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -37,7 +43,7 @@ def main():
     with os.fdopen(fd, 'w') as output:
         json.dump(config, output)
     os.execvp('freqtrade', ['freqtrade', 'trade', '--config', str(path),
-                          '--strategy', 'MultiAssetPaperStrategy', '--dry-run'])
+                          '--strategy', profile.strategy, '--dry-run'])
 
 
 if __name__ == '__main__':

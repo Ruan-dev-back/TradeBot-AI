@@ -1,0 +1,2 @@
+{"BlockIO":"0B / 1.51MB","CPUPerc":"0.00%","Container":"tradebot-ai-okxpaper-1","ID":"f88a3751f7f9","MemPerc":"0.76%","MemUsage":"259.4MiB / 33.29GiB","Name":"tradebot-ai-okxpaper-1","NetIO":"126kB / 11.8kB","PIDs":"16"}
+{"BlockIO":"0B / 1.49MB","CPUPerc":"3.44%","Container":"tradebot-ai-papertrade-1","ID":"8a0e5c208c92","MemPerc":"0.76%","MemUsage":"258.2MiB / 33.29GiB","Name":"tradebot-ai-papertrade-1","NetIO":"143kB / 7.96kB","PIDs":"16"}

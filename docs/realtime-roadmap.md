@@ -101,3 +101,14 @@ resposta a quedas de API/host, reconciliação após desconexão, backups consis
 dos dois SQLite e testes de restauração, verificação regional e política de
 retenção. O restart do Compose e o healthcheck são recursos locais, não evidência
 de disponibilidade24/7. Nenhuma etapa deste roteiro autoriza trading real.
+
+## Atualização OKX
+
+A operação Kraken descrita acima foi preservada. O entrypoint agora aceita
+somente `--exchange kraken` (padrão) ou `--exchange okx`, selecionando perfis
+explícitos e estados separados; argumentos arbitrários continuam recusados.
+Monitoramento REST de bid/ask a cada 20s e saúde schema2 exigem quotes atuais.
+O timestamp público é comparado ao recebimento, com jitter futuro máximo de 2s.
+Sinais continuam em candles fechados de 1h. Credenciais/demo/sandbox são recusados.
+Veja [integração atual](okx-integration-report.md), [comandos](okx-commands.md) e
+[plano VPS sem deploy](vps-plan.md). Evidências antigas permanecem preservadas.

@@ -1,0 +1,3 @@
+time="2026-10-12T00:24:36Z" level=warning msg="Found orphan containers ([tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+Paper startup blocked: [Errno 11] Resource temporarily unavailable
+

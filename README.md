@@ -1,7 +1,8 @@
 # TradeBot AI
 
-MVP de pesquisa quantitativa com **Freqtrade via Docker Compose**. Apenas dados
-públicos, testes e backtesting de BTC/USDT spot em 1h. Não executa trading real,
+Pesquisa quantitativa e operador de **paper trading com Freqtrade via Docker Compose**.
+Dados públicos spot em 1h: pesquisa Binance BTC/USDT de 2024 e simulação atual
+OKX/Kraken de BTC/USDT, ETH/USDT e SOL/USDT. Não executa trading real,
 não usa chaves de API e não inclui ML, LLM, painel web ou deploy.
 
 ## Requisitos
@@ -94,8 +95,8 @@ taxa simulada: 0,1% na entrada e na saída. Não há alegação de lucratividade
 ## Segurança
 
 `dry_run=true`, mercado `spot`, credenciais ausentes, API e Telegram desativados.
-O Compose não expõe portas nem inicia um bot: seu comando padrão é um backtest.
-A entrada adaptada só aceita pesquisa e testes; `trade` e argumentos de
+O Compose de pesquisa não expõe portas nem inicia um bot: seu comando padrão é um backtest.
+A entrada de pesquisa só aceita pesquisa e testes; `trade` e argumentos de
 configuração alternativos são recusados. Overrides `FREQTRADE__*` também são
 recusados. Não forneça credenciais nem substitua a entrada por comandos de trading.
 Essas proteções não impedem alguém de editar o projeto ou invocar Docker diretamente.
@@ -123,3 +124,20 @@ congeladas. [Relatório da integração e dos testes](docs/paper-report.md),
 O serviço foi validado nesta máquina, com dados reais e reinicialização. Isso não
 constitui deploy ou monitoramento 24/7. Processos do ambiente de desenvolvimento
 não têm garantia de sobreviver à publicação ou restauração do ambiente.
+
+## OKX e desenvolvimento concluído nesta etapa
+
+O perfil separado `docker-compose.okx.yml` usa `OkxPaperStrategy`, banco/carteira
+próprios e dados públicos oficiais da OKX. O modo demo autenticado da exchange
+não é utilizado: ordens são simuladas localmente pelo Freqtrade. Kraken permanece
+como alternativa manual, sem migração automática de posições. Os dois perfis
+mantêm as mesmas proteções; monitoram bid/ask a cada 20s e calculam sinais em
+candles fechados de 1h. Acesso público não comprova elegibilidade de uma conta.
+
+[Integração e evidências](docs/okx-integration-report.md),
+[comandos seguros](docs/okx-commands.md),
+[resultados D1–D3 de 2024](docs/research2024-results.md) e
+[plano VPS e custos](docs/vps-plan.md).
+Nenhum candidato passou todos os gates; nenhum foi promovido e ML continua
+bloqueado. O holdout reservado permanece fechado. Os relatórios históricos
+permanecem preservados. Não houve contratação ou deploy de VPS.

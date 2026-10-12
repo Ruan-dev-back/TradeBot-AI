@@ -12,7 +12,8 @@ from paper_risk import RiskPolicy
 
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = {'baseline': 'SmaRsiStrategy', 'trend': 'TrendDevelopment',
-              'breakout': 'BreakoutDevelopment', 'mean_reversion': 'MeanReversionDevelopment'}
+              'breakout': 'BreakoutDevelopment', 'mean_reversion': 'MeanReversionDevelopment',
+              'breakout_volume': 'BreakoutVolumeDevelopment'}
 FOLDS = {'D1': ('20240101', '20240401', '20240701'),
          'D2': ('20240101', '20240701', '20241001'),
          'D3': ('20240101', '20241001', '20250101')}

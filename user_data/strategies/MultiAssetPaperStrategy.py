@@ -3,7 +3,7 @@
 import talib.abstract as ta
 from pandas import DataFrame
 from technical import qtpylib
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import logging
 import json
 import math
@@ -13,6 +13,7 @@ import time
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 from paper_risk import RiskPolicy, RiskState, finite_positive, require_current_window, validate_paper_config
+from paper_profiles import profile_for, minimum_notional
 from validate_data import validate_candles
 from freqtrade.persistence import Trade
 
@@ -43,9 +44,28 @@ class MultiAssetPaperStrategy(IStrategy):
     def bot_start(self, **kwargs):
         validate_paper_config(self.config)
         self.policy = RiskPolicy()
-        self.risk_state = RiskState(Path(self.config["user_data_dir"]) / "paper/risk.sqlite",
+        profile = profile_for(self.config['exchange']['name'])
+        self.risk_state = RiskState(Path(self.config["user_data_dir"]) / profile.state_folder / 'risk.sqlite',
                                     self.policy)
         self.risk_ready = False
+        self.public_quotes = {}
+
+    def _update_quotes(self, now):
+        for pair in self.config['exchange']['pair_whitelist']:
+            previous = self.public_quotes.get(pair)
+            if previous and 0 <= (now-datetime.fromisoformat(previous['observed_at'])).total_seconds() < 20:
+                continue
+            started = time.monotonic()
+            book = self.dp.orderbook(pair, 20)
+            received = datetime.now(timezone.utc)
+            bid, ask = book['bids'][0][0], book['asks'][0][0]
+            if time.monotonic()-started > 3 or not finite_positive(bid,ask) or bid > ask:
+                raise ValueError('Invalid or delayed public price snapshot')
+            if book.get('timestamp') is not None and not -2 <= received.timestamp()-book['timestamp']/1000 <= 30:
+                raise ValueError('Public price timestamp outside receipt-time tolerance')
+            self.public_quotes[pair] = {'status':'ok','observed_at':now.isoformat(),
+                'received_at':received.isoformat(),'bid':float(bid),'ask':float(ask),
+                'spread_bps':float((ask-bid)/((ask+bid)/2)*10000)}
 
     def _equity(self):
         self.wallets.update()
@@ -75,17 +95,24 @@ class MultiAssetPaperStrategy(IStrategy):
             closed = [(t.id, t.close_date_utc, t.close_profit_abs)
                       for t in Trade.get_trades_proxy(is_open=False)]
             self.risk_state.observe(equity, current_time, closed)
+            self._update_quotes(current_time)
             self.risk_ready = True
             if self.risk_state.data["warning"]:
                 logger.warning("Paper drawdown warning: %.4f; entry halt=%s",
                                self.risk_state.data["drawdown"], self.risk_state.data["halted"])
             self._write_status(current_time)
         except Exception as error:
+            self.risk_ready = False
             logger.warning("Paper risk observation failed; entries blocked: %s",
                            str(error) if isinstance(error, ValueError) else type(error).__name__)
+            try:
+                self._write_status(current_time)
+            except Exception:
+                pass  # A stale/unwritable snapshot also fails the external healthcheck.
 
     def _write_status(self, now):
         pairs = {}
+        open_pairs = {trade.pair for trade in Trade.get_trades_proxy(is_open=True)}
         for pair in self.config['exchange']['pair_whitelist']:
             frame, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
             if frame.empty:
@@ -97,18 +124,28 @@ class MultiAssetPaperStrategy(IStrategy):
                 require_current_window(sample['date'].iloc[0].to_pydatetime(), now, now)
                 age = (now - sample['date'].iloc[-1]).total_seconds()
                 valid = len(sample) >= 200 and 3600 <= age <= 7500
+                enter, exit_ = int(sample['enter_long'].iloc[-1]), int(sample['exit_long'].iloc[-1])
+                decision = ('exit_candidate' if pair in open_pairs and (exit_ or self.risk_state.data['halted'])
+                            else 'hold' if pair in open_pairs
+                            else 'entry_candidate' if self.risk_ready and valid and enter and not exit_ and not open_pairs and self.risk_state.allowed(now)
+                            else 'no_trade')
                 pairs[pair] = {'status': 'ok' if valid else 'invalid', 'candles': len(frame),
                                'checked_candles': len(sample), 'first_utc': str(sample['date'].iloc[0]),
                                'last_closed_utc': str(sample['date'].iloc[-1]), 'timeframe': self.timeframe,
-                               'latest_enter_long': int(sample['enter_long'].iloc[-1]),
-                               'latest_exit_long': int(sample['exit_long'].iloc[-1]),
+                               'latest_enter_long': enter, 'latest_exit_long': exit_,
+                               'latest_close_price': float(sample['close'].iloc[-1]),
+                               'public_book':self.public_quotes.get(pair,{'status':'unavailable'}),
+                               'candle_close_utc': (sample['date'].iloc[-1]+timedelta(hours=1)).isoformat(),
+                               'decision': decision,
+                               'decision_note': 'candidate still requires native order/sizing/confirmation; not an executed order',
                                'entry_signals_in_checked_window': int(sample['enter_long'].sum())}
             except ValueError:
                 pairs[pair] = {'status': 'invalid', 'candles': len(frame)}
         body = {'observed_at': now.isoformat(), 'dry_run': self.config['dry_run'],
-                'exchange': 'kraken', 'risk_ready': self.risk_ready, 'risk': self.risk_state.data,
+                'schema_version':2,
+                'exchange': self.config['exchange']['name'], 'risk_ready': self.risk_ready, 'risk': self.risk_state.data,
                 'pairs': pairs, 'holdout_prices_inspected': False}
-        path = Path(self.config['user_data_dir']) / 'paper/status.json'
+        path = Path(self.config['user_data_dir']) / profile_for(self.config['exchange']['name']).state_folder / 'status.json'
         temp = path.with_suffix('.tmp')
         temp.write_text(json.dumps(body, indent=2, allow_nan=False) + '\n')
         temp.replace(path)
@@ -144,14 +181,15 @@ class MultiAssetPaperStrategy(IStrategy):
         bid, ask = book["bids"][0][0], book["asks"][0][0]
         if not finite_positive(bid, ask) or bid > ask:
             raise ValueError("Crossed or invalid order book")
-        if book.get("timestamp") is not None and not 0 <= now.timestamp() - book["timestamp"] / 1000 <= 30:
+        # The API response can be newer than callback current_time. Compare to receipt,
+        # allowing 2s clock jitter while preserving the 30s stale limit.
+        received = datetime.now(timezone.utc)
+        if book.get("timestamp") is not None and not -2 <= received.timestamp() - book["timestamp"] / 1000 <= 30:
             raise ValueError("Stale order book")
         if (ask - bid) / ((ask + bid) / 2) > self.policy.spread or abs(rate / ask - 1) > self.policy.slippage:
             raise ValueError("Spread or price movement exceeds cost budget")
         minimum_amount = market.get("limits", {}).get("amount", {}).get("min")
-        minimum_cost = market.get("limits", {}).get("cost", {}).get("min")
-        if not finite_positive(minimum_amount, minimum_cost):
-            raise ValueError("Unknown exchange minimums")
+        minimum_cost = minimum_notional(self.config['exchange']['name'], market, rate)
         if amount is not None:
             if not finite_positive(amount) or amount < minimum_amount:
                 raise ValueError("Order is below minimum amount")
@@ -167,7 +205,7 @@ class MultiAssetPaperStrategy(IStrategy):
             if remaining > 1e-12 or cost / amount > ask * (1 + self.policy.slippage):
                 raise ValueError("Insufficient depth or excessive impact")
         equity, free = self._equity()
-        return equity, free, max(minimum_cost, minimum_amount * rate)
+        return equity, free, minimum_cost
 
     def custom_stake_amount(self, pair, current_time, current_rate, proposed_stake,
                             min_stake, max_stake, leverage, entry_tag, side, **kwargs):

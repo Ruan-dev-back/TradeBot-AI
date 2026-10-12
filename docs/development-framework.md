@@ -74,3 +74,17 @@ O holdout `[2025-07-01, 2026-07-01)` permanece reservado e fechado, inclusive a
 ressalva histórica sobre dados de fronteira já adquiridos antes da reserva.
 ML segue bloqueado até conclusão do protocolo sem ML, custos, risco e avaliação
 de incerteza; nenhum backtest promete retorno futuro.
+
+## Atualização OKX e avaliação completa
+
+O texto acima registra o framework publicado em e81b01c. Nesta continuação,
+D1–D3 foram executados para cinco candidatos, incluindo a hipótese F2V separada
+de confirmação relativa de volume. As regras originais permanecem intactas;
+F2V/custos foram congelados em 02890c9 antes dos novos resultados. Cenários de
+custos, exposição financeira, replay de oportunidades com risco/cooldown e
+benchmarks foram concluídos. Todos falharam gates; nenhum candidato promovido.
+O replay integral de sinais e análises nativas dos candidatos ainda são pendências.
+Veja [resultados completos](research2024-results.md),
+[protocolo adicional congelado](research2024-extension.md) e
+[comandos reproduzíveis](okx-commands.md). Somente Binance 2024; nenhuma mistura
+de exchanges ou consulta ao holdout.

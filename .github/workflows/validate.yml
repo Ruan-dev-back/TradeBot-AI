@@ -13,10 +13,12 @@ jobs:
         run: |
           python -m json.tool user_data/config.json > /dev/null
           python -m json.tool user_data/config.paper.json > /dev/null
+          python -m json.tool user_data/config.paper.okx.json > /dev/null
       - name: Validate both Compose configurations
         run: |
           docker compose config --quiet
           docker compose -f docker-compose.paper.yml config --quiet
+          docker compose -f docker-compose.okx.yml config --quiet
       - name: Test with the pinned Freqtrade image and no container network
         run: |
           docker compose pull

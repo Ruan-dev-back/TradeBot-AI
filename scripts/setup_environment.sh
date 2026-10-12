@@ -13,4 +13,6 @@ docker info --format '{{.ServerVersion}}'
 docker compose -f docker-compose.yml config --quiet
 docker compose -f docker-compose.yml pull
 docker compose -f docker-compose.paper.yml config --quiet
+docker compose -f docker-compose.okx.yml config --quiet
+python3 -m json.tool user_data/config.paper.okx.json >/dev/null
 docker compose -f docker-compose.yml -f docker-compose.audit.yml run --rm freqtrade test
