@@ -1,0 +1,505 @@
+time="2026-10-12T18:01:45Z" level=warning msg="Found orphan containers ([tradebot-ai-okxpaper-1 tradebot-ai-papertrade-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+test_altered_market_snapshot_is_refused (test_archive.ArchiveTests.test_altered_market_snapshot_is_refused) ... ok
+test_ccxt_parses_snapshot_and_refuses_another_pair (test_archive.ArchiveTests.test_ccxt_parses_snapshot_and_refuses_another_pair) ... ok
+test_checksum_verifies_content_and_filename (test_archive.ArchiveTests.test_checksum_verifies_content_and_filename) ... ok
+test_milliseconds_and_microseconds_are_both_utc_hourly (test_archive.ArchiveTests.test_milliseconds_and_microseconds_are_both_utc_hourly) ... ok
+test_missing_candle_or_wrong_units_are_refused (test_archive.ArchiveTests.test_missing_candle_or_wrong_units_are_refused) ... ok
+test_arrow_scanner_excludes_held_out_and_observed_2025_prices (test_audit.AuditTests.test_arrow_scanner_excludes_held_out_and_observed_2025_prices) ... ok
+test_baseline_tampering_is_detected (test_audit.AuditTests.test_baseline_tampering_is_detected) ... ok
+test_ci_requires_exact_commit_and_explicit_success (test_audit.AuditTests.test_ci_requires_exact_commit_and_explicit_success) ... ok
+test_direct_legacy_scripts_fail_before_acquisition_or_price_reads (test_audit.AuditTests.test_direct_legacy_scripts_fail_before_acquisition_or_price_reads) ... ok
+test_holdout_unlock_and_date_changes_are_refused (test_audit.AuditTests.test_holdout_unlock_and_date_changes_are_refused) ... ok
+test_insufficient_recursive_history_fails_with_missing_values (test_audit.AuditTests.test_insufficient_recursive_history_fails_with_missing_values) ... ok
+test_legacy_acquisition_and_runner_are_blocked_even_without_docs_mount (test_audit.AuditTests.test_legacy_acquisition_and_runner_are_blocked_even_without_docs_mount) ... ok
+test_prefix_negative_control_detects_an_injected_future_indicator (test_audit.AuditTests.test_prefix_negative_control_detects_an_injected_future_indicator) ... ok
+test_stale_bias_cache_is_refused (test_audit.AuditTests.test_stale_bias_cache_is_refused) ... ok
+test_utc_and_exclusive_development_boundary_are_required (test_audit.AuditTests.test_utc_and_exclusive_development_boundary_are_required) ... ok
+test_active_engine_lock_refuses_snapshot (test_backup.BackupTests.test_active_engine_lock_refuses_snapshot) ... ok
+test_snapshot_hashes_and_restored_state_and_position_are_preserved (test_backup.BackupTests.test_snapshot_hashes_and_restored_state_and_position_are_preserved) ... ok
+test_complete_data_and_disjoint_period_counts (test_data.DataTests.test_complete_data_and_disjoint_period_counts) ... ok
+test_duplicate_is_refused (test_data.DataTests.test_duplicate_is_refused) ... ok
+test_gap_is_refused (test_data.DataTests.test_gap_is_refused) ... ok
+test_infinite_values_and_short_sample_are_refused (test_data.DataTests.test_infinite_values_and_short_sample_are_refused) ... ok
+test_invalid_ohlc_is_refused (test_data.DataTests.test_invalid_ohlc_is_refused) ... ok
+test_naive_or_unaligned_timestamps_are_refused (test_data.DataTests.test_naive_or_unaligned_timestamps_are_refused) ... ok
+test_both_side_costs_reduce_benchmark_and_risk_replay (test_development_costs.DevelopmentCostTests.test_both_side_costs_reduce_benchmark_and_risk_replay) ... ok
+test_cooldown_skips_boundary_reentry_and_accounting_conserves_cash (test_development_costs.DevelopmentCostTests.test_cooldown_skips_boundary_reentry_and_accounting_conserves_cash) ... ok
+test_gap_can_exceed_nominal_budget_and_drawdown_threshold (test_development_costs.DevelopmentCostTests.test_gap_can_exceed_nominal_budget_and_drawdown_threshold) ... ok
+test_holdout_frame_is_rejected_before_replay (test_development_costs.DevelopmentCostTests.test_holdout_frame_is_rejected_before_replay) ... ok
+test_minimum_rounding_and_no_trade_metrics_do_not_invent_results (test_development_costs.DevelopmentCostTests.test_minimum_rounding_and_no_trade_metrics_do_not_invent_results) ... ok
+test_volume_confirmation_is_relative_and_causal (test_development_costs.DevelopmentCostTests.test_volume_confirmation_is_relative_and_causal) ... ok
+test_candidates_are_causal_and_breakout_uses_previous_high (test_development_framework.DevelopmentFrameworkTests.test_candidates_are_causal_and_breakout_uses_previous_high) ... ok
+test_candidates_refuse_paper_live_and_observed_2025_entries (test_development_framework.DevelopmentFrameworkTests.test_candidates_refuse_paper_live_and_observed_2025_entries) ... ok
+test_only_fixed_2024_folds_and_candidates_are_accepted (test_development_framework.DevelopmentFrameworkTests.test_only_fixed_2024_folds_and_candidates_are_accepted) ... ok
+test_halt_is_distinct_from_engine_liveness (test_external_health.ExternalHealthTests.test_halt_is_distinct_from_engine_liveness) ... ok
+test_invalid_identity_is_not_hardcoded_as_dry_run (test_external_health.ExternalHealthTests.test_invalid_identity_is_not_hardcoded_as_dry_run) ... ok
+test_minimal_payload_excludes_wallet_prices_and_private_settings (test_external_health.ExternalHealthTests.test_minimal_payload_excludes_wallet_prices_and_private_settings) ... ok
+test_missing_observer_is_reported_despite_healthy_engine (test_external_health.ExternalHealthTests.test_missing_observer_is_reported_despite_healthy_engine) ... ok
+test_corruption_and_mixed_exchange_are_refused_before_restore (test_host_ops.BundleTests.test_corruption_and_mixed_exchange_are_refused_before_restore) ... ok
+test_each_writer_lock_prevents_quiesced_snapshot (test_host_ops.BundleTests.test_each_writer_lock_prevents_quiesced_snapshot) ... ok
+test_existing_state_is_never_overwritten (test_host_ops.BundleTests.test_existing_state_is_never_overwritten) ... ok
+test_four_database_backup_preserves_risk_orders_positions_and_window (test_host_ops.BundleTests.test_four_database_backup_preserves_risk_orders_positions_and_window) ... ok
+test_migration_gap_is_detected_on_next_original_observer_sample (test_host_ops.BundleTests.test_migration_gap_is_detected_on_next_original_observer_sample) ... ok
+test_missing_database_and_unreconciled_closed_ids_are_refused (test_host_ops.BundleTests.test_missing_database_and_unreconciled_closed_ids_are_refused) ... ok
+test_non_dry_order_is_rejected (test_host_ops.BundleTests.test_non_dry_order_is_rejected) ... ok
+test_partial_copy_failure_rolls_back_only_new_files (test_host_ops.BundleTests.test_partial_copy_failure_rolls_back_only_new_files) ... ok
+test_staged_restore_keeps_all_records_and_T0_T1_without_fresh_status (test_host_ops.BundleTests.test_staged_restore_keeps_all_records_and_T0_T1_without_fresh_status) ... ok
+test_symlink_payload_and_manifest_tampering_are_refused (test_host_ops.BundleTests.test_symlink_payload_and_manifest_tampering_are_refused) ... ok
+test_window_and_frozen_content_change_are_not_permission_for_new_window (test_host_ops.BundleTests.test_window_and_frozen_content_change_are_not_permission_for_new_window) ... ok
+test_compose_profiles_are_explicit_no_order_overrides (test_host_ops.HostGuardTests.test_compose_profiles_are_explicit_no_order_overrides) ... ok
+test_external_desktop_units_do_not_require_absent_docker_service (test_host_ops.HostGuardTests.test_external_desktop_units_do_not_require_absent_docker_service) ... ok
+test_recycled_pid_is_not_signalled (test_host_ops.HostGuardTests.test_recycled_pid_is_not_signalled) ... ok
+test_rendered_units_require_recovery_and_non_root_account (test_host_ops.HostGuardTests.test_rendered_units_require_recovery_and_non_root_account) ... ok
+test_start_refuses_missing_window_before_network_or_container_actions (test_host_ops.HostGuardTests.test_start_refuses_missing_window_before_network_or_container_actions) ... ok
+test_uid_mismatch_is_actionable_and_never_changes_permissions (test_host_ops.HostGuardTests.test_uid_mismatch_is_actionable_and_never_changes_permissions) ... ok
+test_unit_specifier_path_and_account_injection_are_refused (test_host_ops.HostGuardTests.test_unit_specifier_path_and_account_injection_are_refused) ... ok
+test_unmanaged_observer_is_never_killed (test_host_ops.HostGuardTests.test_unmanaged_observer_is_never_killed) ... ok
+test_unsupported_architecture_and_old_compose_fail_before_start (test_host_ops.HostGuardTests.test_unsupported_architecture_and_old_compose_fail_before_start) ... ok
+test_proxy_403_is_distinct_from_exchange_451_and_direct_403 (test_network.NetworkTests.test_proxy_403_is_distinct_from_exchange_451_and_direct_403) ... ok
+test_tls_dns_timeout_and_success_are_distinct (test_network.NetworkTests.test_tls_dns_timeout_and_success_are_distinct) ... ok
+test_cached_filters_are_used_and_orders_are_blocked (test_offline.OfflineTests.test_cached_filters_are_used_and_orders_are_blocked) ... ok
+test_credentials_are_refused (test_offline.OfflineTests.test_credentials_are_refused) ... ok
+test_live_dry_run_service_and_futures_are_refused (test_offline.OfflineTests.test_live_dry_run_service_and_futures_are_refused) ... ok
+test_unknown_precision_is_refused (test_offline.OfflineTests.test_unknown_precision_is_refused) ... ok
+test_native_bot_consumes_signal_and_simulates_order_in_isolated_database (test_okx.NativeOkxEngineTests.test_native_bot_consumes_signal_and_simulates_order_in_isolated_database) ... 2026-10-12 18:01:57,028 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-12 18:01:57,029 - freqtrade.loggers - INFO - Logfile configured
+2026-10-12 18:01:57,029 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-12 18:01:57,030 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+2026-10-12 18:01:57,030 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/user_data/strategies
+2026-10-12 18:01:57,031 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2026-10-12 18:01:57,031 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper-okx.sqlite"
+2026-10-12 18:01:57,031 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+sudo: unable to resolve host 8d4796f1aaf7: Temporary failure in name resolution
+2026-10-12 18:01:57,040 - freqtrade.configuration.configuration - INFO - Using user-data directory: /tmp/tmpn7d2t_7u ...
+2026-10-12 18:01:57,041 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
+2026-10-12 18:01:57,041 - freqtrade.configuration.configuration - INFO - Using data directory: /tmp/tmpn7d2t_7u/data/okx ...
+2026-10-12 18:01:57,042 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-12 18:01:57,046 - freqtrade.exchange.check_exchange - INFO - Exchange "okx" is officially supported by the Freqtrade development team.
+2026-10-12 18:01:57,047 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-12 18:01:57,047 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,048 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,048 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research'}
+2026-10-12 18:01:57,051 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research', 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,053 - freqtrade.exchange.exchange - INFO - Using Exchange "OKX"
+2026-10-12 18:01:57,055 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy OkxPaperStrategy from '/freqtrade/user_data/strategies/OkxPaperStrategy.py'...
+2026-10-12 18:01:57,056 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-12 18:01:57,056 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-12 18:01:57,057 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-12 18:01:57,057 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+2026-10-12 18:01:57,057 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+2026-10-12 18:01:57,058 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-12 18:01:57,058 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-12 18:01:57,058 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-12 18:01:57,059 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-12 18:01:57,059 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-12 18:01:57,059 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-12 18:01:57,060 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-12 18:01:57,060 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-12 18:01:57,060 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-12 18:01:57,061 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-12 18:01:57,061 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-12 18:01:57,061 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-12 18:01:57,061 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+2026-10-12 18:01:57,062 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-12 18:01:57,062 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+2026-10-12 18:01:57,062 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-12 18:01:57,063 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-12 18:01:57,063 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-12 18:01:57,063 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-12 18:01:57,064 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-12 18:01:57,064 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-12 18:01:57,064 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-12 18:01:57,064 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-12 18:01:57,065 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-12 18:01:57,065 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-12 18:01:57,072 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,074 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-12 18:01:57,074 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
+2026-10-12 18:01:57,075 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
+2026-10-12 18:01:57,075 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.00s
+2026-10-12 18:01:57,080 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+2026-10-12 18:01:57,096 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,129 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,151 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,159 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,162 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for BTC/USDT with stake_amount: 25 and price: 100010.0 ...
+2026-10-12 18:01:57,168 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,171 - freqtrade.freqtradebot - INFO - Order dry_run_buy_BTC/USDT_236c06ab-1f49-44ce-9cf9-a0e0bd04c44f was created for BTC/USDT and status is closed.
+2026-10-12 18:01:57,180 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,180 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Okx', 'pair': 
+'BTC/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 100010.0, 'order_rate': 100010.0, 'open_rate': 100010.0, 'order_type': 'limit', 'stake_amount': 24.0024, 'stake_currency': 'USDT', 
+'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 12, 18, 1, 57, 171467, tzinfo=datetime.timezone.utc), 'current_rate':
+100010.0, 'sub_trade': False}
+2026-10-12 18:01:57,181 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-12 18:01:57)
+2026-10-12 18:01:57,186 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-12 18:01:57) [buy]: 
+0.0960096 USDT - rate: 0.004
+2026-10-12 18:01:57,187 - freqtrade.persistence.trade_model - INFO - Updating trade (id=1) ...
+2026-10-12 18:01:57,187 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, 
+open_since=2026-10-12 18:01:57).
+2026-10-12 18:01:57,193 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,195 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry_fill, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Okx', 
+'pair': 'BTC/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 100010.0, 'order_rate': 100010.0, 'open_rate': 100010.0, 'order_type': 'limit', 'stake_amount': 24.0024, 'stake_currency': 'USDT', 
+'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 12, 18, 1, 57, 171467, tzinfo=datetime.timezone.utc), 'current_rate':
+100010.0, 'sub_trade': False}
+2026-10-12 18:01:57,197 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-10-12 18:01:57,199 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "1 open trades active.\n\nHandle these trades manually on OKX, or '/start' the bot again 
+and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-10-12 18:01:57,200 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+ok
+test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange (test_okx.NativeOkxEngineTests.test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange) ... 2026-10-12 18:01:57,235 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,235 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,236 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research'}
+2026-10-12 18:01:57,240 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research', 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,248 - freqtrade.exchange.exchange - INFO - Using Exchange "OKX"
+2026-10-12 18:01:57,257 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,258 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,258 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research'}
+2026-10-12 18:01:57,261 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research', 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,264 - freqtrade.exchange.exchange - INFO - Using Exchange "OKX"
+2026-10-12 18:01:57,271 - freqtrade.wallets - INFO - Wallets synced.
+ok
+test_native_paper_configuration_and_strategy_load_without_network (test_okx.NativeOkxEngineTests.test_native_paper_configuration_and_strategy_load_without_network) ... 2026-10-12 18:01:57,306 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.paper.okx.json ...
+2026-10-12 18:01:57,309 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-12 18:01:57,309 - freqtrade.loggers - INFO - Logfile configured
+2026-10-12 18:01:57,309 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-12 18:01:57,309 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+2026-10-12 18:01:57,310 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/user_data/strategies
+2026-10-12 18:01:57,311 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2026-10-12 18:01:57,311 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper-okx.sqlite"
+2026-10-12 18:01:57,311 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+sudo: unable to resolve host 8d4796f1aaf7: Temporary failure in name resolution
+2026-10-12 18:01:57,321 - freqtrade.configuration.configuration - INFO - Using user-data directory: /tmp/tmp_geldgwj ...
+2026-10-12 18:01:57,321 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
+2026-10-12 18:01:57,321 - freqtrade.configuration.configuration - INFO - Using data directory: /tmp/tmp_geldgwj/data/okx ...
+2026-10-12 18:01:57,322 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-12 18:01:57,325 - freqtrade.exchange.check_exchange - INFO - Exchange "okx" is officially supported by the Freqtrade development team.
+2026-10-12 18:01:57,326 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-12 18:01:57,327 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy OkxPaperStrategy from '/freqtrade/user_data/strategies/OkxPaperStrategy.py'...
+2026-10-12 18:01:57,327 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-12 18:01:57,328 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-12 18:01:57,328 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-12 18:01:57,328 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+2026-10-12 18:01:57,329 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+2026-10-12 18:01:57,329 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-12 18:01:57,329 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-12 18:01:57,330 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-12 18:01:57,330 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-12 18:01:57,330 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-12 18:01:57,331 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-12 18:01:57,331 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-12 18:01:57,331 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-12 18:01:57,331 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-12 18:01:57,332 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False, 
+'emergency_exit': 'market'}
+2026-10-12 18:01:57,332 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-12 18:01:57,332 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-12 18:01:57,332 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+2026-10-12 18:01:57,333 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-12 18:01:57,333 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+2026-10-12 18:01:57,333 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-12 18:01:57,334 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-12 18:01:57,334 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-12 18:01:57,334 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-12 18:01:57,334 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-12 18:01:57,335 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-12 18:01:57,335 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-12 18:01:57,335 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-12 18:01:57,335 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-12 18:01:57,336 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+ok
+test_native_pending_limit_is_recovered_then_fills_after_restart (test_okx.NativeOkxEngineTests.test_native_pending_limit_is_recovered_then_fills_after_restart) ... 2026-10-12 18:01:57,367 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,368 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,368 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research'}
+2026-10-12 18:01:57,372 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research', 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,374 - freqtrade.exchange.exchange - INFO - Using Exchange "OKX"
+2026-10-12 18:01:57,380 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,381 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,381 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research'}
+2026-10-12 18:01:57,384 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'options': {'defaultType': 
+'spot', 'fetchMarkets': {'types': ['spot']}}, 'userAgent': 'TradeBot-AI/0.1 public research', 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,386 - freqtrade.exchange.exchange - INFO - Using Exchange "OKX"
+ok
+test_credentials_demo_sandbox_options_and_wrong_strategy_are_rejected (test_okx.OkxSafetyTests.test_credentials_demo_sandbox_options_and_wrong_strategy_are_rejected) ... ok
+test_distinct_configuration_database_and_same_fixed_risk_policy (test_okx.OkxSafetyTests.test_distinct_configuration_database_and_same_fixed_risk_policy) ... ok
+test_minimum_cost_is_derived_from_verified_size_lot_tick_only (test_okx.OkxSafetyTests.test_minimum_cost_is_derived_from_verified_size_lot_tick_only) ... ok
+test_proxy_exchange_and_region_denials_are_distinguished (test_okx.OkxSafetyTests.test_proxy_exchange_and_region_denials_are_distinguished) ... ok
+test_public_checker_refuses_private_paths_before_network (test_okx.OkxSafetyTests.test_public_checker_refuses_private_paths_before_network) ... ok
+test_exchange_uses_explicit_spot_pairs (test_paper.PaperTradingTests.test_exchange_uses_explicit_spot_pairs) ... ok
+test_paper_mode_cannot_trade_real_money (test_paper.PaperTradingTests.test_paper_mode_cannot_trade_real_money) ... ok
+test_position_limit_and_fake_wallet (test_paper.PaperTradingTests.test_position_limit_and_fake_wallet) ... ok
+test_research_isolation (test_paper.PaperTradingTests.test_research_isolation) ... ok
+test_native_bot_consumes_signal_and_simulates_order_in_isolated_database (test_paper_engine.NativePaperEngineTests.test_native_bot_consumes_signal_and_simulates_order_in_isolated_database) ... /usr/local/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'Forbidden'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+/usr/local/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 451: 'Restricted'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+2026-10-12 18:01:57,430 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.paper.json ...
+2026-10-12 18:01:57,432 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-12 18:01:57,433 - freqtrade.loggers - INFO - Logfile configured
+2026-10-12 18:01:57,433 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-12 18:01:57,433 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+2026-10-12 18:01:57,434 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/user_data/strategies
+2026-10-12 18:01:57,434 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2026-10-12 18:01:57,434 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+2026-10-12 18:01:57,435 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+sudo: unable to resolve host 8d4796f1aaf7: Temporary failure in name resolution
+2026-10-12 18:01:57,443 - freqtrade.configuration.configuration - INFO - Using user-data directory: /tmp/tmpg94zyynm ...
+2026-10-12 18:01:57,443 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
+2026-10-12 18:01:57,444 - freqtrade.configuration.configuration - INFO - Using data directory: /tmp/tmpg94zyynm/data/kraken ...
+2026-10-12 18:01:57,444 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-12 18:01:57,446 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+2026-10-12 18:01:57,447 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-12 18:01:57,447 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,448 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,448 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-12 18:01:57,449 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,451 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-12 18:01:57,457 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+2026-10-12 18:01:57,457 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-12 18:01:57,458 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-12 18:01:57,458 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-12 18:01:57,458 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+2026-10-12 18:01:57,458 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+2026-10-12 18:01:57,459 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-12 18:01:57,459 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-12 18:01:57,459 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-12 18:01:57,460 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-12 18:01:57,460 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-12 18:01:57,460 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-12 18:01:57,460 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-12 18:01:57,461 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-12 18:01:57,461 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-12 18:01:57,461 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-12 18:01:57,461 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-12 18:01:57,462 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-12 18:01:57,462 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+2026-10-12 18:01:57,462 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-12 18:01:57,462 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+2026-10-12 18:01:57,463 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-12 18:01:57,463 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-12 18:01:57,463 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-12 18:01:57,464 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-12 18:01:57,464 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-12 18:01:57,464 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-12 18:01:57,464 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-12 18:01:57,465 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-12 18:01:57,465 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-12 18:01:57,465 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-12 18:01:57,470 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,478 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-12 18:01:57,478 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
+2026-10-12 18:01:57,479 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT']
+2026-10-12 18:01:57,479 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.00s
+2026-10-12 18:01:57,484 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+2026-10-12 18:01:57,499 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,530 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,550 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,558 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,560 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for BTC/USDT with stake_amount: 25 and price: 100010.0 ...
+2026-10-12 18:01:57,566 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,568 - freqtrade.freqtradebot - INFO - Order dry_run_buy_BTC/USDT_5ab967f1-97fa-4fac-94fc-f9fa17169c59 was created for BTC/USDT and status is closed.
+2026-10-12 18:01:57,574 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,575 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Kraken', 'pair':
+'BTC/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 100010.0, 'order_rate': 100010.0, 'open_rate': 100010.0, 'order_type': 'limit', 'stake_amount': 24.0024, 'stake_currency': 'USDT', 
+'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 12, 18, 1, 57, 568599, tzinfo=datetime.timezone.utc), 'current_rate':
+100010.0, 'sub_trade': False}
+2026-10-12 18:01:57,575 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-12 18:01:57)
+2026-10-12 18:01:57,580 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, open_since=2026-10-12 18:01:57) [buy]: 
+0.0960096 USDT - rate: 0.004
+2026-10-12 18:01:57,580 - freqtrade.persistence.trade_model - INFO - Updating trade (id=1) ...
+2026-10-12 18:01:57,580 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=1, pair=BTC/USDT, amount=0.00024, is_short=False, leverage=1, open_rate=100010, 
+open_since=2026-10-12 18:01:57).
+2026-10-12 18:01:57,585 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-12 18:01:57,586 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 1, 'type': entry_fill, 'buy_tag': 'sma_cross_rsi', 'enter_tag': 'sma_cross_rsi', 'exchange': 'Kraken', 
+'pair': 'BTC/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 100010.0, 'order_rate': 100010.0, 'open_rate': 100010.0, 'order_type': 'limit', 'stake_amount': 24.0024, 'stake_currency': 'USDT', 
+'base_currency': 'BTC', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.00024, 'open_date': datetime.datetime(2026, 10, 12, 18, 1, 57, 568599, tzinfo=datetime.timezone.utc), 'current_rate':
+100010.0, 'sub_trade': False}
+2026-10-12 18:01:57,589 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-10-12 18:01:57,591 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "1 open trades active.\n\nHandle these trades manually on Kraken, or '/start' the bot 
+again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-10-12 18:01:57,591 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+ok
+test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange (test_paper_engine.NativePaperEngineTests.test_native_fill_fee_trade_and_wallet_persist_across_fresh_exchange) ... 2026-10-12 18:01:57,621 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,622 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,622 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-12 18:01:57,625 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,626 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-12 18:01:57,635 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,635 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,636 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-12 18:01:57,637 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,639 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-12 18:01:57,652 - freqtrade.wallets - INFO - Wallets synced.
+ok
+test_native_paper_configuration_and_strategy_load_without_network (test_paper_engine.NativePaperEngineTests.test_native_paper_configuration_and_strategy_load_without_network) ... 2026-10-12 18:01:57,686 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.paper.json ...
+2026-10-12 18:01:57,689 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-12 18:01:57,689 - freqtrade.loggers - INFO - Logfile configured
+2026-10-12 18:01:57,689 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-12 18:01:57,689 - freqtrade.configuration.configuration - INFO - Parameter --dry-run detected, overriding dry_run to: True ...
+2026-10-12 18:01:57,689 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/user_data/strategies
+2026-10-12 18:01:57,690 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2026-10-12 18:01:57,690 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/tradesv3.paper.sqlite"
+2026-10-12 18:01:57,691 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+sudo: unable to resolve host 8d4796f1aaf7: Temporary failure in name resolution
+2026-10-12 18:01:57,699 - freqtrade.configuration.configuration - INFO - Using user-data directory: /tmp/tmpiycjt20y ...
+2026-10-12 18:01:57,700 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
+2026-10-12 18:01:57,700 - freqtrade.configuration.configuration - INFO - Using data directory: /tmp/tmpiycjt20y/data/kraken ...
+2026-10-12 18:01:57,700 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-12 18:01:57,703 - freqtrade.exchange.check_exchange - INFO - Exchange "kraken" is officially supported by the Freqtrade development team.
+2026-10-12 18:01:57,703 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-12 18:01:57,707 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy MultiAssetPaperStrategy from '/freqtrade/user_data/strategies/MultiAssetPaperStrategy.py'...
+2026-10-12 18:01:57,708 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-12 18:01:57,708 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 1h.
+2026-10-12 18:01:57,709 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-12 18:01:57,709 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 25.
+2026-10-12 18:01:57,709 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'unit': 'minutes'}.
+2026-10-12 18:01:57,709 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-10-12 18:01:57,709 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-10-12 18:01:57,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 1h
+2026-10-12 18:01:57,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-12 18:01:57,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-12 18:01:57,710 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-12 18:01:57,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-12 18:01:57,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-12 18:01:57,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-12 18:01:57,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-10-12 18:01:57,711 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-12 18:01:57,712 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-12 18:01:57,712 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 25
+2026-10-12 18:01:57,712 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 200
+2026-10-12 18:01:57,712 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'unit': 'minutes'}
+2026-10-12 18:01:57,713 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-12 18:01:57,713 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-12 18:01:57,713 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-12 18:01:57,713 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-12 18:01:57,713 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-12 18:01:57,714 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-12 18:01:57,714 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-12 18:01:57,714 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-12 18:01:57,714 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-10-12 18:01:57,714 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+ok
+test_native_pending_limit_is_recovered_then_fills_after_restart (test_paper_engine.NativePaperEngineTests.test_native_pending_limit_is_recovered_then_fills_after_restart) ... 2026-10-12 18:01:57,745 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,745 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,746 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-12 18:01:57,748 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,749 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+2026-10-12 18:01:57,755 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-12 18:01:57,755 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-12 18:01:57,756 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True}
+2026-10-12 18:01:57,757 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'timeout': 15000, 'requests_trust_env': True, 'aiohttp_trust_env': True}
+2026-10-12 18:01:57,759 - freqtrade.exchange.exchange - INFO - Using Exchange "Kraken"
+ok
+test_api_recovery_records_error_and_recovery_without_replaying_signal (test_paper_risk.PaperCallbackTests.test_api_recovery_records_error_and_recovery_without_replaying_signal) ... 2026-10-12 18:01:57,788 - MultiAssetPaperStrategy - WARNING - Paper risk observation failed; entries blocked: RuntimeError
+ok
+test_attempt_persistence_failure_blocks_then_recovers_without_erasing_risk (test_paper_risk.PaperCallbackTests.test_attempt_persistence_failure_blocks_then_recovers_without_erasing_risk) ... 2026-10-12 18:01:57,847 - MultiAssetPaperStrategy - ERROR - Paper telemetry persistence failed; entries blocked: OSError
+2026-10-12 18:01:57,848 - MultiAssetPaperStrategy - ERROR - Paper telemetry persistence failed; entries blocked: OSError
+2026-10-12 18:01:57,848 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Risk state, price or position limit forbids entry
+ok
+test_book_after_callback_time_is_checked_against_receipt (test_paper_risk.PaperCallbackTests.test_book_after_callback_time_is_checked_against_receipt) ... 2026-10-12 18:01:57,908 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Stale order book
+ok
+test_cost_and_liquidity_invalidations (test_paper_risk.PaperCallbackTests.test_cost_and_liquidity_invalidations) ... 2026-10-12 18:01:57,935 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Spread or price movement exceeds cost budget
+2026-10-12 18:01:57,942 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient depth or excessive impact
+2026-10-12 18:01:57,948 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Crossed or invalid order book
+2026-10-12 18:01:57,954 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unknown or underestimated market fee
+2026-10-12 18:01:57,961 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: No official OKX minimum-size provenance
+2026-10-12 18:01:57,967 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Stale order book
+ok
+test_credentials_modes_and_environment_overrides_fail_closed (test_paper_risk.PaperCallbackTests.test_credentials_modes_and_environment_overrides_fail_closed) ... ok
+test_gap_duplicate_future_stale_zero_volume_and_short_candles_block (test_paper_risk.PaperCallbackTests.test_gap_duplicate_future_stale_zero_volume_and_short_candles_block) ... 2026-10-12 18:01:58,014 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Insufficient warmup
+2026-10-12 18:01:58,016 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient warmup
+2026-10-12 18:01:58,019 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Timestamps duplicados ou fora de ordem
+2026-10-12 18:01:58,021 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Timestamps duplicados ou fora de ordem
+2026-10-12 18:01:58,028 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-12 18:01:58,034 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-12 18:01:58,040 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-12 18:01:58,047 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-12 18:01:58,053 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-12 18:01:58,059 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Unclosed, stale or zero-volume candle
+2026-10-12 18:01:58,061 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Insufficient warmup
+2026-10-12 18:01:58,062 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Insufficient warmup
+2026-10-12 18:01:58,069 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Invalid indicators
+2026-10-12 18:01:58,076 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Invalid indicators
+ok
+test_halt_exits_and_restart_still_blocks_entries (test_paper_risk.PaperCallbackTests.test_halt_exits_and_restart_still_blocks_entries) ... 2026-10-12 18:01:58,100 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
+2026-10-12 18:01:58,118 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
+ok
+test_public_price_api_failure_blocks_entry_and_sizing (test_paper_risk.PaperCallbackTests.test_public_price_api_failure_blocks_entry_and_sizing) ... 2026-10-12 18:01:58,141 - MultiAssetPaperStrategy - WARNING - Paper risk observation failed; entries blocked: RuntimeError
+2026-10-12 18:01:58,159 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: Risk state, price or position limit forbids entry
+2026-10-12 18:01:58,161 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
+ok
+test_quantity_precision_cannot_push_order_below_minimum (test_paper_risk.PaperCallbackTests.test_quantity_precision_cannot_push_order_below_minimum) ... ok
+test_risk_errors_never_fall_back_to_native_permissive_defaults (test_paper_risk.PaperCallbackTests.test_risk_errors_never_fall_back_to_native_permissive_defaults) ... 2026-10-12 18:01:58,215 - MultiAssetPaperStrategy - INFO - Paper sizing denied BTC/USDT: RuntimeError
+2026-10-12 18:01:58,216 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: RuntimeError
+2026-10-12 18:01:58,218 - MultiAssetPaperStrategy - INFO - Paper entry denied BTC/USDT: Risk state, price or position limit forbids entry
+ok
+test_signal_copy_matches_frozen_baseline (test_paper_risk.PaperCallbackTests.test_signal_copy_matches_frozen_baseline) ... ok
+test_valid_simulation_and_native_min_stake_clamp_rejection (test_paper_risk.PaperCallbackTests.test_valid_simulation_and_native_min_stake_clamp_rejection) ... ok
+test_cooldown_and_closed_trade_deduplication_survive_restart (test_paper_risk.PaperRiskTests.test_cooldown_and_closed_trade_deduplication_survive_restart) ... ok
+test_cost_aware_cap_and_projected_loss_on_different_wallets (test_paper_risk.PaperRiskTests.test_cost_aware_cap_and_projected_loss_on_different_wallets) ... ok
+test_drawdown_peak_and_halt_survive_restart_and_recovery (test_paper_risk.PaperRiskTests.test_drawdown_peak_and_halt_survive_restart_and_recovery) ... ok
+test_minimum_never_increases_position_and_invalid_values_block (test_paper_risk.PaperRiskTests.test_minimum_never_increases_position_and_invalid_values_block) ... ok
+test_single_exit_cooldown_and_policy_change_refusal (test_paper_risk.PaperRiskTests.test_single_exit_cooldown_and_policy_change_refusal) ... ok
+test_warmup_cannot_acquire_reserved_dates_or_future_or_naive (test_paper_risk.PaperRiskTests.test_warmup_cannot_acquire_reserved_dates_or_future_or_naive) ... ok
+test_current_schema_requires_fresh_public_quotes (test_paper_status.PaperStatusTests.test_current_schema_requires_fresh_public_quotes) ... ok
+test_ready_snapshot_has_real_database_counts_without_invented_trades (test_paper_status.PaperStatusTests.test_ready_snapshot_has_real_database_counts_without_invented_trades) ... ok
+test_stale_future_snapshot_invalid_market_and_real_mode_fail (test_paper_status.PaperStatusTests.test_stale_future_snapshot_invalid_market_and_real_mode_fail) ... ok
+test_disconnect_recovery_and_halt_are_distinct_durable_alerts (test_prospective.ProspectiveTests.test_disconnect_recovery_and_halt_are_distinct_durable_alerts) ... ok
+test_freeze_blocks_parameter_changes_and_documentation_only_head_is_allowed (test_prospective.ProspectiveTests.test_freeze_blocks_parameter_changes_and_documentation_only_head_is_allowed) ... ok
+test_journal_storage_failure_does_not_claim_sample_was_saved (test_prospective.ProspectiveTests.test_journal_storage_failure_does_not_claim_sample_was_saved) ... ok
+test_missing_or_corrupt_persistence_is_not_zero_profit (test_prospective.ProspectiveTests.test_missing_or_corrupt_persistence_is_not_zero_profit) ... ok
+test_native_profit_api_and_open_position_mark_are_fee_adjusted (test_prospective.ProspectiveTests.test_native_profit_api_and_open_position_mark_are_fee_adjusted) ... ok
+test_observer_health_detects_hang_and_tampering (test_prospective.ProspectiveTests.test_observer_health_detects_hang_and_tampering) ... ok
+test_online_journal_export_restores_chain_and_does_not_modify_source (test_prospective.ProspectiveTests.test_online_journal_export_restores_chain_and_does_not_modify_source) ... ok
+test_restart_keeps_window_alert_dedup_and_detects_unobserved_interval (test_prospective.ProspectiveTests.test_restart_keeps_window_alert_dedup_and_detects_unobserved_interval) ... ok
+test_same_heartbeat_has_no_false_availability (test_prospective.ProspectiveTests.test_same_heartbeat_has_no_false_availability) ... ok
+test_samples_after_fixed_end_do_not_repair_failed_first_week (test_prospective.ProspectiveTests.test_samples_after_fixed_end_do_not_repair_failed_first_week) ... ok
+test_seven_days_wall_clock_without_samples_is_not_qualified (test_prospective.ProspectiveTests.test_seven_days_wall_clock_without_samples_is_not_qualified) ... ok
+test_snapshot_zero_operations_is_readonly_and_reason_is_visible (test_prospective.ProspectiveTests.test_snapshot_zero_operations_is_readonly_and_reason_is_visible) ... ok
+test_stale_candle_quote_wallet_and_invalid_quote_fail_even_with_running_process (test_prospective.ProspectiveTests.test_stale_candle_quote_wallet_and_invalid_quote_fail_even_with_running_process) ... ok
+test_telemetry_dedup_excludes_pre_window_signals_and_never_creates_orders (test_prospective.ProspectiveTests.test_telemetry_dedup_excludes_pre_window_signals_and_never_creates_orders) ... ok
+test_failed_download_is_not_reported_as_zero_profit (test_report.ReportTests.test_failed_download_is_not_reported_as_zero_profit) ... ok
+test_future_or_overlapping_trade_is_refused (test_report.ReportTests.test_future_or_overlapping_trade_is_refused) ... ok
+test_inconsistent_aggregate_is_refused (test_report.ReportTests.test_inconsistent_aggregate_is_refused) ... ok
+test_missing_or_ambiguous_exports_are_refused (test_report.ReportTests.test_missing_or_ambiguous_exports_are_refused) ... ok
+test_net_profit_and_two_sided_fees_are_read (test_report.ReportTests.test_net_profit_and_two_sided_fees_are_read) ... ok
+test_no_trades_has_no_invented_profit_factor_or_winrate (test_report.ReportTests.test_no_trades_has_no_invented_profit_factor_or_winrate) ... ok
+test_profit_factor_winrate_and_temporal_exposure (test_report.ReportTests.test_profit_factor_winrate_and_temporal_exposure) ... ok
+test_fees_are_charged_on_both_sides_once (test_risk_model.RiskModelTests.test_fees_are_charged_on_both_sides_once) ... ok
+test_higher_costs_reduce_results_without_double_counting_base_fee (test_risk_model.RiskModelTests.test_higher_costs_reduce_results_without_double_counting_base_fee) ... ok
+test_invalid_costs_capital_and_exposure_are_refused (test_risk_model.RiskModelTests.test_invalid_costs_capital_and_exposure_are_refused) ... ok
+test_missing_partial_and_different_quantity_fills_are_refused (test_risk_model.RiskModelTests.test_missing_partial_and_different_quantity_fills_are_refused) ... ok
+test_quantile_uses_linear_interpolation_and_small_samples (test_risk_model.RiskModelTests.test_quantile_uses_linear_interpolation_and_small_samples) ... ok
+test_replay_compounds_current_equity_and_measures_close_drawdown (test_risk_model.RiskModelTests.test_replay_compounds_current_equity_and_measures_close_drawdown) ... ok
+test_smaller_exposure_reduces_loss_without_claiming_profit (test_risk_model.RiskModelTests.test_smaller_exposure_reduces_loss_without_claiming_profit) ... ok
+test_spread_is_full_and_slippage_is_per_side (test_risk_model.RiskModelTests.test_spread_is_full_and_slippage_is_per_side) ... ok
+test_backtest_builds_fixed_period_and_fee (test_safety.SafetyTests.test_backtest_builds_fixed_period_and_fee) ... ok
+test_checked_in_config_is_research_only (test_safety.SafetyTests.test_checked_in_config_is_research_only) ... ok
+test_cli_refuses_trade_and_alternate_configs (test_safety.SafetyTests.test_cli_refuses_trade_and_alternate_configs) ... ok
+test_credentials_and_ccxt_overrides_are_refused (test_safety.SafetyTests.test_credentials_and_ccxt_overrides_are_refused) ... ok
+test_environment_override_is_refused (test_safety.SafetyTests.test_environment_override_is_refused) ... ok
+test_live_futures_and_wallet_changes_are_refused (test_safety.SafetyTests.test_live_futures_and_wallet_changes_are_refused) ... ok
+test_periods_are_disjoint_and_ordered (test_safety.SafetyTests.test_periods_are_disjoint_and_ordered) ... ok
+test_strategy_overrides_are_refused (test_safety.SafetyTests.test_strategy_overrides_are_refused) ... ok
+test_additional_entry_guard_refuses_live_short_and_wrong_pair (test_strategy.StrategyTests.test_additional_entry_guard_refuses_live_short_and_wrong_pair) ... ok
+test_entry_requires_a_new_cross (test_strategy.StrategyTests.test_entry_requires_a_new_cross) ... ok
+test_exit_at_rsi_75 (test_strategy.StrategyTests.test_exit_at_rsi_75) ... ok
+test_exit_on_downward_cross_even_with_loss (test_strategy.StrategyTests.test_exit_on_downward_cross_even_with_loss) ... ok
+test_indicators_and_signals_do_not_depend_on_future_candles (test_strategy.StrategyTests.test_indicators_and_signals_do_not_depend_on_future_candles) ... ok
+test_missing_indicators_do_not_create_entry (test_strategy.StrategyTests.test_missing_indicators_do_not_create_entry) ... ok
+test_risk_parameters (test_strategy.StrategyTests.test_risk_parameters) ... ok
+test_rsi_entry_boundaries (test_strategy.StrategyTests.test_rsi_entry_boundaries) ... ok
+test_zero_volume_prevents_entry_and_exit (test_strategy.StrategyTests.test_zero_volume_prevents_entry_and_exit) ... ok
+
+----------------------------------------------------------------------
+Ran 146 tests in 2.509s
+
+OK

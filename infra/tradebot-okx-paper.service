@@ -10,7 +10,11 @@ StartLimitBurst=3
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+User=tradebot
+Group=tradebot
+SupplementaryGroups=docker
 WorkingDirectory=/opt/tradebot-ai
+ExecStartPre=/usr/bin/python3 /opt/tradebot-ai/scripts/paper_host.py verify-recovery --exchange okx
 ExecStartPre=/usr/bin/docker compose -f docker-compose.okx.yml config --quiet
 ExecStartPre=/usr/bin/docker compose -f docker-compose.okx.yml run --rm --entrypoint python okxpaper /freqtrade/scripts/check_okx.py
 ExecStart=/usr/bin/docker compose -f docker-compose.okx.yml up -d --wait --wait-timeout 90

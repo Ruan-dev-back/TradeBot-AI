@@ -1,0 +1,23 @@
+{
+  "original_122_preserved": true,
+  "total_tests": 146,
+  "new_tests": 24,
+  "baseline": {
+    "user_data/config.json": "8b34d550c3368f42bf7d638b043574887575e2576f40814c41480b81900ee904",
+    "user_data/strategies/SmaRsiStrategy.py": "b37becb4d3b98242053eaa699c4b744f3f3228865125c0330655b29efea073e6",
+    "docs/results.md": "e1dce99d9c94aa37f8b924fb0db7f0e1bed6e696dd8d1c1179836939dcba08fd",
+    "docs/evidence/backtest-development.json": "77703469c061ace81e47e86746fcca71a4afa646f935dd7bc243473011dca88e",
+    "docs/evidence/backtest-validation.json": "7970af3cd63e04b89ccdb2f89ccfba6e8e3d12b221075196bcfe00c8fba240bf",
+    "docs/evidence/data_manifest.json": "48a820cbe2ada7bfe1329257a0236a431a06394c23ea3e2b62e1033268249ea8",
+    "docs/evidence/market_snapshot.json": "b97a56de2a2f79b42a6616b3fb2479f70e86c7b7953fe1a3bb87aec01dbb29ae"
+  },
+  "frozen_observation_hashes_verified": true,
+  "window": {
+    "start_utc": "2026-10-12T17:17:10.179088+00:00",
+    "target_end_utc": "2026-10-19T17:17:10.179088+00:00",
+    "protocol_sha256": "0d276dcbf79e565ca7eeb61d52980a45a98e890cbcdd250dc9409308c5f2aa39",
+    "last_sample_utc": "2026-10-12T18:04:10.204750+00:00",
+    "exchange": "okx"
+  },
+  "holdout_prices_inspected": false
+}

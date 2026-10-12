@@ -5,6 +5,9 @@ After=docker.service
 
 [Service]
 Type=oneshot
+User=tradebot
+Group=tradebot
+SupplementaryGroups=docker
 WorkingDirectory=/opt/tradebot-ai
 ExecStart=/usr/bin/python3 /opt/tradebot-ai/scripts/paper_monitor.py health --exchange okx
 TimeoutStartSec=10

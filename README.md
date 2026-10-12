@@ -162,3 +162,23 @@ host inteiro. [Protocolo](docs/prospective-protocol.md),
 [relatório real desta etapa](docs/prospective-report.md) e
 [pesquisa futura com controle de múltiplos testes](docs/future-research-protocol.md).
 Sete dias só serão declarados depois da janela e das evidências suficientes.
+
+## Host persistente: Windows/WSL2 e Linux
+
+Ferramentas de operação adicionais, sem alterar os arquivos congelados:
+
+```sh
+python3 scripts/paper_host.py preflight
+python3 scripts/paper_host.py verify-recovery
+python3 scripts/paper_host.py start
+python3 scripts/paper_host.py status
+```
+
+Start exige uma janela já restaurada/autorizada. Backup completo inclui quatro
+bancos e código Git pelo commit; recuperação não sobrescreve estados, não muda
+T0/T1 e não fabrica saúde atual. Windows usa dispatcher PowerShell para WSL2;
+Linux tem templates renderizáveis de systemd, sem instalação automática.
+[Instalação e comandos](docs/host-installation.md),
+[backup/migração/recuperação](docs/host-recovery.md) e
+[monitor externo e alertas humanos](docs/external-monitor-design.md).
+Não houve deploy em PC/VPS nem cadastro de monitor/serviço externo.
