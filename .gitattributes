@@ -5,3 +5,4 @@ docs/paper/evidence/*.log -whitespace
 docs/okx/evidence/*.log -whitespace
 docs/prospective/evidence/*.log -whitespace
 docs/host/evidence/*.log -whitespace
+ops/linux/agenttrader.sh text eol=lf

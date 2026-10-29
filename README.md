@@ -1,5 +1,10 @@
 # TradeBot AI
 
+**AgentTrader V1:** implementação OKX spot em dry run, banca de 100 USDT,
+BTC/USDT e ETH/USDT, limite de 10 USDT e estratégia 5m/1h.
+Veja [configuração, comandos Windows/WSL2 e limitações verificadas](docs/agenttrader-v1.md).
+O restante deste README documenta os fluxos anteriores de pesquisa e paper trading.
+
 Pesquisa quantitativa e operador de **paper trading com Freqtrade via Docker Compose**.
 Dados públicos spot em 1h: pesquisa Binance BTC/USDT de 2024 e simulação atual
 OKX/Kraken de BTC/USDT, ETH/USDT e SOL/USDT. Não executa trading real,

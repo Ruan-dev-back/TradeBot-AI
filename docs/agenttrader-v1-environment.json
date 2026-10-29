@@ -1,0 +1,35 @@
+{
+  "checked_on": "2026-10-29",
+  "branch": "feat/agenttrader-v1",
+  "host": "Windows / PowerShell",
+  "python": "3.13.14",
+  "docker_compose": "v5.1.0",
+  "docker_engine": {
+    "status": "blocked",
+    "initial_error": "dockerDesktopLinuxEngine pipe not found",
+    "after_start_attempt": "Docker Desktop is unable to start"
+  },
+  "wsl": {
+    "default_version": 1,
+    "installed_distributions": [],
+    "status": "WSL2 execution unavailable; no distribution installed or configuration changed"
+  },
+  "okx_public_probe": {
+    "url": "https://www.okx.com/api/v5/public/instruments?instType=SPOT&instId=BTC-USDT",
+    "http_status": 403,
+    "status": "initial_failure_followed_by_success",
+    "private_api_used": false,
+    "reason": "Initial probe returned HTTP Forbidden; later V1 preflight validated both pairs using public instruments and order books",
+    "later_evidence": "agenttrader-v1-preflight.json",
+    "later_cash_caps_usdt": {"BTC/USDT": 9.999485454812351, "ETH/USDT": 9.997816056633402}
+  },
+  "live_orders_sent": 0,
+  "credentials_modified": false,
+  "existing_untracked_files_preserved": true,
+  "references": [
+    "https://www.okx.com/docs-v5/en/",
+    "https://docs.freqtrade.io/en/stable/strategy-callbacks/",
+    "https://docs.freqtrade.io/en/stable/strategy-customization/",
+    "https://docs.freqtrade.io/en/stable/configuration/"
+  ]
+}

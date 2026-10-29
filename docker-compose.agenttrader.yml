@@ -1,0 +1,19 @@
+services:
+  agenttrader:
+    image: freqtradeorg/freqtrade:stable@sha256:9d67afb8eb5f4e1210f4fb067efcbd5e005bd4f1c27f6f3888b8b9fc7f9b5199
+    restart: unless-stopped
+    working_dir: /freqtrade
+    entrypoint: ["python", "/freqtrade/scripts/agenttrader_v1.py"]
+    command: ["run"]
+    ports:
+      - "127.0.0.1:8081:8080"
+    volumes:
+      - ./user_data:/freqtrade/user_data
+      - ./scripts:/freqtrade/scripts:ro
+      - ./tests:/freqtrade/tests:ro
+    stop_grace_period: 30s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

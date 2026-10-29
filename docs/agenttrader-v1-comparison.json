@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-29T18:43:55.043250+00:00",
+  "source": "OKX public recent confirmed candles",
+  "pairs": {
+    "BTC/USDT": {
+      "status": "blocked_historical_execution_metadata",
+      "reason": "Historical book/depth, spread and fee tier unavailable. Current preflight cannot validate historical fills.",
+      "current_preflight": {
+        "notional": 9.984533625000001,
+        "cash": 9.999515417704313,
+        "planned_loss": 0.22923022210053304,
+        "fee_per_side_assumed": 0.001,
+        "slippage_per_side_assumed": 0.0005
+      },
+      "evaluation_start_utc": "2026-10-28T09:20:00+00:00",
+      "evaluation_end_utc": "2026-10-29T18:35:00+00:00",
+      "strategy": {
+        "entry_signals": 1,
+        "trades": null,
+        "net_pnl": null
+      },
+      "baseline_ema21_200": {
+        "entry_signals": 2,
+        "trades": null,
+        "net_pnl": null
+      },
+      "buy_and_hold": {
+        "price_return_diagnostic": -0.01035891092146557,
+        "trades": null,
+        "net_pnl": null
+      },
+      "cost_assumptions": {
+        "fee_per_side": 0.001,
+        "slippage_per_side": 0.0005
+      },
+      "note": "Price return is not a simulated portfolio return. No ranking or profitability claim."
+    },
+    "ETH/USDT": {
+      "status": "blocked_historical_execution_metadata",
+      "reason": "Historical book/depth, spread and fee tier unavailable. Current preflight cannot validate historical fills.",
+      "current_preflight": {
+        "notional": 9.98352273,
+        "cash": 9.998503005856364,
+        "planned_loss": 0.22920701343660604,
+        "fee_per_side_assumed": 0.001,
+        "slippage_per_side_assumed": 0.0005
+      },
+      "evaluation_start_utc": "2026-10-28T09:20:00+00:00",
+      "evaluation_end_utc": "2026-10-29T18:35:00+00:00",
+      "strategy": {
+        "entry_signals": 0,
+        "trades": null,
+        "net_pnl": null
+      },
+      "baseline_ema21_200": {
+        "entry_signals": 2,
+        "trades": null,
+        "net_pnl": null
+      },
+      "buy_and_hold": {
+        "price_return_diagnostic": -0.018709054169777972,
+        "trades": null,
+        "net_pnl": null
+      },
+      "cost_assumptions": {
+        "fee_per_side": 0.001,
+        "slippage_per_side": 0.0005
+      },
+      "note": "Price return is not a simulated portfolio return. No ranking or profitability claim."
+    }
+  },
+  "status": "blocked"
+}

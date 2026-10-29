@@ -238,6 +238,7 @@ user_data/paper/
 user_data/paper-okx/
 user_data/observation/
 user_data/host-ops/
+user_data/agenttrader-v1/
 !docs/okx/evidence/*.log
 !docs/prospective/evidence/*.log
 !docs/host/evidence/*.log

@@ -1,0 +1,58 @@
+{
+  "BTC/USDT": {
+    "status": "validated",
+    "market": {
+      "symbol": "BTC/USDT",
+      "active": true,
+      "spot": true,
+      "contract": false,
+      "taker": 0.001,
+      "fee_note": "provisional 0.10% taker assumption; account tier unverified",
+      "limits": {
+        "amount": {
+          "min": 1e-05,
+          "max": 9999999999.0
+        }
+      },
+      "precision": {
+        "amount": 1e-08,
+        "price": 0.1
+      }
+    },
+    "validation": {
+      "notional": 9.984503707,
+      "cash": 9.999485454812351,
+      "planned_loss": 0.22922953522721384,
+      "fee_per_side_assumed": 0.001,
+      "slippage_per_side_assumed": 0.0005
+    }
+  },
+  "ETH/USDT": {
+    "status": "validated",
+    "market": {
+      "symbol": "ETH/USDT",
+      "active": true,
+      "spot": true,
+      "contract": false,
+      "taker": 0.001,
+      "fee_note": "provisional 0.10% taker assumption; account tier unverified",
+      "limits": {
+        "amount": {
+          "min": 0.0001,
+          "max": 999999999999.0
+        }
+      },
+      "precision": {
+        "amount": 1e-06,
+        "price": 0.01
+      }
+    },
+    "validation": {
+      "notional": 9.98283681,
+      "cash": 9.997816056633402,
+      "planned_loss": 0.22919126572120566,
+      "fee_per_side_assumed": 0.001,
+      "slippage_per_side_assumed": 0.0005
+    }
+  }
+}
