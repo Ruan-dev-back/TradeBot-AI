@@ -22,7 +22,11 @@ class AgentTraderV1(IStrategy):
     INTERFACE_VERSION=3
     timeframe='5m'
     can_short=False
-    startup_candle_count=2400
+    # Per timeframe: DataProvider fetches 1h separately (not 200 * 12 base candles).
+    # EMA200 seed error decays by (199/201)**1000 after 1200 observations.
+    # 1199 warmup + current candle = 4 OKX spot calls of 300, below the 1499 cap.
+    # Reproduce convergence checks: scripts/agenttrader_v1_startup_analysis.py.
+    startup_candle_count=1199
     process_only_new_candles=True
     minimal_roi={'0':.04}
     stoploss=-.02

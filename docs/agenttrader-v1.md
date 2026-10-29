@@ -16,6 +16,13 @@ Candles fechados de 5m, EMA 9/21/200 e RSI 14. Entrada long no cruzamento novo d
 
 O alinhamento de 1h usa `merge_informative_pair`; a informação horária só fica disponível ao encerrar o candle correspondente. Não há short, futuros, margem, alavancagem, DCA ou aumento de posição. A implementação retrospectiva executa decisões após o fechamento do sinal.
 
+## Correção do histórico inicial (29/10/2026)
+
+`startup_candle_count` foi reduzido de 2400 para **1199 candles por timeframe**.
+O DataProvider carrega 1h separadamente: não é necessário transformar a EMA200
+horária em 2400 candles de 5m. A decisão, os limites numéricos, os resultados e os
+comandos para atualizar a VM estão em [agenttrader-v1-startup.md](agenttrader-v1-startup.md).
+
 ## Windows
 
 Na raiz do repositório, com Docker Desktop em modo Linux e engine funcionando:

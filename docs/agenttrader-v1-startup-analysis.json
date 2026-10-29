@@ -1,0 +1,92 @@
+{
+  "data": "deterministic synthetic; no market data or trading",
+  "freqtrade": "2026.9",
+  "talib": "0.8.3",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "startup_candle_count": 1199,
+  "ema_tolerance_relative_pct": 0.001,
+  "sweep_max_errors": {
+    "199": {
+      "ema9_relative_pct": 3.3306690738754696e-14,
+      "ema21_relative_pct": 4.787075624790305e-07,
+      "ema200_relative_pct": 12.114088739298623,
+      "rsi_absolute_points": 49.999999977889686
+    },
+    "399": {
+      "ema9_relative_pct": 0,
+      "ema21_relative_pct": 2.220446049250313e-14,
+      "ema200_relative_pct": 2.254289901166695,
+      "rsi_absolute_points": 2.7850150882123282e-08
+    },
+    "599": {
+      "ema9_relative_pct": 0,
+      "ema21_relative_pct": 0,
+      "ema200_relative_pct": 0.2742216812377518,
+      "rsi_absolute_points": 2.2110317982280838e-08
+    },
+    "799": {
+      "ema9_relative_pct": 0,
+      "ema21_relative_pct": 0,
+      "ema200_relative_pct": 0.030026322454712595,
+      "rsi_absolute_points": 0
+    },
+    "999": {
+      "ema9_relative_pct": 0,
+      "ema21_relative_pct": 0,
+      "ema200_relative_pct": 0.005587546610841265,
+      "rsi_absolute_points": 0
+    },
+    "1199": {
+      "ema9_relative_pct": 0,
+      "ema21_relative_pct": 0,
+      "ema200_relative_pct": 0.0006796936031561174,
+      "rsi_absolute_points": 0
+    },
+    "1499": {
+      "ema9_relative_pct": 0,
+      "ema21_relative_pct": 0,
+      "ema200_relative_pct": 3.38391059395704e-05,
+      "rsi_absolute_points": 0
+    }
+  },
+  "native_recursive_selected_relative_pct": {
+    "ema9": 0,
+    "ema21": 0,
+    "ema200": 1.57266e-05,
+    "rsi": 0,
+    "ema9_1h": 0,
+    "ema21_1h": 0,
+    "ema200_1h": 6.6986e-05
+  },
+  "native_recursive_all_fractional_differences": {
+    "ema21": {
+      "199": -7e-12
+    },
+    "ema200": {
+      "199": -0.001390426694,
+      "399": 0.000442924609,
+      "599": 1.8130209e-05,
+      "799": -8.41244e-06,
+      "999": -1.92733e-07,
+      "1199": 1.57266e-07,
+      "1499": 5.496e-09
+    },
+    "rsi": {
+      "199": 2.3319569e-05,
+      "399": 2e-12
+    },
+    "ema21_1h": {
+      "199": 9e-12
+    },
+    "ema200_1h": {
+      "199": -0.002970745454,
+      "399": 0.003662833901,
+      "599": 0.001164466937,
+      "799": 0.00011012814,
+      "999": 1.627975e-06,
+      "1199": 6.6986e-07,
+      "1499": 7.129e-09
+    }
+  }
+}
